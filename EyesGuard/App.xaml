@@ -1,9 +1,55 @@
 ﻿<Application x:Class="EyesGuard.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:EyesGuard"
+             xmlns:local="clr-namespace:EyesGuard" Startup="Application_Startup"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!--#region Colors-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Colors/SolidColors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Colors/GradientColors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Colors/SolidColorBrushes.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Colors/GradientColorBrushes.xaml" />
+                <!--#endregion-->
+
+                <!--#region Fonts-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Fonts/FontsDictionary.xaml" />
+                <!--#endregion-->
+
+                <!--#region Images-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Images/MenuIcons.xaml" />
+                <!--#endregion-->
+
+                <!--#region Templates--> 
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/BlueMenuTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/BlueMenuItemTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/ChromeButtonTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/GuardButtonTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/TextBlockWhiteTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/CheckboxWhiteTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/GreenButtonTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/FancyTooltipTemplate.xaml" />
+
+                <!--#endregion-->
+                
+
+                <!--#region Strings-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/ApplicationStrings.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/EyeMessageStrings.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/SettingsStrings.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/TaskbarIconStrings.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/StatStrings.xaml" />
+
+                <!--#endregion--> 
+
+                <!--#region Taskbar-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Menus/EyesGuardTaskbarIcon.xaml" />
+
+                <!--#endregion-->
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

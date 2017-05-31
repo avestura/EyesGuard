@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:EyesGuard.Resources.Images">
+
+
+    <fa:ImageAwesome x:Key="HastiUI.Menus.UserLoginMenu.Login"
+                     Foreground="{StaticResource HastiUI.SolidColorBrushes.SandOrange}"
+                     Icon="Key" />
+
+    <fa:ImageAwesome x:Key="HastiUI.Menus.UserLoginMenu.Profile"
+                     Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                     Icon="Pencil" />
+
+    <fa:ImageAwesome x:Key="HastiUI.Menus.UserLoginMenu.Signout"
+                     Foreground="{StaticResource HastiUI.SolidColorBrushes.RedShell}"
+                     Icon="SignOut" />
+
+    <fa:ImageAwesome x:Key="EyesGuard.StartProtecting"
+                     Foreground="#FFBEFFD8"
+                     Icon="Shield" />
+
+    <fa:ImageAwesome x:Key="EyesGuard.StopProtecting"
+                     Foreground="#FFFFC0BE"
+                     Icon="Shield" />
+
+    <fa:ImageAwesome x:Key="EyesGuard.Settings"
+                     Foreground="#FFBABABA"
+                     Icon="Cog" />
+
+    <fa:ImageAwesome x:Key="EyesGuard.QuestionMark"
+                     Foreground="#FF1199DD"
+                     Icon="QuestionCircle" />
+
+
+
+</ResourceDictionary>

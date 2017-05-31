@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Strings">
+
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.Protected">در حال محافظت</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.NotProtected">متوقف شده</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.PausedProtected">موقتا متوقف شده</sys:String>
+
+   
+
+
+
+</ResourceDictionary>

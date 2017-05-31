@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EyesGuard")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Eyes Guard")]
+[assembly: AssemblyDescription("This application protects your eyes from looking a long time to your monitor or laptop screen")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EyesGuard")]
+[assembly: AssemblyCompany("Aryan Software")]
+[assembly: AssemblyProduct("Eyes Guard")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

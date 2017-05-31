@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Strings.Application.OSTitle">نگهبان چشم</sys:String>
+    <sys:String x:Key="Strings.Application.HeaderTitle">نگهبان چشم</sys:String>
+
+    <sys:String x:Key="Strings.Application.NoLoginImplemented">در نرم افزار نگهبان چشم امکانات مربوط به کاربران متفاوت تعبیه نشده است</sys:String>
+
+    <sys:String x:Key="Strings.Application.Help">
+        برای دریافت توضیح و اطلاعات در مورد عناصر برنامه، ماوس خود را روی عنصر مورد نظر نگه دارید. در صورت وجود توضیحات، راهنمای عنصر به صورت پیام در کنار آن ظاهر خواهد شد
+    </sys:String>
+
+    <sys:String x:Key="Strings.Application.Resources" xml:space="preserve">
+      - مقاله موجود در صفحه مطالب مرتبط: وبسایت تبیان
+      - آیکون های نرم افزار: FontAwesome و IconArchive        
+      - رابط کاربری: کیت رابط کاربری هستی (توسعه داده شده توسط آرین نرم‌افزار)
+    </sys:String>
+
+    <sys:String x:Key="Strings.Application.About" xml:space="preserve">
+      نرم افزار نگهبان چشم
+      
+        نسخه: 0.9.9
+        برنامه نویسی و طراحی: آرین ابراهیم پور
+        تاریخ انتشار: 10 خرداد 1396
+        وبسایت: aryan-pc.blog.ir
+        ایمیل: aryanebrahimpour@gmail.com
+    </sys:String>
+
+</ResourceDictionary>

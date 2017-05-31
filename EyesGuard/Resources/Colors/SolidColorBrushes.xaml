@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Colors">
+
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.AshGray" Color="{StaticResource HastiUI.SolidColor.AshGray}" />
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.ParkGreen" Color="{StaticResource HastiUI.SolidColor.ParkGreen}"/>
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.LowGreen" Color="{StaticResource HastiUI.SolidColor.LowGreen}" />
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.LightAwesomeBlue" Color="{StaticResource HastiUI.SolidColor.LightAwesomeBlue}" />
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.DarkAwesomeBlue" Color="{StaticResource HastiUI.SolidColor.DarkAwesomeBlue}"/>
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.LightBorderBlue" Color="{StaticResource HastiUI.SolidColor.LightAwesomeBlue}"/>
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.SandOrange" Color="{StaticResource HastiUI.SolidColor.SandOrange}"/>
+    <SolidColorBrush x:Key="HastiUI.SolidColorBrushes.RedShell" Color="{StaticResource HastiUI.SolidColor.RedShell}"/>
+
+</ResourceDictionary>

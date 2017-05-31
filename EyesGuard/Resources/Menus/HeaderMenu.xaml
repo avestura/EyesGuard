@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="EyesGuard.Resources.Menus.HeaderMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" FlowDirection="RightToLeft"
+             mc:Ignorable="d">
+    <Menu Background="Transparent"
+          FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+          FontSize="10">
+        <MenuItem Header="نگهبان">
+            <MenuItem Header="صفحه اصلی" Click="GoToMainPage_Click"  />
+            <Separator />
+            <MenuItem Header="شروع نگهبانی" Visibility="Collapsed" />
+            <MenuItem Header="توقف برای...">
+                <MenuItem Header="پنج دقیقه" Click="FiveMinutesPause_Click" />
+                <MenuItem Header="ده دقیقه" Click="TenMinutesPause_Click" />
+                <MenuItem Header="نیم ساعت" Click="ThirtyMinutesPause_Click" />
+                <MenuItem Header="یک ساعت" Click="OneHourPause_Click" />
+                <MenuItem Header="دو ساعت" Click="TwoHourPause_Click"/>
+                <Separator />
+                <MenuItem Header="دلخواه..." Click="CustomPause_Click" />
+            </MenuItem>
+
+            <Separator />
+            <MenuItem Header="پنهان‌سازی نرم افزار" Click="HideApp_Click" />
+            <Separator />
+            <MenuItem Header="خروج" Click="ApplicationExit_Click"/>
+        </MenuItem>
+        
+   
+        <MenuItem Header="ابزار ها">
+            <MenuItem Header="آمار" Click="GoToStatictictsPage_Click" />
+            <MenuItem Header="تقویت چشم" Click="GoToEyeSightImprove_Click" Visibility="Collapsed"/>
+            <MenuItem Header="مطالب مرتبط" Click="GoToEyeContentPage_Click" />
+            <Separator />
+            <MenuItem Header="تنظیمات" Click="GoToSettingsPage_Click" Icon="{StaticResource EyesGuard.Settings}"/>
+        </MenuItem>
+        <MenuItem Header="نمایش">
+            <MenuItem Header="زمان های کلیدی" Click="ShowHideTimeRemaining_Click" IsCheckable="True" IsChecked="{Binding IsTimeItemChecked}" StaysOpenOnClick="True" />
+        </MenuItem>
+        <MenuItem Header="راهنما">
+            <MenuItem Header="راهنمای نرم افزار"  Icon="{StaticResource EyesGuard.QuestionMark}" Click="Help_Click" />
+            <MenuItem Header="منابع" Click="Resources_Click" />
+            <Separator />
+            <MenuItem Header="درباره سازنده" Click="MenuItem_Click" />
+
+        </MenuItem>
+    </Menu>
+</UserControl>

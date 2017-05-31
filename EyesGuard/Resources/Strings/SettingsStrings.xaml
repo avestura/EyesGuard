@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Strings">
+
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.TimeSection">تنظیمات زمانی</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.UserSection">تنظیمات کاربری</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Stats">آمار</sys:String>
+
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.ShortGap">فاصله زمانی بین دو استراحت کوتاه:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.LongGap">فاصله زمانی بین دو استراحت بلند:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ShortDuration">مدت زمان استراحت کوتاه:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.LongDuration">مدت زمان استراحت بلند:</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.HourAnd">ساعت و</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.MinutesAnd">دقیقه و</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.Second">ثانیه</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.ForceUser">مرا مجبور به استراحت کن</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.OnlyOneShortBreak">بین هر دو استراحت بلند مدت، تنها یک بار استراحت کوتاه مدت را نشان بده</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.StartupApplication">نرم‌افزار به طور خودکار با اجرای ویندوز اجرا شود</sys:String>
+
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.StoreStats">داده های آماری را ذخیره کن</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStatsText">تاریخچه داده های آماری مرا پاک کن:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStats">پاک سازی داده ها</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.SaveSettings">ذخیره تغییرات</sys:String>
+
+
+</ResourceDictionary>

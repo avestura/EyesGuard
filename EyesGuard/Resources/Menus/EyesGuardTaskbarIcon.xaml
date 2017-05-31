@@ -1,0 +1,52 @@
+﻿<ResourceDictionary x:Class="EyesGuard.Resources.Menus.EyesGuardTaskbarIcon"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Menus" xmlns:nf="http://www.hardcodet.net/taskbar">
+
+
+    <nf:TaskbarIcon x:Key="App.GlobalTaskbarIcon" FlowDirection="RightToLeft"
+                    IconSource="{Binding Source}" ContextMenuOpening="TaskbarIcon_ContextMenuOpening"
+                    TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick" Visibility="Visible">
+
+        <nf:TaskbarIcon.ContextMenu>
+            <ContextMenu FlowDirection="RightToLeft" FontFamily="{StaticResource HastiUI.Fonts.Samim}">
+
+                <MenuItem StaysOpenOnClick="True" Margin="-2 -2 -2 2">
+                    <MenuItem.Template>
+                        <ControlTemplate>
+                            <Grid Loaded="Grid_Loaded" Margin="0" Background="{Binding LowBrush}">
+                                <Grid.RowDefinitions >
+                                    <RowDefinition Height="5" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid Background="{Binding DarkBrush}" Grid.Row="0"/>
+                                <fa:ImageAwesome Margin="0 20 0 10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Icon="Shield" Foreground="{Binding DarkBrush}" Height="50" />
+                                <TextBlock Grid.Row="2" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 10" Foreground="{Binding DarkBrush}" Text="{Binding Title}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </MenuItem.Template>
+                </MenuItem>
+                <MenuItem Header="نمایش نرم افزار" Click="TaskbarIcon_TrayMouseDoubleClick"/>
+                <Separator />
+                <MenuItem Header="شروع نگهبانی" Click="StartProtect_Click" Visibility="{Binding StartProtectVisibility}" Icon="{StaticResource EyesGuard.StartProtecting}"/>
+                <MenuItem Header="توقف نگهبانی" Click="StopProtect_Click" Visibility="{Binding StopProtectVisibility}" Icon="{StaticResource EyesGuard.StopProtecting}"/>
+                <MenuItem Header="توقف به مدت">
+                    <MenuItem Header="پنج دقیقه" Click="FiveMinutesPause_Click" />
+                    <MenuItem Header="ده دقیقه" Click="TenMinutesPause_Click" />
+                    <MenuItem Header="نیم ساعت" Click="ThirtyMinutesPause_Click" />
+                    <MenuItem Header="یک ساعت" Click="OneHourPause_Click" />
+                    <MenuItem Header="دو ساعت" Click="TwoHourPause_Click"/>
+                    <Separator />
+                    <MenuItem Header="دلخواه..." Click="CustomPause_Click" />
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="تنظیمات" Click="Settings_Click"/>
+                <Separator />
+                <MenuItem Header="خروج" Click="Exit_Click"/>
+            </ContextMenu>
+        </nf:TaskbarIcon.ContextMenu>
+    </nf:TaskbarIcon>
+
+</ResourceDictionary>

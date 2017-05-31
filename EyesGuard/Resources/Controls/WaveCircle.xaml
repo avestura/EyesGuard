@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="EyesGuard.Resources.Controls.WaveCircle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EyesGuard.Resources.Controls" 
+             mc:Ignorable="d" Loaded="UserControl_Loaded"
+            >
+    <Ellipse Loaded="MainEllipse_Loaded" x:Name="MainEllipse" Width="10" Height="10" Stroke="White" />
+</UserControl>

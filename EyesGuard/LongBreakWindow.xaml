@@ -1,0 +1,18 @@
+﻿<Window x:Class="EyesGuard.LongBreakWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:fa="http://schemas.fontawesome.io/icons/" FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" AllowsTransparency="True" FlowDirection="RightToLeft"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" WindowStartupLocation="CenterScreen"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" WindowStyle="None"
+        xmlns:local="clr-namespace:EyesGuard" WindowState="Maximized" Topmost="True" Closing="Window_Closing"
+        mc:Ignorable="d" ShowInTaskbar="False" Loaded="Window_Loaded"
+        Title="استراحت بلند" Height="450" Width="600" Background="#E5000000">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <fa:ImageAwesome  Foreground="#FF1A9F55" Icon="Shield" Height="120" />
+            <TextBlock FontSize="20" Margin="10 10 10 0" Foreground="#FF1A9F55" Text="{StaticResource Strings.EyesGuard.LongWindow.Message}"/>
+            <TextBlock FontSize="17" Margin="10 5" Foreground="#FF53F098" Text="{Binding TimeRemaining}" TextAlignment="Center"/>
+            <Button Click="CloseLongBreak_Click" Margin="0 10 0 0" Visibility="{Binding CanCancel}" Width="200" Padding="0 5" Content="بیخیال" Style="{DynamicResource ButtonTemplate.Green}"/>
+        </StackPanel>
+    </Grid>
+</Window>
