@@ -7,6 +7,8 @@ Windows Application for protecting you eyes
 
 #### Created by [@Aryanium](https://github.com/AryanShadowhunter)
 
+#### Under Licence of Creative-Commons BY-SA-NC
+
 ---
 
 # Features
