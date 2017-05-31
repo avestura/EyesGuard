@@ -16,6 +16,7 @@
       - مقاله موجود در صفحه مطالب مرتبط: وبسایت تبیان
       - آیکون های نرم افزار: FontAwesome و IconArchive        
       - رابط کاربری: کیت رابط کاربری هستی (توسعه داده شده توسط آرین نرم‌افزار)
+      - فونت ایران سنس خریداری شده از سایت fontiran.com
     </sys:String>
 
     <sys:String x:Key="Strings.Application.About" xml:space="preserve">
