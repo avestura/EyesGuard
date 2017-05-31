@@ -10,7 +10,7 @@
                     TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick" Visibility="Visible">
 
         <nf:TaskbarIcon.ContextMenu>
-            <ContextMenu FlowDirection="RightToLeft" FontFamily="{StaticResource HastiUI.Fonts.Samim}">
+            <ContextMenu FlowDirection="RightToLeft" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
 
                 <MenuItem StaysOpenOnClick="True" Margin="-2 -2 -2 2">
                     <MenuItem.Template>

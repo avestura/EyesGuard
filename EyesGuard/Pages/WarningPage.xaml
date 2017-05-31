@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:fa="http://schemas.fontawesome.io/icons/"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" FlowDirection="RightToLeft"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
       xmlns:local="clr-namespace:EyesGuard.Pages" Loaded="Page_Loaded" x:Name="page"
       mc:Ignorable="d"  Background="#FF006A9F"
       d:DesignHeight="450" d:DesignWidth="550"

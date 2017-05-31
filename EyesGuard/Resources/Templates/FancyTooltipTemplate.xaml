@@ -15,7 +15,7 @@
                         <Border.BorderBrush>
                             <SolidColorBrush Color="Gray" />
                         </Border.BorderBrush>
-                        <ContentPresenter TextBlock.FontFamily="{StaticResource HastiUI.Fonts.Samim}" Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <ContentPresenter TextBlock.FontFamily="{StaticResource HastiUI.Fonts.IRANSans}" Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasDropShadow" Value="true">

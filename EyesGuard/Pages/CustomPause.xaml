@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:c="clr-namespace:EyesGuard.Resources.Controls" FlowDirection="RightToLeft"
-      xmlns:local="clr-namespace:EyesGuard.Pages" FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+      xmlns:local="clr-namespace:EyesGuard.Pages" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="توقف دلخواه"
       d:DesignHeight="450" d:DesignWidth="550" Background="#FF006A9F"
       Loaded="Page_Loaded" mc:Ignorable="d">

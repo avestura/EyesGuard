@@ -7,7 +7,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" FlowDirection="RightToLeft"
              mc:Ignorable="d">
     <Menu Background="Transparent"
-          FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+          FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
           FontSize="10">
         <MenuItem Header="نگهبان">
             <MenuItem Header="صفحه اصلی" Click="GoToMainPage_Click"  />

@@ -6,7 +6,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       Title="۱۰ روش رفع خستگی و تقویت چشم ها" d:DesignWidth="600" Background="#FF006A9F"
       FlowDirection="RightToLeft"
-      FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+      FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
       Loaded="Page_Loaded" mc:Ignorable="d">
 
     <Grid Margin="10">

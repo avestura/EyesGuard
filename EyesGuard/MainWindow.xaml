@@ -8,7 +8,7 @@
         Width="1000" Height="600" MinWidth="550"
         MinHeight="450" AllowsTransparency="True" Closing="Window_Closing"
         FlowDirection="RightToLeft"
-        FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+        FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
         Loaded="Window_Loaded" ResizeMode="CanResize" StateChanged="Window_StateChanged"
         WindowStartupLocation="CenterScreen" WindowStyle="None" mc:Ignorable="d">
     <WindowChrome.WindowChrome>

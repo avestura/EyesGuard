@@ -5,7 +5,7 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
     <Menu VerticalAlignment="Center" Background="Transparent" FlowDirection="LeftToRight"
-          FontFamily="{StaticResource HastiUI.Fonts.Samim}">
+          FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
         <MenuItem FontSize="15">
             <MenuItem.Header>
 

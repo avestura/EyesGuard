@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="استراحت کوتاه"
         Width="800" Height="200" AllowsTransparency="True" ShowInTaskbar="False"
         Background="#E5000000" FlowDirection="RightToLeft" WindowStartupLocation="CenterScreen"
-        FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+        FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
         Topmost="True" WindowStyle="None" mc:Ignorable="d">
     <Grid>
 

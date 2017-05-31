@@ -1,6 +1,6 @@
 ﻿<Window x:Class="EyesGuard.LongBreakWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:fa="http://schemas.fontawesome.io/icons/" FontFamily="{StaticResource HastiUI.Fonts.Samim}"
+        xmlns:fa="http://schemas.fontawesome.io/icons/" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" AllowsTransparency="True" FlowDirection="RightToLeft"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" WindowStartupLocation="CenterScreen"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" WindowStyle="None"
