@@ -11,7 +11,7 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://aryan-pc.blog.ir"/>
     <ROW Property="Manufacturer" Value="Aryan Software"/>
-    <ROW Property="ProductCode" Value="1033:{723D4E39-73E9-4F33-999B-7BA3E5B3CD6D} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{B72B068D-D674-4E3A-81A9-9685E5A440A5} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Eyes Guard"/>
     <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>

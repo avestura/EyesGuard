@@ -80,7 +80,8 @@ namespace EyesGuard
 
         #region Config :: Constants
         private const  string fileName = "App.Config.Xml";
-        private static string path     = AppDomain.CurrentDomain.BaseDirectory + Path.DirectorySeparatorChar + fileName;
+        private static string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "//Aryan Software//Eyes Guard//";
+        private static string path     = directory + fileName;
         #endregion
 
         #region Config :: Constructor
@@ -92,9 +93,17 @@ namespace EyesGuard
 
         #region Config :: Hard Operations
 
+        public static void InitializeLocalFolder()
+        {
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+        }
+
         public void SaveSettingsToFile()
         {
-
+            
 
             XmlSerializer xsSubmit = new XmlSerializer(typeof(Config));
             var xml = "";

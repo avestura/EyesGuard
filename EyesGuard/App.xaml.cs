@@ -119,6 +119,7 @@ namespace EyesGuard
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fa-IR");
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("fa-IR");
 
+            Config.InitializeLocalFolder();
             Config.LoadSettingsFromFile();
 
             // Ignore paused protecting state
@@ -581,42 +582,7 @@ namespace EyesGuard
 
         #region Application :: Utilities
 
-        public static void SetStartUp(bool enable)
-        {
-            try
-            {
-
-                string runKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-                string appPath = $"\"{Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\EyesGuard.exe\" /auto";
-                string appName = "EyesGuard";
-
-                Microsoft.Win32.RegistryKey startupKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(runKey, true);
-
-                if (enable)
-                {
-                    if (startupKey.GetValue(appName) == null)
-                    {
-                        startupKey.Close();
-                        startupKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(runKey, true);
-                        // Add startup reg key
-                        startupKey.SetValue(appName, appPath);
-                        startupKey.Close();
-                    }
-                }
-                else
-                {
-                    // remove startup
-                    startupKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(runKey, true);
-                    startupKey.DeleteValue(appName, false);
-                    startupKey.Close();
-                }
-        }
-            catch (Exception e) {
-         
-                    MessageBox.Show(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), e.Message.ToString());
- 
-            }
-        }
+   
 
         #endregion
 
