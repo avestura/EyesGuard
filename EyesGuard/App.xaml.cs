@@ -206,7 +206,7 @@ namespace EyesGuard
             }
         }
 
-        private async void ShortBreakHandler_Tick(object sender, EventArgs e)
+        private void ShortBreakHandler_Tick(object sender, EventArgs e)
         {
             if (!IsProtectionPaused)
             {
@@ -215,138 +215,175 @@ namespace EyesGuard
 
                 if ((int)NextShortBreak.TotalSeconds == 0)
                 {
-                    ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
-
-                    NextShortBreak = App.GlobalConfig.ShortBreakGap;
-                    ShortBreakShownOnce = true;
-                    var shortWindow = new ShortBreakWindow()
-                    {
-                        DataContext = ShortBreakViewModel
-                    };
-                    ShortBreakVisibleTime = App.GlobalConfig.ShortBreakDuration;
-                    ShortBreakViewModel.TimeRemaining = ((int)ShortBreakVisibleTime.TotalSeconds).ToString();
-                    ShortBreakViewModel.ShortMessage = GetShortWindowMessage();
-                    try
-                    {
-                        await shortWindow.ShowUsingLinearAnimationAsync();
-                        shortWindow.Show();
-                        shortWindow.BringIntoView();
-                        shortWindow.Focus();
-                    }
-                    catch { }
-          
-                    ShortDurationCounter.Start();
-
-                    ShortBreakHandler.Stop();
-                    LongBreakHandler.Stop();
+                    StartShortBreak();
                 }
             }
 
         }
 
-        private async void LongBreakHandler_Tick(object sender, EventArgs e)
+        public async void StartShortBreak()
+        {
+            ShortBreakHandler.Stop();
+            LongBreakHandler.Stop();
+
+            App.HeaderMenuViewModel.ManualBreakEnabled = false;
+            ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
+
+            NextShortBreak = App.GlobalConfig.ShortBreakGap;
+            ShortBreakShownOnce = true;
+            var shortWindow = new ShortBreakWindow()
+            {
+                DataContext = ShortBreakViewModel
+            };
+            ShortBreakVisibleTime = App.GlobalConfig.ShortBreakDuration;
+            ShortBreakViewModel.TimeRemaining = ((int)ShortBreakVisibleTime.TotalSeconds).ToString();
+            ShortBreakViewModel.ShortMessage = GetShortWindowMessage();
+            try
+            {
+                await shortWindow.ShowUsingLinearAnimationAsync();
+                shortWindow.Show();
+                shortWindow.BringIntoView();
+                shortWindow.Focus();
+            }
+            catch { }
+
+            ShortDurationCounter.Start();
+
+            
+        }
+
+        private void LongBreakHandler_Tick(object sender, EventArgs e)
         {
             if (!IsProtectionPaused)
             {
                 NextLongBreak = NextLongBreak.Subtract(TimeSpan.FromSeconds(1));
                 UpdateLongTimeString();
 
+                if(App.GlobalConfig.AlertBeforeLongBreak && (int)NextLongBreak.TotalSeconds == 60)
+                {
+                    App.TaskbarIcon.ShowBalloonTip(App.Current.FindResource("Strings.EyesGuard.LongBreakAlert.Title").ToString(), App.Current.FindResource("Strings.EyesGuard.LongBreakAlert.Message").ToString(), BalloonIcon.Info);
+                }
+
                 if ((int)NextLongBreak.TotalSeconds == 0)
                 {
 
-                    ShortLongBreakTimeRemainingViewModel.NextLongBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
-
-                    NextShortBreak = App.GlobalConfig.ShortBreakGap;
-                    NextLongBreak = App.GlobalConfig.LongBreakGap;
-
-                    var longWindow = new LongBreakWindow()
-                    {
-                        DataContext = LongBreakViewModel
-                    };
-                    LongBreakVisibleTime = App.GlobalConfig.LongBreakDuration;
-                    LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " ساعت و " + LongBreakVisibleTime.Minutes + " دقیقه و " + LongBreakVisibleTime.Seconds + " ثانیه تا پایان استراحت بلند";
-                    LongBreakViewModel.CanCancel = (GlobalConfig.ForceUserToBreak) ? Visibility.Collapsed : Visibility.Visible;
-
-                    if (CurrentShortBreakWindow != null)
-                    {
-                        ((ShortBreakWindow)CurrentShortBreakWindow).LetItClose = true;
-                        CurrentShortBreakWindow.Close();
-                        CurrentShortBreakWindow = null;
-                    }
-                    ShortDurationCounter.Stop();
-                    await longWindow.ShowUsingLinearAnimationAsync();
-                    longWindow.Show();
-                    longWindow.BringIntoView();
-                    longWindow.Focus();
-                    
-                    LongDurationCounter.Start();
-
-                    ShortBreakHandler.Stop();
-                    LongBreakHandler.Stop();
+                    StartLongBreak();
                 }
             }
 
       
+        }
+
+        public async void StartLongBreak()
+        {
+
+            ShortBreakHandler.Stop();
+            LongBreakHandler.Stop();
+            App.HeaderMenuViewModel.ManualBreakEnabled = false;
+            ShortLongBreakTimeRemainingViewModel.NextLongBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
+
+            NextShortBreak = App.GlobalConfig.ShortBreakGap;
+            NextLongBreak = App.GlobalConfig.LongBreakGap;
+
+            var longWindow = new LongBreakWindow()
+            {
+                DataContext = LongBreakViewModel
+            };
+            LongBreakVisibleTime = App.GlobalConfig.LongBreakDuration;
+            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " ساعت و " + LongBreakVisibleTime.Minutes + " دقیقه و " + LongBreakVisibleTime.Seconds + " ثانیه تا پایان استراحت بلند";
+            LongBreakViewModel.CanCancel = (GlobalConfig.ForceUserToBreak) ? Visibility.Collapsed : Visibility.Visible;
+
+            if (CurrentShortBreakWindow != null)
+            {
+                ((ShortBreakWindow)CurrentShortBreakWindow).LetItClose = true;
+                CurrentShortBreakWindow.Close();
+                CurrentShortBreakWindow = null;
+            }
+            ShortDurationCounter.Stop();
+            await longWindow.ShowUsingLinearAnimationAsync();
+            longWindow.Show();
+            longWindow.BringIntoView();
+            longWindow.Focus();
+
+            LongDurationCounter.Start();
+
         }
 
         #endregion
 
         #region Application :: Timing and Control :: During Rest
 
-        private async void ShortDurationCounter_Tick(object sender, EventArgs e)
+        private void ShortDurationCounter_Tick(object sender, EventArgs e)
         {
             ShortBreakVisibleTime = ShortBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
             ShortBreakViewModel.TimeRemaining = ((int)ShortBreakVisibleTime.TotalSeconds).ToString();
             if ((int)ShortBreakVisibleTime.TotalSeconds == 0)
             {
-                if (GlobalConfig.SaveStats)
-                {
-                    GlobalConfig.ShortBreaksCompleted++;
-                    UpdateStats();
-                }
-      
-                ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Waiting").ToString();
-
-                await CurrentShortBreakWindow.HideUsingLinearAnimationAsync();
-                if(CurrentShortBreakWindow != null)
-                {
-                    ((ShortBreakWindow)CurrentShortBreakWindow).LetItClose = true;
-                    CurrentShortBreakWindow.Close();
-                    CurrentShortBreakWindow = null;
-                }
-                if (!App.GlobalConfig.OnlyOneShortBreak && GlobalConfig.ProtectionState == GuardStates.Protecting)
-                {
-                    ShortBreakHandler.Start();
-                
-                }
-                LongBreakHandler.Start();
-                ShortDurationCounter.Stop();
+                EndShortBreak();
             }
         }
 
-        private async void LongDurationCounter_Tick(object sender, EventArgs e)
+        private async void EndShortBreak()
+        {
+
+            
+            if (GlobalConfig.SaveStats)
+            {
+                GlobalConfig.ShortBreaksCompleted++;
+                UpdateStats();
+            }
+
+            ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Waiting").ToString();
+
+            await CurrentShortBreakWindow.HideUsingLinearAnimationAsync();
+            if (CurrentShortBreakWindow != null)
+            {
+                ((ShortBreakWindow)CurrentShortBreakWindow).LetItClose = true;
+                CurrentShortBreakWindow.Close();
+                CurrentShortBreakWindow = null;
+            }
+            if (!App.GlobalConfig.OnlyOneShortBreak && GlobalConfig.ProtectionState == GuardStates.Protecting)
+            {
+                ShortBreakHandler.Start();
+
+            }
+            LongBreakHandler.Start();
+            ShortDurationCounter.Stop();
+
+            HeaderMenuViewModel.ManualBreakEnabled = true;
+        }
+
+        private void LongDurationCounter_Tick(object sender, EventArgs e)
         {
             LongBreakVisibleTime = LongBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
             LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " ساعت و " + LongBreakVisibleTime.Minutes + " دقیقه و " + LongBreakVisibleTime.Seconds + " ثانیه تا پایان استراحت بلند";
             if ((int)LongBreakVisibleTime.TotalSeconds == 0)
             {
-                ((LongBreakWindow)CurrentLongBreakWindow).LetItClose = true;
-                if (GlobalConfig.SaveStats)
-                {
-                    GlobalConfig.LongBreaksCompleted++;
-                    UpdateStats();
-                }
-                await CurrentLongBreakWindow.HideUsingLinearAnimationAsync();
-                CurrentLongBreakWindow.Close();
-                CurrentLongBreakWindow = null;
-                ShortBreakShownOnce = false;
-                if(GlobalConfig.ProtectionState == GuardStates.Protecting)
-                {
-                    ShortBreakHandler.Start();
-                    LongBreakHandler.Start();
-                }
-                LongDurationCounter.Stop();
+                EndLongBreak();
             }
+        }
+
+        private async void EndLongBreak()
+        {
+            
+            ((LongBreakWindow)CurrentLongBreakWindow).LetItClose = true;
+            if (GlobalConfig.SaveStats)
+            {
+                GlobalConfig.LongBreaksCompleted++;
+                UpdateStats();
+            }
+            await CurrentLongBreakWindow.HideUsingLinearAnimationAsync();
+            CurrentLongBreakWindow.Close();
+            CurrentLongBreakWindow = null;
+            ShortBreakShownOnce = false;
+            if (GlobalConfig.ProtectionState == GuardStates.Protecting)
+            {
+                ShortBreakHandler.Start();
+                LongBreakHandler.Start();
+            }
+            LongDurationCounter.Stop();
+
+            App.HeaderMenuViewModel.ManualBreakEnabled = true;
         }
 
         #endregion

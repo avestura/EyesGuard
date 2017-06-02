@@ -14,7 +14,7 @@
     <ROW Property="ProductCode" Value="1033:{723D4E39-73E9-4F33-999B-7BA3E5B3CD6D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Eyes Guard"/>
-    <ROW Property="ProductVersion" Value="0.9.9" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{38C16C1C-F015-48C7-87B1-E27D444EC021}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

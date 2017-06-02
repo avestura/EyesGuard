@@ -12,7 +12,7 @@
         <nf:TaskbarIcon.ContextMenu>
             <ContextMenu FlowDirection="RightToLeft" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
 
-                <MenuItem StaysOpenOnClick="True" Margin="-2 -2 -2 2">
+                <MenuItem StaysOpenOnClick="True" Margin="-3 -3 -3 2">
                     <MenuItem.Template>
                         <ControlTemplate>
                             <Grid Loaded="Grid_Loaded" Margin="0" Background="{Binding LowBrush}">
@@ -21,9 +21,16 @@
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
-                                <Grid Background="{Binding DarkBrush}" Grid.Row="0"/>
-                                <fa:ImageAwesome Margin="0 20 0 10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Icon="Shield" Foreground="{Binding DarkBrush}" Height="50" />
-                                <TextBlock Grid.Row="2" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 10" Foreground="{Binding DarkBrush}" Text="{Binding Title}" />
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="2" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.ColumnSpan="3" Background="{Binding DarkBrush}" Grid.Row="0"/>
+                                <Grid Grid.Column="0" Grid.RowSpan="3" Background="{Binding DarkBrush}" />
+                                <Grid Grid.Column="2" Grid.RowSpan="3" Background="{Binding DarkBrush}" />
+                                <fa:ImageAwesome Margin="0 20 0 10" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Icon="Shield" Foreground="{Binding DarkBrush}" Height="50" />
+                                <TextBlock Grid.Row="2" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 10" Grid.Column="1" Foreground="{Binding DarkBrush}" Text="{Binding Title}" />
                             </Grid>
                         </ControlTemplate>
                     </MenuItem.Template>

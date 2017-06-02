@@ -60,4 +60,8 @@
     <sys:String x:Key="Strings.EyesGuard.LongWindow.Message">وقت استراحت بلند مدت رسیده. بهتره که بری و یه دوری بزنی.</sys:String>
 
 
+    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Title">یک دقیقه تا استراحت بلند</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Message">تنها یک دقیقه تا استراحت بلند مدت باقی مانده است. در صورت تمایل با استفاده از گزینه توقف موقت میتوانید استراحت را به تعویق بیندازید</sys:String>
+
+
 </ResourceDictionary>

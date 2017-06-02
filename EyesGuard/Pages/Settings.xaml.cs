@@ -52,6 +52,7 @@ namespace EyesGuard.Pages
             forceUserCheckbox.IsChecked = App.GlobalConfig.ForceUserToBreak;
             onlyOneShortbreakCheckbox.IsChecked = App.GlobalConfig.OnlyOneShortBreak;
             storeStatsCheckbox.IsChecked = App.GlobalConfig.SaveStats;
+            alertBeforeLongbreak.IsChecked = App.GlobalConfig.AlertBeforeLongBreak;
             //startupCheckbox.IsChecked = App.GlobalConfig.RunAtStartUp;
 
         }
@@ -160,6 +161,7 @@ namespace EyesGuard.Pages
                     App.GlobalConfig.ForceUserToBreak = forceUserCheckbox.IsChecked.Value;
                     App.GlobalConfig.SaveStats = storeStatsCheckbox.IsChecked.Value;
                     App.GlobalConfig.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
+                    App.GlobalConfig.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     //App.GlobalConfig.RunAtStartUp = startupCheckbox.IsChecked.Value;
 
                     App.GlobalConfig.SaveSettingsToFile();

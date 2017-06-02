@@ -154,28 +154,29 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="15" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Border Grid.RowSpan="5" Grid.Column="0" Margin="3,-0.5,0,0"
+                    <Border Grid.RowSpan="6" Grid.Column="0" Margin="3,-0.5,0,0"
                             BorderBrush="White" BorderThickness="0,0,2,0" FlowDirection="LeftToRight" />
 
-                    <StackPanel Grid.Row="1" Grid.Column="2" Margin="5"
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="5"
                                 Orientation="Horizontal">
                         <CheckBox x:Name="forceUserCheckbox" VerticalAlignment="Center"
                                   Content="{StaticResource Strings.EyesGuard.Settings.ForceUser}"
                                   Foreground="White"
                                   Style="{DynamicResource WhiteCheckbox}" >
                             <CheckBox.ToolTip>
-                                <TextBlock Foreground="#FF464646">در صورتی که این گزینه فعال باشد، شما قادر به <Bold>لغو</Bold>، <Bold>خروج</Bold> و یا <Bold>تعویق</Bold> استراحت نخواهید بود. همچنین اشاره‌گر ماوس شما نیز پنهان خواهد شد.</TextBlock>
+                                <TextBlock Foreground="#FF464646">در صورتی که این گزینه فعال باشد، شما قادر به <Bold>لغو</Bold> و یا <Bold>خروج</Bold> از استراحت نخواهید بود. همچنین اشاره‌گر ماوس شما نیز پنهان خواهد شد.</TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
                     </StackPanel>
 
-                    <StackPanel Grid.Row="2" Grid.Column="2" Margin="5"
+                    <StackPanel Grid.Row="2" Grid.Column="1" Margin="5"
                                 Orientation="Horizontal">
                         <CheckBox x:Name="onlyOneShortbreakCheckbox" VerticalAlignment="Center"
                                   Content="{StaticResource Strings.EyesGuard.Settings.OnlyOneShortBreak}"
@@ -190,7 +191,19 @@
                         </CheckBox>
 
                     </StackPanel>
-                    
+
+                    <StackPanel Grid.Row="3" Grid.Column="1" Margin="5"
+                                Orientation="Horizontal">
+                        <CheckBox x:Name="alertBeforeLongbreak" VerticalAlignment="Center"
+                                  Content="{StaticResource Strings.EyesGuard.Settings.AlertBeforeLongBreak}"
+                                  Foreground="White"
+                                  Style="{DynamicResource WhiteCheckbox}" >
+                            <CheckBox.ToolTip>
+                                <TextBlock Foreground="#FF464646">نرم افزار یک دقیقه قبل از استراحت بلند به شما اطلاع خواهد داد تا در صورت نیاز استراحت را به تعویق بیندازید</TextBlock>
+                            </CheckBox.ToolTip>
+                        </CheckBox>
+                    </StackPanel>
+
                     <!--<StackPanel Grid.Row="3" Grid.Column="2" Margin="5"
                                 Orientation="Horizontal">
                         <CheckBox x:Name="startupCheckbox" VerticalAlignment="Center"

@@ -15,7 +15,7 @@ namespace EyesGuard
         #region Config :: Fields :: Internal
         GuardStates _protectionState = GuardStates.Protecting;
         bool _keyTimeVisible = true;
-        bool runAtStartup = true;
+        bool runAtStartup = false;
         #endregion
 
         #region Config :: Fields :: Public Properties
@@ -63,6 +63,7 @@ namespace EyesGuard
             set { LongBreakDuration = TimeSpan.Parse(value); }
         }
 
+        public bool       AlertBeforeLongBreak { get; set; } = true;
         public bool TrayNotificationSaidBefore { get; set; } = false;
         public bool        RunMinimized { get; set; } = false;
         public bool        ForceUserToBreak     { get; set; } = false;

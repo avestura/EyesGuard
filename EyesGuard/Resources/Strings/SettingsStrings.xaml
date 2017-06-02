@@ -21,6 +21,7 @@
     <sys:String x:Key="Strings.EyesGuard.Settings.ForceUser">مرا مجبور به استراحت کن</sys:String>
     <sys:String x:Key="Strings.EyesGuard.Settings.OnlyOneShortBreak">بین هر دو استراحت بلند مدت، تنها یک بار استراحت کوتاه مدت را نشان بده</sys:String>
     <sys:String x:Key="Strings.EyesGuard.Settings.StartupApplication">نرم‌افزار به طور خودکار با اجرای ویندوز اجرا شود</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.AlertBeforeLongBreak">یک دقیقه قبل از استراحت بلند به من اطلاع بده</sys:String>
 
 
     <sys:String x:Key="Strings.EyesGuard.Settings.StoreStats">داده های آماری را ذخیره کن</sys:String>

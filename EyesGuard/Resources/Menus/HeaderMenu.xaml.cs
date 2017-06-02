@@ -119,5 +119,15 @@ namespace EyesGuard.Resources.Menus
             App.ShowWarning(App.Current.FindResource("Strings.Application.About").ToString(), WarningPage.PageStates.About);
 
         }
+
+        private void StartShortBreak_Click(object sender, RoutedEventArgs e)
+        {
+            App.GetApp().StartShortBreak();
+        }
+
+        private void StartLongBreak_Click(object sender, RoutedEventArgs e)
+        {
+            App.GetApp().StartLongBreak();
+        }
     }
 }

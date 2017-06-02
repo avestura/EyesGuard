@@ -82,7 +82,7 @@ namespace EyesGuard
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             if (App.LaunchMinimized)
-                WindowState = WindowState.Minimized;
+                this.Hide();
             Config.LoadSettingsFromFile();
 
             //wc.Ellipse.Stroke = Brushes.DodgerBlue;

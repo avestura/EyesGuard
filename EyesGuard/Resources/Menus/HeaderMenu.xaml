@@ -37,6 +37,12 @@
             <Separator />
             <MenuItem Header="تنظیمات" Click="GoToSettingsPage_Click" Icon="{StaticResource EyesGuard.Settings}"/>
         </MenuItem>
+
+        <MenuItem Header="استراحت">
+            <MenuItem Header="استراحت کوتاه مدت" Click="StartShortBreak_Click" IsEnabled="{Binding ManualBreakEnabled}" />
+            <MenuItem Header="استراحت بلند مدت" Click="StartLongBreak_Click" IsEnabled="{Binding ManualBreakEnabled}" />
+        </MenuItem>
+        
         <MenuItem Header="نمایش">
             <MenuItem Header="زمان های کلیدی" Click="ShowHideTimeRemaining_Click" IsCheckable="True" IsChecked="{Binding IsTimeItemChecked}" StaysOpenOnClick="True" />
         </MenuItem>

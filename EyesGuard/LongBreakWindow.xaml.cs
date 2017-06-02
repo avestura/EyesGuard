@@ -48,6 +48,7 @@ namespace EyesGuard
                     App.LongBreakHandler.Start();
                 }
                 LongDurationCounter.Stop();
+                App.HeaderMenuViewModel.ManualBreakEnabled = true;
             }
             catch { }
         }

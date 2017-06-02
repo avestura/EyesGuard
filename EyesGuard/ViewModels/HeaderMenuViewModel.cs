@@ -21,6 +21,19 @@ namespace EyesGuard.ViewModels
             }
         }
 
+        private bool manualBreakEnabled = true;
+        public bool ManualBreakEnabled
+        {
+            get { return manualBreakEnabled; }
+            set
+            {
+                manualBreakEnabled = value;
+                OnPropertyChanged("ManualBreakEnabled");
+            }
+        }
+
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged(string propertyName)
