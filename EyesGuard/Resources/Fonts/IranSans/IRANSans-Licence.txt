@@ -14,4 +14,7 @@ IRAN Sans-serif fonts are considered a proprietary software. To gain information
 --------------------------------------------------------------------------------------
 
 فایل فونت ها به دلیل مسائل حقوقی در گیت هاب نشر داده نمیشود
-در هنگام کامپایل مجدد فونت ها را روی فونت Samim تنظیم کنید
+در هنگام کامپایل مجدد فونت ها را روی فونت Samim تنظیم کنید\
+
+License Code for this project: CL2CE
+http://fontiran.com/licenses/?ltype=0&q=نگهبان+چشم

@@ -307,5 +307,8 @@
     <Resource Include="Resources\Images\NonVectorIcons\Sheild-Protecting.ico" />
     <Resource Include="Resources\Images\NonVectorIcons\Shield-Stopped.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\IranSans\FontLicense.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
