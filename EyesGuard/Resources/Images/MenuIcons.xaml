@@ -31,6 +31,10 @@
                      Foreground="#FF1199DD"
                      Icon="QuestionCircle" />
 
+    <fa:ImageAwesome x:Key="EyesGuard.Donate"
+                     Foreground="#F44242"
+                     Icon="Heart" />
+
 
 
 </ResourceDictionary>
