@@ -20,7 +20,7 @@ namespace EyesGuard
 
         #region Config :: Fields :: Public Properties
 
-        public GuardStates ProtectionState{
+        public GuardStates ProtectionState {
             get { return _protectionState; }
             set {
                 _protectionState = value;
@@ -31,16 +31,16 @@ namespace EyesGuard
         }
 
         [XmlIgnore]
-        public TimeSpan    ShortBreakGap        { get; set; } = new TimeSpan(0, 20, 0);
+        public TimeSpan ShortBreakGap { get; set; } = new TimeSpan(0, 20, 0);
 
         [XmlIgnore]
-        public TimeSpan    LongBreakGap         { get; set; } = new TimeSpan(1, 0, 0);
+        public TimeSpan LongBreakGap { get; set; } = new TimeSpan(1, 0, 0);
 
         [XmlIgnore]
-        public TimeSpan    ShortBreakDuration   { get; set; } = new TimeSpan(0, 0, 15);
+        public TimeSpan ShortBreakDuration { get; set; } = new TimeSpan(0, 0, 15);
 
         [XmlIgnore]
-        public TimeSpan    LongBreakDuration    { get; set; } = new TimeSpan(0, 5, 0);
+        public TimeSpan LongBreakDuration { get; set; } = new TimeSpan(0, 5, 0);
 
         public string ShortBreakGapString
         {
@@ -63,19 +63,21 @@ namespace EyesGuard
             set { LongBreakDuration = TimeSpan.Parse(value); }
         }
 
-        public bool       AlertBeforeLongBreak { get; set; } = true;
+        public bool AlertBeforeLongBreak { get; set; } = true;
         public bool TrayNotificationSaidBefore { get; set; } = false;
-        public bool        RunMinimized { get; set; } = false;
-        public bool        ForceUserToBreak     { get; set; } = false;
-        public bool        OnlyOneShortBreak    { get; set; } = false;
-        public bool        SaveStats            { get; set; } = true;
-        public bool        RunAtStartUp         { get { return runAtStartup; } set { runAtStartup = value; } }
-        public long        ShortBreaksCompleted { get; set; } = 0;
-        public long        LongBreaksCompleted  { get; set; } = 0;
-        public long        LongBreaksFailed     { get; set; } = 0;
-        public long        PauseCount { get; set; } = 0;
-        public long        StopCount { get; set; } = 0;
-        public bool        KeyTimesVisible      { get { return _keyTimeVisible; } set { _keyTimeVisible = value; UpdateKeyTimeVisible(); } }
+        public bool RunMinimized { get; set; } = false;
+        public bool ForceUserToBreak { get; set; } = false;
+        public bool OnlyOneShortBreak { get; set; } = false;
+        public bool SaveStats { get; set; } = true;
+        public bool RunAtStartUp { get { return runAtStartup; } set { runAtStartup = value; } }
+        public long ShortBreaksCompleted { get; set; } = 0;
+        public long LongBreaksCompleted { get; set; } = 0;
+        public long LongBreaksFailed { get; set; } = 0;
+        public long PauseCount { get; set; } = 0;
+        public long StopCount { get; set; } = 0;
+        public bool KeyTimesVisible { get { return _keyTimeVisible; } set { _keyTimeVisible = value; UpdateKeyTimeVisible(); } }
+        public ScalingType DpiScalingType { get; set; } = ScalingType.UseWindowsDPIScaling;
+        public ScalingSize DpiScalingFactor { get; set; } = ScalingSize.Unset;
         #endregion
 
         #region Config :: Constants
@@ -132,14 +134,14 @@ namespace EyesGuard
                 using (FileStream fileStream = new FileStream(path, FileMode.Open))
                 {
                     var stream = new StreamReader(fileStream, Encoding.UTF8);
-                    App.GlobalConfig = (Config)serializer.Deserialize(stream);
+                    App.Configuration = (Config)serializer.Deserialize(stream);
                 }
             }
             catch
             {
 
-                App.GlobalConfig = new Config();
-                App.GlobalConfig.SaveSettingsToFile();
+                App.Configuration = new Config();
+                App.Configuration.SaveSettingsToFile();
             }
 
 

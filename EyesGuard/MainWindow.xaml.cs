@@ -23,17 +23,16 @@ namespace EyesGuard
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
         
         private  void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            if(App.TaskbarIcon != null && !App.GlobalConfig.TrayNotificationSaidBefore)
+            if(App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
             {
                 App.TaskbarIcon.ShowBalloonTip("در حال اجرا", "نرم افزار همچنان در پشت زمینه در حال اجراست. برای استفاده از امکانات نرم افزار روی نماد سپر در نوار وظیفه راست کلیک کنید", Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
-                App.GlobalConfig.TrayNotificationSaidBefore = true;
-                App.GlobalConfig.SaveSettingsToFile();
+                App.Configuration.TrayNotificationSaidBefore = true;
+                App.Configuration.SaveSettingsToFile();
             }
             App.Hide();
 
@@ -81,6 +80,9 @@ namespace EyesGuard
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            App.SystemDpiFactor = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice.M11;
+            
+
             if (App.LaunchMinimized)
                 this.Hide();
             Config.LoadSettingsFromFile();
@@ -89,8 +91,25 @@ namespace EyesGuard
             //wc.Ellipse.Fill = Brushes.LightCyan;
 
 
+            if(App.UserScalingType == App.ScalingType.UseCutomScaling)
+            {
+                double userRequest = App.UserScalingFactor.ConvertToDouble();
+                double osRequest = App.SystemDpiFactor;
+
+                double ratio = userRequest / osRequest;
+
+                MainContainer.UserInterfaceCustomScale(ratio, false);
+
+                Width *= ratio; Height *= ratio;
+
+                this.BringWindowCenterScreen();
+            }
+
 
         }
+
+
+
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {

@@ -16,7 +16,7 @@
                       ResizeBorderThickness="10" UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>
 
-    <Grid>
+    <Grid x:Name="MainContainer">
         <Border BorderBrush="{StaticResource HastiUI.SolidColorBrushes.LightAwesomeBlue}" BorderThickness="1" />
         <Grid Margin="1">
             <Border BorderBrush="{StaticResource HastiUI.SolidColorBrushes.DarkAwesomeBlue}" BorderThickness="2" />

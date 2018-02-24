@@ -33,16 +33,16 @@ namespace EyesGuard
             try
             {
                 LetItClose = true;
-                if (App.GlobalConfig.SaveStats)
+                if (App.Configuration.SaveStats)
                 {
-                    App.GlobalConfig.LongBreaksFailed++;
-                    App.GlobalConfig.SaveSettingsToFile();
+                    App.Configuration.LongBreaksFailed++;
+                    App.Configuration.SaveSettingsToFile();
                 }
                 await App.CurrentLongBreakWindow.HideUsingLinearAnimationAsync();
                 App.CurrentLongBreakWindow.Close();
                 App.CurrentLongBreakWindow = null;
                 App.ShortBreakShownOnce = false;
-                if (App.GlobalConfig.ProtectionState == GuardStates.Protecting)
+                if (App.Configuration.ProtectionState == GuardStates.Protecting)
                 {
                     App.ShortBreakHandler.Start();
                     App.LongBreakHandler.Start();
@@ -61,7 +61,7 @@ namespace EyesGuard
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (App.GlobalConfig.ForceUserToBreak)
+            if (App.Configuration.ForceUserToBreak)
                 Cursor = Cursors.None;
         }
     }

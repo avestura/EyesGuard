@@ -33,26 +33,29 @@ namespace EyesGuard.Pages
             }
 
 
-            shortGapHours.Text   = App.GlobalConfig.ShortBreakGap.Hours.ToString();
-            shortGapMinutes.Text = App.GlobalConfig.ShortBreakGap.Minutes.ToString();
-            shortGapSeconds.Text = App.GlobalConfig.ShortBreakGap.Seconds.ToString();
+            shortGapHours.Text   = App.Configuration.ShortBreakGap.Hours.ToString();
+            shortGapMinutes.Text = App.Configuration.ShortBreakGap.Minutes.ToString();
+            shortGapSeconds.Text = App.Configuration.ShortBreakGap.Seconds.ToString();
 
-            longGapHours.Text   = App.GlobalConfig.LongBreakGap.Hours.ToString();
-            longGapMinutes.Text = App.GlobalConfig.LongBreakGap.Minutes.ToString();
-            longGapSeconds.Text = App.GlobalConfig.LongBreakGap.Seconds.ToString();
+            longGapHours.Text   = App.Configuration.LongBreakGap.Hours.ToString();
+            longGapMinutes.Text = App.Configuration.LongBreakGap.Minutes.ToString();
+            longGapSeconds.Text = App.Configuration.LongBreakGap.Seconds.ToString();
 
-            shortDurationHours.Text = App.GlobalConfig.ShortBreakDuration.Hours.ToString();
-            shortDurationMinutes.Text = App.GlobalConfig.ShortBreakDuration.Minutes.ToString();
-            shortDurationSeconds.Text = App.GlobalConfig.ShortBreakDuration.Seconds.ToString();
+            shortDurationHours.Text = App.Configuration.ShortBreakDuration.Hours.ToString();
+            shortDurationMinutes.Text = App.Configuration.ShortBreakDuration.Minutes.ToString();
+            shortDurationSeconds.Text = App.Configuration.ShortBreakDuration.Seconds.ToString();
 
-            longDurationHours.Text = App.GlobalConfig.LongBreakDuration.Hours.ToString();
-            longDurationMinutes.Text = App.GlobalConfig.LongBreakDuration.Minutes.ToString();
-            longDurationSeconds.Text = App.GlobalConfig.LongBreakDuration.Seconds.ToString();
+            longDurationHours.Text = App.Configuration.LongBreakDuration.Hours.ToString();
+            longDurationMinutes.Text = App.Configuration.LongBreakDuration.Minutes.ToString();
+            longDurationSeconds.Text = App.Configuration.LongBreakDuration.Seconds.ToString();
 
-            forceUserCheckbox.IsChecked = App.GlobalConfig.ForceUserToBreak;
-            onlyOneShortbreakCheckbox.IsChecked = App.GlobalConfig.OnlyOneShortBreak;
-            storeStatsCheckbox.IsChecked = App.GlobalConfig.SaveStats;
-            alertBeforeLongbreak.IsChecked = App.GlobalConfig.AlertBeforeLongBreak;
+            forceUserCheckbox.IsChecked = App.Configuration.ForceUserToBreak;
+            onlyOneShortbreakCheckbox.IsChecked = App.Configuration.OnlyOneShortBreak;
+            storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
+            alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
+
+            useSystemDpiCheckbox.IsChecked = App.UserScalingType == App.ScalingType.UseWindowsDPIScaling;
+            ScalingFactorText.Text = App.SystemDpiFactor.ConvertToPercentString();
             //startupCheckbox.IsChecked = App.GlobalConfig.RunAtStartUp;
 
         }
@@ -154,17 +157,17 @@ namespace EyesGuard.Pages
                 if (warning == "")
                 {
 
-                    App.GlobalConfig.ShortBreakGap = new TimeSpan(sgH, sgM, sgS);
-                    App.GlobalConfig.ShortBreakDuration = new TimeSpan(sdH, sdM, sdS);
-                    App.GlobalConfig.LongBreakGap = new TimeSpan(lgH, lgM, lgS);
-                    App.GlobalConfig.LongBreakDuration = new TimeSpan(ldH, ldM, ldS);
-                    App.GlobalConfig.ForceUserToBreak = forceUserCheckbox.IsChecked.Value;
-                    App.GlobalConfig.SaveStats = storeStatsCheckbox.IsChecked.Value;
-                    App.GlobalConfig.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
-                    App.GlobalConfig.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
+                    App.Configuration.ShortBreakGap = new TimeSpan(sgH, sgM, sgS);
+                    App.Configuration.ShortBreakDuration = new TimeSpan(sdH, sdM, sdS);
+                    App.Configuration.LongBreakGap = new TimeSpan(lgH, lgM, lgS);
+                    App.Configuration.LongBreakDuration = new TimeSpan(ldH, ldM, ldS);
+                    App.Configuration.ForceUserToBreak = forceUserCheckbox.IsChecked.Value;
+                    App.Configuration.SaveStats = storeStatsCheckbox.IsChecked.Value;
+                    App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
+                    App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     //App.GlobalConfig.RunAtStartUp = startupCheckbox.IsChecked.Value;
 
-                    App.GlobalConfig.SaveSettingsToFile();
+                    App.Configuration.SaveSettingsToFile();
 
                     App.ShowWarning(App.Current.FindResource("Strings.EyesGuard.Settings.SavedSuccessfully").ToString(), WarningPage.PageStates.Success, new Settings());
 
@@ -194,12 +197,12 @@ namespace EyesGuard.Pages
         {
             uSureBlock.MarginFadeOutAnimation(new Thickness(5, 0, 0, 0), new Thickness(0));
 
-            App.GlobalConfig.ShortBreaksCompleted = 0;
-            App.GlobalConfig.LongBreaksCompleted = 0;
-            App.GlobalConfig.LongBreaksFailed = 0;
-            App.GlobalConfig.StopCount = 0;
-            App.GlobalConfig.PauseCount = 0;
-            App.GlobalConfig.SaveSettingsToFile();
+            App.Configuration.ShortBreaksCompleted = 0;
+            App.Configuration.LongBreaksCompleted = 0;
+            App.Configuration.LongBreaksFailed = 0;
+            App.Configuration.StopCount = 0;
+            App.Configuration.PauseCount = 0;
+            App.Configuration.SaveSettingsToFile();
             App.UpdateStats();
             
             App.ShowWarning(App.Current.FindResource("Strings.EyesGuard.Settings.StatsDeleted").ToString(),

@@ -33,9 +33,9 @@ namespace EyesGuard.Pages
                 UpdatePageText();
 
                 // Ignore paused protecting
-                GlobalConfig.ProtectionState = value;
+                Configuration.ProtectionState = value;
 
-                App.GlobalConfig.SaveSettingsToFile();
+                App.Configuration.SaveSettingsToFile();
             }
         }
         public static readonly DependencyProperty ProtectionStateProperty =
@@ -60,7 +60,7 @@ namespace EyesGuard.Pages
                 this.Background = Brushes.Transparent;
             }
 
-            ProtectionState = App.GlobalConfig.ProtectionState;
+            ProtectionState = App.Configuration.ProtectionState;
 
             DataContext = App.ShortLongBreakTimeRemainingViewModel;
 
@@ -76,7 +76,7 @@ namespace EyesGuard.Pages
             if (ProtectionState == GuardStates.Protecting)
             {
                 ProtectionState = GuardStates.NotProtecting;
-                if(App.GlobalConfig.SaveStats) UpdateIntruptOfStats(GuardStates.NotProtecting);
+                if(App.Configuration.SaveStats) UpdateIntruptOfStats(GuardStates.NotProtecting);
    ;
             }
             else if (ProtectionState == GuardStates.NotProtecting)
