@@ -69,11 +69,15 @@
     </ApplicationDefinition>
     <Compile Include="Animation.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CustomPause.xaml.cs">
       <DependentUpon>CustomPause.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Donate.xaml.cs">
+      <DependentUpon>Donate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EyeArticle.xaml.cs">
       <DependentUpon>EyeArticle.xaml</DependentUpon>
@@ -131,6 +135,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\CustomPause.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Donate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
