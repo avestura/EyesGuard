@@ -50,7 +50,8 @@
             <MenuItem Header="راهنمای نرم افزار"  Icon="{StaticResource EyesGuard.QuestionMark}" Click="Help_Click" />
             <MenuItem Header="منابع" Click="Resources_Click" />
             <Separator />
-            <MenuItem Header="درباره سازنده" Click="MenuItem_Click" />
+            <MenuItem Header="حمایت از نرم‌افزار" Icon="{StaticResource EyesGuard.Donate}" Click="Donate_Click" />
+            <MenuItem Header="درباره سازنده" Click="About_Click" />
 
         </MenuItem>
     </Menu>
