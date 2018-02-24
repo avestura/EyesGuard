@@ -11,12 +11,12 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPURLINFOABOUT" Value="http://aryan-pc.blog.ir"/>
     <ROW Property="Manufacturer" Value="Aryan Software"/>
-    <ROW Property="ProductCode" Value="1033:{B72B068D-D674-4E3A-81A9-9685E5A440A5} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{46DE0335-4783-47CF-BA6C-24BC400D6DC6} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Eyes Guard"/>
-    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="1.0.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
-    <ROW Property="UpgradeCode" Value="{38C16C1C-F015-48C7-87B1-E27D444EC021}"/>
+    <ROW Property="UpgradeCode" Value="{46DE0335-4783-47CF-BA6C-24BC400D6DC6}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
