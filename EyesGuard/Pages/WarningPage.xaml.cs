@@ -24,7 +24,7 @@ namespace EyesGuard.Pages
 
         public enum PageStates
         {
-            Error, Warning, Success, Info, About
+            Error, Warning, Success, Info, About, Donate
         }
 
 
@@ -97,6 +97,13 @@ namespace EyesGuard.Pages
                 vm.Brush = Brushes.White;
                 if (pageTitle == "")
                     vm.PageTitle = "درباره نرم افزار";
+            }
+            else if (PageState == PageStates.Donate)
+            {
+                vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Heart;
+                vm.Brush = new SolidColorBrush(( (Color)ColorConverter.ConvertFromString("#ff7c7c") ));
+                if (pageTitle == "")
+                    vm.PageTitle = "حمایت";
             }
 
             if (pageTitle != "")
