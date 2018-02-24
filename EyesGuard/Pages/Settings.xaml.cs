@@ -54,8 +54,8 @@ namespace EyesGuard.Pages
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
 
-            useSystemDpiCheckbox.IsChecked = App.UserScalingType == App.ScalingType.UseWindowsDPIScaling;
-            ScalingFactorText.Text = App.SystemDpiFactor.ConvertToPercentString();
+            //useSystemDpiCheckbox.IsChecked = App.UserScalingType == App.ScalingType.UseWindowsDPIScaling;
+            //ScalingFactorText.Text = App.SystemDpiFactor.ConvertToPercentString();
             //startupCheckbox.IsChecked = App.GlobalConfig.RunAtStartUp;
 
         }
