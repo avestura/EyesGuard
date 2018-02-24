@@ -64,4 +64,6 @@
     <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Message">تنها یک دقیقه تا استراحت بلند مدت باقی مانده است. در صورت تمایل با استفاده از گزینه توقف موقت میتوانید استراحت را به تعویق بیندازید</sys:String>
 
 
+
+    
 </ResourceDictionary>
