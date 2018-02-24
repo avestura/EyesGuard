@@ -1,18 +1,27 @@
-﻿<UserControl x:Class="EyesGuard.Resources.Menus.UserLoginMenu"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
-    <Menu VerticalAlignment="Center" Background="Transparent" FlowDirection="LeftToRight"
-          FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
+﻿<UserControl
+    x:Class="EyesGuard.Resources.Menus.UserLoginMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Menu
+        VerticalAlignment="Center"
+        Background="Transparent"
+        FlowDirection="LeftToRight"
+        FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
         <MenuItem FontSize="15">
             <MenuItem.Header>
 
                 <StackPanel Margin="5,0" Orientation="Horizontal">
                     <TextBlock>کاربر</TextBlock>
-                    <fa:ImageAwesome Height="20" Margin="5,0,0,0" Foreground="White"
-                                     Icon="UserCircleOutline" />
+                    <fa:ImageAwesome
+                        Height="20"
+                        Margin="5,0,0,0"
+                        Foreground="White"
+                        Icon="UserCircleOutline" />
                 </StackPanel>
             </MenuItem.Header>
             <MenuItem FlowDirection="RightToLeft" StaysOpenOnClick="True">
@@ -23,9 +32,15 @@
                                 <ColumnDefinition Width="50" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <fa:ImageAwesome Grid.Column="0" Height="40" Foreground="#FFCBCBCB"
-                                             Icon="UserCircle" />
-                            <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Center">
+                            <fa:ImageAwesome
+                                Grid.Column="0"
+                                Height="40"
+                                Foreground="#FFCBCBCB"
+                                Icon="UserCircle" />
+                            <StackPanel
+                                Grid.Column="1"
+                                Margin="5"
+                                VerticalAlignment="Center">
                                 <TextBlock FontSize="12" FontWeight="Bold">کاربر وارد نشده</TextBlock>
                                 <TextBlock FontSize="10">بدون سمت</TextBlock>
                             </StackPanel>
@@ -33,15 +48,25 @@
                     </ControlTemplate>
                 </MenuItem.Template>
             </MenuItem>
-            <MenuItem FlowDirection="RightToLeft" FontSize="12" Header="ورود" Click="MenuItem_Click"
-                      Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
-            <MenuItem FlowDirection="RightToLeft" FontSize="12" Header="پروفایل"
-                      Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
-                      IsEnabled="False" />
+            <MenuItem
+                Click="MenuItem_Click"
+                FlowDirection="RightToLeft"
+                FontSize="12"
+                Header="ورود"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
+            <MenuItem
+                FlowDirection="RightToLeft"
+                FontSize="12"
+                Header="پروفایل"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
+                IsEnabled="False" />
             <Separator />
-            <MenuItem FlowDirection="RightToLeft" FontSize="12" Header="خروج از حساب"
-                      Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
-                      IsEnabled="False" />
+            <MenuItem
+                FlowDirection="RightToLeft"
+                FontSize="12"
+                Header="خروج از حساب"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
+                IsEnabled="False" />
         </MenuItem>
     </Menu>
 

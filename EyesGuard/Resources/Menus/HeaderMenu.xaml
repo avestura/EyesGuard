@@ -1,57 +1,83 @@
-﻿<UserControl x:Class="EyesGuard.Resources.Menus.HeaderMenu"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:fa="http://schemas.fontawesome.io/icons/"
-             xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" FlowDirection="RightToLeft"
-             mc:Ignorable="d">
-    <Menu Background="Transparent"
-          FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-          FontSize="10">
+﻿<UserControl
+    x:Class="EyesGuard.Resources.Menus.HeaderMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FlowDirection="RightToLeft"
+    mc:Ignorable="d">
+    <Menu
+        Background="Transparent"
+        FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+        FontSize="10">
         <MenuItem Header="نگهبان">
-            <MenuItem Header="صفحه اصلی" Click="GoToMainPage_Click"  />
+            <MenuItem Click="GoToMainPage_Click" Header="صفحه اصلی" />
             <Separator />
             <MenuItem Header="شروع نگهبانی" Visibility="Collapsed" />
             <MenuItem Header="توقف برای...">
-                <MenuItem Header="پنج دقیقه" Click="FiveMinutesPause_Click" />
-                <MenuItem Header="ده دقیقه" Click="TenMinutesPause_Click" />
-                <MenuItem Header="نیم ساعت" Click="ThirtyMinutesPause_Click" />
-                <MenuItem Header="یک ساعت" Click="OneHourPause_Click" />
-                <MenuItem Header="دو ساعت" Click="TwoHourPause_Click"/>
+                <MenuItem Click="FiveMinutesPause_Click" Header="پنج دقیقه" />
+                <MenuItem Click="TenMinutesPause_Click" Header="ده دقیقه" />
+                <MenuItem Click="ThirtyMinutesPause_Click" Header="نیم ساعت" />
+                <MenuItem Click="OneHourPause_Click" Header="یک ساعت" />
+                <MenuItem Click="TwoHourPause_Click" Header="دو ساعت" />
                 <Separator />
-                <MenuItem Header="دلخواه..." Click="CustomPause_Click" />
+                <MenuItem Click="CustomPause_Click" Header="دلخواه..." />
             </MenuItem>
 
             <Separator />
-            <MenuItem Header="پنهان‌سازی نرم افزار" Click="HideApp_Click" />
+            <MenuItem Click="HideApp_Click" Header="پنهان‌سازی نرم افزار" />
             <Separator />
-            <MenuItem Header="خروج" Click="ApplicationExit_Click"/>
+            <MenuItem Click="ApplicationExit_Click" Header="خروج" />
         </MenuItem>
-        
-   
+
+
         <MenuItem Header="ابزار ها">
-            <MenuItem Header="آمار" Click="GoToStatictictsPage_Click" />
-            <MenuItem Header="تقویت چشم" Click="GoToEyeSightImprove_Click" Visibility="Collapsed"/>
-            <MenuItem Header="مطالب مرتبط" Click="GoToEyeContentPage_Click" />
+            <MenuItem Click="GoToStatictictsPage_Click" Header="آمار" />
+            <MenuItem
+                Click="GoToEyeSightImprove_Click"
+                Header="تقویت چشم"
+                Visibility="Collapsed" />
+            <MenuItem Click="GoToEyeContentPage_Click" Header="مطالب مرتبط" />
             <Separator />
-            <MenuItem Header="تنظیمات" Click="GoToSettingsPage_Click" Icon="{StaticResource EyesGuard.Settings}"/>
+            <MenuItem
+                Click="GoToSettingsPage_Click"
+                Header="تنظیمات"
+                Icon="{StaticResource EyesGuard.Settings}" />
         </MenuItem>
 
         <MenuItem Header="استراحت">
-            <MenuItem Header="استراحت کوتاه مدت" Click="StartShortBreak_Click" IsEnabled="{Binding ManualBreakEnabled}" />
-            <MenuItem Header="استراحت بلند مدت" Click="StartLongBreak_Click" IsEnabled="{Binding ManualBreakEnabled}" />
+            <MenuItem
+                Click="StartShortBreak_Click"
+                Header="استراحت کوتاه مدت"
+                IsEnabled="{Binding ManualBreakEnabled}" />
+            <MenuItem
+                Click="StartLongBreak_Click"
+                Header="استراحت بلند مدت"
+                IsEnabled="{Binding ManualBreakEnabled}" />
         </MenuItem>
-        
+
         <MenuItem Header="نمایش">
-            <MenuItem Header="زمان های کلیدی" Click="ShowHideTimeRemaining_Click" IsCheckable="True" IsChecked="{Binding IsTimeItemChecked}" StaysOpenOnClick="True" />
+            <MenuItem
+                Click="ShowHideTimeRemaining_Click"
+                Header="زمان های کلیدی"
+                IsCheckable="True"
+                IsChecked="{Binding IsTimeItemChecked}"
+                StaysOpenOnClick="True" />
         </MenuItem>
         <MenuItem Header="راهنما">
-            <MenuItem Header="راهنمای نرم افزار"  Icon="{StaticResource EyesGuard.QuestionMark}" Click="Help_Click" />
-            <MenuItem Header="منابع" Click="Resources_Click" />
+            <MenuItem
+                Click="Help_Click"
+                Header="راهنمای نرم افزار"
+                Icon="{StaticResource EyesGuard.QuestionMark}" />
+            <MenuItem Click="Resources_Click" Header="منابع" />
             <Separator />
-            <MenuItem Header="حمایت از نرم‌افزار" Icon="{StaticResource EyesGuard.Donate}" Click="Donate_Click" />
-            <MenuItem Header="درباره سازنده" Click="About_Click" />
+            <MenuItem
+                Click="Donate_Click"
+                Header="حمایت از نرم‌افزار"
+                Icon="{StaticResource EyesGuard.Donate}" />
+            <MenuItem Click="About_Click" Header="درباره سازنده" />
 
         </MenuItem>
     </Menu>
