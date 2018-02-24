@@ -80,7 +80,7 @@ namespace EyesGuard
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            App.SystemDpiFactor = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice.M11;
+            //App.SystemDpiFactor = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice.M11;
             
 
             if (App.LaunchMinimized)
@@ -91,19 +91,19 @@ namespace EyesGuard
             //wc.Ellipse.Fill = Brushes.LightCyan;
 
 
-            if(App.UserScalingType == App.ScalingType.UseCutomScaling)
-            {
-                double userRequest = App.UserScalingFactor.ConvertToDouble();
-                double osRequest = App.SystemDpiFactor;
+            //if(App.UserScalingType == App.ScalingType.UseCutomScaling)
+            //{
+            //    double userRequest = App.UserScalingFactor.ConvertToDouble();
+            //    double osRequest = App.SystemDpiFactor;
 
-                double ratio = userRequest / osRequest;
+            //    double ratio = userRequest / osRequest;
 
-                MainContainer.UserInterfaceCustomScale(ratio, false);
+            //    MainContainer.UserInterfaceCustomScale(ratio, false);
 
-                Width *= ratio; Height *= ratio;
+            //    Width *= ratio; Height *= ratio;
 
-                this.BringWindowCenterScreen();
-            }
+            //    this.BringWindowCenterScreen();
+            //}
 
 
         }
