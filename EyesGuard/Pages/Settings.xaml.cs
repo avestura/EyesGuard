@@ -65,6 +65,10 @@ namespace EyesGuard.Pages
             try
             {
                 string warning = "";
+                // sg: Short Gap
+                // sd: Short Duration
+                // lg: Long Gap
+                // ld: Long Duration
                 int sgH, sgM, sgS, sdH, sdM, sdS, lgH, lgM, lgS, ldH, ldM, ldS;
 
                 sgH = int.Parse(shortGapHours.Text);
