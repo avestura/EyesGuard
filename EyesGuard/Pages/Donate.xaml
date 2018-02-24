@@ -1,0 +1,78 @@
+﻿<Page x:Class="EyesGuard.Pages.Donate" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:c="clr-namespace:EyesGuard.Resources.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:EyesGuard.Pages"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="کمک مالی به نرم افزار"
+      d:DesignHeight="500" d:DesignWidth="600" Background="#FF006A9F"
+      FlowDirection="RightToLeft"
+      FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+      Loaded="Page_Loaded" mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <fa:ImageAwesome Height="28" Margin="0,0,5,0" Foreground="#F44242"
+                                 Icon="Heart" />
+                <TextBlock FontSize="18" Foreground="White"
+                           Text="{StaticResource Strings.Application.Donate.Title}" />
+            </StackPanel>
+            <TextBlock MaxWidth="450" Margin="10,5" Foreground="White"
+                       Text="{StaticResource Strings.Application.Donate.Message}"
+                       TextAlignment="Justify" TextWrapping="Wrap" />
+
+            <Grid Margin="0,10" HorizontalAlignment="Stretch" TextBlock.Foreground="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="5" />
+                    <RowDefinition />
+                    <RowDefinition Height="5" />
+                    <RowDefinition />
+                    <RowDefinition Height="5" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,0,10,0">
+                    <TextBlock FontSize="15">نام حمایت کننده</TextBlock>
+                    <Span FontSize="10" Foreground="#FFE5E5E5">(اختیاری است)</Span>
+                    <TextBlock>:</TextBlock>
+                </TextBlock>
+                <TextBox x:Name="DonateName" Grid.Row="0" Grid.Column="1"
+                         MinWidth="150" MaxWidth="250" FontSize="15"
+                         Style="{DynamicResource WhiteTextBox}"
+                         TextAlignment="Center" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,0,10,0">
+                    <TextBlock FontSize="15">مبلغ حمایتی</TextBlock>
+                    <Span FontSize="10" Foreground="#FFE5E5E5">(به تومان)</Span>
+                    <TextBlock>:</TextBlock>
+                </TextBlock>
+                <c:NumOnlyTextbox x:Name="DonatePay" Grid.Row="2" Grid.Column="1"
+                                  MinWidth="150" MaxWidth="250" FontSize="15"
+                                  Style="{DynamicResource WhiteTextBox}"
+                                  Text="0" TextAlignment="Center" />
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,0,10,0">
+                    <TextBlock FontSize="15">پیام و توضیحات شما</TextBlock>
+                    <Span FontSize="10" Foreground="#FFE5E5E5">(اختیاری است)</Span>
+                    <TextBlock>:</TextBlock>
+                </TextBlock>
+                <TextBox x:Name="DonateMessage" Grid.Row="4" Grid.Column="1"
+                         MinWidth="150" MaxWidth="250" FontSize="15"
+                         Style="{DynamicResource WhiteTextBox}"
+                         TextAlignment="Center" />
+
+                <Button Grid.Row="6" Grid.Column="1" Height="30"
+                        Click="DonateButton_Click" Content="هدایت به صفحه پرداخت" FontSize="15"
+                        Style="{DynamicResource ButtonTemplate.Green}" />
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
