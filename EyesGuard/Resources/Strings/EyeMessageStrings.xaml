@@ -1,7 +1,8 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
-                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 
     <sys:String x:Key="Strings.EyeGuard.Guarding.Running">نرم‌افزار در حال نگهبانی از چشم‌های شماست</sys:String>
@@ -15,7 +16,7 @@
     <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Seconds">نرم افزار به مدت {0} ثانیه متوقف شده</sys:String>
     <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Minutes">نرم افزار به مدت {0} دقیقه متوقف شده</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.CustomPause.Message">مدت زمان توقف دلخواه را وارد کنید </sys:String>
+    <sys:String x:Key="Strings.EyesGuard.CustomPause.Message">مدت زمان توقف دلخواه را وارد کنید</sys:String>
     <sys:String x:Key="Strings.EyesGuard.CustomPause.ButtonText">ایجاد وقفه</sys:String>
 
     <sys:String x:Key="Strings.EyesGuard.WarningPage.Attention">توجه</sys:String>
@@ -28,7 +29,7 @@
     <sys:String x:Key="Strings.EyesGuard.MinutesLimit">دقیقه ورودی نباید بیشتر از {0} باشد</sys:String>
     <sys:String x:Key="Strings.EyesGuard.SecondsLimit">ثانیه ورودی نباید بیشتر از {0} باشد</sys:String>
 
-    
+
     <sys:String x:Key="Strings.EyesGuard.SGapMorethanLGap">فاصله بین دو استراحت کوتاه باید کمتر از فاصله بین دو استراحت بلند باشد</sys:String>
     <sys:String x:Key="Strings.EyesGuard.SDurationMorethanLDuration">مدت زمان استراحت کوتاه باید کمتر از مدت زمان استراحت بلند باشد</sys:String>
     <sys:String x:Key="Strings.EyesGuard.SDurationTooHigh">استراحت کوتاه نمیتواند بیشتر از پنج دقیقه باشد</sys:String>
@@ -65,5 +66,5 @@
 
 
 
-    
+
 </ResourceDictionary>

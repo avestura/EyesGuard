@@ -1,8 +1,10 @@
-﻿<Application x:Class="EyesGuard.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:EyesGuard" Startup="Application_Startup"
-             StartupUri="MainWindow.xaml">
+﻿<Application
+    x:Class="EyesGuard.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EyesGuard"
+    Startup="Application_Startup"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -22,7 +24,7 @@
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Images/MenuIcons.xaml" />
                 <!--#endregion-->
 
-                <!--#region Templates--> 
+                <!--#region Templates-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/BlueMenuTemplate.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/BlueMenuItemTemplate.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/ChromeButtonTemplate.xaml" />
@@ -33,7 +35,7 @@
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/FancyTooltipTemplate.xaml" />
 
                 <!--#endregion-->
-                
+
 
                 <!--#region Strings-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/ApplicationStrings.xaml" />
@@ -42,7 +44,7 @@
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/TaskbarIconStrings.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/StatStrings.xaml" />
 
-                <!--#endregion--> 
+                <!--#endregion-->
 
                 <!--#region Taskbar-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Menus/EyesGuardTaskbarIcon.xaml" />

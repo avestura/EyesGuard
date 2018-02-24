@@ -1,93 +1,137 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:EyesGuard.Resources.Templates">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EyesGuard.Resources.Templates">
     <Style x:Key="EyesGuard.WhiteOptionalMark.FocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    <Rectangle
+                        Margin="2"
+                        SnapsToDevicePixels="true"
+                        Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        StrokeDashArray="1 2"
+                        StrokeThickness="1" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Background" Color="#FFFFFFFF"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Border" Color="#FF707070"/>
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Background" Color="#FFFFFFFF" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Border" Color="#FF707070" />
     <Style x:Key="EyesGuard.WhiteOptionalMark.OptionMarkFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Rectangle Margin="14,0,0,0" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    <Rectangle
+                        Margin="14,0,0,0"
+                        SnapsToDevicePixels="true"
+                        Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"
+                        StrokeDashArray="1 2"
+                        StrokeThickness="1" />
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Background" Color="#FFD5FAAC"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Border" Color="#FFA9FF61"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Glyph" Color="#FF212121"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Background" Color="#FFE6E6E6"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Border" Color="#FFBCBCBC"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Glyph" Color="#FF707070"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Background" Color="#FFCDFF95"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Border" Color="#FF71E80D"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Glyph" Color="#FF212121"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Glyph" Color="#FF212121"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Checked.Background" Color="#FF74B729"/>
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Checked.Border" Color="#FF71E80D"/>
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Background" Color="#FFD5FAAC" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Border" Color="#FFA9FF61" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Background" Color="#FFE6E6E6" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Border" Color="#FFBCBCBC" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Glyph" Color="#FF707070" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Background" Color="#FFCDFF95" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Border" Color="#FF71E80D" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Static.Glyph" Color="#FF212121" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Checked.Background" Color="#FF74B729" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Checked.Border" Color="#FF71E80D" />
     <Style x:Key="WhiteCheckbox" TargetType="{x:Type CheckBox}">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource EyesGuard.WhiteOptionalMark.FocusVisual}"/>
-        <Setter Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Static.Border}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource EyesGuard.WhiteOptionalMark.FocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Static.Background}" />
+        <Setter Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Static.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CheckBox}">
-                    <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
+                    <Grid
+                        x:Name="templateRoot"
+                        Background="Transparent"
+                        SnapsToDevicePixels="True">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Border Width="15" Height="15" x:Name="checkBoxBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                        <Border
+                            x:Name="checkBoxBorder"
+                            Width="15"
+                            Height="15"
+                            Margin="1"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
                             <Grid x:Name="markGrid">
-                                <Path FlowDirection="LeftToRight" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="optionMark" Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z " Fill="{StaticResource EyesGuard.WhiteOptionalMark.Static.Glyph}" Margin="1" Opacity="0" Stretch="None"/>
-                                <Rectangle x:Name="indeterminateMark" Fill="{StaticResource EyesGuard.WhiteOptionalMark.Static.Glyph}" Margin="2" Opacity="0"/>
+                                <Path
+                                    x:Name="optionMark"
+                                    Margin="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z "
+                                    Fill="{StaticResource EyesGuard.WhiteOptionalMark.Static.Glyph}"
+                                    FlowDirection="LeftToRight"
+                                    Opacity="0"
+                                    Stretch="None" />
+                                <Rectangle
+                                    x:Name="indeterminateMark"
+                                    Margin="2"
+                                    Fill="{StaticResource EyesGuard.WhiteOptionalMark.Static.Glyph}"
+                                    Opacity="0" />
                             </Grid>
                         </Border>
-                        <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            Grid.Column="1"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False"
+                            RecognizesAccessKey="True"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasContent" Value="true">
-                            <Setter Property="FocusVisualStyle" Value="{StaticResource EyesGuard.WhiteOptionalMark.OptionMarkFocusVisual}"/>
-                            <Setter Property="Padding" Value="4,-1,0,0"/>
+                            <Setter Property="FocusVisualStyle" Value="{StaticResource EyesGuard.WhiteOptionalMark.OptionMarkFocusVisual}" />
+                            <Setter Property="Padding" Value="4,-1,0,0" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Border}"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Glyph}"/>
-                            <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Glyph}"/>
+                            <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Background}" />
+                            <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Border}" />
+                            <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Glyph}" />
+                            <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.MouseOver.Glyph}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Border}"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}"/>
-                            <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}"/>
+                            <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Background}" />
+                            <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Border}" />
+                            <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}" />
+                            <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
-                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Border}"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Glyph}"/>
-                            <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Glyph}"/>
+                            <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Background}" />
+                            <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Border}" />
+                            <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Glyph}" />
+                            <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Glyph}" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="true">
-                            <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Checked.Background}"/>
-                            <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource EyesGuard.WhiteOptionalMark.Checked.Border}"/>
-                            <Setter Property="Fill" TargetName="optionMark" Value="White"/>
-                            <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
-                            <Setter Property="Opacity" TargetName="indeterminateMark" Value="0"/>
+                            <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Checked.Background}" />
+                            <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Checked.Border}" />
+                            <Setter TargetName="optionMark" Property="Fill" Value="White" />
+                            <Setter TargetName="optionMark" Property="Opacity" Value="1" />
+                            <Setter TargetName="indeterminateMark" Property="Opacity" Value="0" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
-                            <Setter Property="Opacity" TargetName="optionMark" Value="0"/>
-                            <Setter Property="Opacity" TargetName="indeterminateMark" Value="1"/>
+                            <Setter TargetName="optionMark" Property="Opacity" Value="0" />
+                            <Setter TargetName="indeterminateMark" Property="Opacity" Value="1" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
