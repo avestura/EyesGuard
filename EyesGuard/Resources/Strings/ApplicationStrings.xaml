@@ -22,11 +22,27 @@
     <sys:String x:Key="Strings.Application.About" xml:space="preserve">
       نرم افزار نگهبان چشم
       
-        نسخه: ۱.۰.۰
+        نسخه: ۱.۰.۱
         برنامه نویسی و طراحی: آرین ابراهیم پور
         تاریخ انتشار: 10 خرداد 1396
         وبسایت: aryan-pc.blog.ir
         ایمیل: aryanebrahimpour@gmail.com
+    </sys:String>
+
+    <sys:String x:Key="Strings.Application.Donate" xml:space="preserve">
+شما تا چند لحظه دیگر به صفحه پرداخت در مرورگر خود هدایت خواهید شد
+با تشکر از توجه شما به حمایت از نرم‌افزار های باکیفیت بومی
+      
+همچنین هر گونه پیشنهاد و یا مشکلی را میتوانید از طریق ایمیل و یا وبسایت موجود در بخش درباره نرم افزار با من در ارتباط بگذارید
+
+    </sys:String>
+
+    <sys:String x:Key="Strings.Application.Donate.Title">
+        از این نرم افزار رایگان حمایت می‌کنید؟
+    </sys:String>
+
+    <sys:String x:Key="Strings.Application.Donate.Message">
+        در صورتی که می‌خواهید از این نرم افزار رایگان حمایت کنید و یا مایل به ایجاد انگیزه برای انتشار سایر نرم افزار های با کیفیت رایگان در آینده هستید لطفا از طریق فرم زیر از این نرم افزار حمایت مالی کنید
     </sys:String>
 
 </ResourceDictionary>
