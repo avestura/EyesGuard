@@ -53,8 +53,8 @@ namespace EyesGuard.Resources.Menus
    
         private void ShowHideTimeRemaining_Click(object sender, RoutedEventArgs e)
         {
-            App.GlobalConfig.KeyTimesVisible = (App.GlobalConfig.KeyTimesVisible) ? false : true;
-            App.GlobalConfig.SaveSettingsToFile();
+            App.Configuration.KeyTimesVisible = (App.Configuration.KeyTimesVisible) ? false : true;
+            App.Configuration.SaveSettingsToFile();
         }
 
         private void FiveMinutesPause_Click(object sender, RoutedEventArgs e)
@@ -128,6 +128,18 @@ namespace EyesGuard.Resources.Menus
         private void StartLongBreak_Click(object sender, RoutedEventArgs e)
         {
             App.GetApp().StartLongBreak();
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+
+            App.ShowWarning(App.Current.FindResource("Strings.Application.About").ToString(), WarningPage.PageStates.About);
+
+        }
+
+        private void Donate_Click(object sender, RoutedEventArgs e)
+        {
+            App.GetMainWindow().MainFrame.Navigate(new Donate());
         }
     }
 }

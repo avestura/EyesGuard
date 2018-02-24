@@ -56,6 +56,9 @@ namespace EyesGuard.Resources.Menus
         private void CustomPause_Click(object sender, RoutedEventArgs e)
         {
             App.GetMainWindow().MainFrame.Navigate(new CustomPause());
+
+            if (!App.GetMainWindow().IsVisible)
+                App.Show();
         }
 
         
@@ -78,7 +81,7 @@ namespace EyesGuard.Resources.Menus
         {
             if (App.CheckIfResting()) return;
 
-            if (App.GlobalConfig.ProtectionState == App.GuardStates.PausedProtecting)
+            if (App.Configuration.ProtectionState == App.GuardStates.PausedProtecting)
                 App.ResumeProtection();
             else
                 App.CurrentMainPage.ProtectionState = App.GuardStates.Protecting;
@@ -88,16 +91,17 @@ namespace EyesGuard.Resources.Menus
         {
             if (App.CheckIfResting()) return;
 
-            if (App.GlobalConfig.SaveStats) App.UpdateIntruptOfStats(App.GuardStates.NotProtecting);
+            if (App.Configuration.SaveStats) App.UpdateIntruptOfStats(App.GuardStates.NotProtecting);
             App.CurrentMainPage.ProtectionState = App.GuardStates.NotProtecting;
         }
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            if (!App.GetMainWindow().IsVisible)
-                App.Show();
 
             App.GetMainWindow().MainFrame.Navigate(new Settings());
+
+            if (!App.GetMainWindow().IsVisible)
+                App.Show();
         }
     }
 }
