@@ -4,17 +4,14 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <sys:String x:Key="Strings.EyesGuard.Stats.Short">Short-break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.Long">Long-break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.Paused">Pauses</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Stats.Short">استراحت کوتاه</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.Long">استراحت بلند</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.Paused">وقفه ها</sys:String>
-
-
-    <sys:String x:Key="Strings.EyesGuard.Stats.ShortCount">تعداد استراحت های کوتاه:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.LongComplatedCount">تعداد استراحت های بلند موفق:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.LongFailedCount">تعداد استراحت های بلند ناموفق:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.PauseCount">تعداد وقفه های موقت:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Stats.StopCount">تعداد وقفه های غیر موقت:</sys:String>
-
+    <sys:String x:Key="Strings.EyesGuard.Stats.ShortCount">Short-breaks:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.LongComplatedCount">Completed Long-breaks:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.LongFailedCount">Failed Long-breaks:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.PauseCount">Temporary pauses:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Stats.StopCount">Stops:</sys:String>
 
 </ResourceDictionary>

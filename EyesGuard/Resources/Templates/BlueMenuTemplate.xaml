@@ -3,7 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:EyesGuard.Resources.Templates">
 
-
     <SolidColorBrush x:Key="BlueTheme.Menu.Static.Background" Color="#FF006599" />
     <SolidColorBrush x:Key="BlueTheme.Menu.Static.Foreground" Color="#EFEFD3" />
     <Style TargetType="{x:Type Menu}">
@@ -36,7 +35,7 @@
         <Setter Property="Grid.IsSharedSizeScope" Value="true" />
         <Setter Property="Foreground" Value="{StaticResource BlueTheme.Menu.Static.Foreground}" />
         <Setter Property="Background" Value="{StaticResource BlueTheme.Menu.Static.Background}" />
-        <Setter Property="FontSize" Value="10" />
+        <Setter Property="FontSize" Value="11" />
         <Setter Property="HasDropShadow" Value="False" />
         <Setter Property="Template">
             <Setter.Value>
@@ -61,6 +60,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 
 </ResourceDictionary>

@@ -27,18 +27,13 @@ namespace EyesGuard.Pages
             Error, Warning, Success, Info, About, Donate
         }
 
-
         public string Message
         {
             get { return (string)GetValue(MessageProperty); }
             set { SetValue(MessageProperty, value); }
         }
         public static readonly DependencyProperty MessageProperty =
-            DependencyProperty.Register("Message", typeof(string), typeof(WarningPage), new PropertyMetadata("بدون پیام"));
-
-
-
-
+            DependencyProperty.Register("Message", typeof(string), typeof(WarningPage), new PropertyMetadata("No message."));
 
         public PageStates PageState
         {
@@ -47,9 +42,6 @@ namespace EyesGuard.Pages
         }
         public static readonly DependencyProperty PageStateProperty =
             DependencyProperty.Register("PageState", typeof(PageStates), typeof(WarningPage), new PropertyMetadata(PageStates.Warning));
-
-
-
 
         public Page ReturnPage { get; set; }
 
@@ -68,50 +60,48 @@ namespace EyesGuard.Pages
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Warning;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFEEC78A")));
                 if (pageTitle == "")
-                    vm.PageTitle = "توجه";
+                    vm.PageTitle = "Attention";
             }
             else if (PageState == PageStates.Success)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#8ED28A")));
                 if (pageTitle == "")
-                    vm.PageTitle = "موفقیت آمیز";
+                    vm.PageTitle = "Successful";
             }
             else if (PageState == PageStates.Error)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.ExclamationCircle;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFD9884")));
                 if (pageTitle == "")
-                    vm.PageTitle = "خطا";
+                    vm.PageTitle = "Error";
             }
             else if (PageState == PageStates.Info)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Comment;
                 vm.Brush = Brushes.White;
                 if (pageTitle == "")
-                    vm.PageTitle = "اطلاعات";
+                    vm.PageTitle = "Info";
             }
             else if (PageState == PageStates.About)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Rocket;
                 vm.Brush = Brushes.White;
                 if (pageTitle == "")
-                    vm.PageTitle = "درباره نرم افزار";
+                    vm.PageTitle = "About Software";
             }
             else if (PageState == PageStates.Donate)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Heart;
                 vm.Brush = new SolidColorBrush(( (Color)ColorConverter.ConvertFromString("#ff7c7c") ));
                 if (pageTitle == "")
-                    vm.PageTitle = "حمایت";
+                    vm.PageTitle = "Donate";
             }
 
             if (pageTitle != "")
                 vm.PageTitle = pageTitle;
 
             InitializeComponent();
-
-    
 
         }
 
@@ -122,9 +112,6 @@ namespace EyesGuard.Pages
                 this.Background = Brushes.Transparent;
             }
 
-         
-
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

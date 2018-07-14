@@ -14,7 +14,6 @@
     MinHeight="450"
     AllowsTransparency="True"
     Closing="Window_Closing"
-    FlowDirection="RightToLeft"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Window_Loaded"
     ResizeMode="CanResize"
@@ -84,18 +83,17 @@
                         WindowChrome.IsHitTestVisibleInChrome="True">
 
                         <Button
-                            x:Name="CloseButton"
+                            x:Name="MinimizeButton"
                             Width="25"
                             Height="25"
                             Margin="0,0,5,0"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Click="CloseButton_Click"
+                            Click="MinimizeButton_Click"
                             Style="{DynamicResource HastiUI.Templates.ChromeButtonTemplate}">
                             <Path
-                                Margin="6"
-                                Data="M0,0L10,10M0,10L10,0"
-                                Stretch="Fill"
+                                Margin="5"
+                                Data="M0,5H10"
                                 Stroke="White"
                                 StrokeThickness="1"
                                 UseLayoutRounding="True" />
@@ -138,22 +136,22 @@
                             </Grid>
                         </Button>
                         <Button
-                            x:Name="MinimizeButton"
+                            x:Name="CloseButton"
                             Width="25"
                             Height="25"
                             Margin="0,0,5,0"
                             HorizontalContentAlignment="Center"
                             VerticalContentAlignment="Center"
-                            Click="MinimizeButton_Click"
+                            Click="CloseButton_Click"
                             Style="{DynamicResource HastiUI.Templates.ChromeButtonTemplate}">
                             <Path
-                                Margin="5"
-                                Data="M0,5H10"
+                                Margin="6"
+                                Data="M0,0L10,10M0,10L10,0"
+                                Stretch="Fill"
                                 Stroke="White"
                                 StrokeThickness="1"
                                 UseLayoutRounding="True" />
                         </Button>
-
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="1" Background="#FF006A9F">

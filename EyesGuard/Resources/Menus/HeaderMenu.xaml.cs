@@ -34,11 +34,6 @@ namespace EyesGuard.Resources.Menus
 
         }
 
-        private void GoToEyeContentPage_Click(object sender, RoutedEventArgs e)
-        {
-            App.GetMainWindow().MainFrame.Navigate(new EyeArticle());
-        }
-
         private void GoToSettingsPage_Click(object sender, RoutedEventArgs e)
         {
             App.GetMainWindow().MainFrame.Navigate(new Settings());
@@ -50,7 +45,6 @@ namespace EyesGuard.Resources.Menus
 
         }
 
-   
         private void ShowHideTimeRemaining_Click(object sender, RoutedEventArgs e)
         {
             App.Configuration.KeyTimesVisible = (App.Configuration.KeyTimesVisible) ? false : true;
@@ -115,7 +109,7 @@ namespace EyesGuard.Resources.Menus
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            
+
             App.ShowWarning(App.Current.FindResource("Strings.Application.About").ToString(), WarningPage.PageStates.About);
 
         }

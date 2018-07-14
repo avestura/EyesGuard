@@ -12,12 +12,11 @@ namespace EyesGuard.Resources.Menus
     public partial class EyesGuardTaskbarIcon
     {
 
-
         public EyesGuardTaskbarIcon()
         {
-            
+
         }
-        
+
         private  void TaskbarIcon_TrayMouseDoubleClick(object sender, System.Windows.RoutedEventArgs e)
         {
             if(!App.GetMainWindow().IsVisible)
@@ -61,7 +60,6 @@ namespace EyesGuard.Resources.Menus
                 App.Show();
         }
 
-        
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             App.Current.Shutdown();
@@ -69,7 +67,7 @@ namespace EyesGuard.Resources.Menus
 
         private void TaskbarIcon_ContextMenuOpening(object sender, System.Windows.Controls.ContextMenuEventArgs e)
         {
-            
+
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

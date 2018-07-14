@@ -51,7 +51,7 @@ namespace EyesGuard
                 else
                     return ScalingType.UseWindowsDPIScaling;
             }
-            
+
         }
         public static ScalingSize UserScalingFactor { get; set; }
 
@@ -136,14 +136,10 @@ namespace EyesGuard
             if (programInstancesCount > 1)
             {
 
-                MessageBox.Show("نرم افزار در حال اجراست. برای نمایش گزینه های نرم افزار روی آیکون سپر موجود در نوار وظیفه راست کلیک کنید");
+                MessageBox.Show("Eyes Guard is already running. You can't run multiple instances of this software.");
 
                 Shutdown();
             }
-                
-            // Changing UICulture to FARSI-IRAN , ba eftekhaar (:
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("fa-IR");
-            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("fa-IR");
 
             Config.InitializeLocalFolder();
             Config.LoadSettingsFromFile();
@@ -168,7 +164,7 @@ namespace EyesGuard
                 Configuration.LongBreakDuration = new TimeSpan(0, 0, 5);
 
             Configuration.SaveSettingsToFile();
-            
+
             NextShortBreak  = App.Configuration.ShortBreakGap;
             NextLongBreak  = App.Configuration.LongBreakGap;
             ShortBreakVisibleTime  = App.Configuration.ShortBreakDuration;
@@ -212,7 +208,7 @@ namespace EyesGuard
             if (App.CurrentShortBreakWindow != null ||
                 App.CurrentLongBreakWindow != null)
             {
-                App.ShowWarning("لطفا تا پایان استراحت صبر کنید", WarningPage.PageStates.Warning);
+                App.ShowWarning("Please wait until break finishes.", WarningPage.PageStates.Warning);
                 return true;
             }
             return false;
@@ -315,7 +311,7 @@ namespace EyesGuard
                 DataContext = LongBreakViewModel
             };
             LongBreakVisibleTime = App.Configuration.LongBreakDuration;
-            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " ساعت و " + LongBreakVisibleTime.Minutes + " دقیقه و " + LongBreakVisibleTime.Seconds + " ثانیه تا پایان استراحت بلند";
+            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minutes(s) and " + LongBreakVisibleTime.Seconds + " seconds until the end of break.";
             LongBreakViewModel.CanCancel = (Configuration.ForceUserToBreak) ? Visibility.Collapsed : Visibility.Visible;
 
             if (CurrentShortBreakWindow != null)
@@ -380,7 +376,7 @@ namespace EyesGuard
         private void LongDurationCounter_Tick(object sender, EventArgs e)
         {
             LongBreakVisibleTime = LongBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
-            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " ساعت و " + LongBreakVisibleTime.Minutes + " دقیقه و " + LongBreakVisibleTime.Seconds + " ثانیه تا پایان استراحت بلند";
+            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minute and " + LongBreakVisibleTime.Seconds + " second(s) to the end of long-break.";
             if ((int)LongBreakVisibleTime.TotalSeconds == 0)
             {
                 EndLongBreak();
@@ -389,7 +385,7 @@ namespace EyesGuard
 
         private async void EndLongBreak()
         {
-            
+
             ((LongBreakWindow)CurrentLongBreakWindow).LetItClose = true;
             if (Configuration.SaveStats)
             {
@@ -475,7 +471,7 @@ namespace EyesGuard
             {
                 ShortLongBreakTimeRemainingViewModel.TimeRemainingVisibility = Visibility.Visible;
                 HeaderMenuViewModel.IsTimeItemChecked = true;
-                
+
             }
             else
             {

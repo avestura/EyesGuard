@@ -25,12 +25,11 @@ namespace EyesGuard
             InitializeComponent();
         }
 
-        
         private  void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             if(App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
             {
-                App.TaskbarIcon.ShowBalloonTip("در حال اجرا", "نرم افزار همچنان در پشت زمینه در حال اجراست. برای استفاده از امکانات نرم افزار روی نماد سپر در نوار وظیفه راست کلیک کنید", Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
+                App.TaskbarIcon.ShowBalloonTip("App is running", "Eyes Guard is running in the background. You can reveal it using the shield icon in the taskbar.", Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
                 App.Configuration.TrayNotificationSaidBefore = true;
                 App.Configuration.SaveSettingsToFile();
             }
@@ -81,7 +80,6 @@ namespace EyesGuard
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //App.SystemDpiFactor = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice.M11;
-            
 
             if (App.LaunchMinimized)
                 this.Hide();
@@ -89,7 +87,6 @@ namespace EyesGuard
 
             //wc.Ellipse.Stroke = Brushes.DodgerBlue;
             //wc.Ellipse.Fill = Brushes.LightCyan;
-
 
             //if(App.UserScalingType == App.ScalingType.UseCutomScaling)
             //{
@@ -105,11 +102,7 @@ namespace EyesGuard
             //    this.BringWindowCenterScreen();
             //}
 
-
         }
-
-
-
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {

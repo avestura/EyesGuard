@@ -4,67 +4,59 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <sys:String x:Key="Strings.EyeGuard.Guarding.Running">Your eyes are under protection</sys:String>
+    <sys:String x:Key="Strings.EyeGuard.Guarding.Paused">Eyes Guard is temporarily disabled</sys:String>
+    <sys:String x:Key="Strings.EyeGuard.Guarding.Stopped">Eyes Guard is disabled</sys:String>
 
-    <sys:String x:Key="Strings.EyeGuard.Guarding.Running">نرم‌افزار در حال نگهبانی از چشم‌های شماست</sys:String>
-    <sys:String x:Key="Strings.EyeGuard.Guarding.Paused">نرم‌افزار موقتا غیر‌فعال شده است</sys:String>
-    <sys:String x:Key="Strings.EyeGuard.Guarding.Stopped">نرم‌افزار متوقف شده است</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds">seconds until short-break.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes">minutes until short-break.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.LongBreak.Seconds">seconds until long-break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.LongBreak.Minutes">minutes until long-break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Seconds">Eyes Guard is disabled for {0} seconds</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Minutes">Eyes Guard is disabled for {0} minutes</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds">ثانیه تا استراحت کوتاه مدت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes">دقیقه تا استراحت کوتاه مدت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.LongBreak.Seconds">ثانیه تا استراحت بلند مدت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.LongBreak.Minutes">دقیقه تا استراحت بلند مدت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Seconds">نرم افزار به مدت {0} ثانیه متوقف شده</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TimeRemaining.PauseTime.Minutes">نرم افزار به مدت {0} دقیقه متوقف شده</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.CustomPause.Message">Enter the desired pause time</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.CustomPause.ButtonText">Pause</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.CustomPause.Message">مدت زمان توقف دلخواه را وارد کنید</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.CustomPause.ButtonText">ایجاد وقفه</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.WarningPage.Attention">Attention</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.WarningPage.Return">Return</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.WarningPage.Attention">توجه</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.WarningPage.Return">بازگشت</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.OperationFailed">Operation failed</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.CheckInput">Check input validiation.</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.OperationFailed">عملیات ناموفق بود</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.CheckInput">داده های ورودی را چک کنید و از صحت اطلاعات ضروری مطمئن شوید</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.HoursLimit">Hours field must not be more than {0}</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.MinutesLimit">Minutes field must not be more than {0}</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.SecondsLimit">Seconds field must not be more than {0}</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.HoursLimit">ساعت ورودی نباید بیشتر از {0} باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.MinutesLimit">دقیقه ورودی نباید بیشتر از {0} باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.SecondsLimit">ثانیه ورودی نباید بیشتر از {0} باشد</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.SGapMorethanLGap">Gap between two short-break must be smaller than the gap between two long-break.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.SDurationMorethanLDuration">Short-break duration must be smaller than long-break duration.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.SDurationTooHigh">Short-break can not be more than 5 minutes.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LDurationTooHigh">Long-break can not be more than 2 hours.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.NotEnoughGapBetweenLandS">Not enough gap between short-break and long-break.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortGapLow">Gap between two short-breaks must be at least 1 minutes.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LongGapLow">Gap between two long-breaks must be at least 5 minutes.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ChooseLargerTime">Please choose a larger time.</sys:String>
 
+    <sys:String x:Key="Strings.EyesGuard.Settings.SavedSuccessfully">Settings successfully saved</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.SGapMorethanLGap">فاصله بین دو استراحت کوتاه باید کمتر از فاصله بین دو استراحت بلند باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.SDurationMorethanLDuration">مدت زمان استراحت کوتاه باید کمتر از مدت زمان استراحت بلند باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.SDurationTooHigh">استراحت کوتاه نمیتواند بیشتر از پنج دقیقه باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.LDurationTooHigh">استراحت بلند نمیتواند بیشتر از دو ساعت باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.NotEnoughGapBetweenLandS">استراحت کوتاه و استراحت بلند به اندازه کافی با یکدیگر فاصله ندارند</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ShortGapLow">فاصله بین دو استراحت کوتاه حداقل باید یک دقیقه باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.LongGapLow">فاصله بین دو استراحت بلند حداقل باید پنج دقیقه باشد</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ChooseLargerTime">مدت زمان بیشتری را انتخاب کنید</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.AreYouSure">Are you sure?</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Yes">Yes, Sure</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.No">No, Keep data</sys:String>
 
+    <sys:String x:Key="Strings.EyesGuard.Settings.StatsDeleted">All of stats deleted</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.SavedSuccessfully">تغییرات با موفقیت ذخیره سازی شد</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Resting">Resting</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Waiting">Waiting</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.AreYouSure">آیا مطمئنید؟</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Yes">بله مطمئنم</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.No">خیر، آمار را حذف نکن</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message0">Open and close your eyes</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message1">Blink unremittingly</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message2">Stare far-off</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message3">Look out the window</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message4">Wash your hands then massage your eyes with them</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.StatsDeleted">همه داده های آماری نرم‌افزار پاک شدند</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LongWindow.Message">It's time for a long-break. Go for a walk.</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Resting">در حال استراحت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Waiting">در حال انتظار</sys:String>
-
-
-    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message0">محکم چشماتو ببند و باز کن</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message1">پشت سر هم پلک بزن</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message2">به یک نقطه دور دست خیره شو</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message3">از پنجره بیرون رو نگاه کن</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.ShortWindow.Message4">چشماتو با دستات مالش بده</sys:String>
-
-    <sys:String x:Key="Strings.EyesGuard.LongWindow.Message">وقت استراحت بلند مدت رسیده. بهتره که بری و یه دوری بزنی.</sys:String>
-
-
-    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Title">یک دقیقه تا استراحت بلند</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Message">تنها یک دقیقه تا استراحت بلند مدت باقی مانده است. در صورت تمایل با استفاده از گزینه توقف موقت میتوانید استراحت را به تعویق بیندازید</sys:String>
-
-
-
+    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Title">1 minute to the long-break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Message">There is only one minute left until long-break. You can postpone this break from the taskbar context menu if nessesary.</sys:String>
 
 </ResourceDictionary>

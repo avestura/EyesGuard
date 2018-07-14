@@ -4,35 +4,31 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <sys:String x:Key="Strings.EyesGuard.Settings.TimeSection">Time Settings</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.UserSection">User Settings</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Stats">Stats</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Prefrences">Preferences</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.TimeSection">تنظیمات زمانی</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.UserSection">تنظیمات کاربری</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.Stats">آمار</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.Prefrences">اولویت ها</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ShortGap">Time gap between two Short-break:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.LongGap">Time gap between two Long-break:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ShortDuration">Short-break duration:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.LongDuration">Long-break duration:</sys:String>
 
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.HourAnd">Hour(s) and</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.MinutesAnd">Minute(s) and</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.Second">Seconds</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.ShortGap">فاصله زمانی بین دو استراحت کوتاه:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.LongGap">فاصله زمانی بین دو استراحت بلند:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.ShortDuration">مدت زمان استراحت کوتاه:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.LongDuration">مدت زمان استراحت بلند:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ForceUser">Force me to break</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.OnlyOneShortBreak">Show only one short-break between two long-breaks.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.StartupApplication">Start Eyes Guard with system startup</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.AlertBeforeLongBreak">Notify me 1 minute before long-break</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.HourAnd">ساعت و</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.MinutesAnd">دقیقه و</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.Second">ثانیه</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.StoreStats">Store stats</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStatsText">Remove history of stats:</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStats">Remove data</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.Settings.ForceUser">مرا مجبور به استراحت کن</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.OnlyOneShortBreak">بین هر دو استراحت بلند مدت، تنها یک بار استراحت کوتاه مدت را نشان بده</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.StartupApplication">نرم‌افزار به طور خودکار با اجرای ویندوز اجرا شود</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.AlertBeforeLongBreak">یک دقیقه قبل از استراحت بلند به من اطلاع بده</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.UseWindowsDPIScaling">Use windows DPI Scaling</sys:String>
 
-
-    <sys:String x:Key="Strings.EyesGuard.Settings.StoreStats">داده های آماری را ذخیره کن</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStatsText">تاریخچه داده های آماری مرا پاک کن:</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.ClearStats">پاک سازی داده ها</sys:String>
-
-    <sys:String x:Key="Strings.EyesGuard.Settings.UseWindowsDPIScaling">از اندازه تعیین شده ویندوز استفاده کن</sys:String>
-
-    <sys:String x:Key="Strings.EyesGuard.Settings.SaveSettings">ذخیره تغییرات</sys:String>
-
+    <sys:String x:Key="Strings.EyesGuard.Settings.SaveSettings">Save changes</sys:String>
 
 </ResourceDictionary>

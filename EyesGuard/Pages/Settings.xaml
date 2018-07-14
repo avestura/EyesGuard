@@ -7,10 +7,9 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="تنظیمات"
+    Title="Settings"
     d:DesignWidth="800"
     Background="#FF006A9F"
-    FlowDirection="RightToLeft"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
@@ -54,9 +53,9 @@
                     <Border
                         Grid.RowSpan="6"
                         Grid.Column="0"
-                        Margin="3,-0.5,0,0"
+                        Margin="6,-0.5,0,0"
                         BorderBrush="White"
-                        BorderThickness="0,0,2,0"
+                        BorderThickness="2,0,0,0"
                         FlowDirection="LeftToRight" />
 
                     <TextBlock
@@ -302,9 +301,9 @@
                     <Border
                         Grid.RowSpan="6"
                         Grid.Column="0"
-                        Margin="3,-0.5,0,0"
+                        Margin="6,-0.5,0,0"
                         BorderBrush="White"
-                        BorderThickness="0,0,2,0"
+                        BorderThickness="2,0,0,0"
                         FlowDirection="LeftToRight" />
 
                     <StackPanel
@@ -320,9 +319,9 @@
                             Style="{DynamicResource WhiteCheckbox}">
                             <CheckBox.ToolTip>
                                 <TextBlock Foreground="#FF464646">
-                                    در صورتی که این گزینه فعال باشد، شما قادر به<Bold>لغو</Bold>
-                                    و یا<Bold>خروج</Bold>
-                                    از استراحت نخواهید بود. همچنین اشاره‌گر ماوس شما نیز پنهان خواهد شد.</TextBlock>
+                                    If you enable this option, you can't&#32;<Bold>postpone</Bold>
+                                    or&#32;<Bold>exit</Bold>
+                                    the break. Also, your mouse pointer will hide during the break.</TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
                     </StackPanel>
@@ -340,8 +339,7 @@
                             Style="{DynamicResource WhiteCheckbox}">
                             <CheckBox.ToolTip>
                                 <TextBlock Foreground="#FF464646">
-                                    با فعال سازی این گزینه، نرم افزار پس از اتمام یک استراحت کوتاه و به منظور نمایش استراحت کوتاه بعد،
-                                    تا پایان یک استراحت بلند صبر می کند
+                                    Activing this option stops counter of the short-break after one completed successfully until a long-break.
                                 </TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
@@ -360,7 +358,7 @@
                             Foreground="White"
                             Style="{DynamicResource WhiteCheckbox}">
                             <CheckBox.ToolTip>
-                                <TextBlock Foreground="#FF464646">نرم افزار یک دقیقه قبل از استراحت بلند به شما اطلاع خواهد داد تا در صورت نیاز استراحت را به تعویق بیندازید</TextBlock>
+                                <TextBlock Foreground="#FF464646">Eyes Guard notifies you one minute before a long-break.</TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
                     </StackPanel>
@@ -373,7 +371,6 @@
                                   Style="{DynamicResource WhiteCheckbox}" />
 
                     </StackPanel>-->
-
 
                 </Grid>
                 <StackPanel Orientation="Horizontal">
@@ -402,9 +399,9 @@
                     <Border
                         Grid.RowSpan="4"
                         Grid.Column="0"
-                        Margin="3,-0.5,0,0"
+                        Margin="6,-0.5,0,0"
                         BorderBrush="White"
-                        BorderThickness="0,0,2,0"
+                        BorderThickness="2,0,0,0"
                         FlowDirection="LeftToRight" />
 
                     <StackPanel
@@ -420,9 +417,9 @@
                             Style="{DynamicResource WhiteCheckbox}">
                             <CheckBox.ToolTip>
                                 <TextBlock Foreground="#FF464646">
-                                    با فعال سازی این گزینه نرم‌افزار داده هایی را جمع‌آوری می‌کند که از منو<Bold>ابزار ها</Bold>
-                                    &gt;<Bold>آمار</Bold>
-                                    در دسترس است</TextBlock>
+                                    Eyes Guard will store some info about your usage that you can see in<Bold>Tools</Bold>
+                                    &gt;<Bold>Stas</Bold>
+                                    menu.</TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
                     </StackPanel>
@@ -460,9 +457,7 @@
                             </TextBlock>
                         </TextBlock>
 
-
                     </StackPanel>
-
 
                 </Grid>
                 <!--
@@ -502,9 +497,6 @@
                         </CheckBox>
                         <RadioButton>100 درصد</RadioButton>
                     </StackPanel>
-
-
-
 
                 </Grid>
                 -->

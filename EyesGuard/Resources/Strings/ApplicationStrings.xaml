@@ -4,46 +4,40 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="Strings.Application.OSTitle">نگهبان چشم</sys:String>
-    <sys:String x:Key="Strings.Application.HeaderTitle">نگهبان چشم</sys:String>
+    <sys:String x:Key="Strings.Application.OSTitle">Eyes Guard</sys:String>
+    <sys:String x:Key="Strings.Application.HeaderTitle">Eyes Guard</sys:String>
 
-    <sys:String x:Key="Strings.Application.NoLoginImplemented">در نرم افزار نگهبان چشم امکانات مربوط به کاربران متفاوت تعبیه نشده است</sys:String>
+    <sys:String x:Key="Strings.Application.NoLoginImplemented">Eyes Guard currently doesn't support multi-user features.</sys:String>
 
     <sys:String x:Key="Strings.Application.Help">
-        برای دریافت توضیح و اطلاعات در مورد عناصر برنامه، ماوس خود را روی عنصر مورد نظر نگه دارید. در صورت وجود توضیحات، راهنمای عنصر به صورت پیام در کنار آن ظاهر خواهد شد
+        For getting more info about an element in app, hower your mouse on that element. A tooltip will open if available.
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Resources" xml:space="preserve">
-      - مقاله موجود در صفحه مطالب مرتبط: وبسایت تبیان
-      - آیکون های نرم افزار: FontAwesome و IconArchive        
-      - رابط کاربری: کیت رابط کاربری هستی (توسعه داده شده توسط آرین نرم‌افزار)
-      - فونت ایران سنس خریداری شده از سایت fontiran.com
+      - Icons: FontAwesome and IconArchive
+      - UI Kit: Hasti UI Kit (Developed by Aryan Software)
     </sys:String>
 
     <sys:String x:Key="Strings.Application.About" xml:space="preserve">
-      نرم افزار نگهبان چشم
-      
-        نسخه: ۱.۰.۱
-        برنامه نویسی و طراحی: آرین ابراهیم پور
-        تاریخ انتشار: 10 خرداد 1396
-        وبسایت: aryan-pc.blog.ir
-        ایمیل: aryanebrahimpour@gmail.com
+      Eyes Guard
+
+        Publisher: Aryan Software
+        Project Repo: https://github.com/0xaryan/EyesGuard
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Donate" xml:space="preserve">
-شما تا چند لحظه دیگر به صفحه پرداخت در مرورگر خود هدایت خواهید شد
-با تشکر از توجه شما به حمایت از نرم‌افزار های باکیفیت بومی
-      
-همچنین هر گونه پیشنهاد و یا مشکلی را میتوانید از طریق ایمیل و یا وبسایت موجود در بخش درباره نرم افزار با من در ارتباط بگذارید
+Thanks for your support!
+You will be redirected to a donation page in your browser
 
+If you have any comments, you can post in Eyes Guard page of Microsoft Store. If you have any feedback you can use Feedback menu in main page.
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Donate.Title">
-        از این نرم افزار رایگان حمایت می‌کنید؟
+        Do you want to donate?
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Donate.Message">
-        در صورتی که می‌خواهید از این نرم افزار رایگان حمایت کنید و یا مایل به ایجاد انگیزه برای انتشار سایر نرم افزار های با کیفیت رایگان در آینده هستید لطفا از طریق فرم زیر از این نرم افزار حمایت مالی کنید
+        If you want to support this free open-source software, you can use this form.
     </sys:String>
 
 </ResourceDictionary>

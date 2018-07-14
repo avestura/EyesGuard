@@ -4,12 +4,8 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Strings"
     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.Protected">در حال محافظت</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.NotProtected">متوقف شده</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.PausedProtected">موقتا متوقف شده</sys:String>
-
-
-
-
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.Protected">Protecting</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.NotProtected">Not protecting</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.TaskbarIcon.PausedProtected">Temporarily disabled</sys:String>
 
 </ResourceDictionary>

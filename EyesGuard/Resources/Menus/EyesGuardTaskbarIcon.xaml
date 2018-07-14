@@ -6,17 +6,15 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     xmlns:nf="http://www.hardcodet.net/taskbar">
 
-
     <nf:TaskbarIcon
         x:Key="App.GlobalTaskbarIcon"
         ContextMenuOpening="TaskbarIcon_ContextMenuOpening"
-        FlowDirection="RightToLeft"
         IconSource="{Binding Source}"
         TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick"
         Visibility="Visible">
 
         <nf:TaskbarIcon.ContextMenu>
-            <ContextMenu FlowDirection="RightToLeft" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
+            <ContextMenu FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
 
                 <MenuItem Margin="-3,-3,-3,2" StaysOpenOnClick="True">
                     <MenuItem.Template>
@@ -69,31 +67,31 @@
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
-                <MenuItem Click="TaskbarIcon_TrayMouseDoubleClick" Header="نمایش نرم افزار" />
+                <MenuItem Click="TaskbarIcon_TrayMouseDoubleClick" Header="Show Main Menu" />
                 <Separator />
                 <MenuItem
                     Click="StartProtect_Click"
-                    Header="شروع نگهبانی"
+                    Header="Start Protection"
                     Icon="{StaticResource EyesGuard.StartProtecting}"
                     Visibility="{Binding StartProtectVisibility}" />
                 <MenuItem
                     Click="StopProtect_Click"
-                    Header="توقف نگهبانی"
+                    Header="Stop Protection"
                     Icon="{StaticResource EyesGuard.StopProtecting}"
                     Visibility="{Binding StopProtectVisibility}" />
-                <MenuItem Header="توقف به مدت">
-                    <MenuItem Click="FiveMinutesPause_Click" Header="پنج دقیقه" />
-                    <MenuItem Click="TenMinutesPause_Click" Header="ده دقیقه" />
-                    <MenuItem Click="ThirtyMinutesPause_Click" Header="نیم ساعت" />
-                    <MenuItem Click="OneHourPause_Click" Header="یک ساعت" />
-                    <MenuItem Click="TwoHourPause_Click" Header="دو ساعت" />
+                <MenuItem Header="Pause for">
+                    <MenuItem Click="FiveMinutesPause_Click" Header="5 minutes" />
+                    <MenuItem Click="TenMinutesPause_Click" Header="10 minutes" />
+                    <MenuItem Click="ThirtyMinutesPause_Click" Header="30 minutes" />
+                    <MenuItem Click="OneHourPause_Click" Header="1 hour" />
+                    <MenuItem Click="TwoHourPause_Click" Header="2 hours" />
                     <Separator />
-                    <MenuItem Click="CustomPause_Click" Header="دلخواه..." />
+                    <MenuItem Click="CustomPause_Click" Header="Custom..." />
                 </MenuItem>
                 <Separator />
-                <MenuItem Click="Settings_Click" Header="تنظیمات" />
+                <MenuItem Click="Settings_Click" Header="Settings" />
                 <Separator />
-                <MenuItem Click="Exit_Click" Header="خروج" />
+                <MenuItem Click="Exit_Click" Header="Exit" />
             </ContextMenu>
         </nf:TaskbarIcon.ContextMenu>
     </nf:TaskbarIcon>

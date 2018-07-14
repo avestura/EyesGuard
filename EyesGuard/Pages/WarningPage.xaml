@@ -1,22 +1,49 @@
-﻿<Page x:Class="EyesGuard.Pages.WarningPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:fa="http://schemas.fontawesome.io/icons/"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" FlowDirection="RightToLeft"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-      xmlns:local="clr-namespace:EyesGuard.Pages" Loaded="Page_Loaded" x:Name="page"
-      mc:Ignorable="d"  Background="#FF006A9F"
-      d:DesignHeight="450" d:DesignWidth="550"
-      Title="توجه">
+﻿<Page
+    x:Class="EyesGuard.Pages.WarningPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="page"
+    Title="Attention"
+    d:DesignHeight="450"
+    d:DesignWidth="550"
+    Background="#FF006A9F"
+    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    Loaded="Page_Loaded"
+    mc:Ignorable="d">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal">
-                <fa:ImageAwesome x:Name="pageIcon" Width="28" Icon="{Binding Icon}" Foreground="{Binding Brush}" />
-                <TextBlock x:Name="pageText" FontSize="20" Margin="5 0 0 0" Foreground="{Binding Brush}" VerticalAlignment="Center" Text="{Binding PageTitle}" />
+                <fa:ImageAwesome
+                    x:Name="pageIcon"
+                    Width="28"
+                    Foreground="{Binding Brush}"
+                    Icon="{Binding Icon}" />
+                <TextBlock
+                    x:Name="pageText"
+                    Margin="5,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="{Binding Brush}"
+                    Text="{Binding PageTitle}" />
             </StackPanel>
-            <TextBlock Margin="0 5" TextWrapping="Wrap" Foreground="White" MaxWidth="430" Text="{Binding Path=Message, ElementName=page}"/>
-            <Button Click="Button_Click" Width="120" Padding="10 4" HorizontalAlignment="Right" Content="{StaticResource Strings.EyesGuard.WarningPage.Return}" Style="{DynamicResource ButtonTemplate.Green}" />
+            <TextBlock
+                MaxWidth="430"
+                Margin="0,5"
+                Foreground="White"
+                Text="{Binding Path=Message, ElementName=page}"
+                TextWrapping="Wrap" />
+            <Button
+                Width="120"
+                Padding="10,4"
+                HorizontalAlignment="Right"
+                Click="Button_Click"
+                Content="{StaticResource Strings.EyesGuard.WarningPage.Return}"
+                Style="{DynamicResource ButtonTemplate.Green}" />
         </StackPanel>
     </Grid>
 </Page>

@@ -10,21 +10,21 @@
     <Menu
         VerticalAlignment="Center"
         Background="Transparent"
-        FlowDirection="LeftToRight"
         FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
         <MenuItem FontSize="15">
             <MenuItem.Header>
 
                 <StackPanel Margin="5,0" Orientation="Horizontal">
-                    <TextBlock>کاربر</TextBlock>
                     <fa:ImageAwesome
                         Height="20"
-                        Margin="5,0,0,0"
+                        Margin="0,0,5,0"
                         Foreground="White"
                         Icon="UserCircleOutline" />
+                    <TextBlock>User</TextBlock>
+
                 </StackPanel>
             </MenuItem.Header>
-            <MenuItem FlowDirection="RightToLeft" StaysOpenOnClick="True">
+            <MenuItem StaysOpenOnClick="True">
                 <MenuItem.Template>
                     <ControlTemplate>
                         <Grid Height="60">
@@ -41,8 +41,8 @@
                                 Grid.Column="1"
                                 Margin="5"
                                 VerticalAlignment="Center">
-                                <TextBlock FontSize="12" FontWeight="Bold">کاربر وارد نشده</TextBlock>
-                                <TextBlock FontSize="10">بدون سمت</TextBlock>
+                                <TextBlock FontSize="12" FontWeight="Bold">Not logged in</TextBlock>
+                                <TextBlock FontSize="10">No title</TextBlock>
                             </StackPanel>
                         </Grid>
                     </ControlTemplate>
@@ -50,21 +50,18 @@
             </MenuItem>
             <MenuItem
                 Click="MenuItem_Click"
-                FlowDirection="RightToLeft"
                 FontSize="12"
-                Header="ورود"
+                Header="Login"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
             <MenuItem
-                FlowDirection="RightToLeft"
                 FontSize="12"
-                Header="پروفایل"
+                Header="Profile"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
                 IsEnabled="False" />
             <Separator />
             <MenuItem
-                FlowDirection="RightToLeft"
                 FontSize="12"
-                Header="خروج از حساب"
+                Header="Logout"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
                 IsEnabled="False" />
         </MenuItem>

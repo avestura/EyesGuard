@@ -6,78 +6,76 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    FlowDirection="RightToLeft"
     mc:Ignorable="d">
     <Menu
         Background="Transparent"
         FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-        FontSize="10">
-        <MenuItem Header="نگهبان">
-            <MenuItem Click="GoToMainPage_Click" Header="صفحه اصلی" />
+        FontSize="11">
+        <MenuItem Header="Eyes Guard">
+            <MenuItem Click="GoToMainPage_Click" Header="Main Menu" />
             <Separator />
-            <MenuItem Header="شروع نگهبانی" Visibility="Collapsed" />
-            <MenuItem Header="توقف برای...">
-                <MenuItem Click="FiveMinutesPause_Click" Header="پنج دقیقه" />
-                <MenuItem Click="TenMinutesPause_Click" Header="ده دقیقه" />
-                <MenuItem Click="ThirtyMinutesPause_Click" Header="نیم ساعت" />
-                <MenuItem Click="OneHourPause_Click" Header="یک ساعت" />
-                <MenuItem Click="TwoHourPause_Click" Header="دو ساعت" />
+            <MenuItem Header="Start Protection" Visibility="Collapsed" />
+            <MenuItem Header="Pause for...">
+                <MenuItem Click="FiveMinutesPause_Click" Header="5 minutes" />
+                <MenuItem Click="TenMinutesPause_Click" Header="10 minutes" />
+                <MenuItem Click="ThirtyMinutesPause_Click" Header="30 minutes" />
+                <MenuItem Click="OneHourPause_Click" Header="1 hour" />
+                <MenuItem Click="TwoHourPause_Click" Header="2 hours" />
                 <Separator />
-                <MenuItem Click="CustomPause_Click" Header="دلخواه..." />
+                <MenuItem Click="CustomPause_Click" Header="Custom..." />
             </MenuItem>
 
             <Separator />
-            <MenuItem Click="HideApp_Click" Header="پنهان‌سازی نرم افزار" />
+            <MenuItem Click="HideApp_Click" Header="Hide Eyes Guard" />
             <Separator />
-            <MenuItem Click="ApplicationExit_Click" Header="خروج" />
+            <MenuItem Click="ApplicationExit_Click" Header="Exit" />
         </MenuItem>
 
-
-        <MenuItem Header="ابزار ها">
-            <MenuItem Click="GoToStatictictsPage_Click" Header="آمار" />
+        <MenuItem Header="Tools">
+            <MenuItem Click="GoToStatictictsPage_Click" Header="Stats" />
             <MenuItem
                 Click="GoToEyeSightImprove_Click"
-                Header="تقویت چشم"
+                Header="Improve your eyes"
                 Visibility="Collapsed" />
-            <MenuItem Click="GoToEyeContentPage_Click" Header="مطالب مرتبط" />
+
             <Separator />
             <MenuItem
                 Click="GoToSettingsPage_Click"
-                Header="تنظیمات"
+                Header="Settings"
                 Icon="{StaticResource EyesGuard.Settings}" />
         </MenuItem>
 
-        <MenuItem Header="استراحت">
+        <MenuItem Header="Breaks">
             <MenuItem
                 Click="StartShortBreak_Click"
-                Header="استراحت کوتاه مدت"
+                Header="Go for a short-break"
                 IsEnabled="{Binding ManualBreakEnabled}" />
             <MenuItem
                 Click="StartLongBreak_Click"
-                Header="استراحت بلند مدت"
+                Header="Go for a long-break"
                 IsEnabled="{Binding ManualBreakEnabled}" />
         </MenuItem>
 
-        <MenuItem Header="نمایش">
+        <MenuItem Header="View">
             <MenuItem
                 Click="ShowHideTimeRemaining_Click"
-                Header="زمان های کلیدی"
+                Header="Key Times"
                 IsCheckable="True"
                 IsChecked="{Binding IsTimeItemChecked}"
                 StaysOpenOnClick="True" />
         </MenuItem>
-        <MenuItem Header="راهنما">
+        <MenuItem Header="Help">
             <MenuItem
                 Click="Help_Click"
-                Header="راهنمای نرم افزار"
+                Header="Eyes Guard Help"
                 Icon="{StaticResource EyesGuard.QuestionMark}" />
-            <MenuItem Click="Resources_Click" Header="منابع" />
+            <MenuItem Click="Resources_Click" Header="Resources" />
             <Separator />
             <MenuItem
                 Click="Donate_Click"
-                Header="حمایت از نرم‌افزار"
+                Header="Donate"
                 Icon="{StaticResource EyesGuard.Donate}" />
-            <MenuItem Click="About_Click" Header="درباره سازنده" />
+            <MenuItem Click="About_Click" Header="About" />
 
         </MenuItem>
     </Menu>

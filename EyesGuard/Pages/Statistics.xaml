@@ -1,23 +1,34 @@
-﻿<Page x:Class="EyesGuard.Pages.Statistics"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:fa="http://schemas.fontawesome.io/icons/" xmlns:local="clr-namespace:EyesGuard.Pages"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="آمار"
-      d:DesignHeight="450" d:DesignWidth="600" Background="#FF006A9F"
-      FlowDirection="RightToLeft"
-      FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-      Loaded="Page_Loaded" mc:Ignorable="d">
+﻿<Page
+    x:Class="EyesGuard.Pages.Statistics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Stats"
+    d:DesignHeight="450"
+    d:DesignWidth="600"
+    Background="#FF006A9F"
+    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    Loaded="Page_Loaded"
+    mc:Ignorable="d">
 
     <Grid>
 
         <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <WrapPanel Margin="0,10" Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
-                    <fa:ImageAwesome Width="30" Foreground="White" Icon="CircleOutline" />
-                    <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="18"
-                               Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.Short}" />
+                    <fa:ImageAwesome
+                        Width="30"
+                        Foreground="White"
+                        Icon="CircleOutline" />
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.Short}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -30,23 +41,41 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Border Grid.RowSpan="6" Grid.Column="0" Margin="3,-0.5,0,0"
-                            BorderBrush="White" BorderThickness="0,0,2,0" FlowDirection="LeftToRight" />
+                    <Border
+                        Grid.RowSpan="6"
+                        Grid.Column="0"
+                        Margin="6,-0.5,0,0"
+                        BorderBrush="White"
+                        BorderThickness="2,0,0,0"
+                        FlowDirection="LeftToRight" />
 
-                    <TextBlock Grid.Row="1" Grid.Column="1" Margin="5"
-                               VerticalAlignment="Center" Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.ShortCount}" />
-                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5"
-                               FontSize="15"
-                               Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
-                               Text="{Binding ShortCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.ShortCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="5"
+                        FontSize="15"
+                        Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                        Text="{Binding ShortCount}" />
                 </Grid>
 
                 <StackPanel Orientation="Horizontal">
-                    <fa:ImageAwesome Width="30" Foreground="White" Icon="CircleOutline" />
-                    <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="18"
-                               Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.Long}" />
+                    <fa:ImageAwesome
+                        Width="30"
+                        Foreground="White"
+                        Icon="CircleOutline" />
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.Long}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -60,30 +89,55 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Border Grid.RowSpan="6" Grid.Column="0" Margin="3,-0.5,0,0"
-                            BorderBrush="White" BorderThickness="0,0,2,0" FlowDirection="LeftToRight" />
+                    <Border
+                        Grid.RowSpan="6"
+                        Grid.Column="0"
+                        Margin="6,-0.5,0,0"
+                        BorderBrush="White"
+                        BorderThickness="2,0,0,0"
+                        FlowDirection="LeftToRight" />
 
-                    <TextBlock Grid.Row="1" Grid.Column="1" Margin="5"
-                               VerticalAlignment="Center" Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.LongComplatedCount}" />
-                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5"
-                               FontSize="15"
-                               Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
-                               Text="{Binding LongCompletedCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.LongComplatedCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="5"
+                        FontSize="15"
+                        Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                        Text="{Binding LongCompletedCount}" />
 
-                    <TextBlock Grid.Row="2" Grid.Column="1" Margin="5"
-                               VerticalAlignment="Center" Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.LongFailedCount}" />
-                    <TextBlock Grid.Row="2" Grid.Column="2" Margin="5"
-                               FontSize="15"
-                               Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
-                               Text="{Binding LongFailedCount}" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.LongFailedCount}" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Margin="5"
+                        FontSize="15"
+                        Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                        Text="{Binding LongFailedCount}" />
                 </Grid>
                 <StackPanel Orientation="Horizontal">
-                    <fa:ImageAwesome Width="30" Foreground="White" Icon="CircleOutline" />
-                    <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="18"
-                               Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.Paused}" />
+                    <fa:ImageAwesome
+                        Width="30"
+                        Foreground="White"
+                        Icon="CircleOutline" />
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.Paused}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -97,24 +151,43 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Border Grid.RowSpan="6" Grid.Column="0" Margin="3,-0.5,0,0"
-                            BorderBrush="White" BorderThickness="0,0,2,0" FlowDirection="LeftToRight" />
+                    <Border
+                        Grid.RowSpan="6"
+                        Grid.Column="0"
+                        Margin="6,-0.5,0,0"
+                        BorderBrush="White"
+                        BorderThickness="2,0,0,0"
+                        FlowDirection="LeftToRight" />
 
-                    <TextBlock Grid.Row="1" Grid.Column="1" Margin="5"
-                               VerticalAlignment="Center" Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.StopCount}" />
-                    <TextBlock Grid.Row="1" Grid.Column="2" Margin="5"
-                               FontSize="15"
-                               Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
-                               Text="{Binding StopCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.StopCount}" />
+                    <TextBlock
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="5"
+                        FontSize="15"
+                        Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                        Text="{Binding StopCount}" />
 
-                    <TextBlock Grid.Row="2" Grid.Column="1" Margin="5"
-                               VerticalAlignment="Center" Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Stats.PauseCount}" />
-                    <TextBlock Grid.Row="2" Grid.Column="2" Margin="5"
-                               FontSize="15"
-                               Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
-                               Text="{Binding PauseCount}" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="5"
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Text="{StaticResource Strings.EyesGuard.Stats.PauseCount}" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Margin="5"
+                        FontSize="15"
+                        Foreground="{StaticResource HastiUI.SolidColorBrushes.LowGreen}"
+                        Text="{Binding PauseCount}" />
                 </Grid>
             </WrapPanel>
         </ScrollViewer>
