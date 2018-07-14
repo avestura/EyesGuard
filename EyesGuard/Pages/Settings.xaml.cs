@@ -32,7 +32,6 @@ namespace EyesGuard.Pages
                 this.Background = Brushes.Transparent;
             }
 
-
             shortGapHours.Text   = App.Configuration.ShortBreakGap.Hours.ToString();
             shortGapMinutes.Text = App.Configuration.ShortBreakGap.Minutes.ToString();
             shortGapSeconds.Text = App.Configuration.ShortBreakGap.Seconds.ToString();
@@ -65,6 +64,7 @@ namespace EyesGuard.Pages
             try
             {
                 string warning = "";
+
                 // sg: Short Gap
                 // sd: Short Duration
                 // lg: Long Gap

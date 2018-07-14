@@ -148,15 +148,12 @@ namespace EyesGuard
             Config.InitializeLocalFolder();
             Config.LoadSettingsFromFile();
 
-         
-
             UserScalingFactor = Configuration.DpiScalingFactor;
             // End Section
 
             // Ignore paused protecting state
             if (Configuration.ProtectionState == GuardStates.PausedProtecting)
                 Configuration.ProtectionState = GuardStates.Protecting;
-
 
             if ((int)Configuration.ShortBreakGap.TotalMinutes < 1)
                 Configuration.ShortBreakGap = new TimeSpan(0, 1, 0);
@@ -177,7 +174,6 @@ namespace EyesGuard
             ShortBreakVisibleTime  = App.Configuration.ShortBreakDuration;
             LongBreakVisibleTime  = App.Configuration.LongBreakDuration;
 
-
             if(App.Configuration.ProtectionState == GuardStates.Protecting)
             {
                 ShortBreakHandler.Start();
@@ -188,7 +184,6 @@ namespace EyesGuard
             UpdateLongTimeString();
             UpdateKeyTimeVisible();
             UpdateStats();
-            
 
             ShortBreakHandler.Tick += ShortBreakHandler_Tick;
             LongBreakHandler .Tick += LongBreakHandler_Tick;
@@ -281,7 +276,6 @@ namespace EyesGuard
 
             ShortDurationCounter.Start();
 
-            
         }
 
         private void LongBreakHandler_Tick(object sender, EventArgs e)
@@ -303,7 +297,6 @@ namespace EyesGuard
                 }
             }
 
-      
         }
 
         public async void StartLongBreak()
@@ -358,7 +351,6 @@ namespace EyesGuard
         private async void EndShortBreak()
         {
 
-            
             if (Configuration.SaveStats)
             {
                 Configuration.ShortBreaksCompleted++;
@@ -613,7 +605,6 @@ namespace EyesGuard
 
         #region Application :: Utilities
 
-
         #endregion
 
         #region Application :: Chrome Actions
@@ -657,13 +648,6 @@ namespace EyesGuard
         }
 
         #endregion
-
-
-
-
-
-
-
 
     }
 }
