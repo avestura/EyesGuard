@@ -57,7 +57,6 @@ namespace EyesGuard.Pages
 
             App.ShowWarning(App.Current.FindResource("Strings.Application.Donate").ToString(), WarningPage.PageStates.Donate, new MainPage());
 
-
         }
     }
 }
