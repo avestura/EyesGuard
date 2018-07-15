@@ -29,11 +29,11 @@
 Thanks for your support!
 You will be redirected to a donation page in your browser
 
-If you have any comments, you can post in Eyes Guard page of Microsoft Store. If you have any feedback you can use Feedback menu in main page.
+If you have any comments, you can post in Eyes Guard page of Microsoft Store.
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Donate.Title">
-        Do you want to donate?
+        Would you like to Donate?
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Donate.Message">
