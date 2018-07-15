@@ -21,6 +21,7 @@ namespace EyesGuard.Resources.Menus
         public HeaderMenu()
         {
             InitializeComponent();
+
             DataContext = App.HeaderMenuViewModel;
         }
 
@@ -134,6 +135,11 @@ namespace EyesGuard.Resources.Menus
         private void Donate_Click(object sender, RoutedEventArgs e)
         {
             App.GetMainWindow().MainFrame.Navigate(new Donate());
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
