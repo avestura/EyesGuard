@@ -37,21 +37,9 @@ namespace EyesGuard.Pages
         private void DonateButton_Click(object sender, RoutedEventArgs e)
         {
 
-            int pay = 0;
-
-            const int MinPay = 10000;
-            const int MaxPay = 150000000;
-
             try
             {
-                pay = int.Parse(DonatePay.Text + "0");
-                if (pay < MinPay) pay = MinPay;
-                if (pay > MaxPay) pay = MaxPay;
-            } catch { }
-
-            try
-            {
-                Process.Start($"https://idpay.ir/aryansoftware-donate?amount={pay}&desc={DonateMessage.Text}&name={DonateName.Text}");
+                Process.Start($"https://donorbox.org/eyes-guard-donate");
 
             } catch { }
 

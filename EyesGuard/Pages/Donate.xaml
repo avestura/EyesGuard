@@ -42,11 +42,7 @@
                 TextBlock.Foreground="White">
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition Height="5" />
-                    <RowDefinition />
-                    <RowDefinition Height="5" />
-                    <RowDefinition />
-                    <RowDefinition Height="5" />
+
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -55,67 +51,13 @@
 
                 </Grid.ColumnDefinitions>
 
-                <TextBlock
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Margin="0,0,10,0">
-                    <TextBlock FontSize="15">Your name</TextBlock>
-                    <Span FontSize="10" Foreground="#FFE5E5E5">(optional)</Span>
-                    <TextBlock>:</TextBlock>
-                </TextBlock>
-                <TextBox
-                    x:Name="DonateName"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    MinWidth="150"
-                    MaxWidth="250"
-                    FontSize="15"
-                    Style="{DynamicResource WhiteTextBox}"
-                    TextAlignment="Center" />
-
-                <TextBlock
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Margin="0,0,10,0">
-                    <TextBlock FontSize="15">Donate</TextBlock>
-                    <Span FontSize="10" Foreground="#FFE5E5E5">(in USD)</Span>
-                    <TextBlock>:</TextBlock>
-                </TextBlock>
-                <c:NumOnlyTextbox
-                    x:Name="DonatePay"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    MinWidth="150"
-                    MaxWidth="250"
-                    FontSize="15"
-                    Style="{DynamicResource WhiteTextBox}"
-                    Text="0"
-                    TextAlignment="Center" />
-
-                <TextBlock
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    Margin="0,0,10,0">
-                    <TextBlock FontSize="15">Your message</TextBlock>
-                    <Span FontSize="10" Foreground="#FFE5E5E5">(optional)</Span>
-                    <TextBlock>:</TextBlock>
-                </TextBlock>
-                <TextBox
-                    x:Name="DonateMessage"
-                    Grid.Row="4"
-                    Grid.Column="1"
-                    MinWidth="150"
-                    MaxWidth="250"
-                    FontSize="15"
-                    Style="{DynamicResource WhiteTextBox}"
-                    TextAlignment="Center" />
-
                 <Button
                     Grid.Row="6"
                     Grid.Column="1"
                     Height="30"
+                    Padding="10,0"
                     Click="DonateButton_Click"
-                    Content="Recirect to donate page"
+                    Content="Open donate webpage in Browser"
                     FontSize="15"
                     Style="{DynamicResource ButtonTemplate.Green}" />
             </Grid>
