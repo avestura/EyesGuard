@@ -127,6 +127,7 @@ namespace EyesGuard
         #region Application :: Initialization
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+
             // Check if application is running by startup
             if (e.Args.Length > 0 && e.Args[0] == "/auto")
             {

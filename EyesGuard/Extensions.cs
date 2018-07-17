@@ -13,10 +13,9 @@ namespace EyesGuard
     public static class Extensions
     {
 
-
         public static void UserInterfaceCustomScale(this FrameworkElement element, double customScale, bool chengeDimentions = true)
         {
-            
+
             element.LayoutTransform = new ScaleTransform(customScale, customScale, 0, 0);
 
             if (chengeDimentions)
@@ -25,12 +24,11 @@ namespace EyesGuard
                 element.Height *= customScale;
             }
 
-
         }
 
         public static void BringWindowCenterScreen(this Window window)
         {
-     
+
             // Bring window center screen
             var screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
             var screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
@@ -61,7 +59,6 @@ namespace EyesGuard
         {
             return $"({(scalingSize * 100)} درصد)";
         }
-
 
     }
 }
