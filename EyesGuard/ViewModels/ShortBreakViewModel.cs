@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,7 +21,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 shortMessage = value;
-                OnPropertyChanged("ShortMessage");
+                OnPropertyChanged();
             }
         }
 
@@ -34,13 +35,12 @@ namespace EyesGuard.ViewModels
             set
             {
                 timeRemaining = value;
-                OnPropertyChanged("TimeRemaining");
+                OnPropertyChanged();
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propName)
+        public void OnPropertyChanged([CallerMemberName]string propName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }

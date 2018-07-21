@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,7 +21,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 timeRemaining = value;
-                OnPropertyChanged("TimeRemaining");
+                OnPropertyChanged();
             }
         }
 
@@ -34,13 +35,13 @@ namespace EyesGuard.ViewModels
             set
             {
                 _canCancel = value;
-                OnPropertyChanged("CanCancel");
+                OnPropertyChanged();
             }
 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

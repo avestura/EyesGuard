@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,7 +20,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 _nextShortBreak = value;
-                OnPropertyChanged("NextShortBreak");
+                OnPropertyChanged();
             }
 
         }
@@ -34,11 +35,10 @@ namespace EyesGuard.ViewModels
             set
             {
                 _nextLongBreak = value;
-                OnPropertyChanged("NextLongBreak");
+                OnPropertyChanged();
             }
 
         }
-
 
         private string _pauseTime = "";
         public string PauseTime
@@ -50,7 +50,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 _pauseTime = value;
-                OnPropertyChanged("PauseTime");
+                OnPropertyChanged();
             }
 
         }
@@ -65,7 +65,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 _timeRemainVisibility = value;
-                OnPropertyChanged("TimeRemainingVisibility");
+                OnPropertyChanged();
             }
 
         }
@@ -80,7 +80,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 _protectionPause = value;
-                OnPropertyChanged("IsProtectionPaused");
+                OnPropertyChanged();
 
                 if (_protectionPause)
                 {
@@ -91,14 +91,13 @@ namespace EyesGuard.ViewModels
                 {
                     PauseVisibility = Visibility.Collapsed;
                     LongShortVisibility = Visibility.Visible;
-            
+
                 }
                 OnPropertyChanged("PauseVisibility");
                 OnPropertyChanged("LongShortVisibility");
             }
 
         }
-
 
         public Visibility PauseVisibility { get; set; } = Visibility.Collapsed;
 
@@ -107,13 +106,12 @@ namespace EyesGuard.ViewModels
             get { return _longShortVisibility; }
             set {
                 _longShortVisibility = value;
-                OnPropertyChanged("LongShortVisibility");
+                OnPropertyChanged();
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(string propertyName)
+        private void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

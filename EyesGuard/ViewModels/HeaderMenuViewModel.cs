@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,7 +18,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 _isTimeItemChecked = value;
-                OnPropertyChanged("IsTimeItemChecked");
+                OnPropertyChanged();
             }
         }
 
@@ -28,15 +29,23 @@ namespace EyesGuard.ViewModels
             set
             {
                 manualBreakEnabled = value;
-                OnPropertyChanged("ManualBreakEnabled");
+                OnPropertyChanged();
             }
         }
 
-
-
+        private bool isFeedbackAvailable = true;
+        public bool IsFeedbackAvailable
+        {
+            get { return isFeedbackAvailable; }
+            set
+            {
+                isFeedbackAvailable = value;
+                OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propertyName)
+        public void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

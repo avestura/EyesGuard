@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,7 +21,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 darkBrush = value;
-                OnPropertyChanged("DarkBrush");
+                OnPropertyChanged();
             }
         }
 
@@ -34,7 +35,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 darkBrush = value;
-                OnPropertyChanged("LowBrush");
+                OnPropertyChanged();
             }
         }
 
@@ -48,7 +49,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 source = value;
-                OnPropertyChanged("Source");
+                OnPropertyChanged();
             }
         }
 
@@ -62,7 +63,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 startProtectVisibility = value;
-                OnPropertyChanged("StartProtectVisibility");
+                OnPropertyChanged();
             }
         }
 
@@ -76,7 +77,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 stopProtectVisibility = value;
-                OnPropertyChanged("StopProtectVisibility");
+                OnPropertyChanged();
             }
         }
 
@@ -90,12 +91,12 @@ namespace EyesGuard.ViewModels
             set
             {
                 title = value;
-                OnPropertyChanged("Title");
+                OnPropertyChanged();
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propName)
+        public void OnPropertyChanged([CallerMemberName]string propName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 shortCount = value;
-                OnPropertyChanged("ShortCount");
+                OnPropertyChanged();
             }
         }
 
@@ -33,10 +34,9 @@ namespace EyesGuard.ViewModels
             set
             {
                 longCompletedCount = value;
-                OnPropertyChanged("LongCompletedCount");
+                OnPropertyChanged();
             }
         }
-
 
         private long longfailedCount = 0;
         public long LongFailedCount
@@ -48,7 +48,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 longfailedCount = value;
-                OnPropertyChanged("LongFailedCount");
+                OnPropertyChanged();
             }
         }
 
@@ -62,7 +62,7 @@ namespace EyesGuard.ViewModels
             set
             {
                 pauseCount = value;
-                OnPropertyChanged("PauseCount");
+                OnPropertyChanged();
             }
         }
 
@@ -76,13 +76,12 @@ namespace EyesGuard.ViewModels
             set
             {
                 stopCount = value;
-                OnPropertyChanged("StopCount");
+                OnPropertyChanged();
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged(string propName)
+        public void OnPropertyChanged([CallerMemberName]string propName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
