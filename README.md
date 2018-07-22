@@ -2,12 +2,7 @@ Eyes Guard
 ===
 Windows Application for protecting you eyes
 
-Download setup and view article at [Download - Aryan Software Blog](http://aryan-pc.blog.ir/post/EyeGuard-App)
-
-
-#### Eyes Guard Applicarion by [Aryan Software](http://aryan-pc.blog.ir)
-
-#### Created by [@Aryanium](https://github.com/AryanShadowhunter)
+<a href='//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge'><img width="250" src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge'/></a>
 
 #### Under licence of GNU General Public License v3
 
