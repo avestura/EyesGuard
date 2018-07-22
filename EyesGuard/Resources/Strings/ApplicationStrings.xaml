@@ -10,7 +10,7 @@
     <sys:String x:Key="Strings.Application.NoLoginImplemented">Eyes Guard currently doesn't support multi-user features.</sys:String>
 
     <sys:String x:Key="Strings.Application.Help">
-        For getting more info about an element in app, hower your mouse on that element. A tooltip will open if available.
+        For getting more info about an element in app, hover your mouse on that element. A tooltip will open if available.
     </sys:String>
 
     <sys:String x:Key="Strings.Application.Resources" xml:space="preserve">
