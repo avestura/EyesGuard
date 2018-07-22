@@ -60,4 +60,8 @@
     <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Title">1 minute to the long-break</sys:String>
     <sys:String x:Key="Strings.EyesGuard.LongBreakAlert.Message">There is only one minute left until long-break. You can postpone this break from the taskbar context menu if nessesary.</sys:String>
 
+    <sys:String x:Key="Strings.EyesGuard.WaitUnitlEndOfBreak">Please wait until break finishes.</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.LongBreakTimeRemaining">%s hour(s) and %s minutes(s) and %s seconds to the end of break.</sys:String>
+
 </ResourceDictionary>

@@ -18,6 +18,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
+using System.Xml.Serialization;
 
 namespace EyesGuard
 {
@@ -39,7 +40,11 @@ namespace EyesGuard
         /// <summary>
         /// Number of application process. Used to run only one instance
         /// </summary>
-        private static int programInstancesCount = System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count();
+        private static int programInstancesCount =
+            Process.GetProcessesByName(
+                System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)
+                ).Count();
+
         #endregion Application Fields :: Private Fields
 
         #region Application :: Fields :: Public Fields
@@ -152,7 +157,7 @@ namespace EyesGuard
             if (programInstancesCount > 1)
             {
 
-                MessageBox.Show("Eyes Guard is already running. You can't run multiple instances of this software.");
+                MessageBox.Show("Strings.EyesGuard.Alerts.DoNotRunMultipleInstances".Translate());
 
                 Shutdown();
             }
@@ -262,7 +267,7 @@ namespace EyesGuard
                 App.CurrentLongBreakWindow != null)
             {
                 if(showWarning)
-                    App.ShowWarning("Please wait until break finishes.", WarningPage.PageStates.Warning);
+                    App.ShowWarning("Strings.EyesGuard.WaitUnitlEndOfBreak".Translate(), WarningPage.PageStates.Warning);
                 return true;
             }
             return false;
@@ -304,7 +309,7 @@ namespace EyesGuard
             LongBreakHandler.Stop();
 
             App.HeaderMenuViewModel.ManualBreakEnabled = false;
-            ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
+            ShortLongBreakTimeRemainingViewModel.NextShortBreak = "Strings.EyesGuard.Resting".Translate();
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             ShortBreakShownOnce = true;
@@ -337,7 +342,10 @@ namespace EyesGuard
 
                 if(App.Configuration.AlertBeforeLongBreak && (int)NextLongBreak.TotalSeconds == 60)
                 {
-                    App.TaskbarIcon.ShowBalloonTip(App.Current.FindResource("Strings.EyesGuard.LongBreakAlert.Title").ToString(), App.Current.FindResource("Strings.EyesGuard.LongBreakAlert.Message").ToString(), BalloonIcon.Info);
+                    App.TaskbarIcon.ShowBalloonTip(
+                        "Strings.EyesGuard.LongBreakAlert.Title".Translate(),
+                        "Strings.EyesGuard.LongBreakAlert.Message".Translate(),
+                        BalloonIcon.Info);
                 }
 
                 if ((int)NextLongBreak.TotalSeconds == 0)
@@ -355,7 +363,7 @@ namespace EyesGuard
             ShortBreakHandler.Stop();
             LongBreakHandler.Stop();
             App.HeaderMenuViewModel.ManualBreakEnabled = false;
-            ShortLongBreakTimeRemainingViewModel.NextLongBreak = App.Current.FindResource("Strings.EyesGuard.Resting").ToString();
+            ShortLongBreakTimeRemainingViewModel.NextLongBreak = "Strings.EyesGuard.Resting".Translate();
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             NextLongBreak = App.Configuration.LongBreakGap;
@@ -365,7 +373,12 @@ namespace EyesGuard
                 DataContext = LongBreakViewModel
             };
             LongBreakVisibleTime = App.Configuration.LongBreakDuration;
-            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minutes(s) and " + LongBreakVisibleTime.Seconds + " seconds until the end of break.";
+            LongBreakViewModel.TimeRemaining = string.Format(
+                "Strings.EyesGuard.LongBreakTimeRemaining".Translate(),
+                LongBreakVisibleTime.Hours,
+                LongBreakVisibleTime.Minutes,
+                LongBreakVisibleTime.Seconds);
+
             LongBreakViewModel.CanCancel = (Configuration.ForceUserToBreak) ? Visibility.Collapsed : Visibility.Visible;
 
             if (CurrentShortBreakWindow != null)
@@ -407,7 +420,7 @@ namespace EyesGuard
                 UpdateStats();
             }
 
-            ShortLongBreakTimeRemainingViewModel.NextShortBreak = App.Current.FindResource("Strings.EyesGuard.Waiting").ToString();
+            ShortLongBreakTimeRemainingViewModel.NextShortBreak = "Strings.EyesGuard.Waiting".Translate();
 
             await CurrentShortBreakWindow.HideUsingLinearAnimationAsync();
             if (CurrentShortBreakWindow != null)
@@ -430,7 +443,12 @@ namespace EyesGuard
         private void LongDurationCounter_Tick(object sender, EventArgs e)
         {
             LongBreakVisibleTime = LongBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
-            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minute(s) and " + LongBreakVisibleTime.Seconds + " second(s) to the end of long-break.";
+            LongBreakViewModel.TimeRemaining = string.Format(
+                         "Strings.EyesGuard.LongBreakTimeRemaining".Translate(),
+                         LongBreakVisibleTime.Hours,
+                         LongBreakVisibleTime.Minutes,
+                         LongBreakVisibleTime.Seconds);
+
             if ((int)LongBreakVisibleTime.TotalSeconds == 0)
             {
                 EndLongBreak();
@@ -468,11 +486,13 @@ namespace EyesGuard
         {
             if (NextLongBreak.TotalSeconds < 60)
             {
-                ShortLongBreakTimeRemainingViewModel.NextLongBreak = (int)NextLongBreak.TotalSeconds + " " + App.Current.FindResource("Strings.EyesGuard.TimeRemaining.LongBreak.Seconds").ToString();
+                ShortLongBreakTimeRemainingViewModel.NextLongBreak =
+                    $"{(int)NextLongBreak.TotalSeconds} {"Strings.EyesGuard.TimeRemaining.LongBreak.Seconds".Translate()}";
             }
             else
             {
-                ShortLongBreakTimeRemainingViewModel.NextLongBreak = (int)NextLongBreak.TotalMinutes + " " + App.Current.FindResource("Strings.EyesGuard.TimeRemaining.LongBreak.Minutes").ToString();
+                ShortLongBreakTimeRemainingViewModel.NextLongBreak =
+                    $"{(int)NextLongBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.LongBreak.Minutes".Translate()}";
 
             }
         }
@@ -481,11 +501,13 @@ namespace EyesGuard
         {
             if (NextShortBreak.TotalSeconds < 60)
             {
-                ShortLongBreakTimeRemainingViewModel.NextShortBreak = (int)NextShortBreak.TotalSeconds + " " + App.Current.FindResource("Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds");
+                ShortLongBreakTimeRemainingViewModel.NextShortBreak =
+                    $"{(int)NextShortBreak.TotalSeconds} {"Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds".Translate()}";
             }
             else
             {
-                ShortLongBreakTimeRemainingViewModel.NextShortBreak = (int)NextShortBreak.TotalMinutes + " " + App.Current.FindResource("Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes");
+                ShortLongBreakTimeRemainingViewModel.NextShortBreak =
+                    $"{(int)NextShortBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes".Translate()}";
 
             }
         }
@@ -494,11 +516,15 @@ namespace EyesGuard
         {
             if (PauseProtectionSpan.TotalSeconds < 60)
             {
-                ShortLongBreakTimeRemainingViewModel.PauseTime = string.Format(App.Current.FindResource("Strings.EyesGuard.TimeRemaining.PauseTime.Seconds").ToString(), (int)PauseProtectionSpan.TotalSeconds);
+                ShortLongBreakTimeRemainingViewModel.PauseTime =
+                    string.Format("Strings.EyesGuard.TimeRemaining.PauseTime.Seconds".Translate(),
+                    (int)PauseProtectionSpan.TotalSeconds);
             }
             else
             {
-                ShortLongBreakTimeRemainingViewModel.PauseTime = string.Format(App.Current.FindResource("Strings.EyesGuard.TimeRemaining.PauseTime.Minutes").ToString(), (int)PauseProtectionSpan.TotalMinutes);
+                ShortLongBreakTimeRemainingViewModel.PauseTime =
+                    string.Format("Strings.EyesGuard.TimeRemaining.PauseTime.Minutes".Translate(),
+                    (int)PauseProtectionSpan.TotalMinutes);
 
             }
         }
@@ -551,7 +577,7 @@ namespace EyesGuard
                 NotifyIconViewModel.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Sheild-Protecting.ico", UriKind.Absolute));
                 NotifyIconViewModel.StartProtectVisibility = Visibility.Collapsed;
                 NotifyIconViewModel.StopProtectVisibility = Visibility.Visible;
-                NotifyIconViewModel.Title = App.Current.FindResource("Strings.EyesGuard.TaskbarIcon.Protected").ToString();
+                NotifyIconViewModel.Title = "Strings.EyesGuard.TaskbarIcon.Protected".Translate();
             }
             else if (Configuration.ProtectionState == GuardStates.PausedProtecting)
             {
@@ -560,7 +586,7 @@ namespace EyesGuard
                 NotifyIconViewModel.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Sheild-Paused.ico", UriKind.Absolute));
                 NotifyIconViewModel.StartProtectVisibility = Visibility.Visible;
                 NotifyIconViewModel.StopProtectVisibility = Visibility.Collapsed;
-                NotifyIconViewModel.Title = App.Current.FindResource("Strings.EyesGuard.TaskbarIcon.PausedProtected").ToString();
+                NotifyIconViewModel.Title = "Strings.EyesGuard.TaskbarIcon.PausedProtected".Translate();
 
             }
             else if (Configuration.ProtectionState == GuardStates.NotProtecting)
@@ -570,7 +596,7 @@ namespace EyesGuard
                 NotifyIconViewModel.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Shield-Stopped.ico", UriKind.Absolute));
                 NotifyIconViewModel.StartProtectVisibility = Visibility.Visible;
                 NotifyIconViewModel.StopProtectVisibility = Visibility.Collapsed;
-                NotifyIconViewModel.Title = App.Current.FindResource("Strings.EyesGuard.TaskbarIcon.NotProtected").ToString();
+                NotifyIconViewModel.Title = "Strings.EyesGuard.TaskbarIcon.NotProtected".Translate();
 
             }
         }
@@ -648,7 +674,7 @@ namespace EyesGuard
         {
             ShortMessageIteration++;
             ShortMessageIteration = ShortMessageIteration % 5;
-            return App.Current.FindResource($"Strings.EyesGuard.ShortWindow.Message{ShortMessageIteration}").ToString();
+            return $"Strings.EyesGuard.ShortWindow.Message{ShortMessageIteration}".Translate();
         }
 
         #endregion

@@ -87,15 +87,15 @@ namespace EyesGuard.Pages
 
             if (ProtectionState == GuardStates.Protecting)
             {
-                PageText.Text = App.Current.FindResource("Strings.EyeGuard.Guarding.Running").ToString();
+                PageText.Text = "Strings.EyeGuard.Guarding.Running".Translate();
             }
             else if (ProtectionState == GuardStates.NotProtecting)
             {
-                PageText.Text = App.Current.FindResource("Strings.EyeGuard.Guarding.Stopped").ToString();
+                PageText.Text = "Strings.EyeGuard.Guarding.Stopped".Translate();
             }
             else if (ProtectionState == GuardStates.PausedProtecting)
             {
-                PageText.Text = App.Current.FindResource("Strings.EyeGuard.Guarding.Paused").ToString();
+                PageText.Text = "Strings.EyeGuard.Guarding.Paused".Translate();
             }
 
             await PageText.ShowUsingLinearAnimationAsync();

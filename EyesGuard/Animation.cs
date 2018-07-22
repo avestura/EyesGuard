@@ -7,7 +7,6 @@ using System.Windows;
 using System.Windows.Media.Animation;
 using FontAwesome.WPF;
 
-
 namespace EyesGuard
 {
     public static class Animation
@@ -25,9 +24,9 @@ namespace EyesGuard
                 By = (from + to) / 2
             };
             image.BeginAnimation(ImageAwesome.SpinDurationProperty, anim);
-           
+
         }
-        
+
         public static void MarginFadeInAnimation(this FrameworkElement element, Thickness from, Thickness to, TimeSpan? duration = null, bool useFade = true, bool makeVisible = true)
         {
             if (duration == null) duration = new TimeSpan(0, 0, 1);
@@ -45,7 +44,7 @@ namespace EyesGuard
             Storyboard.SetTargetProperty(thicknessAnim, new PropertyPath(FrameworkElement.MarginProperty));
 
             storyboard.Children.Add(thicknessAnim);
-            
+
             if (useFade)
             {
                 var fadeAnim = new DoubleAnimation()
@@ -101,7 +100,6 @@ namespace EyesGuard
                     Duration = duration.Value,
                     EasingFunction = new QuadraticEase()
                 };
-                
 
                 Storyboard.SetTarget(fadeAnim, element);
                 Storyboard.SetTargetProperty(fadeAnim, new PropertyPath(UIElement.OpacityProperty));
@@ -131,8 +129,6 @@ namespace EyesGuard
             element.Opacity = 1;
             element.Visibility = Visibility.Visible;
             element.BeginAnimation(UIElement.OpacityProperty, anim);
-
-
 
         }
 
@@ -210,8 +206,6 @@ namespace EyesGuard
             element.BlinkEasing(TimeSpan.FromMilliseconds(milliSecondDuration), opacityStart, opacityEnd);
         }
         #endregion
-
-
 
     }
 }

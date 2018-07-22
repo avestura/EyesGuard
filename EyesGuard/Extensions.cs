@@ -13,6 +13,11 @@ namespace EyesGuard
 {
     public static class Extensions
     {
+        public static string Translate(this string resourceKey)
+        {
+            return App.Current.FindResource(resourceKey).ToString();
+        }
+
         public static void Forget(this Task task)
         {
             _ = task;
@@ -63,7 +68,7 @@ namespace EyesGuard
 
         public static string ConvertToPercentString(this double scalingSize)
         {
-            return $"({(scalingSize * 100)} percents)";
+            return $"({(scalingSize * 100)} {"Strings.EyesGuard.Words.Percents".Translate()})";
         }
 
     }

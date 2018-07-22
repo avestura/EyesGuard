@@ -43,7 +43,7 @@ namespace EyesGuard.Pages
 
             } catch { }
 
-            App.ShowWarning(App.Current.FindResource("Strings.Application.Donate").ToString(), WarningPage.PageStates.Donate, new MainPage());
+            App.ShowWarning("Strings.Application.Donate".Translate(), WarningPage.PageStates.Donate, new MainPage());
 
         }
     }
