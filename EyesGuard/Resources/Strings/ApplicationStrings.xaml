@@ -40,4 +40,9 @@ If you have any comments, you can post in Eyes Guard page of Microsoft Store.
         If you want to support this free open-source software, you can use this form.
     </sys:String>
 
+    <sys:String x:Key="Strings.EyesGuard.Alerts.DoNotRunMultipleInstances">Eyes Guard is already running. You can't run multiple instances of this software.</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.Alerts.RunBackground.Title">App is running.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Alerts.RunBackground.Message">Eyes Guard is running in the background. You can reveal it using the shield icon in the taskbar.</sys:String>
+
 </ResourceDictionary>

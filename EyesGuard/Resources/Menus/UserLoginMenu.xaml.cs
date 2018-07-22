@@ -24,10 +24,9 @@ namespace EyesGuard.Resources.Menus
             InitializeComponent();
         }
 
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            App.ShowWarning(App.Current.FindResource("Strings.Application.NoLoginImplemented").ToString(), WarningPage.PageStates.Info);
+            App.ShowWarning("Strings.Application.NoLoginImplemented".Translate(), WarningPage.PageStates.Info);
         }
     }
 }

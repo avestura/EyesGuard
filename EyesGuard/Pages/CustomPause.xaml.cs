@@ -44,13 +44,13 @@ namespace EyesGuard.Pages
                 seconds = int.Parse(SecondsUI.Text);
 
                 if (hours > 11)
-                    warning += string.Format("» " + App.Current.FindResource("Strings.EyesGuard.HoursLimit").ToString(), 11);
+                    warning += string.Format("» " + "Strings.EyesGuard.HoursLimit".Translate(), 11);
 
                 if(minutes > 59)
                 {
                     if(warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + App.Current.FindResource("Strings.EyesGuard.MinutesLimit").ToString(), 59);
+                    warning += string.Format("» " + "Strings.EyesGuard.MinutesLimit".Translate(), 59);
 
                 }
 
@@ -58,7 +58,7 @@ namespace EyesGuard.Pages
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + App.Current.FindResource("Strings.EyesGuard.SecondsLimit").ToString(), 59);
+                    warning += string.Format("» " + "Strings.EyesGuard.SecondsLimit".Translate(), 59);
 
                 }
 
@@ -66,7 +66,7 @@ namespace EyesGuard.Pages
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + App.Current.FindResource("Strings.EyesGuard.ChooseLargerTime").ToString(), 59);
+                    warning += string.Format("» " + "Strings.EyesGuard.ChooseLargerTime".Translate(), 59);
 
                 }
 
@@ -82,7 +82,7 @@ namespace EyesGuard.Pages
                 }
             }
             catch {
-                App.ShowWarning($"{App.Current.FindResource("Strings.EyesGuard.OperationFailed")}.\n{App.Current.FindResource("Strings.EyesGuard.CheckInput")}.");
+                App.ShowWarning($"{"Strings.EyesGuard.OperationFailed".Translate()}.\n{"Strings.EyesGuard.CheckInput".Translate()}.");
             }
         }
     }

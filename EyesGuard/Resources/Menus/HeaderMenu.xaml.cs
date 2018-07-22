@@ -100,19 +100,21 @@ namespace EyesGuard.Resources.Menus
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            App.ShowWarning(App.Current.FindResource("Strings.Application.Help").ToString(), WarningPage.PageStates.Info);
+            App.ShowWarning(
+                "Strings.Application.Help".Translate(),
+                WarningPage.PageStates.Info);
         }
 
         private void Resources_Click(object sender, RoutedEventArgs e)
         {
-            App.ShowWarning(App.Current.FindResource("Strings.Application.Resources").ToString(), WarningPage.PageStates.Info);
+            App.ShowWarning("Strings.Application.Resources".Translate(), WarningPage.PageStates.Info);
 
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
-            App.ShowWarning(App.Current.FindResource("Strings.Application.About").ToString(), WarningPage.PageStates.About);
+            App.ShowWarning("Strings.Application.About".Translate(), WarningPage.PageStates.About);
 
         }
 
@@ -129,7 +131,7 @@ namespace EyesGuard.Resources.Menus
         private void About_Click(object sender, RoutedEventArgs e)
         {
 
-            App.ShowWarning(App.Current.FindResource("Strings.Application.About").ToString(), WarningPage.PageStates.About);
+            App.ShowWarning("Strings.Application.About".Translate(), WarningPage.PageStates.About);
 
         }
 

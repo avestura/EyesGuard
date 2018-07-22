@@ -60,42 +60,42 @@ namespace EyesGuard.Pages
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Warning;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFEEC78A")));
                 if (pageTitle == "")
-                    vm.PageTitle = "Attention";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Attention".Translate();
             }
             else if (PageState == PageStates.Success)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#8ED28A")));
                 if (pageTitle == "")
-                    vm.PageTitle = "Successful";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Successful".Translate();
             }
             else if (PageState == PageStates.Error)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.ExclamationCircle;
                 vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFD9884")));
                 if (pageTitle == "")
-                    vm.PageTitle = "Error";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Error".Translate();
             }
             else if (PageState == PageStates.Info)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Comment;
                 vm.Brush = Brushes.White;
                 if (pageTitle == "")
-                    vm.PageTitle = "Info";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Info".Translate();
             }
             else if (PageState == PageStates.About)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Rocket;
                 vm.Brush = Brushes.White;
                 if (pageTitle == "")
-                    vm.PageTitle = "About Software";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.AboutSoftware".Translate();
             }
             else if (PageState == PageStates.Donate)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Heart;
                 vm.Brush = new SolidColorBrush(( (Color)ColorConverter.ConvertFromString("#ff7c7c") ));
                 if (pageTitle == "")
-                    vm.PageTitle = "Donate";
+                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Donate".Translate();
             }
 
             if (pageTitle != "")

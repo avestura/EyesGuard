@@ -29,7 +29,11 @@ namespace EyesGuard
         {
             if(App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
             {
-                App.TaskbarIcon.ShowBalloonTip("App is running", "Eyes Guard is running in the background. You can reveal it using the shield icon in the taskbar.", Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
+                App.TaskbarIcon.ShowBalloonTip(
+                    "Strings.EyesGuard.Alerts.RunBackground.Title".Translate(),
+                    "Strings.EyesGuard.Alerts.RunBackground.Message".Translate(),
+                    Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
+
                 App.Configuration.TrayNotificationSaidBefore = true;
                 App.Configuration.SaveSettingsToFile();
             }
