@@ -19,12 +19,8 @@ namespace EyesGuard.Pages
     /// <summary>
     /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainPage : Page 
+    public partial class MainPage : Page
     {
-
-
-       
-
 
         public GuardStates ProtectionState
         {
@@ -41,16 +37,12 @@ namespace EyesGuard.Pages
         public static readonly DependencyProperty ProtectionStateProperty =
             DependencyProperty.Register("ProtectionState", typeof(GuardStates), typeof(MainPage), new PropertyMetadata(GuardStates.Protecting));
 
-
-
-    
-
         public MainPage()
         {
-            
+
             InitializeComponent();
             CurrentMainPage = this;
-            
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -64,14 +56,11 @@ namespace EyesGuard.Pages
 
             DataContext = App.ShortLongBreakTimeRemainingViewModel;
 
-            
-
         }
 
         private void GuardButton_Click(object sender, RoutedEventArgs e)
         {
             if (App.CheckIfResting()) return;
-
 
             if (ProtectionState == GuardStates.Protecting)
             {
@@ -90,14 +79,12 @@ namespace EyesGuard.Pages
 
             }
 
-
         }
 
         private async void UpdatePageText()
         {
             PageText.Opacity = 0;
 
-            
             if (ProtectionState == GuardStates.Protecting)
             {
                 PageText.Text = App.Current.FindResource("Strings.EyeGuard.Guarding.Running").ToString();
@@ -110,10 +97,8 @@ namespace EyesGuard.Pages
             {
                 PageText.Text = App.Current.FindResource("Strings.EyeGuard.Guarding.Paused").ToString();
             }
-                
 
             await PageText.ShowUsingLinearAnimationAsync();
-
 
         }
 
@@ -127,13 +112,11 @@ namespace EyesGuard.Pages
                         uie.ShowUsingLinearAnimationAsync();
                     }
                 }
-          
-        
+
             //}
             //catch  { }
-            
+
         }
 
-       
     }
 }

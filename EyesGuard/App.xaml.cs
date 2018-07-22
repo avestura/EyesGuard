@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -28,6 +29,7 @@ namespace EyesGuard
 
         #region Application :: Fields :: Private Fields
         private static bool _isProtectionPaused = false;
+        private const int EyesGuardIdleDetectionThreshold = 80;
 
         /// <summary>
         /// Used in <see cref="App.GetShortWindowMessage()"/> to get appropriate message from string resources
@@ -55,6 +57,8 @@ namespace EyesGuard
         }
         public static ScalingSize UserScalingFactor { get; set; }
 
+        public static IdleDetector SystemIdleDetector { get; set; }
+
         public static MainPage CurrentMainPage { get; set; }
         public static TaskbarIcon TaskbarIcon { get; set; }
         public static bool ShortBreakShownOnce = false;
@@ -63,8 +67,19 @@ namespace EyesGuard
         public static bool LaunchMinimized { get; set; } = false;
         public static bool IsProtectionPaused {
             get { return _isProtectionPaused; }
-            set { _isProtectionPaused = value; ShortLongBreakTimeRemainingViewModel.IsProtectionPaused = value; }
+            set {
+                _isProtectionPaused = value;
+                ShortLongBreakTimeRemainingViewModel.IsProtectionPaused = value;
+                SystemIdleDetector.EnableRaisingEvents = !value;
+            }
         }
+
+        public static bool AppIsInIdleState =>
+            Configuration.SystemIdleDetectionEnabled &&
+            CurrentMainPage.ProtectionState == GuardStates.Protecting &&
+            SystemIdleDetector.IsSystemIdle();
+
+        public static bool TimersAreEligibleToCountdown => !(IsProtectionPaused || AppIsInIdleState);
 
         public static TimeSpan PauseProtectionSpan { get; set; } = TimeSpan.FromSeconds(0);
         public static TimeSpan NextShortBreak { get; set; } = App.Configuration.ShortBreakGap;
@@ -145,6 +160,11 @@ namespace EyesGuard
             Config.InitializeLocalFolder();
             Config.LoadSettingsFromFile();
 
+            InitializeIdleDetector(Configuration.SystemIdleDetectionEnabled);
+
+            ToolTipService.ShowDurationProperty.OverrideMetadata(
+                typeof(DependencyObject), new FrameworkPropertyMetadata(Int32.MaxValue));
+
             UserScalingFactor = Configuration.DpiScalingFactor;
             // End Section
 
@@ -196,6 +216,38 @@ namespace EyesGuard
 
         }
 
+        private void InitializeIdleDetector(bool initialStart)
+        {
+            try
+            {
+                SystemIdleDetector = new IdleDetector()
+                {
+                    IdleThreshold = EyesGuardIdleDetectionThreshold,
+                    DeferUpdate = false,
+                    EnableRaisingEvents = initialStart
+                };
+                SystemIdleDetector.IdleStateChanged += SystemIdleDetector_IdleStateChanged;
+
+                if(initialStart && SystemIdleDetector.State == IdleDetectorState.Stopped)
+                    _ = SystemIdleDetector.RequestStart();
+            }
+            catch { }
+        }
+
+        private void SystemIdleDetector_IdleStateChanged(object sender, IdleStateChangedEventArgs e)
+        {
+            UpdateIdleActions();
+        }
+
+        public static void UpdateIdleActions()
+        {
+            if (App.CheckIfResting(showWarning: false)) return;
+
+            ShortLongBreakTimeRemainingViewModel.IdleVisibility =
+                (AppIsInIdleState) ? Visibility.Visible : Visibility.Collapsed;
+
+        }
+
         #endregion
 
         #region Application :: Timing and Control :: Common
@@ -204,12 +256,13 @@ namespace EyesGuard
         /// This method prevents user to change protection status in resting mode
         /// </summary>
         /// <returns></returns>
-        public static bool CheckIfResting()
+        public static bool CheckIfResting(bool showWarning = true)
         {
             if (App.CurrentShortBreakWindow != null ||
                 App.CurrentLongBreakWindow != null)
             {
-                App.ShowWarning("Please wait until break finishes.", WarningPage.PageStates.Warning);
+                if(showWarning)
+                    App.ShowWarning("Please wait until break finishes.", WarningPage.PageStates.Warning);
                 return true;
             }
             return false;
@@ -232,7 +285,7 @@ namespace EyesGuard
 
         private void ShortBreakHandler_Tick(object sender, EventArgs e)
         {
-            if (!IsProtectionPaused)
+            if (TimersAreEligibleToCountdown)
             {
                 NextShortBreak = NextShortBreak.Subtract(TimeSpan.FromSeconds(1));
                 UpdateShortTimeString();
@@ -277,7 +330,7 @@ namespace EyesGuard
 
         private void LongBreakHandler_Tick(object sender, EventArgs e)
         {
-            if (!IsProtectionPaused)
+            if (TimersAreEligibleToCountdown)
             {
                 NextLongBreak = NextLongBreak.Subtract(TimeSpan.FromSeconds(1));
                 UpdateLongTimeString();
@@ -377,7 +430,7 @@ namespace EyesGuard
         private void LongDurationCounter_Tick(object sender, EventArgs e)
         {
             LongBreakVisibleTime = LongBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
-            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minute and " + LongBreakVisibleTime.Seconds + " second(s) to the end of long-break.";
+            LongBreakViewModel.TimeRemaining = LongBreakVisibleTime.Hours + " hour(s) and " + LongBreakVisibleTime.Minutes + " minute(s) and " + LongBreakVisibleTime.Seconds + " second(s) to the end of long-break.";
             if ((int)LongBreakVisibleTime.TotalSeconds == 0)
             {
                 EndLongBreak();

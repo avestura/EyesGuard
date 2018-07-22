@@ -110,6 +110,17 @@ namespace EyesGuard.ViewModels
             }
         }
 
+        private Visibility _idleVisibility { get; set; } = Visibility.Collapsed;
+        public Visibility IdleVisibility
+        {
+            get { return _idleVisibility; }
+            set
+            {
+                _idleVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {

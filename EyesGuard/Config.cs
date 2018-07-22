@@ -16,6 +16,7 @@ namespace EyesGuard
         GuardStates _protectionState = GuardStates.Protecting;
         bool _keyTimeVisible = true;
         bool runAtStartup = false;
+        bool _systemIdleDetectionEnabled = false;
         #endregion
 
         #region Config :: Fields :: Public Properties
@@ -27,6 +28,8 @@ namespace EyesGuard
                 UpdateTimeHandlers();
                 UpdateLongShortVisibility();
                 UpdateTaskbarIcon();
+                UpdateIdleActions();
+
             }
         }
 
@@ -78,6 +81,27 @@ namespace EyesGuard
         public bool KeyTimesVisible { get { return _keyTimeVisible; } set { _keyTimeVisible = value; UpdateKeyTimeVisible(); } }
         public ScalingType DpiScalingType { get; set; } = ScalingType.UseWindowsDPIScaling;
         public ScalingSize DpiScalingFactor { get; set; } = ScalingSize.Unset;
+
+        public bool SystemIdleDetectionEnabled
+        {
+            get { return _systemIdleDetectionEnabled; }
+            set {
+                _systemIdleDetectionEnabled = value;
+
+                if(SystemIdleDetector != null)
+                {
+                    if (value && SystemIdleDetector.State == IdleDetectorState.Stopped)
+                    {
+                        _ = SystemIdleDetector.RequestStart();
+                    }
+                    else if (!value && SystemIdleDetector.State == IdleDetectorState.Running)
+                    {
+                        _ = SystemIdleDetector.RequestCancel();
+                    }
+                }
+
+            }
+        }
         #endregion
 
         #region Config :: Constants
@@ -105,7 +129,6 @@ namespace EyesGuard
 
         public void SaveSettingsToFile()
         {
-            
 
             XmlSerializer xsSubmit = new XmlSerializer(typeof(Config));
             var xml = "";
@@ -120,10 +143,6 @@ namespace EyesGuard
             }
 
             File.WriteAllText(path, xml);
-
-            
-
-        
 
         }
         public static void LoadSettingsFromFile()
@@ -143,8 +162,6 @@ namespace EyesGuard
                 App.Configuration = new Config();
                 App.Configuration.SaveSettingsToFile();
             }
-
-
 
         }
 

@@ -84,7 +84,7 @@
     <Compile Include="Animation.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="IdleDetection.cs" />
+    <Compile Include="IdleDetector.cs" />
     <Compile Include="LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>
     </Compile>

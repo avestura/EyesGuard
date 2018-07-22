@@ -7,6 +7,7 @@
     <sys:String x:Key="Strings.EyeGuard.Guarding.Running">Your eyes are under protection</sys:String>
     <sys:String x:Key="Strings.EyeGuard.Guarding.Paused">Eyes Guard is temporarily disabled</sys:String>
     <sys:String x:Key="Strings.EyeGuard.Guarding.Stopped">Eyes Guard is disabled</sys:String>
+    <sys:String x:Key="Strings.EyeGuard.Guarding.Idle">Eyes Guard paused due to system idle detection</sys:String>
 
     <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds">seconds until short-break.</sys:String>
     <sys:String x:Key="Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes">minutes until short-break.</sys:String>

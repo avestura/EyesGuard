@@ -292,6 +292,7 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -299,7 +300,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Border
-                        Grid.RowSpan="6"
+                        Grid.RowSpan="7"
                         Grid.Column="0"
                         Margin="6,-0.5,0,0"
                         BorderBrush="White"
@@ -363,14 +364,47 @@
                         </CheckBox>
                     </StackPanel>
 
-                    <!--<StackPanel Grid.Row="3" Grid.Column="2" Margin="5"
-                                Orientation="Horizontal">
-                        <CheckBox x:Name="startupCheckbox" VerticalAlignment="Center"
-                                  Content="{StaticResource Strings.EyesGuard.Settings.StartupApplication}"
-                                  Foreground="White"
-                                  Style="{DynamicResource WhiteCheckbox}" />
+                    <StackPanel
+                        Grid.Row="4"
+                        Grid.Column="2"
+                        Margin="5"
+                        Orientation="Horizontal">
+                        <CheckBox
+                            x:Name="startupCheckbox"
+                            VerticalAlignment="Center"
+                            Content="{StaticResource Strings.EyesGuard.Settings.StartupApplication}"
+                            Foreground="White"
+                            IsChecked="True"
+                            IsEnabled="False"
+                            Style="{DynamicResource WhiteCheckbox}">
+                            <CheckBox.ToolTip>
+                                <TextBlock Foreground="#FF464646">
+                                    Eyes Guard starts with system boot by default. You can disable this feature from&#32;<Bold>TaskManager » Startup</Bold>
+                                    Tab.</TextBlock>
+                            </CheckBox.ToolTip>
+                        </CheckBox>
 
-                    </StackPanel>-->
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Row="5"
+                        Grid.Column="2"
+                        Margin="5"
+                        Orientation="Horizontal">
+                        <CheckBox
+                            x:Name="sytemIdleCheckbox"
+                            VerticalAlignment="Center"
+                            Content="{StaticResource Strings.EyesGuard.Settings.SystemIdle}"
+                            Foreground="White"
+                            Style="{DynamicResource WhiteCheckbox}">
+                            <CheckBox.ToolTip>
+                                <TextBlock Foreground="#FF464646">
+                                    Eyes Guard uses system idle detection to detect if you are away from your PC. In this mode, Eyes Guard automatically pauses down-counting.<LineBreak />
+                                    Notice that this feature can disable guarding your eyes when you are not interacting with your PC, for example when watching movies.</TextBlock>
+                            </CheckBox.ToolTip>
+                        </CheckBox>
+
+                    </StackPanel>
 
                 </Grid>
                 <StackPanel Orientation="Horizontal">
@@ -417,9 +451,9 @@
                             Style="{DynamicResource WhiteCheckbox}">
                             <CheckBox.ToolTip>
                                 <TextBlock Foreground="#FF464646">
-                                    Eyes Guard will store some info about your usage that you can see in<Bold>Tools</Bold>
+                                    Eyes Guard will store some info about your usage that you can see in&#32;<Bold>Tools</Bold>
                                     &gt;<Bold>Stas</Bold>
-                                    menu.</TextBlock>
+                                    menu. These data are stored locally in your machine.</TextBlock>
                             </CheckBox.ToolTip>
                         </CheckBox>
                     </StackPanel>

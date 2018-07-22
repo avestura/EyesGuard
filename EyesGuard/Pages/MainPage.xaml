@@ -59,6 +59,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -121,6 +122,27 @@
                             FontSize="15"
                             Foreground="White"
                             Text="{Binding NextLongBreak}" />
+                    </StackPanel>
+
+                    <StackPanel
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Margin="5,8,0,10"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"
+                        Visibility="{Binding IdleVisibility}">
+                        <fa:ImageAwesome
+                            Height="15"
+                            Foreground="#FFFAD564"
+                            Icon="HourglassOutline" />
+
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            FontSize="11"
+                            Foreground="#FFFAD564"
+                            Text="{StaticResource Strings.EyeGuard.Guarding.Idle}" />
                     </StackPanel>
 
                 </Grid>

@@ -16,7 +16,7 @@
 
     <sys:String x:Key="Strings.EyesGuard.Settings.Separator.HourAnd">Hour(s) and</sys:String>
     <sys:String x:Key="Strings.EyesGuard.Settings.Separator.MinutesAnd">Minute(s) and</sys:String>
-    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.Second">Seconds</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.Settings.Separator.Second">Second(s)</sys:String>
 
     <sys:String x:Key="Strings.EyesGuard.Settings.ForceUser">Force me to break</sys:String>
     <sys:String x:Key="Strings.EyesGuard.Settings.OnlyOneShortBreak">Show only one short-break between two long-breaks.</sys:String>
@@ -28,6 +28,8 @@
     <sys:String x:Key="Strings.EyesGuard.Settings.ClearStats">Remove data</sys:String>
 
     <sys:String x:Key="Strings.EyesGuard.Settings.UseWindowsDPIScaling">Use windows DPI Scaling</sys:String>
+
+    <sys:String x:Key="Strings.EyesGuard.Settings.SystemIdle">Pause Eyes Guard when system detected as idle</sys:String>
 
     <sys:String x:Key="Strings.EyesGuard.Settings.SaveSettings">Save changes</sys:String>
 

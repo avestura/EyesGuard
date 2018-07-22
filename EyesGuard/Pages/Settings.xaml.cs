@@ -53,6 +53,8 @@ namespace EyesGuard.Pages
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
 
+            sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
+
             //useSystemDpiCheckbox.IsChecked = App.UserScalingType == App.ScalingType.UseWindowsDPIScaling;
             //ScalingFactorText.Text = App.SystemDpiFactor.ConvertToPercentString();
             //startupCheckbox.IsChecked = App.GlobalConfig.RunAtStartUp;
@@ -170,6 +172,7 @@ namespace EyesGuard.Pages
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     //App.GlobalConfig.RunAtStartUp = startupCheckbox.IsChecked.Value;
+                    App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
 
                     App.Configuration.SaveSettingsToFile();
 
@@ -208,7 +211,7 @@ namespace EyesGuard.Pages
             App.Configuration.PauseCount = 0;
             App.Configuration.SaveSettingsToFile();
             App.UpdateStats();
-            
+
             App.ShowWarning(App.Current.FindResource("Strings.EyesGuard.Settings.StatsDeleted").ToString(),
                 WarningPage.PageStates.Success);
         }
