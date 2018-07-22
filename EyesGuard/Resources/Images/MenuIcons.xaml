@@ -4,7 +4,6 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Images">
 
-
     <fa:ImageAwesome
         x:Key="HastiUI.Menus.UserLoginMenu.Login"
         Foreground="{StaticResource HastiUI.SolidColorBrushes.SandOrange}"
@@ -45,6 +44,15 @@
         Foreground="#F44242"
         Icon="Heart" />
 
+    <fa:ImageAwesome
+        x:Key="EyesGuard.Feedback"
+        Foreground="#C7C7C7"
+        Icon="Comment" />
 
+    <TextBlock
+        x:Key="Microsoft.Feedback"
+        VerticalAlignment="Center"
+        FontFamily="Segoe MDL2 Assets"
+        Text="&#xE939;" />
 
 </ResourceDictionary>
