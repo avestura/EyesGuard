@@ -14,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 namespace EyesGuard.Resources.Menus
 {
     public partial class HeaderMenu : UserControl
@@ -141,5 +142,6 @@ namespace EyesGuard.Resources.Menus
         {
 
         }
+
     }
 }

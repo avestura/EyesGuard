@@ -76,6 +76,8 @@
                 Click="Donate_Click"
                 Header="Donate"
                 Icon="{StaticResource EyesGuard.Donate}" />
+            <Separator />
+
             <MenuItem Click="About_Click" Header="About" />
 
         </MenuItem>
