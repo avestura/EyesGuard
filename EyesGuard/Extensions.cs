@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using static EyesGuard.App;
 
@@ -12,6 +13,10 @@ namespace EyesGuard
 {
     public static class Extensions
     {
+        public static void Forget(this Task task)
+        {
+            _ = task;
+        }
 
         public static void UserInterfaceCustomScale(this FrameworkElement element, double customScale, bool chengeDimentions = true)
         {
@@ -34,6 +39,7 @@ namespace EyesGuard
             var screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
             window.Top = ( screenHeight - window.Height ) / 2;
             window.Left = ( screenWidth - window.Width ) / 2;
+
         }
 
         public static double ConvertToDouble(this ScalingSize scalingSize)
@@ -57,7 +63,7 @@ namespace EyesGuard
 
         public static string ConvertToPercentString(this double scalingSize)
         {
-            return $"({(scalingSize * 100)} درصد)";
+            return $"({(scalingSize * 100)} percents)";
         }
 
     }
