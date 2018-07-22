@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Serialization;
 using static EyesGuard.App;
 
-namespace EyesGuard
+namespace EyesGuard.Configurations
 {
-    public class Config
+    public partial class Configuration
     {
+
         #region Config :: Fields :: Internal
         GuardStates _protectionState = GuardStates.Protecting;
         bool _keyTimeVisible = true;
@@ -21,9 +20,11 @@ namespace EyesGuard
 
         #region Config :: Fields :: Public Properties
 
-        public GuardStates ProtectionState {
+        public GuardStates ProtectionState
+        {
             get { return _protectionState; }
-            set {
+            set
+            {
                 _protectionState = value;
                 UpdateTimeHandlers();
                 UpdateLongShortVisibility();
@@ -85,10 +86,11 @@ namespace EyesGuard
         public bool SystemIdleDetectionEnabled
         {
             get { return _systemIdleDetectionEnabled; }
-            set {
+            set
+            {
                 _systemIdleDetectionEnabled = value;
 
-                if(SystemIdleDetector != null)
+                if (SystemIdleDetector != null)
                 {
                     if (value && SystemIdleDetector.State == IdleDetectorState.Stopped)
                     {
@@ -103,69 +105,5 @@ namespace EyesGuard
             }
         }
         #endregion
-
-        #region Config :: Constants
-        private const  string fileName = "App.Config.Xml";
-        private static string directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "//Aryan Software//Eyes Guard//";
-        private static string path     = directory + fileName;
-        #endregion
-
-        #region Config :: Constructor
-        public Config()
-        {
-
-        }
-        #endregion
-
-        #region Config :: Hard Operations
-
-        public static void InitializeLocalFolder()
-        {
-            if (!Directory.Exists(directory))
-            {
-                Directory.CreateDirectory(directory);
-            }
-        }
-
-        public void SaveSettingsToFile()
-        {
-
-            XmlSerializer xsSubmit = new XmlSerializer(typeof(Config));
-            var xml = "";
-
-            using (var sww = new StringWriter())
-            {
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, this);
-                    xml = sww.ToString(); // Your XML
-                }
-            }
-
-            File.WriteAllText(path, xml);
-
-        }
-        public static void LoadSettingsFromFile()
-        {
-            try
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(Config));
-                using (FileStream fileStream = new FileStream(path, FileMode.Open))
-                {
-                    var stream = new StreamReader(fileStream, Encoding.UTF8);
-                    App.Configuration = (Config)serializer.Deserialize(stream);
-                }
-            }
-            catch
-            {
-
-                App.Configuration = new Config();
-                App.Configuration.SaveSettingsToFile();
-            }
-
-        }
-
-        #endregion
-
     }
 }

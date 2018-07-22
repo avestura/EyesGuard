@@ -87,7 +87,7 @@ namespace EyesGuard
 
             if (App.LaunchMinimized)
                 this.Hide();
-            Config.LoadSettingsFromFile();
+            Configuration.LoadSettingsFromFile();
 
             //wc.Ellipse.Stroke = Brushes.DodgerBlue;
             //wc.Ellipse.Fill = Brushes.LightCyan;

@@ -29,7 +29,7 @@ namespace EyesGuard.Pages
                 UpdatePageText();
 
                 // Ignore paused protecting
-                Configuration.ProtectionState = value;
+                App.Configuration.ProtectionState = value;
 
                 App.Configuration.SaveSettingsToFile();
             }

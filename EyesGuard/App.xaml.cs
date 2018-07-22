@@ -67,7 +67,7 @@ namespace EyesGuard
         public static MainPage CurrentMainPage { get; set; }
         public static TaskbarIcon TaskbarIcon { get; set; }
         public static bool ShortBreakShownOnce = false;
-        public static Config Configuration { get; set; } = new Config();
+        public static Configuration Configuration { get; set; } = new Configuration();
 
         public static bool LaunchMinimized { get; set; } = false;
         public static bool IsProtectionPaused {
@@ -162,8 +162,8 @@ namespace EyesGuard
                 Shutdown();
             }
 
-            Config.InitializeLocalFolder();
-            Config.LoadSettingsFromFile();
+            Configuration.InitializeLocalFolder();
+            Configuration.LoadSettingsFromFile();
 
             InitializeIdleDetector(Configuration.SystemIdleDetectionEnabled);
 
