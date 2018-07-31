@@ -1,4 +1,5 @@
-﻿using EyesGuard.Pages;
+﻿using EyesGuard.AppManagers;
+using EyesGuard.Pages;
 using EyesGuard.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace EyesGuard.Resources.Menus
         private  void TaskbarIcon_TrayMouseDoubleClick(object sender, System.Windows.RoutedEventArgs e)
         {
             if(!App.GetMainWindow().IsVisible)
-            App.Show();
+            ChromeManager.Show();
         }
 
         private void FiveMinutesPause_Click(object sender, RoutedEventArgs e)
@@ -57,7 +58,7 @@ namespace EyesGuard.Resources.Menus
             App.GetMainWindow().MainFrame.Navigate(new CustomPause());
 
             if (!App.GetMainWindow().IsVisible)
-                App.Show();
+                ChromeManager.Show();
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -99,7 +100,7 @@ namespace EyesGuard.Resources.Menus
             App.GetMainWindow().MainFrame.Navigate(new Settings());
 
             if (!App.GetMainWindow().IsVisible)
-                App.Show();
+                ChromeManager.Show();
         }
     }
 }

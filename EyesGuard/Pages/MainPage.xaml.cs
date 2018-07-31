@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -54,7 +55,7 @@ namespace EyesGuard.Pages
 
             ProtectionState = App.Configuration.ProtectionState;
 
-            DataContext = App.ShortLongBreakTimeRemainingViewModel;
+            DataContext = App.UIViewModels.ShortLongBreakTimeRemaining;
 
         }
 

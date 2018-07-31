@@ -23,7 +23,7 @@ namespace EyesGuard.Pages
         public Statistics()
         {
             InitializeComponent();
-            DataContext = App.StatsViewModel;
+            DataContext = App.UIViewModels.Stats;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

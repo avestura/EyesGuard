@@ -1,4 +1,7 @@
-﻿using EyesGuard.Pages;
+﻿using EyesGuard.AppManagers;
+using EyesGuard.Configurations;
+using EyesGuard.Extensions;
+using EyesGuard.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +40,7 @@ namespace EyesGuard
                 App.Configuration.TrayNotificationSaidBefore = true;
                 App.Configuration.SaveSettingsToFile();
             }
-            App.Hide();
+            ChromeManager.Hide();
 
         }
 

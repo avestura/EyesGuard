@@ -84,6 +84,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Animation.cs" />
+    <Compile Include="AppManagers\ChromeManager.cs" />
+    <Compile Include="AppManagers\TaskbarIconManager.cs" />
+    <Compile Include="AppManagers\UIViewModels.cs" />
     <Compile Include="Configurations\Configuration.cs" />
     <Compile Include="Configurations\ConfigurationConstants.cs">
       <DependentUpon>Configuration.cs</DependentUpon>
@@ -94,7 +97,9 @@
     <Compile Include="Configurations\ConfigurationProperties.cs">
       <DependentUpon>Configuration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Extensions.cs" />
+    <Compile Include="Extensions\FunctionalExtensions.cs" />
+    <Compile Include="Extensions\ScalingExtensions.cs" />
+    <Compile Include="Extensions\ResourceExtensions.cs" />
     <Compile Include="IdleDetector.cs" />
     <Compile Include="LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>

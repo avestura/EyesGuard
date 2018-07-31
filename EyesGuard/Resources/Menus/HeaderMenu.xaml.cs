@@ -1,4 +1,6 @@
-﻿using EyesGuard.Pages;
+﻿using EyesGuard.AppManagers;
+using EyesGuard.Extensions;
+using EyesGuard.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,7 @@ namespace EyesGuard.Resources.Menus
         {
             InitializeComponent();
 
-            DataContext = App.HeaderMenuViewModel;
+            DataContext = App.UIViewModels.HeaderMenu;
         }
 
         private void GoToStatictictsPage_Click(object sender, RoutedEventArgs e)
@@ -95,7 +97,7 @@ namespace EyesGuard.Resources.Menus
 
         private void HideApp_Click(object sender, RoutedEventArgs e)
         {
-            App.Hide();
+            ChromeManager.Hide();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

@@ -1,4 +1,5 @@
-﻿using EyesGuard.ViewModels;
+﻿using EyesGuard.Extensions;
+using EyesGuard.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

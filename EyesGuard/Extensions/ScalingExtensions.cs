@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -9,19 +10,10 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using static EyesGuard.App;
 
-namespace EyesGuard
+namespace EyesGuard.Extensions
 {
-    public static class Extensions
+    public static class ScalingExtensions
     {
-        public static string Translate(this string resourceKey)
-        {
-            return App.Current.FindResource(resourceKey).ToString();
-        }
-
-        public static void Forget(this Task task)
-        {
-            _ = task;
-        }
 
         public static void UserInterfaceCustomScale(this FrameworkElement element, double customScale, bool chengeDimentions = true)
         {
