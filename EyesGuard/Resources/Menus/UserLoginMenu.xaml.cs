@@ -1,4 +1,5 @@
-﻿using EyesGuard.Pages;
+﻿using EyesGuard.Extensions;
+using EyesGuard.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
