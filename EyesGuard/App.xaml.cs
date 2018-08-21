@@ -46,7 +46,7 @@ namespace EyesGuard
         private static int programInstancesCount =
             Process.GetProcessesByName(
                 System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)
-                ).Count();
+                ).Length;
 
         #endregion Application Fields :: Private Fields
 
