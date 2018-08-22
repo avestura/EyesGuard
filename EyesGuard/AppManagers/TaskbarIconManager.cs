@@ -19,18 +19,18 @@ namespace EyesGuard.AppManagers
             if (Configuration.ProtectionState == GuardStates.Protecting)
             {
 
-                App.UIViewModels.NotifyIcon.LowBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFBEFFD8")));
-                App.UIViewModels.NotifyIcon.DarkBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FF12B754")));
-                App.UIViewModels.NotifyIcon.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Sheild-Protecting.ico", UriKind.Absolute));
+                App.UIViewModels.NotifyIcon.DarkBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.Protecting.DarkBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.LowBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.Protecting.LowBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.Protecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.Protected".Translate();
             }
             else if (Configuration.ProtectionState == GuardStates.PausedProtecting)
             {
-                App.UIViewModels.NotifyIcon.LowBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFFFDBF")));
-                App.UIViewModels.NotifyIcon.DarkBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFD6C90D")));
-                App.UIViewModels.NotifyIcon.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Sheild-Paused.ico", UriKind.Absolute));
+                App.UIViewModels.NotifyIcon.DarkBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.PausedProtecting.DarkBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.LowBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.PausedProtecting.LowBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.PausedProtecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.PausedProtected".Translate();
@@ -38,9 +38,9 @@ namespace EyesGuard.AppManagers
             }
             else if (Configuration.ProtectionState == GuardStates.NotProtecting)
             {
-                App.UIViewModels.NotifyIcon.LowBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFFC0BE")));
-                App.UIViewModels.NotifyIcon.DarkBrush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFF322A")));
-                App.UIViewModels.NotifyIcon.Source = new BitmapImage(new Uri("pack://application:,,,/EyesGuard;component/Resources/Images/NonVectorIcons/Shield-Stopped.ico", UriKind.Absolute));
+                App.UIViewModels.NotifyIcon.DarkBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.NotProtecting.DarkBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.LowBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.NotProtecting.LowBrush".Translate<SolidColorBrush>();
+                App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.NotProtecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.NotProtected".Translate();

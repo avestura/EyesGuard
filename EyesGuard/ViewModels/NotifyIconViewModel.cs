@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -7,17 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace EyesGuard.ViewModels
 {
     public class NotifyIconViewModel : INotifyPropertyChanged
     {
         private SolidColorBrush darkBrush = Brushes.Green;
+        private SolidColorBrush lowBrush = Brushes.Green;
+        private ImageSource source;
+        private Visibility startProtectVisibility;
+        private Visibility stopProtectVisibility;
+        private string title = string.Empty;
+
         public SolidColorBrush DarkBrush {
-            get
-            {
-                return darkBrush;
-            }
+            get => darkBrush;
             set
             {
                 darkBrush = value;
@@ -25,27 +30,19 @@ namespace EyesGuard.ViewModels
             }
         }
 
-        private SolidColorBrush lowBrush = Brushes.Green;
         public SolidColorBrush LowBrush
         {
-            get
-            {
-                return darkBrush;
-            }
+            get => lowBrush;
             set
             {
-                darkBrush = value;
+                lowBrush = value;
                 OnPropertyChanged();
             }
         }
 
-        private ImageSource source ;
         public ImageSource Source
         {
-            get
-            {
-                return source;
-            }
+            get => source;
             set
             {
                 source = value;
@@ -53,13 +50,9 @@ namespace EyesGuard.ViewModels
             }
         }
 
-        private Visibility startProtectVisibility;
         public Visibility StartProtectVisibility
         {
-            get
-            {
-                return startProtectVisibility;
-            }
+            get => startProtectVisibility;
             set
             {
                 startProtectVisibility = value;
@@ -67,13 +60,9 @@ namespace EyesGuard.ViewModels
             }
         }
 
-        private Visibility stopProtectVisibility;
         public Visibility StopProtectVisibility
         {
-            get
-            {
-                return stopProtectVisibility;
-            }
+            get => stopProtectVisibility;
             set
             {
                 stopProtectVisibility = value;
@@ -81,13 +70,9 @@ namespace EyesGuard.ViewModels
             }
         }
 
-        private string title = string.Empty;
         public string Title
         {
-            get
-            {
-                return title;
-            }
+            get => title;
             set
             {
                 title = value;
@@ -96,6 +81,7 @@ namespace EyesGuard.ViewModels
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         public void OnPropertyChanged([CallerMemberName]string propName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));

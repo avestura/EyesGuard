@@ -4,14 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
+    xmlns:c="clr-namespace:EyesGuard.Resources.Converters"
     xmlns:nf="http://www.hardcodet.net/taskbar">
+
+    <c:ImageSourceToVisisbilityConverter x:Key="IconSourceVisbilityConverter" />
 
     <nf:TaskbarIcon
         x:Key="App.GlobalTaskbarIcon"
         ContextMenuOpening="TaskbarIcon_ContextMenuOpening"
         IconSource="{Binding Source}"
         TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick"
-        Visibility="Visible">
+        Visibility="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IconSource, Converter={StaticResource IconSourceVisbilityConverter}}">
 
         <nf:TaskbarIcon.ContextMenu>
             <ContextMenu FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
