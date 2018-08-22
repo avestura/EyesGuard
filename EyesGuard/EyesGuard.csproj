@@ -145,6 +145,8 @@
     <Compile Include="Resources\Controls\WaveCircle.xaml.cs">
       <DependentUpon>WaveCircle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Resources\Converters\ImageSourceToVisisbilityConverter.cs" />
     <Compile Include="Resources\Menus\EyesGuardTaskbarIcon.xaml.cs">
       <DependentUpon>EyesGuardTaskbarIcon.xaml</DependentUpon>
     </Compile>

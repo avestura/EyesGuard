@@ -22,6 +22,8 @@
 
                 <!--#region Images-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Images/MenuIcons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Images/TaskbarIconResources.xaml" />
+
                 <!--#endregion-->
 
                 <!--#region Templates-->
