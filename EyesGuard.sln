@@ -9,6 +9,9 @@ Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "EyesGuardPackage", "EyesGua
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AzureDevOps|Any CPU = AzureDevOps|Any CPU
+		AzureDevOps|x64 = AzureDevOps|x64
+		AzureDevOps|x86 = AzureDevOps|x86
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -17,6 +20,12 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|Any CPU.ActiveCfg = AzureDevOps|Any CPU
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|Any CPU.Build.0 = AzureDevOps|Any CPU
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|x64.ActiveCfg = AzureDevOps|Any CPU
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|x64.Build.0 = AzureDevOps|Any CPU
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|x86.ActiveCfg = AzureDevOps|Any CPU
+		{C9BF8494-EC16-4090-82E5-208CF56216D4}.AzureDevOps|x86.Build.0 = AzureDevOps|Any CPU
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -29,6 +38,13 @@ Global
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Release|x64.Build.0 = Release|Any CPU
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Release|x86.ActiveCfg = Release|Any CPU
 		{C9BF8494-EC16-4090-82E5-208CF56216D4}.Release|x86.Build.0 = Release|Any CPU
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|Any CPU.ActiveCfg = AzureDevOps|Any CPU
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x64.ActiveCfg = AzureDevOps|x64
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x64.Build.0 = AzureDevOps|x64
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x64.Deploy.0 = AzureDevOps|x64
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x86.ActiveCfg = AzureDevOps|x86
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x86.Build.0 = AzureDevOps|x86
+		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.AzureDevOps|x86.Deploy.0 = AzureDevOps|x86
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
