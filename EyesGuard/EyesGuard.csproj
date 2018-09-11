@@ -66,15 +66,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
-    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETCore\v4.5\System.Runtime.WindowsRuntime.UI.Xaml.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -83,18 +74,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Windows">
-      <HintPath>C:\Program Files (x86)\Windows Kits\10\UnionMetadata\Facade\Windows.WinMD</HintPath>
-    </Reference>
-    <Reference Include="Windows.Foundation.FoundationContract">
-      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.17134.0\Windows.Foundation.FoundationContract\3.0.0.0\Windows.Foundation.FoundationContract.winmd</HintPath>
-    </Reference>
-    <Reference Include="Windows.Foundation.UniversalApiContract">
-      <HintPath>C:\Program Files (x86)\Windows Kits\10\References\10.0.17134.0\Windows.Foundation.UniversalApiContract\6.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
-    </Reference>
-    <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -127,6 +109,9 @@
     </Compile>
     <Compile Include="Pages\Donate.xaml.cs">
       <DependentUpon>Donate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FeedbackPage.xaml.cs">
+      <DependentUpon>FeedbackPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -187,6 +172,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Donate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FeedbackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -374,16 +363,8 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images\Photos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Microsoft.Advertising.JS.10.1705.16001\build\Microsoft.Advertising.JS.targets" Condition="Exists('..\packages\Microsoft.Advertising.JS.10.1705.16001\build\Microsoft.Advertising.JS.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Advertising.JS.10.1705.16001\build\Microsoft.Advertising.JS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Advertising.JS.10.1705.16001\build\Microsoft.Advertising.JS.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Advertising.XAML.10.1705.16001\build\Microsoft.Advertising.XAML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Advertising.XAML.10.1705.16001\build\Microsoft.Advertising.XAML.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Services.Store.Engagement.10.1610.0\build\Microsoft.Services.Store.Engagement.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Services.Store.Engagement.10.1610.0\build\Microsoft.Services.Store.Engagement.targets'))" />
-  </Target>
-  <Import Project="..\packages\Microsoft.Advertising.XAML.10.1705.16001\build\Microsoft.Advertising.XAML.targets" Condition="Exists('..\packages\Microsoft.Advertising.XAML.10.1705.16001\build\Microsoft.Advertising.XAML.targets')" />
-  <Import Project="..\packages\Microsoft.Services.Store.Engagement.10.1610.0\build\Microsoft.Services.Store.Engagement.targets" Condition="Exists('..\packages\Microsoft.Services.Store.Engagement.10.1610.0\build\Microsoft.Services.Store.Engagement.targets')" />
 </Project>
