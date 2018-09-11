@@ -72,6 +72,8 @@
                 Icon="{StaticResource EyesGuard.QuestionMark}" />
             <MenuItem Click="Resources_Click" Header="Resources" />
             <Separator />
+            <MenuItem Click="Feedback_Menu_Click" Header="Send Feedback" Icon="{StaticResource EyesGuard.Feedback}" />
+            <Separator/>
             <MenuItem
                 Click="Donate_Click"
                 Header="Donate"

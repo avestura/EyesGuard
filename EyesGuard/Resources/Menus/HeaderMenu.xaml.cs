@@ -3,6 +3,7 @@ using EyesGuard.Extensions;
 using EyesGuard.Pages;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -147,5 +148,9 @@ namespace EyesGuard.Resources.Menus
 
         }
 
+        private void Feedback_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            App.GetMainWindow().MainFrame.Navigate(new FeedbackPage());
+        }
     }
 }

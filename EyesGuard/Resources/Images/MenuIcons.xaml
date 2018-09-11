@@ -47,12 +47,6 @@
     <fa:ImageAwesome
         x:Key="EyesGuard.Feedback"
         Foreground="#C7C7C7"
-        Icon="Comment" />
-
-    <TextBlock
-        x:Key="Microsoft.Feedback"
-        VerticalAlignment="Center"
-        FontFamily="Segoe MDL2 Assets"
-        Text="&#xE939;" />
+        Icon="Comments" />
 
 </ResourceDictionary>
