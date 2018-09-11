@@ -28,10 +28,12 @@
                 <Grid Height="250">
                     <c:WaveCircle
                         CircleArea="200"
+                        WaveStroke="White"
                         IsSignaling="True"
                         MaximumSignalArea="250" />
                     <c:WaveCircle
                         CircleArea="200"
+                        WaveStroke="White"
                         IsSignaling="True"
                         MaximumSignalArea="220" />
 

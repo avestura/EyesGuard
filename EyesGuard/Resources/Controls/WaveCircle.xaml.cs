@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,6 @@ namespace EyesGuard.Resources.Controls
     public partial class WaveCircle : UserControl
     {
 
-
-
-
         public TimeSpan SignalDuration
         {
             get { return (TimeSpan)GetValue(SignalDurationProperty); }
@@ -25,9 +23,6 @@ namespace EyesGuard.Resources.Controls
         public static readonly DependencyProperty SignalDurationProperty =
             DependencyProperty.Register("SignalDuration", typeof(TimeSpan), typeof(WaveCircle));
 
-
-
-
         public double CircleArea
         {
             get { return (double)GetValue(CircleAreaProperty); }
@@ -35,8 +30,6 @@ namespace EyesGuard.Resources.Controls
         }
         public static readonly DependencyProperty CircleAreaProperty =
             DependencyProperty.Register("CircleArea", typeof(double), typeof(WaveCircle));
-
-
 
         public double MaximumSignalArea
         {
@@ -46,12 +39,16 @@ namespace EyesGuard.Resources.Controls
         public static readonly DependencyProperty MaximumSignalAreaProperty =
             DependencyProperty.Register("MaximumSignalArea", typeof(double), typeof(WaveCircle));
 
+        public System.Windows.Media.Brush WaveStroke
+        {
+            get { return (System.Windows.Media.Brush)GetValue(WaveStrokeProperty); }
+            set { SetValue(WaveStrokeProperty, value); }
+        }
 
-
+        public static readonly DependencyProperty WaveStrokeProperty =
+            DependencyProperty.Register("WaveStroke", typeof(System.Windows.Media.Brush), typeof(WaveCircle));
 
         public Ellipse Ellipse { get { return MainEllipse; } }
-
-
 
         public bool IsSignaling
         {
@@ -78,8 +75,6 @@ namespace EyesGuard.Resources.Controls
         public static readonly DependencyProperty IsSignalingProperty =
             DependencyProperty.Register("IsSignaling", typeof(bool), typeof(WaveCircle));
 
-
-
         DoubleAnimation widthAnim;
 
         DoubleAnimation heightAnim;
@@ -90,15 +85,10 @@ namespace EyesGuard.Resources.Controls
 
         public WaveCircle()
         {
-
-
             InitializeComponent();
 
             if (SignalDuration.Milliseconds == 0)
                 SignalDuration = TimeSpan.FromSeconds(2);
-
-
-
 
         }
 
@@ -134,11 +124,6 @@ namespace EyesGuard.Resources.Controls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-
-
-
-
-
 
         }
 

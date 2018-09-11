@@ -6,11 +6,12 @@
     xmlns:local="clr-namespace:EyesGuard.Resources.Controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Loaded="UserControl_Loaded"
+    x:Name="this"
     mc:Ignorable="d">
     <Ellipse
         x:Name="MainEllipse"
         Width="10"
         Height="10"
         Loaded="MainEllipse_Loaded"
-        Stroke="White" />
+        Stroke="{Binding ElementName=this, Path=WaveStroke}" />
 </UserControl>
