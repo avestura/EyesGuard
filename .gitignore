@@ -260,12 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 
-# IRANSansFont (Commercial Font)
-/EyesGuard/Resources/Fonts/IranSans/IRANSans.ttf
-/EyesGuard/Resources/Fonts/IranSans/IRANSans_Bold.ttf
-/EyesGuard/Resources/Fonts/IranSans/IRANSans_Light.ttf
-/EyesGuard/Resources/Fonts/IranSans/IRANSans_Medium.ttf
-/EyesGuard/Resources/Fonts/IranSans/IRANSans_UltraLight.ttf
-
 # Setup Project
 /Setup Files/
