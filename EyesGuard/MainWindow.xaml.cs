@@ -26,20 +26,14 @@ namespace EyesGuard
         public MainWindow()
         {
             InitializeComponent();
+
+            if (App.LaunchMinimized)
+                this.Hide();
         }
 
         private  void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            if(App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
-            {
-                App.TaskbarIcon.ShowBalloonTip(
-                    "Strings.EyesGuard.Alerts.RunBackground.Title".Translate(),
-                    "Strings.EyesGuard.Alerts.RunBackground.Message".Translate(),
-                    Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
 
-                App.Configuration.TrayNotificationSaidBefore = true;
-                App.Configuration.SaveSettingsToFile();
-            }
             ChromeManager.Hide();
 
         }
@@ -86,28 +80,8 @@ namespace EyesGuard
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //App.SystemDpiFactor = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice.M11;
 
-            if (App.LaunchMinimized)
-                this.Hide();
             Configuration.LoadSettingsFromFile();
-
-            //wc.Ellipse.Stroke = Brushes.DodgerBlue;
-            //wc.Ellipse.Fill = Brushes.LightCyan;
-
-            //if(App.UserScalingType == App.ScalingType.UseCutomScaling)
-            //{
-            //    double userRequest = App.UserScalingFactor.ConvertToDouble();
-            //    double osRequest = App.SystemDpiFactor;
-
-            //    double ratio = userRequest / osRequest;
-
-            //    MainContainer.UserInterfaceCustomScale(ratio, false);
-
-            //    Width *= ratio; Height *= ratio;
-
-            //    this.BringWindowCenterScreen();
-            //}
 
         }
 
