@@ -15,7 +15,23 @@
         IconSource="{Binding Source}"
         TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick"
         Visibility="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IconSource, Converter={StaticResource IconSourceVisbilityConverter}}">
-
+        <nf:TaskbarIcon.TrayToolTip>
+            <ToolTip>
+                <StackPanel>
+                    <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Shield" Height="10" />
+                        <TextBlock FontWeight="Bold" Margin="5 0">Eyes Guard</TextBlock>
+                    </StackPanel>
+                    <TextBlock Visibility="{Binding PausedVisibility}">
+                        Paused for: <TextBlock Text="{Binding PauseRemaining}" />
+                    </TextBlock>
+                    <TextBlock>
+                    Next short break: <TextBlock Text="{Binding NextShortBreak}" /><LineBreak/>
+                    Next long break: <TextBlock Text="{Binding NextLongBreak}" />
+                    </TextBlock>
+                </StackPanel>
+            </ToolTip>
+        </nf:TaskbarIcon.TrayToolTip>
         <nf:TaskbarIcon.ContextMenu>
             <ContextMenu FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
 

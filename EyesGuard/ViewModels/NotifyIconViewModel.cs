@@ -20,6 +20,10 @@ namespace EyesGuard.ViewModels
         private Visibility startProtectVisibility;
         private Visibility stopProtectVisibility;
         private string title = string.Empty;
+        private string _nextShortBreak;
+        private string _nextLongBreak;
+        private Visibility _pausedVisibility = Visibility.Collapsed;
+        private string _pauseRemaining;
 
         public SolidColorBrush DarkBrush {
             get => darkBrush;
@@ -76,6 +80,46 @@ namespace EyesGuard.ViewModels
             set
             {
                 title = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string NextShortBreak
+        {
+            get => _nextShortBreak;
+            set
+            {
+                _nextShortBreak = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string NextLongBreak
+        {
+            get => _nextLongBreak;
+            set
+            {
+                _nextLongBreak = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public Visibility PausedVisibility
+        {
+            get => _pausedVisibility;
+            set
+            {
+                _pausedVisibility = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string PauseRemaining
+        {
+            get => _pauseRemaining;
+            set
+            {
+                _pauseRemaining = value;
                 OnPropertyChanged();
             }
         }

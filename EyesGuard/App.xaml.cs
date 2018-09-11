@@ -72,20 +72,22 @@ namespace EyesGuard
         public static bool ShortBreakShownOnce = false;
         public static Configuration Configuration { get; set; } = new Configuration();
 
-        public static bool LaunchMinimized { get; set; } = false;
+        public static bool LaunchMinimized { get; set; } = true;
+
         public static bool IsProtectionPaused {
             get { return _isProtectionPaused; }
             set {
                 _isProtectionPaused = value;
                 UIViewModels.ShortLongBreakTimeRemaining.IsProtectionPaused = value;
+                UIViewModels.NotifyIcon.PausedVisibility = (value) ? Visibility.Visible : Visibility.Collapsed;
                 SystemIdleDetector.EnableRaisingEvents = !value;
             }
         }
 
         public static bool AppIsInIdleState =>
-            Configuration.SystemIdleDetectionEnabled &&
-            CurrentMainPage.ProtectionState == GuardStates.Protecting &&
-            SystemIdleDetector.IsSystemIdle();
+            Configuration.SystemIdleDetectionEnabled
+            && CurrentMainPage.ProtectionState == GuardStates.Protecting
+            && SystemIdleDetector.IsSystemIdle();
 
         public static bool TimersAreEligibleToCountdown => !(IsProtectionPaused || AppIsInIdleState);
 
@@ -141,9 +143,9 @@ namespace EyesGuard
         #endregion
 
         #region Application :: Initialization
+
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-
             // Check if application is running by startup
             if (e.Args.Length > 0 && e.Args[0] == "/auto")
             {
@@ -213,6 +215,17 @@ namespace EyesGuard
 
             UpdateTaskbarIcon();
 
+            if (App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
+            {
+                App.TaskbarIcon.ShowBalloonTip(
+                    "Strings.EyesGuard.Alerts.RunBackground.Title".Translate(),
+                    "Strings.EyesGuard.Alerts.RunBackground.Message".Translate(),
+                    Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
+
+                App.Configuration.TrayNotificationSaidBefore = true;
+                App.Configuration.SaveSettingsToFile();
+            }
+
         }
 
         private void InitializeIdleDetector(bool initialStart)
@@ -257,8 +270,8 @@ namespace EyesGuard
         /// <returns></returns>
         public static bool CheckIfResting(bool showWarning = true)
         {
-            if (App.CurrentShortBreakWindow != null ||
-                App.CurrentLongBreakWindow != null)
+            if (App.CurrentShortBreakWindow != null
+                || App.CurrentLongBreakWindow != null)
             {
                 if(showWarning)
                     App.ShowWarning("Strings.EyesGuard.WaitUnitlEndOfBreak".Translate(), WarningPage.PageStates.Warning);
@@ -304,6 +317,7 @@ namespace EyesGuard
 
             UIViewModels.HeaderMenu.ManualBreakEnabled = false;
             UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = "Strings.EyesGuard.Resting".Translate();
+            UIViewModels.NotifyIcon.NextShortBreak = "Strings.EyesGuard.Resting".Translate();
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             ShortBreakShownOnce = true;
@@ -358,6 +372,7 @@ namespace EyesGuard
             LongBreakHandler.Stop();
             UIViewModels.HeaderMenu.ManualBreakEnabled = false;
             UIViewModels.ShortLongBreakTimeRemaining.NextLongBreak = "Strings.EyesGuard.Resting".Translate();
+            UIViewModels.NotifyIcon.NextLongBreak = "Strings.EyesGuard.Resting".Translate();
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             NextLongBreak = App.Configuration.LongBreakGap;
@@ -415,6 +430,7 @@ namespace EyesGuard
             }
 
             UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = "Strings.EyesGuard.Waiting".Translate();
+            UIViewModels.NotifyIcon.NextShortBreak = "Strings.EyesGuard.Waiting".Translate();
 
             await CurrentShortBreakWindow.HideUsingLinearAnimationAsync();
             if (CurrentShortBreakWindow != null)
@@ -489,6 +505,8 @@ namespace EyesGuard
                     $"{(int)NextLongBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.LongBreak.Minutes".Translate()}";
 
             }
+            UIViewModels.NotifyIcon.NextLongBreak =
+                $"{NextLongBreak.Hours}:{NextLongBreak.Minutes}:{NextLongBreak.Seconds}";
         }
 
         public static void UpdateShortTimeString()
@@ -504,6 +522,8 @@ namespace EyesGuard
                     $"{(int)NextShortBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes".Translate()}";
 
             }
+            UIViewModels.NotifyIcon.NextShortBreak =
+                $"{NextShortBreak.Hours}:{NextShortBreak.Minutes}:{NextShortBreak.Seconds}";
         }
 
         public static void UpdatePauseTimeString()
@@ -521,6 +541,8 @@ namespace EyesGuard
                     (int)PauseProtectionSpan.TotalMinutes);
 
             }
+            UIViewModels.NotifyIcon.PauseRemaining =
+                $"{PauseProtectionSpan.Hours}:{PauseProtectionSpan.Minutes}:{PauseProtectionSpan.Seconds}";
         }
 
         public static void UpdateTimeHandlers()
