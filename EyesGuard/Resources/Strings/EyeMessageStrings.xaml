@@ -62,6 +62,6 @@
 
     <sys:String x:Key="Strings.EyesGuard.WaitUnitlEndOfBreak">Please wait until break finishes.</sys:String>
 
-    <sys:String x:Key="Strings.EyesGuard.LongBreakTimeRemaining">%s hour(s) and %s minutes(s) and %s seconds to the end of break.</sys:String>
+    <sys:String x:Key="Strings.EyesGuard.LongBreakTimeRemaining">{0} hour(s) and {1} minutes(s) and {2} seconds to the end of break.</sys:String>
 
 </ResourceDictionary>
