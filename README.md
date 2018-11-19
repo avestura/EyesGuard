@@ -15,7 +15,7 @@ Windows Application for protecting you eyes
 #### Notify Icon
 ![Eyes Guard NotifyIcon](Photos/Store/ContextMenu.png)
 
-#### Under licence of GNU General Public License v3
+
 
 ---
 
