@@ -494,46 +494,7 @@
                     </StackPanel>
 
                 </Grid>
-                <!--
-                <StackPanel Orientation="Horizontal">
-                    <Grid>
-                        <fa:ImageAwesome Width="30" Foreground="White" Icon="Circle" />
-                        <fa:ImageAwesome Width="15" Foreground="#006A9F" Icon="Sliders" />
-                    </Grid>
-                    <TextBlock Margin="10,0,0,0" VerticalAlignment="Center" FontSize="18"
-                               Foreground="White"
-                               Text="{StaticResource Strings.EyesGuard.Settings.Prefrences}" />
-                </StackPanel>
-                <Grid Margin="10,0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="10" />
-                        <RowDefinition />
 
-                        <RowDefinition Height="10" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="15" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Border Grid.RowSpan="4" Grid.Column="0" Margin="3,-0.5,0,0"
-                            BorderBrush="White" BorderThickness="0,0,2,0" FlowDirection="LeftToRight" />
-
-                    <StackPanel Grid.Row="1" Grid.Column="2" Margin="5"
-                                Orientation="Vertical">
-                        <CheckBox VerticalAlignment="Center"
-                                  Foreground="White" FlowDirection="RightToLeft"
-                                  x:Name="useSystemDpiCheckbox"
-                                  Style="{DynamicResource WhiteCheckbox}">
-                            <TextBlock Foreground="White" >
-                                <TextBlock Text="{StaticResource Strings.EyesGuard.Settings.UseWindowsDPIScaling}" />
-                                <TextBlock Margin="2 0 0 0" Foreground="Wheat" FontSize="11" x:Name="ScalingFactorText"></TextBlock>
-                            </TextBlock>
-                        </CheckBox>
-                        <RadioButton>100 درصد</RadioButton>
-                    </StackPanel>
-
-                </Grid>
-                -->
             </WrapPanel>
         </ScrollViewer>
         <StackPanel
