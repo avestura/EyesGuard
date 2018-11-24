@@ -15,21 +15,15 @@ Windows Application for protecting you eyes
 #### Notify Icon
 ![Eyes Guard NotifyIcon](Photos/Store/ContextMenu.png)
 
-
-
 ---
 
-# Features
+## Features
 
-- Short break support
-- Long break support
+- Short break
+- Long break
 - Timing customization
 - Stats
-- Contents about eye sight
 - Pause or Stop Protection
-
-# Todo Features
-- Intrupt long break
-- Disable long or short break
-- Customize short message's text
+- Customize short-break messages
+- Multiple languages support
 
