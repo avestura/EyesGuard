@@ -601,7 +601,7 @@
                                  Grid.Row="1"
                                  Foreground="White"
                                  HorizontalContentAlignment="Stretch"
-                                 Background="#66FFFFFF"
+                                 Background="#44FFFFFF"
                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
                                  MaxHeight="150" Grid.ColumnSpan="2" Margin="0,0.2,-0.8,0.2" >
                             <ListBox.ItemTemplate>
