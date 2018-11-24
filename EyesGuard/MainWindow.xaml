@@ -7,7 +7,8 @@
     xmlns:local="clr-namespace:EyesGuard"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:menus="clr-namespace:EyesGuard.Resources.Menus"
-    Title="{StaticResource Strings.Application.OSTitle}"
+    x:Name="this"
+    Title="{Binding ElementName=this, Path=Translation.Application.OSTitle}"
     Width="1000"
     Height="600"
     MinWidth="550"
@@ -18,6 +19,7 @@
     Loaded="Window_Loaded"
     ResizeMode="CanResize"
     StateChanged="Window_StateChanged"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -65,7 +67,7 @@
                                 Margin="0,0,10,0"
                                 VerticalAlignment="Center"
                                 FontWeight="Bold"
-                                Text="{StaticResource Strings.Application.HeaderTitle}" />
+                                Text="{Binding ElementName=this, Path=Translation.Application.HeaderTitle}" />
                         </StackPanel>
                     </Button>
                     <menus:HeaderMenu
@@ -78,7 +80,6 @@
                         Margin="5,5"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
-                        FlowDirection="LeftToRight"
                         Orientation="Horizontal"
                         WindowChrome.IsHitTestVisibleInChrome="True">
 

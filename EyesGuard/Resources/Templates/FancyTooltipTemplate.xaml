@@ -5,7 +5,7 @@
     <Style TargetType="ToolTip">
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="HasDropShadow" Value="True" />
-
+        <Setter Property="Foreground" Value="#FF2B2B2B" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToolTip">
@@ -19,10 +19,9 @@
                             <SolidColorBrush Color="Gray" />
                         </Border.BorderBrush>
                         <ContentPresenter
-                            Margin="4"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            TextBlock.FontFamily="{StaticResource HastiUI.Fonts.IRANSans}" />
+                                Margin="4"
+                                VerticalAlignment="Top"
+                                TextBlock.FontFamily="{StaticResource HastiUI.Fonts.IRANSans}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasDropShadow" Value="true">

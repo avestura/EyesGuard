@@ -4,6 +4,7 @@ using EyesGuard.Extensions;
 using EyesGuard.Pages;
 using EyesGuard.Resources.Menus;
 using EyesGuard.ViewModels;
+using FormatWith;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,6 @@ namespace EyesGuard
     /// </summary>
     public partial class App : Application
     {
-
         #region Application :: Fields :: Private Fields
         private static bool _isProtectionPaused = false;
         private const int EyesGuardIdleDetectionThreshold = 80;
@@ -43,27 +43,15 @@ namespace EyesGuard
         /// <summary>
         /// Number of application process. Used to run only one instance
         /// </summary>
-        private static int programInstancesCount =
+        private static readonly int programInstancesCount =
             Process.GetProcessesByName(
-                System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)
+                Path.GetFileNameWithoutExtension(Assembly.GetEntryAssembly().Location)
                 ).Length;
 
         #endregion Application Fields :: Private Fields
 
         #region Application :: Fields :: Public Fields
         public static double SystemDpiFactor { get; set; }
-        public static ScalingType UserScalingType {
-            get
-            {
-                // Section :: Scaling Init
-                if (SystemDpiFactor >= 1 && SystemDpiFactor <= 2.5 && SystemDpiFactor % 0.25 == 0)
-                    return Configuration.DpiScalingType;
-                else
-                    return ScalingType.UseWindowsDPIScaling;
-            }
-
-        }
-        public static ScalingSize UserScalingFactor { get; set; }
 
         public static IdleDetector SystemIdleDetector { get; set; }
 
@@ -71,6 +59,8 @@ namespace EyesGuard
         public static TaskbarIcon TaskbarIcon { get; set; }
         public static bool ShortBreakShownOnce = false;
         public static Configuration Configuration { get; set; } = new Configuration();
+
+        public static Localization.LocalizedEnvironment LocalizedEnvironment { get; set; }
 
         public static bool LaunchMinimized { get; set; } = true;
 
@@ -118,31 +108,19 @@ namespace EyesGuard
         {
             PausedProtecting, Protecting, NotProtecting
         }
-        public enum ScalingType
-        {
-            UseWindowsDPIScaling, UseCutomScaling
-        }
-        public enum ScalingSize
-        {
-            X100, X125, X150, X175, X200, Unset
-        }
 
         #endregion Application Enums
 
         #region Application :: Sensitive Get
 
-        public static App GetApp()
-        {
-            return ((App)Current);
-        }
+        public static App GetApp() => (App)Current;
 
-        public static MainWindow GetMainWindow()
-        {
-            return ((MainWindow)App.Current.MainWindow);
-        }
+        public static MainWindow GetMainWindow() => (MainWindow)App.Current.MainWindow;
         #endregion
 
         #region Application :: Initialization
+
+        public bool BasePrequirementsLoaded { get; private set; } = false;
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
@@ -152,22 +130,30 @@ namespace EyesGuard
                 LaunchMinimized = true;
             }
 
-            if (programInstancesCount > 1)
-            {
-                MessageBox.Show("Strings.EyesGuard.Alerts.DoNotRunMultipleInstances".Translate());
-                Shutdown();
-            }
-
             Configuration.InitializeLocalFolder();
             Configuration.LoadSettingsFromFile();
+
+            InitalizeLocalizedEnvironment();
+
+            if (programInstancesCount > 1)
+            {
+                MessageBox.Show(App.LocalizedEnvironment.Translation.Application.DoNotRunMultipleInstances);
+                Shutdown();
+            }
 
             InitializeIdleDetector(Configuration.SystemIdleDetectionEnabled);
 
             ToolTipService.ShowDurationProperty.OverrideMetadata(
-                typeof(DependencyObject), new FrameworkPropertyMetadata(Int32.MaxValue));
+                typeof(DependencyObject), new FrameworkPropertyMetadata(int.MaxValue));
 
-            UserScalingFactor = Configuration.DpiScalingFactor;
-            // End Section
+            if (App.Configuration.CustomShortMessages.Length == 0) {
+                App.Configuration.CustomShortMessages = new string[]
+                {
+                    "Stare far-off"
+                };
+            }
+
+            BasePrequirementsLoaded = true;
 
             // Ignore paused protecting state
             if (Configuration.ProtectionState == GuardStates.PausedProtecting)
@@ -218,14 +204,38 @@ namespace EyesGuard
             if (App.TaskbarIcon != null && !App.Configuration.TrayNotificationSaidBefore)
             {
                 App.TaskbarIcon.ShowBalloonTip(
-                    "Strings.EyesGuard.Alerts.RunBackground.Title".Translate(),
-                    "Strings.EyesGuard.Alerts.RunBackground.Message".Translate(),
+                    App.LocalizedEnvironment.Translation.Application.Notifications.FirstLaunch.Title,
+                    App.LocalizedEnvironment.Translation.Application.Notifications.FirstLaunch.Message,
                     Hardcodet.Wpf.TaskbarNotification.BalloonIcon.Info);
 
                 App.Configuration.TrayNotificationSaidBefore = true;
                 App.Configuration.SaveSettingsToFile();
             }
+        }
 
+        private void InitalizeLocalizedEnvironment()
+        {
+            var currentLocale = Configuration.ApplicationLocale;
+            if(currentLocale == "en-US")
+            {
+                LocalizedEnvironment = Localization.LanguageLoader.DefaultLocale;
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
+            }
+            if (Localization.LanguageLoader.IsCultureSupportedAndExists(currentLocale))
+            {
+                LocalizedEnvironment = Localization.LanguageLoader.CreateEnvironment(currentLocale);
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(currentLocale);
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(currentLocale);
+            }
+            else
+            {
+                Configuration.ApplicationLocale = "en-US";
+                Configuration.SaveSettingsToFile();
+                LocalizedEnvironment = Localization.LanguageLoader.DefaultLocale;
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
+            }
         }
 
         private void InitializeIdleDetector(bool initialStart)
@@ -257,7 +267,6 @@ namespace EyesGuard
 
             UIViewModels.ShortLongBreakTimeRemaining.IdleVisibility =
                 (AppIsInIdleState) ? Visibility.Visible : Visibility.Collapsed;
-
         }
 
         #endregion
@@ -274,7 +283,7 @@ namespace EyesGuard
                 || App.CurrentLongBreakWindow != null)
             {
                 if(showWarning)
-                    App.ShowWarning("Strings.EyesGuard.WaitUnitlEndOfBreak".Translate(), WarningPage.PageStates.Warning);
+                    App.ShowWarning(App.LocalizedEnvironment.Translation.EyesGuard.WaitUnitlEndOfBreak, WarningPage.PageStates.Warning);
                 return true;
             }
             return false;
@@ -307,7 +316,6 @@ namespace EyesGuard
                     StartShortBreak();
                 }
             }
-
         }
 
         public async void StartShortBreak()
@@ -316,8 +324,8 @@ namespace EyesGuard
             LongBreakHandler.Stop();
 
             UIViewModels.HeaderMenu.ManualBreakEnabled = false;
-            UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = "Strings.EyesGuard.Resting".Translate();
-            UIViewModels.NotifyIcon.NextShortBreak = "Strings.EyesGuard.Resting".Translate();
+            UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = App.LocalizedEnvironment.Translation.EyesGuard.Resting;
+            UIViewModels.NotifyIcon.NextShortBreak = LocalizedEnvironment.Translation.EyesGuard.Resting;
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             ShortBreakShownOnce = true;
@@ -338,7 +346,6 @@ namespace EyesGuard
             catch { }
 
             ShortDurationCounter.Start();
-
         }
 
         private void LongBreakHandler_Tick(object sender, EventArgs e)
@@ -351,28 +358,25 @@ namespace EyesGuard
                 if(App.Configuration.AlertBeforeLongBreak && (int)NextLongBreak.TotalSeconds == 60)
                 {
                     App.TaskbarIcon.ShowBalloonTip(
-                        "Strings.EyesGuard.LongBreakAlert.Title".Translate(),
-                        "Strings.EyesGuard.LongBreakAlert.Message".Translate(),
+                        LocalizedEnvironment.Translation.EyesGuard.Notifications.LongBreakAlert.Title,
+                        LocalizedEnvironment.Translation.EyesGuard.Notifications.LongBreakAlert.Message,
                         BalloonIcon.Info);
                 }
 
                 if ((int)NextLongBreak.TotalSeconds == 0)
                 {
-
                     StartLongBreak();
                 }
             }
-
         }
 
         public async void StartLongBreak()
         {
-
             ShortBreakHandler.Stop();
             LongBreakHandler.Stop();
             UIViewModels.HeaderMenu.ManualBreakEnabled = false;
-            UIViewModels.ShortLongBreakTimeRemaining.NextLongBreak = "Strings.EyesGuard.Resting".Translate();
-            UIViewModels.NotifyIcon.NextLongBreak = "Strings.EyesGuard.Resting".Translate();
+            UIViewModels.ShortLongBreakTimeRemaining.NextLongBreak = LocalizedEnvironment.Translation.EyesGuard.Resting;
+            UIViewModels.NotifyIcon.NextLongBreak = LocalizedEnvironment.Translation.EyesGuard.Resting;
 
             NextShortBreak = App.Configuration.ShortBreakGap;
             NextLongBreak = App.Configuration.LongBreakGap;
@@ -382,11 +386,13 @@ namespace EyesGuard
                 DataContext = UIViewModels.LongBreak
             };
             LongBreakVisibleTime = App.Configuration.LongBreakDuration;
-            UIViewModels.LongBreak.TimeRemaining = string.Format(
-                "Strings.EyesGuard.LongBreakTimeRemaining".Translate(),
-                LongBreakVisibleTime.Hours,
-                LongBreakVisibleTime.Minutes,
-                LongBreakVisibleTime.Seconds);
+            UIViewModels.LongBreak.TimeRemaining =
+                LocalizedEnvironment.Translation.EyesGuard.LongBreakTimeRemaining.FormatWith(new
+                {
+                    LongBreakVisibleTime.Hours,
+                    LongBreakVisibleTime.Minutes,
+                    LongBreakVisibleTime.Seconds
+                });
 
             UIViewModels.LongBreak.CanCancel = (Configuration.ForceUserToBreak) ? Visibility.Collapsed : Visibility.Visible;
 
@@ -403,7 +409,6 @@ namespace EyesGuard
             longWindow.Focus();
 
             LongDurationCounter.Start();
-
         }
 
         #endregion
@@ -429,8 +434,8 @@ namespace EyesGuard
                 UpdateStats();
             }
 
-            UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = "Strings.EyesGuard.Waiting".Translate();
-            UIViewModels.NotifyIcon.NextShortBreak = "Strings.EyesGuard.Waiting".Translate();
+            UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak = LocalizedEnvironment.Translation.EyesGuard.Waiting;
+            UIViewModels.NotifyIcon.NextShortBreak = LocalizedEnvironment.Translation.EyesGuard.Waiting;
 
             await CurrentShortBreakWindow.HideUsingLinearAnimationAsync();
             if (CurrentShortBreakWindow != null)
@@ -442,7 +447,6 @@ namespace EyesGuard
             if (!App.Configuration.OnlyOneShortBreak && Configuration.ProtectionState == GuardStates.Protecting)
             {
                 ShortBreakHandler.Start();
-
             }
             LongBreakHandler.Start();
             ShortDurationCounter.Stop();
@@ -453,11 +457,13 @@ namespace EyesGuard
         private async void LongDurationCounter_Tick(object sender, EventArgs e)
         {
             LongBreakVisibleTime = LongBreakVisibleTime.Subtract(TimeSpan.FromSeconds(1));
-            UIViewModels.LongBreak.TimeRemaining = string.Format(
-                         "Strings.EyesGuard.LongBreakTimeRemaining".Translate(),
-                         LongBreakVisibleTime.Hours,
-                         LongBreakVisibleTime.Minutes,
-                         LongBreakVisibleTime.Seconds);
+            UIViewModels.LongBreak.TimeRemaining =
+                LocalizedEnvironment.Translation.EyesGuard.LongBreakTimeRemaining.FormatWith(new
+                {
+                    LongBreakVisibleTime.Hours,
+                    LongBreakVisibleTime.Minutes,
+                    LongBreakVisibleTime.Seconds
+                });
 
             if ((int)LongBreakVisibleTime.TotalSeconds == 0)
             {
@@ -497,13 +503,18 @@ namespace EyesGuard
             if (NextLongBreak.TotalSeconds < 60)
             {
                 UIViewModels.ShortLongBreakTimeRemaining.NextLongBreak =
-                    $"{(int)NextLongBreak.TotalSeconds} {"Strings.EyesGuard.TimeRemaining.LongBreak.Seconds".Translate()}";
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.LongBreak.Seconds.FormatWith(new
+                    {
+                        Seconds = (int)NextLongBreak.TotalSeconds
+                    });
             }
             else
             {
                 UIViewModels.ShortLongBreakTimeRemaining.NextLongBreak =
-                    $"{(int)NextLongBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.LongBreak.Minutes".Translate()}";
-
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.LongBreak.Minutes.FormatWith(new
+                    {
+                        Minutes = (int)NextLongBreak.TotalMinutes
+                    });
             }
             UIViewModels.NotifyIcon.NextLongBreak =
                 $"{NextLongBreak.Hours}:{NextLongBreak.Minutes}:{NextLongBreak.Seconds}";
@@ -514,13 +525,18 @@ namespace EyesGuard
             if (NextShortBreak.TotalSeconds < 60)
             {
                 UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak =
-                    $"{(int)NextShortBreak.TotalSeconds} {"Strings.EyesGuard.TimeRemaining.ShortBreak.Seconds".Translate()}";
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.ShortBreak.Seconds.FormatWith(new
+                    {
+                        Seconds = (int)NextShortBreak.TotalSeconds
+                    });
             }
             else
             {
                 UIViewModels.ShortLongBreakTimeRemaining.NextShortBreak =
-                    $"{(int)NextShortBreak.TotalMinutes} {"Strings.EyesGuard.TimeRemaining.ShortBreak.Minutes".Translate()}";
-
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.ShortBreak.Minutes.FormatWith(new
+                    {
+                        Minutes = (int)NextShortBreak.TotalMinutes
+                    });
             }
             UIViewModels.NotifyIcon.NextShortBreak =
                 $"{NextShortBreak.Hours}:{NextShortBreak.Minutes}:{NextShortBreak.Seconds}";
@@ -531,15 +547,18 @@ namespace EyesGuard
             if (PauseProtectionSpan.TotalSeconds < 60)
             {
                 UIViewModels.ShortLongBreakTimeRemaining.PauseTime =
-                    string.Format("Strings.EyesGuard.TimeRemaining.PauseTime.Seconds".Translate(),
-                    (int)PauseProtectionSpan.TotalSeconds);
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.PauseTime.Seconds.FormatWith(new
+                    {
+                        Seconds = (int)PauseProtectionSpan.TotalSeconds
+                    });
             }
             else
             {
                 UIViewModels.ShortLongBreakTimeRemaining.PauseTime =
-                    string.Format("Strings.EyesGuard.TimeRemaining.PauseTime.Minutes".Translate(),
-                    (int)PauseProtectionSpan.TotalMinutes);
-
+                    LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.PauseTime.Seconds.FormatWith(new
+                    {
+                        Seconds = (int)PauseProtectionSpan.TotalMinutes
+                    });
             }
             UIViewModels.NotifyIcon.PauseRemaining =
                 $"{PauseProtectionSpan.Hours}:{PauseProtectionSpan.Minutes}:{PauseProtectionSpan.Seconds}";
@@ -660,9 +679,14 @@ namespace EyesGuard
 
         public static string GetShortWindowMessage()
         {
+            var messagesBase = (Configuration.UseLanguageProvedidShortMessages) ?
+                LocalizedEnvironment.Translation.EyesGuard.ShortMessageSuggestions :
+                Configuration.CustomShortMessages;
+
             ShortMessageIteration++;
-            ShortMessageIteration = ShortMessageIteration % 5;
-            return $"Strings.EyesGuard.ShortWindow.Message{ShortMessageIteration}".Translate();
+            ShortMessageIteration %= messagesBase.Count();
+
+            return messagesBase[ShortMessageIteration];
         }
 
         #endregion

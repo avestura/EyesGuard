@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:EyesGuard.Resources.Templates">
+
+    <Style TargetType='Hyperlink'>
+        <Setter Property="TextDecorations" Value="{x:Null}" />
+        <Setter Property='Foreground' Value='#FFFDE5C3' />
+        <Style.Triggers>
+            <Trigger Property='IsMouseOver' Value='true'>
+                <Setter Property='Foreground'    Value='#FFF4D395' />
+                <Setter Property='Cursor' Value='Hand' />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

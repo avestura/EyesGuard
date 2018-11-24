@@ -58,9 +58,9 @@ namespace EyesGuard.Configurations
                     App.Configuration = (Configuration)serializer.Deserialize(stream);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
+                var a = ex.Message;
                 App.Configuration = new Configuration();
                 App.Configuration.SaveSettingsToFile();
             }

@@ -27,6 +27,9 @@ namespace EyesGuard.Pages
             InitializeComponent();
         }
 
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
@@ -43,8 +46,10 @@ namespace EyesGuard.Pages
                 Process.Start($"https://donorbox.org/eyes-guard-donate");
 
             } catch { }
-
-            App.ShowWarning("Strings.Application.Donate".Translate(), WarningPage.PageStates.Donate, new MainPage());
+            var donateText = App.LocalizedEnvironment.Translation.Application.Donate.DonationButtonClicked.Content;
+            App.ShowWarning(
+                $"{donateText.Thanks}\n{donateText.Redirect}\n\n{donateText.FeedbackNotice}"
+                , WarningPage.PageStates.Donate, new MainPage());
 
         }
     }

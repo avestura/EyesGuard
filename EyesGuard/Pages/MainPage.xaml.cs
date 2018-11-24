@@ -40,11 +40,12 @@ namespace EyesGuard.Pages
 
         public MainPage()
         {
-
             InitializeComponent();
             CurrentMainPage = this;
-
         }
+
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -56,7 +57,6 @@ namespace EyesGuard.Pages
             ProtectionState = App.Configuration.ProtectionState;
 
             DataContext = App.UIViewModels.ShortLongBreakTimeRemaining;
-
         }
 
         private void GuardButton_Click(object sender, RoutedEventArgs e)
@@ -67,17 +67,14 @@ namespace EyesGuard.Pages
             {
                 ProtectionState = GuardStates.NotProtecting;
                 if(App.Configuration.SaveStats) UpdateIntruptOfStats(GuardStates.NotProtecting);
-   ;
             }
             else if (ProtectionState == GuardStates.NotProtecting)
             {
                 ProtectionState = GuardStates.Protecting;
-
             }
             else if (ProtectionState == GuardStates.PausedProtecting)
             {
                 App.ResumeProtection();
-
             }
 
         }
@@ -88,35 +85,29 @@ namespace EyesGuard.Pages
 
             if (ProtectionState == GuardStates.Protecting)
             {
-                PageText.Text = "Strings.EyeGuard.Guarding.Running".Translate();
+                PageText.Text = App.LocalizedEnvironment.Translation.EyesGuard.GuardStatus.Running;
             }
             else if (ProtectionState == GuardStates.NotProtecting)
             {
-                PageText.Text = "Strings.EyeGuard.Guarding.Stopped".Translate();
+                PageText.Text = App.LocalizedEnvironment.Translation.EyesGuard.GuardStatus.Stopped;
             }
             else if (ProtectionState == GuardStates.PausedProtecting)
             {
-                PageText.Text = "Strings.EyeGuard.Guarding.Paused".Translate();
+                PageText.Text = App.LocalizedEnvironment.Translation.EyesGuard.GuardStatus.Paused;
             }
 
             await PageText.ShowUsingLinearAnimationAsync();
-
         }
 
         private void StackPanel_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            //try
-            //{
-                if(((bool)e.NewValue)){
-                    foreach (UIElement uie in ((StackPanel)sender).Children)
-                    {
-                        uie.ShowUsingLinearAnimationAsync();
-                    }
+            if((bool)e.NewValue)
+            {
+                foreach (UIElement uie in ((StackPanel)sender).Children)
+                {
+                    uie.ShowUsingLinearAnimationAsync();
                 }
-
-            //}
-            //catch  { }
-
+            }
         }
 
     }

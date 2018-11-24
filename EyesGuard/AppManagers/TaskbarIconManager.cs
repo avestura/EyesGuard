@@ -24,7 +24,7 @@ namespace EyesGuard.AppManagers
                 App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.Protecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Visible;
-                App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.Protected".Translate();
+                App.UIViewModels.NotifyIcon.Title = LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Protected;
             }
             else if (Configuration.ProtectionState == GuardStates.PausedProtecting)
             {
@@ -33,7 +33,7 @@ namespace EyesGuard.AppManagers
                 App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.PausedProtecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
-                App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.PausedProtected".Translate();
+                App.UIViewModels.NotifyIcon.Title = LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.PausedProtected;
 
             }
             else if (Configuration.ProtectionState == GuardStates.NotProtecting)
@@ -43,7 +43,7 @@ namespace EyesGuard.AppManagers
                 App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.NotProtecting".Translate<BitmapImage>();
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
-                App.UIViewModels.NotifyIcon.Title = "Strings.EyesGuard.TaskbarIcon.NotProtected".Translate();
+                App.UIViewModels.NotifyIcon.Title = LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.NotProtected;
 
             }
         }

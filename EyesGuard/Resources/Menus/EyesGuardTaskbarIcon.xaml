@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
+    x:Name="this"
     xmlns:c="clr-namespace:EyesGuard.Resources.Converters"
     xmlns:nf="http://www.hardcodet.net/taskbar">
 
@@ -12,7 +13,7 @@
     <nf:TaskbarIcon
         x:Key="App.GlobalTaskbarIcon"
         ContextMenuOpening="TaskbarIcon_ContextMenuOpening"
-        IconSource="{Binding Source}"
+        IconSource="{Binding Source}" FlowDirection="{Binding Menu_FlowDirection}"
         TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick"
         Visibility="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IconSource, Converter={StaticResource IconSourceVisbilityConverter}}">
         <nf:TaskbarIcon.TrayToolTip>
@@ -20,20 +21,19 @@
                 <StackPanel>
                     <StackPanel Margin="0 0 0 10" Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Shield" Height="10" />
-                        <TextBlock FontWeight="Bold" Margin="5 0">Eyes Guard</TextBlock>
+                        <TextBlock FontWeight="Bold" Margin="5 0" Text="{Binding TooltipTitle}"/>
                     </StackPanel>
-                    <TextBlock Visibility="{Binding PausedVisibility}">
-                        Paused for: <TextBlock Text="{Binding PauseRemaining}" />
-                    </TextBlock>
+                    <TextBlock Visibility="{Binding PausedVisibility}"
+                               Text="{Binding PauseRemainingFullText}" />
                     <TextBlock>
-                    Next short break: <TextBlock Text="{Binding NextShortBreak}" /><LineBreak/>
-                    Next long break: <TextBlock Text="{Binding NextLongBreak}" />
+                    <TextBlock Text="{Binding NextShortBreakFullText}" /><LineBreak/>
+                    <TextBlock Text="{Binding NextLongBreakFullText}" />
                     </TextBlock>
                 </StackPanel>
             </ToolTip>
         </nf:TaskbarIcon.TrayToolTip>
         <nf:TaskbarIcon.ContextMenu>
-            <ContextMenu FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
+            <ContextMenu FlowDirection="{Binding Menu_FlowDirection}" FontFamily="{DynamicResource HastiUI.Fonts.IRANSans}">
 
                 <MenuItem Margin="-3,-3,-3,2" StaysOpenOnClick="True">
                     <MenuItem.Template>
@@ -86,31 +86,38 @@
                         </ControlTemplate>
                     </MenuItem.Template>
                 </MenuItem>
-                <MenuItem Click="TaskbarIcon_TrayMouseDoubleClick" Header="Show Main Menu" />
+                <MenuItem Click="TaskbarIcon_TrayMouseDoubleClick"
+                          Header="{Binding Menu_ShowMainMenu}" />
                 <Separator />
                 <MenuItem
                     Click="StartProtect_Click"
-                    Header="Start Protection"
+                    Header="{Binding Menu_StartProtection}"
                     Icon="{StaticResource EyesGuard.StartProtecting}"
                     Visibility="{Binding StartProtectVisibility}" />
                 <MenuItem
                     Click="StopProtect_Click"
-                    Header="Stop Protection"
+                    Header="{Binding Menu_StopProtection}"
                     Icon="{StaticResource EyesGuard.StopProtecting}"
                     Visibility="{Binding StopProtectVisibility}" />
-                <MenuItem Header="Pause for">
-                    <MenuItem Click="FiveMinutesPause_Click" Header="5 minutes" />
-                    <MenuItem Click="TenMinutesPause_Click" Header="10 minutes" />
-                    <MenuItem Click="ThirtyMinutesPause_Click" Header="30 minutes" />
-                    <MenuItem Click="OneHourPause_Click" Header="1 hour" />
-                    <MenuItem Click="TwoHourPause_Click" Header="2 hours" />
+                <MenuItem Header="{Binding Menu_PauseFor}">
+                    <MenuItem Click="FiveMinutesPause_Click"
+                              Header="{Binding Menu_FiveMins}" />
+                    <MenuItem Click="TenMinutesPause_Click"
+                              Header="{Binding Menu_TenMins}" />
+                    <MenuItem Click="ThirtyMinutesPause_Click"
+                              Header="{Binding Menu_ThirtyMins}" />
+                    <MenuItem Click="OneHourPause_Click"
+                              Header="{Binding Menu_OneHour}" />
+                    <MenuItem Click="TwoHourPause_Click"
+                              Header="{Binding Menu_TwoHours}" />
                     <Separator />
-                    <MenuItem Click="CustomPause_Click" Header="Custom..." />
+                    <MenuItem Click="CustomPause_Click"
+                              Header="{Binding Menu_Custom}" />
                 </MenuItem>
                 <Separator />
-                <MenuItem Click="Settings_Click" Header="Settings" />
+                <MenuItem Click="Settings_Click" Header="{Binding Menu_Settings}" />
                 <Separator />
-                <MenuItem Click="Exit_Click" Header="Exit" />
+                <MenuItem Click="Exit_Click" Header="{Binding Menu_Exit}" />
             </ContextMenu>
         </nf:TaskbarIcon.ContextMenu>
     </nf:TaskbarIcon>

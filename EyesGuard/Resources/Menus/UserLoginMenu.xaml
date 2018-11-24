@@ -6,6 +6,7 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="this"
     mc:Ignorable="d">
     <Menu
         VerticalAlignment="Center"
@@ -20,7 +21,7 @@
                         Margin="0,0,5,0"
                         Foreground="White"
                         Icon="UserCircleOutline" />
-                    <TextBlock>User</TextBlock>
+                    <TextBlock Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.User}"/>
 
                 </StackPanel>
             </MenuItem.Header>
@@ -41,8 +42,8 @@
                                 Grid.Column="1"
                                 Margin="5"
                                 VerticalAlignment="Center">
-                                <TextBlock FontSize="12" FontWeight="Bold">Not logged in</TextBlock>
-                                <TextBlock FontSize="10">No title</TextBlock>
+                                <TextBlock FontSize="12" FontWeight="Bold" Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.NotLoggedIn}"/>
+                                <TextBlock FontSize="10" Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.NoTitle}"/>
                             </StackPanel>
                         </Grid>
                     </ControlTemplate>
@@ -51,17 +52,17 @@
             <MenuItem
                 Click="MenuItem_Click"
                 FontSize="12"
-                Header="Login"
+                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Login}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
             <MenuItem
                 FontSize="12"
-                Header="Profile"
+                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Profile}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
                 IsEnabled="False" />
             <Separator />
             <MenuItem
                 FontSize="12"
-                Header="Logout"
+                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Logout}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
                 IsEnabled="False" />
         </MenuItem>

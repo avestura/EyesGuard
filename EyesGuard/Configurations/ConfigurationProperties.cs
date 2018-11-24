@@ -26,10 +26,14 @@ namespace EyesGuard.Configurations
             set
             {
                 _protectionState = value;
-                UpdateTimeHandlers();
-                UpdateLongShortVisibility();
-                UpdateTaskbarIcon();
-                UpdateIdleActions();
+
+                if (App.GetApp().BasePrequirementsLoaded)
+                {
+                    UpdateTimeHandlers();
+                    UpdateLongShortVisibility();
+                    UpdateTaskbarIcon();
+                    UpdateIdleActions();
+                }
 
             }
         }
@@ -51,16 +55,19 @@ namespace EyesGuard.Configurations
             get { return ShortBreakGap.ToString(); }
             set { ShortBreakGap = TimeSpan.Parse(value); }
         }
+
         public string LongBreakGapString
         {
             get { return LongBreakGap.ToString(); }
             set { LongBreakGap = TimeSpan.Parse(value); }
         }
+
         public string ShortBreakDurationString
         {
             get { return ShortBreakDuration.ToString(); }
             set { ShortBreakDuration = TimeSpan.Parse(value); }
         }
+
         public string LongBreakDurationString
         {
             get { return LongBreakDuration.ToString(); }
@@ -80,8 +87,6 @@ namespace EyesGuard.Configurations
         public long PauseCount { get; set; } = 0;
         public long StopCount { get; set; } = 0;
         public bool KeyTimesVisible { get { return _keyTimeVisible; } set { _keyTimeVisible = value; UpdateKeyTimeVisible(); } }
-        public ScalingType DpiScalingType { get; set; } = ScalingType.UseWindowsDPIScaling;
-        public ScalingSize DpiScalingFactor { get; set; } = ScalingSize.Unset;
 
         public bool SystemIdleDetectionEnabled
         {
@@ -104,6 +109,12 @@ namespace EyesGuard.Configurations
 
             }
         }
+
+        public string ApplicationLocale { get; set; } = "en-US";
+
+        public bool UseLanguageProvedidShortMessages { get; set; } = true;
+
+        public string[] CustomShortMessages { get; set; } = new string[] { "Stare far-off" };
         #endregion
     }
 }

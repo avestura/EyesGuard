@@ -7,11 +7,13 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Donate Eyes Guard"
+    Title="{Binding ElementName=this, Path=Translation.Application.Donate.PageTitle}"
     d:DesignHeight="500"
     d:DesignWidth="600"
+    x:Name="this"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
@@ -26,13 +28,13 @@
                 <TextBlock
                     FontSize="18"
                     Foreground="White"
-                    Text="{StaticResource Strings.Application.Donate.Title}" />
+                    Text="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.InnerTitle}" />
             </StackPanel>
             <TextBlock
                 MaxWidth="450"
                 Margin="10,5"
                 Foreground="White"
-                Text="{StaticResource Strings.Application.Donate.Message}"
+                Text="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.Message}"
                 TextAlignment="Justify"
                 TextWrapping="Wrap" />
 
@@ -57,7 +59,7 @@
                     Height="30"
                     Padding="10,0"
                     Click="DonateButton_Click"
-                    Content="Open donate webpage in Browser"
+                    Content="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.ButtonText}"
                     FontSize="15"
                     Style="{DynamicResource ButtonTemplate.Green}" />
             </Grid>

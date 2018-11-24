@@ -1,0 +1,279 @@
+﻿{
+  "Meta": {
+    "Translators": [
+      {
+        "Name": "آرین ابراهیم پور",
+        "GitHubUsername": "0xaryan",
+        "Website": "https://0xaryan.github.com/cv",
+        "Notes": ""
+      }
+    ]
+  },
+  "Translation": {
+    "Application": {
+      "OSTitle": "نگهبان چشم",
+      "HeaderTitle": "نگهبان چشم",
+      "LoginWarning": "در حال حاضر نگهبان چشم دارای قابلیت های چند کاربره نیست.",
+      "HelpPageText": "برای دریافت اطلاعات بیشتر درباره یک عنصر ماوس خود را روی آن عنصر ببرید. در صورت وجود یک جعبه راهنما باز خواهد شد.",
+      "DoNotRunMultipleInstances": "نگهبان چشم هم اکنون در حال احراست. شما نمیتوانید چندین نمونه از این نرم افزار را هم زمان باز کنید.",
+      "Notifications": {
+        "FirstLaunch": {
+          "Title": "نگهبان چشم در حال اجراست.",
+          "Message": "نگهبان چشم در پس زمینه در حال اجراست. میتوانید با استفاده از آیکون سپر در نوار وظیفه مجددا کنترل پنل را روی صفحه ببینید."
+        }
+      },
+      "Resources": {
+        "PageTitle": "منابع",
+        "Content": {
+          "Icons": "آیکون ها: FontAwesome و IconArchive",
+          "UIKit": "کیت رابط کاربری: Hasti UI Kit (توسعه داده شده توسط آرین نرم افزار)"
+        }
+      },
+      "About": {
+        "PageTitle": "درباره",
+        "Content": {
+          "InnerTitle": "درباره نگهبان چشم",
+          "PublisherInfo": "ناشر: آرین نرم افزار"
+        }
+      },
+      "Donate": {
+        "PageTitle": "هدیه به نگهبان چشم",
+        "BeforeDonation": {
+          "Content": {
+            "InnerTitle": "میخواهید که به نگهبان چشم هدیه بدهید؟",
+            "Message": "اگر میخواهید که از این نرم افزار متن-باز و رایگان حمایت کنید، از فرم زیر استفاده کنید.",
+            "ButtonText": "بازکردن صفحه هدیه در مرورگر"
+          }
+        },
+        "DonationButtonClicked": {
+          "Content": {
+            "InnerTitle": "هدیه",
+            "Thanks": "از حمایت شما ممنونیم!",
+            "Redirect": "شما به صفحه حمایت در مرورگر خود هدایت خواهید شد",
+            "FeedbackNotice": "اگر هر نظر یا پیشنهادی دارید، میتوانید آن را در صفحه نگهبان چشم در استور مایکروسافت به اشتراک بگذاریئ"
+          }
+        }
+      },
+      "Feedback": {
+        "PageTitle": "بازخورد",
+        "Content": {
+          "InnerTitle": "بازخورد",
+          "Message": "میتوانید یک مسئله در گیت هاب ایجاد کنید و تغییرات برنامه نسبت به آن را دنبال کنید",
+          "ButtonText": "ساخت یک مسئله در گیت‌هاب"
+        }
+      }
+    },
+    "EyesGuard": {
+      "ControlPanel": {
+        "Title": "کنترل پنل"
+      },
+      "GuardStatus": {
+        "Running": "نگهبان چشم در حال نگهبانی از چشم شماست",
+        "Paused": "نگهبان چشم موقتا غیر فعال شده است",
+        "Stopped": "نگهبان چشم غیرفعال است",
+        "Idle": "نگهبان چشم به واسطه تشخیص بیکار بودن سیستم موقتا غیر فعال شده است"
+      },
+      "TimeRemaining": {
+        "ShortBreak": {
+          "Seconds": "{Seconds} ثانیه تا استراحت کوتاه مدت",
+          "Minutes": "{Minutes} دقیقه تا استراحت کوتاه مدت"
+        },
+        "LongBreak": {
+          "Seconds": "{Seconds} ثانیه تا استراحت بلند مدت",
+          "Minutes": "{Minutes} دقیقه تا استراحت بلند مدت"
+        },
+        "PauseTime": {
+          "Seconds": "نگهبان چشم به مدت {Seconds} ثانیه متوقف شده است",
+          "Minutes": "نگهبان چشم به مدت {Minutes} دقیقه متوقف شده است"
+        }
+      },
+      "CustomPause": {
+        "PageTitle": "ایست سفارشی",
+        "Message": "زمان دلخواه خود را وارد کنید",
+        "ButtonText": "ایست"
+      },
+      "WarningPage": {
+        "ButtonText": "بازگشت"
+      },
+      "OperationFailed": "عملیات شکست خورد",
+      "CheckInput": "معتبر بودن داده های ورودی را بررسی کنید",
+      "TimeManipulation": {
+        "HoursLimit": "فیلد ساعت نباید بیشتر از {Hours} باشد",
+        "MinutesLimit": "فیلد دقیقه نباید بیشتر از {Minutes} باشد",
+        "SecondsLimit": "فیلد ثانیه نباید بیشتر از {Seconds} باشد",
+        "SGapMorethanLGap": "فاصله بین دو استراحت کوتاه باید کمتر از فاصله بین دو استراحت بلند باشد.",
+        "SDurationMorethanLDuration": "مدت زمان استراحت کوتاه باید کوچکتر از مدت زمان استراحت بلند باشد.",
+        "SDurationTooHigh": "استراحت کوتاه نمیتواند بیشتر از 5 دقیقه باشد.",
+        "LDurationTooHigh": "استراحت بلند مدت نمی تواند بیشتر از 2 ساعت باشد.",
+        "NotEnoughGapBetweenLandS": "فاصله بین استراحت کوتاه و استراحت بلند کافی نیست.",
+        "ShortGapLow": "فاصله بین دو استراحت کوتاه باید حداقل یک 1 باشد.",
+        "LongGapLow": "فاصله بین دو استراحت بلند باید حداقل 5 دقیقه باشد.",
+        "ChooseLargerTime": "لطفا زمان طولانی تری را انتخاب کنید."
+      },
+      "Settings": {
+        "Title": "تنظیمات",
+        "SavedSuccessfully": "تنظیمات با موفقیت ذخیره شد",
+        "AreYouSure": "آیا مطمئن هستید؟",
+        "LanguageSection": "زبان",
+        "TimeSeparators": {
+          "Hour": "ساعت و",
+          "Minutes": "دقیقه و",
+          "Second": "ثانیه"
+        },
+        "SaveSettings": "ذخیره تغییرات",
+        "TimeSettings": {
+          "Title": "تنظیمات زمان",
+          "GapBetweenTwoShortBreak": "مدت زمان بین دو استراحت کوتاه:",
+          "GapBetweenTwoLongBreak": "مدت زمان بین دو استراحت بلند:",
+          "ShortBreakDuration": "مدت زمان استراحت کوتاه:",
+          "LongBreakDuration": "مدت زمان استراحت بلند:"
+        },
+        "UserSettings": {
+          "Title": "تنظیمات کاربر",
+          "ForceUser": "مرا مجبور به استراحت کن",
+          "ForceUserToolTip": "اگر این گزینه را فعال کنید قادر به تعویق یا خروج از استراحت بلند نخواهید بود. همچنین اشاره گر ماوس نیز پنهان خواهد شد.",
+          "OnlyOneShortBreak": "فقط یک استراحت کوتاه بین دو استراحت بلند وجود داشته باشد.",
+          "OnlyOneShortBreakToolTip": "فعال کردن این گزینه پس از استراحت کوتاه، شمارنده آن را تا استراحت بلند بعدی خاموش می کند ",
+          "StartupApplication": "نگهبان چشم همراه با سیستم اجرا شود",
+          "StartupApplicationToolTip": "نگهبان چشم به طور پیشفرض با سیستم اجرا می شود. شما میتوانید این ویژگی را از تسک منیجر >>  تب استارت آپ خاموش کنید.",
+          "AlertBeforeLongBreak": "یک دقیقه قبل از استراحت بلند مدت به من اطلاع بده",
+          "AlertBeforeLongBreakToolTip": "نگهبان چشم یک دقیقه قبل از یک استراحت بلند از طریق اعلان ویندوز به شما اطلاع می دهد.",
+          "SystemIdle": "نگهبان چشم را در صورت بیکار بودن سیستم متوقف کن",
+          "SystemIdleToolTip": [
+            "نگهبان چشم از سامانه تشخیص بیکار بودن سیستم استفاده میکند تا ببیند که آیا شما از سیستم دور هستید.",
+            "در این حالت نگهبان چشم به طور خودکار شمارش معکوس را متوقف میکند.",
+            "این ویژگی نگهبان چشم را هنگامی که با سیستم خود کار نمیکنید قطع میکند, به عنوان مثال زمان هایی که در حال مشاهده فیلم هستید."
+          ]
+        },
+        "StatsSettings": {
+          "Title": "آمار",
+          "YesDeleteData": "بله، حتما",
+          "NoKeepData": "نه، داده ها را نگه دار",
+          "StatsDeleted": "همه داده ها پاک شدند",
+          "StoreStats": "آمار را ذخیره کن",
+          "StoreStatsToolTip": "نگهبان چشم اطلاعاتی را درباره کار شما ذخیره میکند که از منو ابزارها >> آمار در دسترس است. این اطلاعات به صورت محلی در سیستم شما ذخیره می شود.",
+          "ClearStatsText": "مشاهده تاریخچه آمار:",
+          "ClearStats": "حذف داده ها"
+        },
+        "LanguageSettings": {
+          "Title": "زبان",
+          "SelectLanguage": "زبان دلخواه خود را انتخاب کنید:",
+          "MaintainMessage": "این زبان توسط این افراد نگهداری می شود: ",
+          "RestartRequired": "تغییر زبان در شروع بعدی نرم افزار اعمال می شود",
+          "MessagesFromLangFile": "از فایل زبان به عنوان منبع پیام های استراحت کوتاه استفاده شود",
+          "MessagesFromLangFileToolTip": "اگر این گزینه را فعال کنید، پیام هایی که در پنجره استراحت کوتاه نمایش داده می شود از فایل زبان خواهد بود",
+          "AddMessage": "افزودن پیام",
+          "RemoveMessage": "حذف پیام",
+          "NoAccount": "بدون حساب",
+          "NoWebsite": "بدون سایت",
+          "NoNotes": "بدون توضیحاتی درباره ترجمه",
+          "EnterNewMessage": "پیام جدیدی را وارد کنید",
+          "Submit": "تایید"
+        }
+      },
+      "Resting": "در حال استراحت",
+      "Waiting": "در حال انتظار",
+      "ShortMessageSuggestions": [
+        "چشم های خود را ببندید و باز کنید",
+        "پشت سر هم پلک بزنید",
+        "به دور دست خیره شوید",
+        "از پنجره به بیرون نگاه کنید",
+        "دست های خود را بشویید و سپس چشم ها را لمس کنید"
+      ],
+      "LongWindowMessage": "وقت استراحت بلند مدت رسیده است. برو و دوری بزن.",
+      "LongWindowCancelButton": "بیخیال",
+      "Notifications": {
+        "LongBreakAlert": {
+          "Title": "یک دقیقه تا استراحت بلند",
+          "Message": "فقط یک دقیقه تا استراحت بلند مدت باقیست. شما میتوانید این استراحت را از طریق آیکون سپر در نوار وظیفه به تعویق بیندازید."
+        }
+      },
+      "WaitUnitlEndOfBreak": "لطفا تا پایان استراحت صبر کنید.",
+      "LongBreakTimeRemaining": "{Hours} ساعت و {Minutes} دقیقه و {Seconds} ثانیه تا پایان استراحت.",
+      "StatsPage": {
+        "Title": "آمار",
+        "ShortBreak": "استراحت کوتاه",
+        "LongBreak": "استراحت بلند",
+        "Pauses": "ایست ها",
+        "ShortCount": "استراحت های کوتاه:",
+        "LongCompletedCount": "استراحت های بلند موفق:",
+        "LongFailedCount": "استراحت های بلند ناموفق:",
+        "PauseCount": "ایست های موفق:",
+        "StopCount": "ایست های دائم:"
+      },
+      "AlertPages": {
+        "Titles": {
+          "Attention": "توجه",
+          "Successful": "موفقیت آمیز",
+          "Error": "خطا",
+          "Info": "اطلاعات",
+          "AboutSoftware": "درباره نرم افزار",
+          "Donate": "هدیه"
+        }
+      },
+      "HeaderMenu": {
+        "EyesGuard": {
+          "Header": "نگهبان چشم",
+          "MainMenu": "منو اصلی",
+          "Hide": "پنهان سازی نگهبان چشم",
+          "Exit": "خروج"
+        },
+        "Tools": {
+          "Header": "ابزار",
+          "Stats": "آمار",
+          "Settings": "تنظیمات"
+        },
+        "Breaks": {
+          "Header": "استراحت ها",
+          "GoShort": "رفتن برای یک استراحت کوتاه",
+          "GoLong": "رفتن برای یک استراحت بلند"
+        },
+        "View": {
+          "Header": "نمایش",
+          "KeyTimes": "زمان های کلیدی"
+        },
+        "Help": {
+          "Header": "راهنما",
+          "EyesGuardHelp": "راهنمای نگهبان چشم",
+          "Resources": "منابع",
+          "SendFeedback": "ارسال بازخورد",
+          "Donate": "هدیه",
+          "About": "درباره"
+        }
+      },
+      "UserManager": {
+        "User": "کاربر",
+        "NotLoggedIn": "وارد نشده",
+        "NoTitle": "بدون عنوان",
+        "Login": "ورود",
+        "Profile": "پروفایل",
+        "Logout": "خروج از حساب"
+      }
+    },
+    "ShellExtensions": {
+      "TaskbarIcon": {
+        "Protected": "در حال نگهبانی",
+        "NotProtected": "در حال نگهبانی نیست",
+        "PausedProtected": "موقتا غیر فعال",
+        "Menu": {
+          "PauseFor":  "توقف برای...",
+          "PausedFor": "متوقف شده برای {PauseRemaining}",
+          "NextShortBreak": "استراحت کوتاه بعدی: {NextShortBreak}",
+          "NextLongBreak": "استراحت بلند بعدی: {NextLongBreak}",
+          "ShowMainMenu": "نمایش منو اصلی",
+          "StartProtection": "شروع محافظت",
+          "StopProtection": "ایست محافظت",
+          "FiveMins": "۵ دقیقه",
+          "TenMins": "۱۰ دقیقه",
+          "ThirtyMins": "۳۰ دقیقه",
+          "OneHour": "۱ ساعت",
+          "TwoHours": "۲ ساعت",
+          "Custom": "سفارشی...",
+          "Settings": "تنظیمات",
+          "Exit": "خروج"
+        }
+      }
+    }
+
+  }
+}

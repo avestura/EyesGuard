@@ -7,11 +7,13 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Feedback"
+    x:Name="this"
+    Title="{Binding ElementName=this, Path=Translation.Application.Feedback.PageTitle}"
     d:DesignHeight="500"
     d:DesignWidth="600"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     mc:Ignorable="d">
 
     <Grid>
@@ -25,13 +27,13 @@
                 <TextBlock
                     FontSize="18"
                     Foreground="White"
-                    Text="{StaticResource Strings.Application.Feedback.Title}" />
+                    Text="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.InnerTitle}" />
             </StackPanel>
             <TextBlock
                 MaxWidth="480"
                 Margin="10,5"
                 Foreground="White"
-                Text="{StaticResource Strings.Application.Feedback.Message}"
+                Text="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.Message}"
                 TextAlignment="Justify"
                 TextWrapping="Wrap" />
 
@@ -56,7 +58,7 @@
                     Height="30"
                     Padding="10,0"
                     Click="Feedback_Click"
-                    Content="Create a new issue"
+                    Content="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.ButtonText}"
                     FontSize="15"
                     Style="{DynamicResource ButtonTemplate.Green}" />
             </Grid>

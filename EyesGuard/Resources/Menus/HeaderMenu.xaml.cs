@@ -47,7 +47,6 @@ namespace EyesGuard.Resources.Menus
         private void GoToMainPage_Click(object sender, RoutedEventArgs e)
         {
             App.GetMainWindow().MainFrame.Navigate(new MainPage());
-
         }
 
         private void ShowHideTimeRemaining_Click(object sender, RoutedEventArgs e)
@@ -64,25 +63,21 @@ namespace EyesGuard.Resources.Menus
         private void TenMinutesPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromMinutes(10));
-
         }
 
         private void ThirtyMinutesPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromMinutes(30));
-
         }
 
         private void OneHourPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromHours(1));
-
         }
 
         private void TwoHourPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromHours(2));
-
         }
 
         private void CustomPause_Click(object sender, RoutedEventArgs e)
@@ -104,21 +99,24 @@ namespace EyesGuard.Resources.Menus
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             App.ShowWarning(
-                "Strings.Application.Help".Translate(),
+                App.LocalizedEnvironment.Translation.Application.HelpPageText,
                 WarningPage.PageStates.Info);
         }
 
         private void Resources_Click(object sender, RoutedEventArgs e)
         {
-            App.ShowWarning("Strings.Application.Resources".Translate(), WarningPage.PageStates.Info);
-
+            var resourcesBase = App.LocalizedEnvironment.Translation.Application.Resources;
+            App.ShowWarning(
+                $"    - {resourcesBase.Content.Icons}\n    - {resourcesBase.Content.UIKit}"
+                , WarningPage.PageStates.Info);
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
-            App.ShowWarning("Strings.Application.About".Translate(), WarningPage.PageStates.About);
-
+            var aboutBase = App.LocalizedEnvironment.Translation.Application.About;
+            App.ShowWarning(
+                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n   {aboutBase.Content.Repo}"
+                , WarningPage.PageStates.About);
         }
 
         private void StartShortBreak_Click(object sender, RoutedEventArgs e)
@@ -133,9 +131,10 @@ namespace EyesGuard.Resources.Menus
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
-
-            App.ShowWarning("Strings.Application.About".Translate(), WarningPage.PageStates.About);
-
+            var aboutBase = App.LocalizedEnvironment.Translation.Application.About;
+            App.ShowWarning(
+                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n   {aboutBase.Content.Repo}"
+                , WarningPage.PageStates.About);
         }
 
         private void Donate_Click(object sender, RoutedEventArgs e)

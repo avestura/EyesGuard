@@ -12,13 +12,7 @@ namespace EyesGuard.Resources.Menus
 {
     public partial class EyesGuardTaskbarIcon
     {
-
-        public EyesGuardTaskbarIcon()
-        {
-
-        }
-
-        private  void TaskbarIcon_TrayMouseDoubleClick(object sender, System.Windows.RoutedEventArgs e)
+        private void TaskbarIcon_TrayMouseDoubleClick(object sender, System.Windows.RoutedEventArgs e)
         {
             if(!App.GetMainWindow().IsVisible)
             ChromeManager.Show();
@@ -32,25 +26,21 @@ namespace EyesGuard.Resources.Menus
         private void TenMinutesPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromMinutes(10));
-
         }
 
         private void ThirtyMinutesPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromMinutes(30));
-
         }
 
         private void OneHourPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromHours(1));
-
         }
 
         private void TwoHourPause_Click(object sender, RoutedEventArgs e)
         {
             App.PauseProtection(TimeSpan.FromHours(2));
-
         }
 
         private void CustomPause_Click(object sender, RoutedEventArgs e)
@@ -96,7 +86,6 @@ namespace EyesGuard.Resources.Menus
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-
             App.GetMainWindow().MainFrame.Navigate(new Settings());
 
             if (!App.GetMainWindow().IsVisible)

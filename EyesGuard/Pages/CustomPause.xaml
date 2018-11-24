@@ -5,21 +5,23 @@
     xmlns:c="clr-namespace:EyesGuard.Resources.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:l="clr-namespace:EyesGuard.Localization"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Custom Pause"
+    Title="{Binding ElementName=this, Path=Translation.EyesGuard.CustomPause.PageTitle}"
     d:DesignHeight="450"
+    x:Name="this"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     d:DesignWidth="550"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
-
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
                 FontSize="20"
                 Foreground="White"
-                Text="{StaticResource Strings.EyesGuard.CustomPause.Message}" />
+                Text="{Binding ElementName=this, Path=Translation.EyesGuard.CustomPause.Message}" />
             <StackPanel
                 Grid.Row="2"
                 Grid.Column="2"
@@ -37,7 +39,7 @@
                     Margin="5,0,0,0"
                     VerticalAlignment="Center"
                     Foreground="White"
-                    Text="{StaticResource Strings.EyesGuard.Settings.Separator.HourAnd}" />
+                    Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Hour}" />
                 <c:NumOnlyTextbox
                     x:Name="MinutesUI"
                     MinWidth="50"
@@ -50,7 +52,7 @@
                     Margin="5,0,0,0"
                     VerticalAlignment="Center"
                     Foreground="White"
-                    Text="{StaticResource Strings.EyesGuard.Settings.Separator.MinutesAnd}" />
+                    Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Minutes}" />
                 <c:NumOnlyTextbox
                     x:Name="SecondsUI"
                     MinWidth="50"
@@ -63,7 +65,7 @@
                     Margin="5,0,0,0"
                     VerticalAlignment="Center"
                     Foreground="White"
-                    Text="{StaticResource Strings.EyesGuard.Settings.Separator.Second}" />
+                    Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Second}" />
 
             </StackPanel>
             <Button
@@ -71,7 +73,7 @@
                 Margin="0,10,0,0"
                 Padding="10,4"
                 Click="PauseProtection_Click"
-                Content="{StaticResource Strings.EyesGuard.CustomPause.ButtonText}"
+                Content="{Binding ElementName=this, Path=Translation.EyesGuard.CustomPause.ButtonText}"
                 Style="{DynamicResource ButtonTemplate.Green}" />
         </StackPanel>
     </Grid>

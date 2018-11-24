@@ -22,7 +22,6 @@ namespace EyesGuard.Pages
     /// </summary>
     public partial class WarningPage : Page
     {
-
         public enum PageStates
         {
             Error, Warning, Success, Info, About, Donate
@@ -33,6 +32,7 @@ namespace EyesGuard.Pages
             get { return (string)GetValue(MessageProperty); }
             set { SetValue(MessageProperty, value); }
         }
+
         public static readonly DependencyProperty MessageProperty =
             DependencyProperty.Register("Message", typeof(string), typeof(WarningPage), new PropertyMetadata("No message."));
 
@@ -41,6 +41,7 @@ namespace EyesGuard.Pages
             get { return (PageStates)GetValue(PageStateProperty); }
             set { SetValue(PageStateProperty, value); }
         }
+
         public static readonly DependencyProperty PageStateProperty =
             DependencyProperty.Register("PageState", typeof(PageStates), typeof(WarningPage), new PropertyMetadata(PageStates.Warning));
 
@@ -56,55 +57,59 @@ namespace EyesGuard.Pages
 
             DataContext = vm;
 
+            var titles = App.LocalizedEnvironment.Translation.EyesGuard.AlertPages.Titles;
+
             if (PageState == PageStates.Warning)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Warning;
-                vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFEEC78A")));
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Attention".Translate();
+                vm.Brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFEEC78A"));
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.Attention;
             }
             else if (PageState == PageStates.Success)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Check;
-                vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#8ED28A")));
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Successful".Translate();
+                vm.Brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#8ED28A"));
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.Successful;
             }
             else if (PageState == PageStates.Error)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.ExclamationCircle;
-                vm.Brush = new SolidColorBrush(((Color)ColorConverter.ConvertFromString("#FFFD9884")));
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Error".Translate();
+                vm.Brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFFD9884"));
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.Error;
             }
             else if (PageState == PageStates.Info)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Comment;
                 vm.Brush = Brushes.White;
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Info".Translate();
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.Info;
             }
             else if (PageState == PageStates.About)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Rocket;
                 vm.Brush = Brushes.White;
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.AboutSoftware".Translate();
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.AboutSoftware;
             }
             else if (PageState == PageStates.Donate)
             {
                 vm.Icon = FontAwesome.WPF.FontAwesomeIcon.Heart;
-                vm.Brush = new SolidColorBrush(( (Color)ColorConverter.ConvertFromString("#ff7c7c") ));
-                if (pageTitle == "")
-                    vm.PageTitle = "Strings.EyesGuard.AlertPage.Titles.Donate".Translate();
+                vm.Brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ff7c7c"));
+                if (pageTitle?.Length == 0)
+                    vm.PageTitle = titles.Donate;
             }
 
             if (pageTitle != "")
                 vm.PageTitle = pageTitle;
 
             InitializeComponent();
-
         }
+
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -112,7 +117,6 @@ namespace EyesGuard.Pages
             {
                 this.Background = Brushes.Transparent;
             }
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

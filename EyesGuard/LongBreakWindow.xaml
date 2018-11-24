@@ -7,8 +7,10 @@
     xmlns:local="clr-namespace:EyesGuard"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Long Break"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     Width="600"
     Height="450"
+    x:Name="this"
     AllowsTransparency="True"
     Background="#E5000000"
     Closing="Window_Closing"
@@ -30,7 +32,7 @@
                 Margin="10,10,10,0"
                 FontSize="20"
                 Foreground="#FF1A9F55"
-                Text="{StaticResource Strings.EyesGuard.LongWindow.Message}" />
+                Text="{Binding ElementName=this, Path=Translation.EyesGuard.LongWindowMessage}" />
             <TextBlock
                 Margin="10,5"
                 FontSize="17"
@@ -42,7 +44,7 @@
                 Margin="0,10,0,0"
                 Padding="0,5"
                 Click="CloseLongBreak_Click"
-                Content="Cancel"
+                Content="{Binding ElementName=this, Path=Translation.EyesGuard.LongWindowCancelButton}"
                 Style="{DynamicResource ButtonTemplate.Green}"
                 Visibility="{Binding CanCancel}" />
         </StackPanel>

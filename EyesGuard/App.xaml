@@ -35,6 +35,8 @@
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/CheckboxWhiteTemplate.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/GreenButtonTemplate.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/FancyTooltipTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/ComboBoxTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Templates/HyperlinkTemplate.xaml" />
 
                 <!--#endregion-->
 
@@ -50,10 +52,14 @@
 
                 <!--#region Taskbar-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Menus/EyesGuardTaskbarIcon.xaml" />
+                <!--#endregion-->
 
+                <!--#region Converters-->
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Converters/Converters.xaml" />
                 <!--#endregion-->
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>

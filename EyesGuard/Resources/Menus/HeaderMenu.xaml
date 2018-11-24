@@ -12,75 +12,70 @@
         Background="Transparent"
         FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
         FontSize="11">
-        <MenuItem Header="Eyes Guard">
-            <MenuItem Click="GoToMainPage_Click" Header="Main Menu" />
+        <MenuItem Header="{Binding Header_EyesGuard_Title}">
+            <MenuItem Click="GoToMainPage_Click" Header="{Binding Header_EyesGuard_MainMenu}" />
             <Separator />
-            <MenuItem Header="Start Protection" Visibility="Collapsed" />
-            <MenuItem Header="Pause for...">
-                <MenuItem Click="FiveMinutesPause_Click" Header="5 minutes" />
-                <MenuItem Click="TenMinutesPause_Click" Header="10 minutes" />
-                <MenuItem Click="ThirtyMinutesPause_Click" Header="30 minutes" />
-                <MenuItem Click="OneHourPause_Click" Header="1 hour" />
-                <MenuItem Click="TwoHourPause_Click" Header="2 hours" />
+            <MenuItem Header="{Binding Menu_PauseFor}">
+                <MenuItem Click="FiveMinutesPause_Click" Header="{Binding Menu_FiveMins}" />
+                <MenuItem Click="TenMinutesPause_Click" Header="{Binding Menu_TenMins}" />
+                <MenuItem Click="ThirtyMinutesPause_Click" Header="{Binding Menu_ThirtyMins}" />
+                <MenuItem Click="OneHourPause_Click" Header="{Binding Menu_OneHour}" />
+                <MenuItem Click="TwoHourPause_Click" Header="{Binding Menu_TwoHours}" />
                 <Separator />
-                <MenuItem Click="CustomPause_Click" Header="Custom..." />
+                <MenuItem Click="CustomPause_Click" Header="{Binding Menu_Custom}" />
             </MenuItem>
 
             <Separator />
-            <MenuItem Click="HideApp_Click" Header="Hide Eyes Guard" />
+            <MenuItem Click="HideApp_Click" Header="{Binding Header_EyesGuard_Hide}" />
             <Separator />
-            <MenuItem Click="ApplicationExit_Click" Header="Exit" />
+            <MenuItem Click="ApplicationExit_Click" Header="{Binding Header_EyesGuard_Exit}" />
         </MenuItem>
 
-        <MenuItem Header="Tools">
-            <MenuItem Click="GoToStatictictsPage_Click" Header="Stats" />
-            <MenuItem
-                Click="GoToEyeSightImprove_Click"
-                Header="Improve your eyes"
-                Visibility="Collapsed" />
+        <MenuItem Header="{Binding Header_Tools_Title}">
+            <MenuItem Click="GoToStatictictsPage_Click" Header="{Binding Header_Tools_Stats}" />
 
             <Separator />
             <MenuItem
                 Click="GoToSettingsPage_Click"
-                Header="Settings"
+                Header="{Binding Header_Tools_Settings}"
                 Icon="{StaticResource EyesGuard.Settings}" />
         </MenuItem>
 
-        <MenuItem Header="Breaks">
+        <MenuItem Header="{Binding Header_Breaks_Title}">
             <MenuItem
                 Click="StartShortBreak_Click"
-                Header="Go for a short-break"
+                Header="{Binding Header_Breaks_GoShort}"
                 IsEnabled="{Binding ManualBreakEnabled}" />
             <MenuItem
                 Click="StartLongBreak_Click"
-                Header="Go for a long-break"
+                Header="{Binding Header_Breaks_GoLong}"
                 IsEnabled="{Binding ManualBreakEnabled}" />
         </MenuItem>
 
-        <MenuItem Header="View">
+        <MenuItem Header="{Binding Header_View_Title}">
             <MenuItem
                 Click="ShowHideTimeRemaining_Click"
-                Header="Key Times"
+                Header="{Binding Header_View_KeyTimes}"
                 IsCheckable="True"
                 IsChecked="{Binding IsTimeItemChecked}"
                 StaysOpenOnClick="True" />
         </MenuItem>
-        <MenuItem Header="Help">
+        <MenuItem Header="{Binding Header_Help_Title}">
             <MenuItem
                 Click="Help_Click"
-                Header="Eyes Guard Help"
+                Header="{Binding Header_Help_EyesGuardHelp}"
                 Icon="{StaticResource EyesGuard.QuestionMark}" />
-            <MenuItem Click="Resources_Click" Header="Resources" />
+            <MenuItem Click="Resources_Click" Header="{Binding Header_Help_Resources}" />
             <Separator />
-            <MenuItem Click="Feedback_Menu_Click" Header="Send Feedback" Icon="{StaticResource EyesGuard.Feedback}" />
+            <MenuItem Click="Feedback_Menu_Click" Header="{Binding Header_Help_SendFeedback}" Icon="{StaticResource EyesGuard.Feedback}" />
             <Separator/>
             <MenuItem
                 Click="Donate_Click"
-                Header="Donate"
+                Header="{Binding Header_Help_Donate}"
                 Icon="{StaticResource EyesGuard.Donate}" />
             <Separator />
 
-            <MenuItem Click="About_Click" Header="About" />
+            <MenuItem Click="About_Click" Header="{Binding Header_Help_About}" />
 
         </MenuItem>
     </Menu>

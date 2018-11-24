@@ -1,11 +1,17 @@
 ﻿using EyesGuard.Extensions;
+using EyesGuard.Localization;
+using EyesGuard.Resources.Controls;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -13,6 +19,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static EyesGuard.Localization.LanguageLoader;
 
 namespace EyesGuard.Pages
 {
@@ -26,12 +33,32 @@ namespace EyesGuard.Pages
             InitializeComponent();
         }
 
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
+
+        public ObservableCollection<string> ShortMessagesSource { get; set; } = new ObservableCollection<string>();
+
+        public Visibility DeleteButtonVisibility
+        {
+            get { return (Visibility)GetValue(DeleteButtonVisibilityProperty); }
+            set { SetValue(DeleteButtonVisibilityProperty, value); }
+        }
+
+        public static readonly DependencyProperty DeleteButtonVisibilityProperty =
+            DependencyProperty.Register("DeleteButtonVisibility", typeof(Visibility), typeof(Settings));
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
             {
                 this.Background = Brushes.Transparent;
             }
+
+            FillComboBoxWithLanguages();
+            FillShortMessages();
+
+            LanguagesCombo.SelectedItem =
+                LanguagesBriefData.Value.First(x => x.Name == App.LocalizedEnvironment.Meta.CurrentCulture.Name);
 
             shortGapHours.Text   = App.Configuration.ShortBreakGap.Hours.ToString();
             shortGapMinutes.Text = App.Configuration.ShortBreakGap.Minutes.ToString();
@@ -56,10 +83,33 @@ namespace EyesGuard.Pages
 
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
-            //useSystemDpiCheckbox.IsChecked = App.UserScalingType == App.ScalingType.UseWindowsDPIScaling;
-            //ScalingFactorText.Text = App.SystemDpiFactor.ConvertToPercentString();
-            //startupCheckbox.IsChecked = App.GlobalConfig.RunAtStartUp;
+            UseLanguageAsSourceCheckbox.IsChecked = App.Configuration.UseLanguageProvedidShortMessages;
+        }
 
+        private void FillShortMessages()
+        {
+
+                if (UseLanguageAsSourceCheckbox.IsChecked == true)
+                {
+                    ShortMessagesSource = new ObservableCollection<string>(App.LocalizedEnvironment.Translation.EyesGuard.ShortMessageSuggestions);
+                    AddBtn.Visibility = Visibility.Collapsed;
+                    DeleteButtonVisibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    ShortMessagesSource = new ObservableCollection<string>(App.Configuration.CustomShortMessages);
+                    DeleteButtonVisibility = Visibility.Visible;
+                    AddBtn.Visibility = Visibility.Visible;
+                }
+
+                ShortMessages.ItemsSource = ShortMessagesSource;
+
+        }
+
+        private void FillComboBoxWithLanguages()
+        {
+
+            LanguagesCombo.ItemsSource = LanguagesBriefData.Value;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -91,79 +141,69 @@ namespace EyesGuard.Pages
                 ldS = int.Parse(longDurationSeconds.Text);
 
                 if (sgH > 11 || sdH > 11 || lgH > 11 || ldH > 11)
-                    warning += string.Format("» " + "Strings.EyesGuard.HoursLimit".Translate(), 11);
+                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.HoursLimit, 11);
 
                 if (sgM > 59 || sdM > 59 || lgM > 59 || ldM > 59)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + "Strings.EyesGuard.MinutesLimit".Translate(), 59);
-
+                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.MinutesLimit, 59);
                 }
 
                 if (sgS > 59 || sdS > 59 || lgS > 59 || ldS > 59)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + "Strings.EyesGuard.SecondsLimit".Translate(), 59);
-
+                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit, 59);
                 }
                 if (new TimeSpan(sgH, sgM, sgS).TotalSeconds >= new TimeSpan(lgH, lgM, lgS).TotalSeconds)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.SGapMorethanLGap".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SGapMorethanLGap;
                 }
                 if (new TimeSpan(sdH, sdM, sdS).TotalSeconds >= new TimeSpan(ldH, ldM, ldS).TotalSeconds)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.SDurationMorethanLDuration".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SDurationMorethanLDuration;
                 }
                 if (new TimeSpan(sdH, sdM, sdS).TotalMinutes > 5)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.SDurationTooHigh".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SDurationTooHigh;
                 }
                 if (new TimeSpan(ldH, ldM, ldS).TotalHours > 2)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.LDurationTooHigh".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.LDurationTooHigh;
                 }
 
                 if (new TimeSpan(sgH, sgM, sgS).TotalSeconds + new TimeSpan(sdH, sdM, sdS).TotalSeconds >= new TimeSpan(lgH,lgM,lgS).TotalSeconds)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.NotEnoughGapBetweenLandS".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.NotEnoughGapBetweenLandS;
                 }
 
                 if (new TimeSpan(sgH, sgM, sgS).TotalSeconds < 60)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.ShortGapLow".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.ShortGapLow;
                 }
 
                 if (new TimeSpan(lgH, lgM, lgS).TotalMinutes < 5)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + "Strings.EyesGuard.LongGapLow".Translate();
-
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.LongGapLow;
                 }
 
-                if (warning == "")
+                if (warning?.Length == 0)
                 {
-
                     App.Configuration.ShortBreakGap = new TimeSpan(sgH, sgM, sgS);
                     App.Configuration.ShortBreakDuration = new TimeSpan(sdH, sdM, sdS);
                     App.Configuration.LongBreakGap = new TimeSpan(lgH, lgM, lgS);
@@ -172,16 +212,24 @@ namespace EyesGuard.Pages
                     App.Configuration.SaveStats = storeStatsCheckbox.IsChecked.Value;
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
-                    //App.GlobalConfig.RunAtStartUp = startupCheckbox.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
+                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? "en-US";
+                    App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
+
+                    if (!App.Configuration.UseLanguageProvedidShortMessages)
+                    {
+                        App.Configuration.CustomShortMessages =
+                            (ShortMessagesSource.Count > 0) ?
+                            ShortMessagesSource.ToArray() :
+                            new string[] { "Stare far-off" };
+                    }
 
                     App.Configuration.SaveSettingsToFile();
 
                     App.ShowWarning(
-                        "Strings.EyesGuard.Settings.SavedSuccessfully".Translate(),
+                        App.LocalizedEnvironment.Translation.EyesGuard.Settings.SavedSuccessfully,
                         WarningPage.PageStates.Success,
                         new Settings());
-
                 }
                 else
                 {
@@ -190,7 +238,7 @@ namespace EyesGuard.Pages
             }
             catch
             {
-                App.ShowWarning($"{"Strings.EyesGuard.OperationFailed".Translate()}.\n{"Strings.EyesGuard.CheckInput".Translate()}.");
+                App.ShowWarning($"{App.LocalizedEnvironment.Translation.EyesGuard.OperationFailed}.\n{App.LocalizedEnvironment.Translation.EyesGuard.CheckInput}.");
             }
         }
 
@@ -217,8 +265,87 @@ namespace EyesGuard.Pages
             App.UpdateStats();
 
             App.ShowWarning(
-                "Strings.EyesGuard.Settings.StatsDeleted".Translate(),
+                App.LocalizedEnvironment.Translation.EyesGuard.Settings.StatsSettings.StatsDeleted,
                 WarningPage.PageStates.Success);
+        }
+
+        private void startupCheckbox_Click(object sender, RoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void LanguagesCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                MaintainersLinks.Inlines.Clear();
+                var translators = LanguageLoader.LoadMeta(((LanguageHolder)LanguagesCombo.SelectedItem).Name).Meta.Translators;
+                for (int i = 0; i < translators.Length; i++)
+                {
+                    var translator = translators[i];
+                    var link = new Hyperlink(new Run(translator.Name));
+                    var popup = new Popup
+                    {
+                        Child = new TranslatorInfo
+                        {
+                            TranslatorName = translator.Name,
+                            GitHubUsername = (string.IsNullOrWhiteSpace(translator.GitHubUsername)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoAccount : $"@{translator.GitHubUsername}",
+                            WebsiteUrl = (string.IsNullOrWhiteSpace(translator.Website)) ?App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoWebsite : translator.Website,
+                            Notes = (string.IsNullOrWhiteSpace(translator.Notes)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoNotes : translator.Notes
+                        },
+                        PlacementTarget = MaintainersLinks,
+                        Placement = PlacementMode.Mouse,
+                        StaysOpen = false,
+                        PopupAnimation = PopupAnimation.Slide
+                    };
+                    MaintainersLinks.Inlines.Add(popup);
+                    link.Click += (s, ev) => popup.IsOpen = !popup.IsOpen;
+                    MaintainersLinks.Inlines.Add(link);
+                    if (i != translators.Length - 1)
+                    {
+                        MaintainersLinks.Inlines.Add(new Run($" {App.LocalizedEnvironment.Meta.CurrentCulture.TextInfo.ListSeparator} ")
+                        {
+                            Foreground = Brushes.White,
+                            FontSize = 12
+                        });
+                    }
+                }
+            }
+            catch { }
+        }
+
+        private void UseLanguageAsSourceCheckbox_CheckedChanged(object sender, RoutedEventArgs e)
+        {
+            if(this.IsLoaded)
+                FillShortMessages();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ShortMessagesSource.Count <= 1) return;
+            var btn = sender as Button;
+            try
+            {
+                if(ShortMessagesSource.FirstOrDefault(x => x == (string)btn.Tag) is string s)
+                {
+                    ShortMessagesSource.Remove(s);
+                }
+            }
+            catch { }
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NewMessagePopup.IsOpen = !NewMessagePopup.IsOpen;
+        }
+
+        private void SubmitMessageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(UseLanguageAsSourceCheckbox.IsChecked == false
+                && !ShortMessagesSource.Contains(MessageContent.Text))
+            {
+                ShortMessagesSource.Add(MessageContent.Text);
+            }
         }
     }
 }

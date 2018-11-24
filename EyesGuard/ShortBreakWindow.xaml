@@ -7,6 +7,8 @@
     xmlns:local="clr-namespace:EyesGuard"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Short Break"
+    x:Name="this"
+    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     Width="800"
     Height="200"
     AllowsTransparency="True"

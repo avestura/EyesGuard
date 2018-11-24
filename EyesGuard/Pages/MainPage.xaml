@@ -7,15 +7,16 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converter="clr-namespace:EyesGuard.Resources.Converters"
     x:Name="page"
-    Title="Control Panel"
+    Title="{Binding ElementName=page, Path=Translation.EyesGuard.ControlPanel.Title}"
     d:DesignHeight="450"
     d:DesignWidth="550"
+    FlowDirection="{Binding ElementName=page, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
-
     <Grid>
         <Grid>
             <!--<Border Height="200" Width="200" Background="#FF006A9F" CornerRadius="200">
@@ -52,7 +53,7 @@
                     Margin="0,15,0,0"
                     HorizontalAlignment="Center"
                     FontSize="25"
-                    Text="{StaticResource Strings.EyeGuard.Guarding.Running}">
+                    Text="{Binding ElementName=page, Path=Translation.EyesGuard.GuardStatus.Running}">
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="White" />
                     </TextBlock.Foreground>
@@ -144,7 +145,7 @@
                             VerticalAlignment="Center"
                             FontSize="11"
                             Foreground="#FFFAD564"
-                            Text="{StaticResource Strings.EyeGuard.Guarding.Idle}" />
+                            Text="{Binding ElementName=page, Path=Translation.EyesGuard.GuardStatus.Idle}" />
                     </StackPanel>
 
                 </Grid>

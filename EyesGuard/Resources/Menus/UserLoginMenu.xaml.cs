@@ -25,9 +25,12 @@ namespace EyesGuard.Resources.Menus
             InitializeComponent();
         }
 
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            App.ShowWarning("Strings.Application.NoLoginImplemented".Translate(), WarningPage.PageStates.Info);
+            App.ShowWarning(App.LocalizedEnvironment.Translation.Application.LoginWarning, WarningPage.PageStates.Info);
         }
     }
 }

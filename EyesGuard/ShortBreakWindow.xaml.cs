@@ -25,6 +25,9 @@ namespace EyesGuard
             InitializeComponent();
         }
 
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
+
         public bool LetItClose { get; set; } = false;
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

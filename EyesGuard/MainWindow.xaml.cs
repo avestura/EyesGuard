@@ -31,11 +31,12 @@ namespace EyesGuard
                 this.Hide();
         }
 
-        private  void CloseButton_Click(object sender, RoutedEventArgs e)
+        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
+        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-
             ChromeManager.Hide();
-
         }
 
         private void MaxRestoreButton_Click(object sender, RoutedEventArgs e)
@@ -80,14 +81,11 @@ namespace EyesGuard
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
             Configuration.LoadSettingsFromFile();
-
         }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-
             try
             {
                 CurrentPageTitleBlock.Text = ((Page)MainFrame.Content).Title;
