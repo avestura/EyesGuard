@@ -557,7 +557,7 @@ namespace EyesGuard
                 UIViewModels.ShortLongBreakTimeRemaining.PauseTime =
                     LocalizedEnvironment.Translation.EyesGuard.TimeRemaining.PauseTime.Minutes.FormatWith(new
                     {
-                        Seconds = (int)PauseProtectionSpan.TotalMinutes
+                        Minutes = (int)PauseProtectionSpan.TotalMinutes
                     });
             }
             UIViewModels.NotifyIcon.PauseRemaining =
