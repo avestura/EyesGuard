@@ -40,16 +40,6 @@
 
                 <!--#endregion-->
 
-                <!--#region Strings-->
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/ApplicationStrings.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/EyeMessageStrings.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/SettingsStrings.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/TaskbarIconStrings.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/StatStrings.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Strings/WordsStrings.xaml" />
-
-                <!--#endregion-->
-
                 <!--#region Taskbar-->
                 <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Menus/EyesGuardTaskbarIcon.xaml" />
                 <!--#endregion-->
