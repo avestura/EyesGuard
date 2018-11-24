@@ -32,7 +32,7 @@ Prs are very welcome!
 
 You can contribute to software development and/or create translations for the app.
 
-#### How to contribute to translating app
+### How to contribute to translating app
 **Adding a new Language:**
 
 1. Go to [Localization/Languages](https://github.com/0xaryan/EyesGuard/tree/master/EyesGuard/Localization/Languages) folder and create a new json file with name `{StandardCountryCode}.json` like `en-US.json` or `fa-IR.json`. Here is a [List of country codes](https://azuliadesigns.com/list-net-culture-country-codes/) you can pick.
