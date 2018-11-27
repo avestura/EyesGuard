@@ -26,9 +26,6 @@ namespace EyesGuard.Pages
             InitializeComponent();
         }
 
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
-
         private void Feedback_Click(object sender, RoutedEventArgs e)
         {
             Task.Run(() => Process.Start("https://github.com/0xaryan/EyesGuard/issues"));

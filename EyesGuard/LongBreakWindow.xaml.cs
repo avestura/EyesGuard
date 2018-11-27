@@ -26,9 +26,6 @@ namespace EyesGuard
             InitializeComponent();
         }
 
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
-
         public bool LetItClose { get; set; } = false;
 
         private async void CloseLongBreak_Click(object sender, RoutedEventArgs e)

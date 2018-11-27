@@ -33,9 +33,6 @@ namespace EyesGuard.Pages
             InitializeComponent();
         }
 
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
-
         public ObservableCollection<string> ShortMessagesSource { get; set; } = new ObservableCollection<string>();
 
         public Visibility DeleteButtonVisibility

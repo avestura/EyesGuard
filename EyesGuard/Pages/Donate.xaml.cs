@@ -27,9 +27,6 @@ namespace EyesGuard.Pages
             InitializeComponent();
         }
 
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))

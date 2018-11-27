@@ -168,14 +168,12 @@
     <Compile Include="ShortBreakWindow.xaml.cs">
       <DependentUpon>ShortBreakWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\CustomPausePageViewModel.cs" />
     <Compile Include="ViewModels\HeaderMenuViewModel.cs" />
     <Compile Include="ViewModels\LongBreakWindowViewModel.cs" />
     <Compile Include="ViewModels\NotifyIconViewModel.cs" />
     <Compile Include="ViewModels\ShortBreakViewModel.cs" />
     <Compile Include="ViewModels\ShortLongBreakTimeRemainingViewModel.cs" />
     <Compile Include="ViewModels\StatsViewModel.cs" />
-    <Compile Include="ViewModels\TranslatableViewModel.cs" />
     <Compile Include="ViewModels\WarningPageViewModel.cs" />
     <Page Include="LongBreakWindow.xaml">
       <SubType>Designer</SubType>

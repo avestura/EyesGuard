@@ -26,11 +26,7 @@ namespace EyesGuard.Pages
         public CustomPause()
         {
             InitializeComponent();
-            DataContext = new CustomPausePageViewModel();
         }
-
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

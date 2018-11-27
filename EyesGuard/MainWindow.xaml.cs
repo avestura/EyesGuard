@@ -31,9 +31,6 @@ namespace EyesGuard
                 this.Hide();
         }
 
-        public Localization.Meta Meta => App.LocalizedEnvironment.Meta;
-        public Localization.Translation Translation => App.LocalizedEnvironment.Translation;
-
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             ChromeManager.Hide();
