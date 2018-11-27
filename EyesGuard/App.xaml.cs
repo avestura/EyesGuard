@@ -215,12 +215,14 @@ namespace EyesGuard
 
         private void InitalizeLocalizedEnvironment()
         {
+            const string @default = Localization.LocalizedEnvironment.DefaultLocale;
             var currentLocale = Configuration.ApplicationLocale;
-            if(currentLocale == "en-US")
+
+            if(currentLocale == @default)
             {
                 LocalizedEnvironment = Localization.LanguageLoader.DefaultLocale;
-                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
             }
             if (Localization.LanguageLoader.IsCultureSupportedAndExists(currentLocale))
             {
@@ -230,11 +232,11 @@ namespace EyesGuard
             }
             else
             {
-                Configuration.ApplicationLocale = "en-US";
+                Configuration.ApplicationLocale = @default;
                 Configuration.SaveSettingsToFile();
                 LocalizedEnvironment = Localization.LanguageLoader.DefaultLocale;
-                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
             }
         }
 

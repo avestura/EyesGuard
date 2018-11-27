@@ -43,11 +43,6 @@ namespace EyesGuard
 
         public event EventHandler<IdleStateChangedEventArgs> IdleStateChanged;
 
-        public IdleDetector()
-        {
-
-        }
-
         internal struct LASTINPUTINFO
         {
             public uint cbSize;
@@ -63,8 +58,15 @@ namespace EyesGuard
 
             while (!cancelRequested)
             {
-
-                GetLastInputInfo(ref lastInPut);
+                try
+                {
+                    GetLastInputInfo(ref lastInPut);
+                }
+                catch
+                {
+                    EnableRaisingEvents = false;
+                    break;
+                }
                 IdleDuration = (Environment.TickCount - lastInPut.dwTime) / 1000;
 
                 if (EnableRaisingEvents && (IsSystemIdle() != previousSystemInputIdle))

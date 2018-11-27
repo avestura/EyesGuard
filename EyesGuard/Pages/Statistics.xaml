@@ -5,14 +5,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.Title}"
+    Title="{lang:LocalizedString 'EyesGuard.StatsPage.Title'}"
     x:Name="this"
     d:DesignHeight="450"
     d:DesignWidth="600"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
@@ -30,7 +31,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.ShortBreak}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.ShortBreak'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -57,7 +58,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.ShortCount}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.ShortCount'}" />
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="2"
@@ -77,7 +78,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.LongBreak}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.LongBreak'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -105,7 +106,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.LongCompletedCount}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.LongCompletedCount'}" />
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="2"
@@ -120,7 +121,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.LongFailedCount}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.LongFailedCount'}" />
                     <TextBlock
                         Grid.Row="2"
                         Grid.Column="2"
@@ -139,7 +140,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.Pauses}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.Pauses'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -167,7 +168,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.StopCount}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.StopCount'}" />
                     <TextBlock
                         Grid.Row="1"
                         Grid.Column="2"
@@ -182,7 +183,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.StatsPage.PauseCount}" />
+                        Text="{lang:LocalizedString 'EyesGuard.StatsPage.PauseCount'}" />
                     <TextBlock
                         Grid.Row="2"
                         Grid.Column="2"

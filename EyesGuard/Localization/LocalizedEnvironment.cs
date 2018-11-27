@@ -13,6 +13,8 @@ namespace EyesGuard.Localization
 
     public class LocalizedEnvironment
     {
+        public const string DefaultLocale = "en-US";
+
         public Meta Meta { get; set; }
         public Translation Translation { get; set; }
     }

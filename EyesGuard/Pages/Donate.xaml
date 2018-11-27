@@ -5,15 +5,16 @@
     xmlns:c="clr-namespace:EyesGuard.Resources.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="{Binding ElementName=this, Path=Translation.Application.Donate.PageTitle}"
+    Title="{lang:LocalizedString 'Application.Donate.PageTitle'}"
     d:DesignHeight="500"
     d:DesignWidth="600"
     x:Name="this"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
@@ -28,13 +29,13 @@
                 <TextBlock
                     FontSize="18"
                     Foreground="White"
-                    Text="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.InnerTitle}" />
+                    Text="{lang:LocalizedString 'Application.Donate.BeforeDonation.Content.InnerTitle'}" />
             </StackPanel>
             <TextBlock
                 MaxWidth="450"
                 Margin="10,5"
                 Foreground="White"
-                Text="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.Message}"
+                Text="{lang:LocalizedString 'Application.Donate.BeforeDonation.Content.Message'}"
                 TextAlignment="Justify"
                 TextWrapping="Wrap" />
 
@@ -59,7 +60,7 @@
                     Height="30"
                     Padding="10,0"
                     Click="DonateButton_Click"
-                    Content="{Binding ElementName=this, Path=Translation.Application.Donate.BeforeDonation.Content.ButtonText}"
+                    Content="{lang:LocalizedString 'Application.Donate.BeforeDonation.Content.ButtonText'}"
                     FontSize="15"
                     Style="{DynamicResource ButtonTemplate.Green}" />
             </Grid>

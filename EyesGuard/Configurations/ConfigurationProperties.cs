@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Localization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -110,7 +111,7 @@ namespace EyesGuard.Configurations
             }
         }
 
-        public string ApplicationLocale { get; set; } = "en-US";
+        public string ApplicationLocale { get; set; } = Localization.LocalizedEnvironment.DefaultLocale;
 
         public bool UseLanguageProvedidShortMessages { get; set; } = true;
 

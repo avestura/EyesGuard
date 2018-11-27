@@ -7,10 +7,11 @@
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
     xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.Title}"
+    Title="{lang:LocalizedString 'EyesGuard.Settings.Title'}"
     x:Name="this"
-    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     d:DesignWidth="800"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
@@ -38,7 +39,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSettings.Title}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSettings.Title'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -68,7 +69,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSettings.GapBetweenTwoShortBreak}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSettings.GapBetweenTwoShortBreak'}" />
                     <StackPanel
                         Grid.Row="1"
                         Grid.Column="2"
@@ -86,7 +87,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Hour}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Hour'}" />
                         <c:NumOnlyTextbox
                             x:Name="shortGapMinutes"
                             MinWidth="50"
@@ -99,7 +100,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Minutes}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Minutes'}" />
                         <c:NumOnlyTextbox
                             x:Name="shortGapSeconds"
                             MinWidth="50"
@@ -112,7 +113,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Second}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Second'}" />
 
                     </StackPanel>
 
@@ -122,7 +123,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSettings.GapBetweenTwoLongBreak}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSettings.GapBetweenTwoLongBreak'}" />
                     <StackPanel
                         Grid.Row="2"
                         Grid.Column="2"
@@ -140,7 +141,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Hour}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Hour'}" />
                         <c:NumOnlyTextbox
                             x:Name="longGapMinutes"
                             MinWidth="50"
@@ -153,7 +154,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Minutes}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Minutes'}" />
                         <c:NumOnlyTextbox
                             x:Name="longGapSeconds"
                             MinWidth="50"
@@ -166,7 +167,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Second}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Second'}" />
 
                     </StackPanel>
 
@@ -176,7 +177,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSettings.ShortBreakDuration}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSettings.ShortBreakDuration'}" />
                     <StackPanel
                         Grid.Row="3"
                         Grid.Column="2"
@@ -194,7 +195,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Hour}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Hour'}" />
                         <c:NumOnlyTextbox
                             x:Name="shortDurationMinutes"
                             MinWidth="50"
@@ -207,7 +208,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Minutes}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Minutes'}" />
                         <c:NumOnlyTextbox
                             x:Name="shortDurationSeconds"
                             MinWidth="50"
@@ -220,7 +221,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Second}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Second'}" />
 
                     </StackPanel>
                     <TextBlock
@@ -229,7 +230,7 @@
                         Margin="5"
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSettings.LongBreakDuration}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSettings.LongBreakDuration'}" />
                     <StackPanel
                         Grid.Row="4"
                         Grid.Column="2"
@@ -247,7 +248,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Hour}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Hour'}" />
                         <c:NumOnlyTextbox
                             x:Name="longDurationMinutes"
                             MinWidth="50"
@@ -260,7 +261,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Minutes}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Minutes'}" />
                         <c:NumOnlyTextbox
                             x:Name="longDurationSeconds"
                             MinWidth="50"
@@ -273,7 +274,7 @@
                             Margin="5,0,0,0"
                             VerticalAlignment="Center"
                             Foreground="White"
-                            Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.TimeSeparators.Second}" />
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Second'}" />
 
                     </StackPanel>
                 </Grid>
@@ -288,7 +289,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.Title}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.Title'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -320,10 +321,10 @@
                         <CheckBox
                             x:Name="forceUserCheckbox"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.ForceUser}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.ForceUser'}"
                             Foreground="White"
                             Style="{DynamicResource WhiteCheckbox}"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.ForceUserToolTip}">
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.ForceUserToolTip'}">
 
                         </CheckBox>
                     </StackPanel>
@@ -336,9 +337,9 @@
                         <CheckBox
                             x:Name="onlyOneShortbreakCheckbox"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.OnlyOneShortBreak}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.OnlyOneShortBreak'}"
                             Foreground="White"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.OnlyOneShortBreakToolTip}"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.OnlyOneShortBreakToolTip'}"
                             Style="{DynamicResource WhiteCheckbox}">
                         </CheckBox>
 
@@ -352,9 +353,9 @@
                         <CheckBox
                             x:Name="alertBeforeLongbreak"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.AlertBeforeLongBreak}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.AlertBeforeLongBreak'}"
                             Foreground="White"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.AlertBeforeLongBreakToolTip}"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.AlertBeforeLongBreakToolTip'}"
                             Style="{DynamicResource WhiteCheckbox}">
                         </CheckBox>
                     </StackPanel>
@@ -363,12 +364,12 @@
                         Grid.Row="4"
                         Grid.Column="2"
                         Margin="5"
-                        ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.StartupApplicationToolTip}"
+                        ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.StartupApplicationToolTip'}"
                         Orientation="Horizontal">
                         <CheckBox
                             x:Name="startupCheckbox"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.StartupApplication}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.StartupApplication'}"
                             Foreground="White"
                             IsEnabled="False"
                             IsChecked="True"
@@ -386,9 +387,9 @@
                         <CheckBox
                             x:Name="sytemIdleCheckbox"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.SystemIdle}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.SystemIdle'}"
                             Foreground="White"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.UserSettings.SystemIdleToolTipJoined}"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.SystemIdleToolTipJoined'}"
                             Style="{DynamicResource WhiteCheckbox}">
                         </CheckBox>
 
@@ -406,7 +407,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.Title}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.Title'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -435,10 +436,10 @@
                         <CheckBox
                             x:Name="storeStatsCheckbox"
                             VerticalAlignment="Center"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.StoreStats}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.StoreStats'}"
                             Foreground="White"
                             Style="{DynamicResource WhiteCheckbox}"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.StoreStatsToolTip}"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.StoreStatsToolTip'}"
                             >
 
                         </CheckBox>
@@ -450,28 +451,28 @@
                         Margin="5"
                         Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center" Foreground="White">
-                            <TextBlock Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.ClearStatsText}" />
+                            <TextBlock Text="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.ClearStatsText'}" />
                             <Hyperlink
                                 Click="ClearHistoryFirstStep_Click"
                                 Foreground="#FFF6B29F"
                                 TextDecorations="{x:Null}">
-                                <TextBlock Foreground="#FFFDC6C6" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.ClearStats}" />
+                                <TextBlock Foreground="#FFFDC6C6" Text="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.ClearStats'}" />
                             </Hyperlink>
                             <TextBlock
                                 x:Name="uSureBlock"
                                 Foreground="White"
                                 Visibility="Collapsed">
                                 <TextBlock Text="(" />
-                                <TextBlock Foreground="#FFEAEAEA" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.AreYouSure}" />
+                                <TextBlock Foreground="#FFEAEAEA" Text="{lang:LocalizedString 'EyesGuard.Settings.AreYouSure'}" />
                                 <Hyperlink Click="ClearHistory_Click" TextDecorations="{x:Null}">
-                                    <TextBlock Foreground="#FFFDC6C6" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.YesDeleteData}" />
+                                    <TextBlock Foreground="#FFFDC6C6" Text="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.YesDeleteData'}" />
                                 </Hyperlink>
                                 <TextBlock
                                     Margin="0,0,2,0"
                                     Foreground="White"
                                     Text="،" />
                                 <Hyperlink Click="ClearHistoryCancel_Click" TextDecorations="{x:Null}">
-                                    <TextBlock Foreground="#FFFDC6C6" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.StatsSettings.NoKeepData}" />
+                                    <TextBlock Foreground="#FFFDC6C6" Text="{lang:LocalizedString 'EyesGuard.Settings.StatsSettings.NoKeepData'}" />
                                 </Hyperlink>
                                 <TextBlock Text=")" />
                             </TextBlock>
@@ -491,7 +492,7 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.Title}" />
+                        Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.Title'}" />
                 </StackPanel>
                 <Grid Margin="10,0">
                     <Grid.RowDefinitions>
@@ -520,7 +521,7 @@
                         Grid.Column="2"
                         Margin="5"
                         Orientation="Horizontal">
-                        <TextBlock VerticalAlignment="Center" Foreground="White" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.SelectLanguage}"/>
+                        <TextBlock VerticalAlignment="Center" Foreground="White" Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.SelectLanguage'}"/>
                         <ComboBox x:Name="LanguagesCombo"
                                   DisplayMemberPath="NativeName"
                                   SelectedValuePath="Name"
@@ -535,13 +536,13 @@
                     </StackPanel>
 
                     <StackPanel Margin="5 0 0 0" Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
-                        <TextBlock FontSize="10" Foreground="White" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.MaintainMessage}"/>
+                        <TextBlock FontSize="10" Foreground="White" Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.MaintainMessage'}"/>
                         <TextBlock Margin="5 0 0 0" FontSize="10" x:Name="MaintainersLinks" />
 
                     </StackPanel>
 
                     <StackPanel Margin="5 0 0 10" Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
-                        <TextBlock FontSize="10" Foreground="#FFCBCBCB" Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.RestartRequired}"/>
+                        <TextBlock FontSize="10" Foreground="#FFCBCBCB" Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.RestartRequired'}"/>
                     </StackPanel>
 
                     <StackPanel
@@ -553,12 +554,12 @@
                             x:Name="UseLanguageAsSourceCheckbox"
                             VerticalAlignment="Center"
                             IsChecked="True"
-                            Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.MessagesFromLangFile}"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.MessagesFromLangFile'}"
                             Foreground="White"
                             Checked="UseLanguageAsSourceCheckbox_CheckedChanged"
                             Unchecked="UseLanguageAsSourceCheckbox_CheckedChanged"
                             Style="{DynamicResource WhiteCheckbox}"
-                            ToolTip="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.MessagesFromLangFileToolTip}"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.MessagesFromLangFileToolTip'}"
                             >
                         </CheckBox>
 
@@ -581,17 +582,17 @@
                                     Click="AddBtn_Click"
                                     Padding="10 2"
                                     Style="{DynamicResource ButtonTemplate.Green}"
-                                    Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.AddMessage}"
+                                    Content="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.AddMessage'}"
                                     />
                             <Popup x:Name="NewMessagePopup" PopupAnimation="Slide" StaysOpen="False" PlacementTarget="{Binding ElementName=AddBtn}">
                                 <Border Padding="10" BorderThickness="1" BorderBrush="#1979A8" Background="#AA006A9F" TextBlock.Foreground="White">
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock Text="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.EnterNewMessage}"/>
+                                        <TextBlock Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.EnterNewMessage'}"/>
                                         <TextBox x:Name="MessageContent" Width="250" />
                                         <Button
                                             Click="SubmitMessageButton_Click"
                                             Margin="0 5 0 0"
-                                            Style="{DynamicResource ButtonTemplate.Green}" Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.LanguageSettings.Submit}"/>
+                                            Style="{DynamicResource ButtonTemplate.Green}" Content="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.Submit'}"/>
                                     </StackPanel>
                                 </Border>
                             </Popup>
@@ -640,7 +641,7 @@
                 Padding="20,5"
                 HorizontalAlignment="Right"
                 Click="SaveButton_Click"
-                Content="{Binding ElementName=this, Path=Translation.EyesGuard.Settings.SaveSettings}"
+                Content="{lang:LocalizedString 'EyesGuard.Settings.SaveSettings'}"
                 Style="{DynamicResource ButtonTemplate.Green}" />
         </StackPanel>
     </Grid>

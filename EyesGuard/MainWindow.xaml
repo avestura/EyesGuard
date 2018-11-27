@@ -5,10 +5,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:menus="clr-namespace:EyesGuard.Resources.Menus"
     x:Name="this"
-    Title="{Binding ElementName=this, Path=Translation.Application.OSTitle}"
+    Title="{lang:LocalizedString 'Application.OSTitle'}"
     Width="1000"
     Height="600"
     MinWidth="550"
@@ -19,7 +20,7 @@
     Loaded="Window_Loaded"
     ResizeMode="CanResize"
     StateChanged="Window_StateChanged"
-    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
@@ -67,7 +68,7 @@
                                 Margin="0,0,10,0"
                                 VerticalAlignment="Center"
                                 FontWeight="Bold"
-                                Text="{Binding ElementName=this, Path=Translation.Application.HeaderTitle}" />
+                                Text="{lang:LocalizedString 'Application.HeaderTitle'}" />
                         </StackPanel>
                     </Button>
                     <menus:HeaderMenu

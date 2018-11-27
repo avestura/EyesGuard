@@ -8,11 +8,12 @@
     xmlns:local="clr-namespace:EyesGuard.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converter="clr-namespace:EyesGuard.Resources.Converters"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     x:Name="page"
-    Title="{Binding ElementName=page, Path=Translation.EyesGuard.ControlPanel.Title}"
+    Title="{lang:LocalizedString 'EyesGuard.ControlPanel.Title'}"
     d:DesignHeight="450"
     d:DesignWidth="550"
-    FlowDirection="{Binding ElementName=page, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Page_Loaded"
@@ -53,7 +54,7 @@
                     Margin="0,15,0,0"
                     HorizontalAlignment="Center"
                     FontSize="25"
-                    Text="{Binding ElementName=page, Path=Translation.EyesGuard.GuardStatus.Running}">
+                    Text="{lang:LocalizedString 'EyesGuard.GuardStatus.Running'}">
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="White" />
                     </TextBlock.Foreground>
@@ -145,7 +146,7 @@
                             VerticalAlignment="Center"
                             FontSize="11"
                             Foreground="#FFFAD564"
-                            Text="{Binding ElementName=page, Path=Translation.EyesGuard.GuardStatus.Idle}" />
+                            Text="{lang:LocalizedString 'EyesGuard.GuardStatus.Idle'}" />
                     </StackPanel>
 
                 </Grid>

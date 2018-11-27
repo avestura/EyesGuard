@@ -5,10 +5,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
-    FlowDirection="{Binding ElementName=page, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="page"
-    Title="{Binding ElementName=page, Path=Translation.EyesGuard.AlertPages.Titles.Attention}"
+    Title="{lang:LocalizedString 'EyesGuard.AlertPages.Titles.Attention'}"
     d:DesignHeight="450"
     d:DesignWidth="550"
     Background="#FF006A9F"
@@ -43,7 +44,7 @@
                 Padding="10,4"
                 HorizontalAlignment="Right"
                 Click="Button_Click"
-                Content="{Binding ElementName=page, Path=Translation.EyesGuard.WarningPage.ButtonText}"
+                Content="{lang:LocalizedString 'EyesGuard.WarningPage.ButtonText'}"
                 Style="{DynamicResource ButtonTemplate.Green}" />
         </StackPanel>
     </Grid>

@@ -114,6 +114,9 @@
     <Compile Include="Configurations\ConfigurationProperties.cs">
       <DependentUpon>Configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\PropertyValueDeepDiveExtension.cs" />
+    <Compile Include="Localization\LocalizedFlowDirection.cs" />
+    <Compile Include="Localization\LocalizedString.cs" />
     <Compile Include="Resources\Controls\TranslatorInfo.xaml.cs">
       <DependentUpon>TranslatorInfo.xaml</DependentUpon>
     </Compile>

@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,40 +13,55 @@ namespace EyesGuard.Localization
 {
     public static class LanguageLoader
     {
+        private static string CompilerFilePath([CallerFilePath] string path = "") => path;
+
+        public static string CompilerDirectory() => Path.GetDirectoryName(CompilerFilePath());
+
         public static string[] SupportedCultures =
             CultureInfo.GetCultures(CultureTypes.AllCultures).Select(x => x.Name).ToArray();
 
         public static bool IsCultureSupported(this string locale) => SupportedCultures.Contains(locale);
 
-        public static bool IsCultureSupportedAndExists(this string locale) =>
-            LocaleFileExists(locale) && IsCultureSupported(locale);
+        public static bool IsCultureSupportedAndExists(this string locale, bool designMode = false) =>
+            LocaleFileExists(locale, designMode) && IsCultureSupported(locale);
 
-        public static string GetLocalePath(this string locale) =>
+        public static string GetLocalePath(this string locale, bool designMode = false) =>
+            (designMode) ? Path.Combine(
+                  CompilerDirectory(),
+                  "Languages",
+                  $"{locale}.json"
+              ) :
             Path.Combine(
                   LocalizationFilesPath,
                   $"{locale}.json"
               );
 
-        public static string GetLocaleContent(this string locale) =>
-            File.ReadAllText(GetLocalePath(locale));
+        public static string GetLocaleContent(this string locale, bool designMode = false) =>
+            File.ReadAllText(GetLocalePath(locale, designMode));
 
-        public static bool LocaleFileExists(this string locale) =>
+        public static bool LocaleFileExists(this string locale, bool designMode = false) =>
           File.Exists(
+              (designMode) ?
               Path.Combine(
-                  LocalizationFilesPath,
+                  CompilerDirectory(),
+                  "Languages",
                   $"{locale}.json"
-              )
+              ) :
+            Path.Combine(
+                      LocalizationFilesPath,
+                      $"{locale}.json"
+                  )
           );
 
-        public static LocalizedEnvironment CreateEnvironment(string locale)
+        public static LocalizedEnvironment CreateEnvironment(string locale, bool designMode = false)
         {
             try
             {
-                var path = locale.GetLocalePath();
+                var path = locale.GetLocalePath(designMode);
 
-                if (locale.IsCultureSupportedAndExists())
+                if (locale.IsCultureSupportedAndExists(designMode))
                 {
-                    var content = locale.GetLocaleContent();
+                    var content = locale.GetLocaleContent(designMode);
 
                     var localeEnv = JsonConvert.DeserializeObject<LocalizedEnvironment>(content);
 
@@ -58,15 +74,15 @@ namespace EyesGuard.Localization
             return null;
         }
 
-        public static MetaPhantom LoadMeta(string locale)
+        public static MetaPhantom LoadMeta(string locale, bool designMode = false)
         {
             try
             {
-                var path = locale.GetLocalePath();
+                var path = locale.GetLocalePath(designMode);
 
-                if (locale.IsCultureSupportedAndExists())
+                if (locale.IsCultureSupportedAndExists(designMode))
                 {
-                    var content = locale.GetLocaleContent();
+                    var content = locale.GetLocaleContent(designMode);
 
                     var phantom = JsonConvert.DeserializeObject<MetaPhantom>(content);
 
@@ -84,7 +100,8 @@ namespace EyesGuard.Localization
              "Languages"
          );
 
-        public static LocalizedEnvironment DefaultLocale { get; } = CreateEnvironment("en-US");
+        public static LocalizedEnvironment DefaultLocale { get; }
+            = CreateEnvironment(LocalizedEnvironment.DefaultLocale);
 
         public static string[] GetLocaleFiles() =>
             Directory.GetFiles(LocalizationFilesPath, "*.json", SearchOption.TopDirectoryOnly)

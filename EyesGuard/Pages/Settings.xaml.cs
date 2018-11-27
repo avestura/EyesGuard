@@ -213,7 +213,7 @@ namespace EyesGuard.Pages
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
-                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? "en-US";
+                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? LocalizedEnvironment.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
 
                     if (!App.Configuration.UseLanguageProvedidShortMessages)

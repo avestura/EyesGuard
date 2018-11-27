@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="this"
@@ -21,7 +22,7 @@
                         Margin="0,0,5,0"
                         Foreground="White"
                         Icon="UserCircleOutline" />
-                    <TextBlock Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.User}"/>
+                    <TextBlock Text="{lang:LocalizedString 'EyesGuard.UserManager.User'}"/>
 
                 </StackPanel>
             </MenuItem.Header>
@@ -42,8 +43,8 @@
                                 Grid.Column="1"
                                 Margin="5"
                                 VerticalAlignment="Center">
-                                <TextBlock FontSize="12" FontWeight="Bold" Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.NotLoggedIn}"/>
-                                <TextBlock FontSize="10" Text="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.NoTitle}"/>
+                                <TextBlock FontSize="12" FontWeight="Bold" Text="{lang:LocalizedString 'EyesGuard.UserManager.NotLoggedIn'}"/>
+                                <TextBlock FontSize="10" Text="{lang:LocalizedString 'EyesGuard.UserManager.NoTitle'}"/>
                             </StackPanel>
                         </Grid>
                     </ControlTemplate>
@@ -52,17 +53,17 @@
             <MenuItem
                 Click="MenuItem_Click"
                 FontSize="12"
-                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Login}"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Login'}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
             <MenuItem
                 FontSize="12"
-                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Profile}"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Profile'}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
                 IsEnabled="False" />
             <Separator />
             <MenuItem
                 FontSize="12"
-                Header="{Binding ElementName=this, Path=Translation.EyesGuard.UserManager.Logout}"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Logout'}"
                 Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
                 IsEnabled="False" />
         </MenuItem>

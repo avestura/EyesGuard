@@ -6,14 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Pages"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="this"
-    Title="{Binding ElementName=this, Path=Translation.Application.Feedback.PageTitle}"
+    Title="{lang:LocalizedString 'Application.Feedback.PageTitle'}"
     d:DesignHeight="500"
     d:DesignWidth="600"
     Background="#FF006A9F"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
-    FlowDirection="{Binding ElementName=this, Path=Meta.CurrentCulture.TextInfo.IsRightToLeft, Converter={StaticResource BoolToFlow}}"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     mc:Ignorable="d">
 
     <Grid>
@@ -27,13 +28,13 @@
                 <TextBlock
                     FontSize="18"
                     Foreground="White"
-                    Text="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.InnerTitle}" />
+                    Text="{lang:LocalizedString 'Application.Feedback.Content.InnerTitle'}" />
             </StackPanel>
             <TextBlock
                 MaxWidth="480"
                 Margin="10,5"
                 Foreground="White"
-                Text="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.Message}"
+                Text="{lang:LocalizedString 'Application.Feedback.Content.Message'}"
                 TextAlignment="Justify"
                 TextWrapping="Wrap" />
 
@@ -58,7 +59,7 @@
                     Height="30"
                     Padding="10,0"
                     Click="Feedback_Click"
-                    Content="{Binding ElementName=this, Path=Translation.Application.Feedback.Content.ButtonText}"
+                    Content="{lang:LocalizedString 'Application.Feedback.Content.ButtonText'}"
                     FontSize="15"
                     Style="{DynamicResource ButtonTemplate.Green}" />
             </Grid>
