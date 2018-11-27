@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Loaded="UserControl_Loaded"
@@ -12,70 +13,70 @@
         Background="Transparent"
         FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
         FontSize="11">
-        <MenuItem Header="{Binding Header_EyesGuard_Title}">
-            <MenuItem Click="GoToMainPage_Click" Header="{Binding Header_EyesGuard_MainMenu}" />
+        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.Header'}">
+            <MenuItem Click="GoToMainPage_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.MainMenu'}" />
             <Separator />
-            <MenuItem Header="{Binding Menu_PauseFor}">
-                <MenuItem Click="FiveMinutesPause_Click" Header="{Binding Menu_FiveMins}" />
-                <MenuItem Click="TenMinutesPause_Click" Header="{Binding Menu_TenMins}" />
-                <MenuItem Click="ThirtyMinutesPause_Click" Header="{Binding Menu_ThirtyMins}" />
-                <MenuItem Click="OneHourPause_Click" Header="{Binding Menu_OneHour}" />
-                <MenuItem Click="TwoHourPause_Click" Header="{Binding Menu_TwoHours}" />
+            <MenuItem Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.PauseFor'}">
+                <MenuItem Click="FiveMinutesPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.FiveMins'}" />
+                <MenuItem Click="TenMinutesPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.TenMins'}" />
+                <MenuItem Click="ThirtyMinutesPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.ThirtyMins'}" />
+                <MenuItem Click="OneHourPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.OneHour'}" />
+                <MenuItem Click="TwoHourPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.TwoHours'}" />
                 <Separator />
-                <MenuItem Click="CustomPause_Click" Header="{Binding Menu_Custom}" />
+                <MenuItem Click="CustomPause_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.Custom'}" />
             </MenuItem>
 
             <Separator />
-            <MenuItem Click="HideApp_Click" Header="{Binding Header_EyesGuard_Hide}" />
+            <MenuItem Click="HideApp_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.Hide'}" />
             <Separator />
-            <MenuItem Click="ApplicationExit_Click" Header="{Binding Header_EyesGuard_Exit}" />
+            <MenuItem Click="ApplicationExit_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.Exit'}" />
         </MenuItem>
 
-        <MenuItem Header="{Binding Header_Tools_Title}">
-            <MenuItem Click="GoToStatictictsPage_Click" Header="{Binding Header_Tools_Stats}" />
+        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Tools.Header'}">
+            <MenuItem Click="GoToStatictictsPage_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Tools.Stats'}" />
 
             <Separator />
             <MenuItem
                 Click="GoToSettingsPage_Click"
-                Header="{Binding Header_Tools_Settings}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Tools.Settings'}"
                 Icon="{StaticResource EyesGuard.Settings}" />
         </MenuItem>
 
-        <MenuItem Header="{Binding Header_Breaks_Title}">
+        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Breaks.Header'}">
             <MenuItem
                 Click="StartShortBreak_Click"
-                Header="{Binding Header_Breaks_GoShort}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Breaks.GoShort'}"
                 IsEnabled="{Binding ManualBreakEnabled}" />
             <MenuItem
                 Click="StartLongBreak_Click"
-                Header="{Binding Header_Breaks_GoLong}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Breaks.GoLong'}"
                 IsEnabled="{Binding ManualBreakEnabled}" />
         </MenuItem>
 
-        <MenuItem Header="{Binding Header_View_Title}">
+        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.View.Header'}">
             <MenuItem
                 Click="ShowHideTimeRemaining_Click"
-                Header="{Binding Header_View_KeyTimes}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.View.KeyTimes'}"
                 IsCheckable="True"
                 IsChecked="{Binding IsTimeItemChecked}"
                 StaysOpenOnClick="True" />
         </MenuItem>
-        <MenuItem Header="{Binding Header_Help_Title}">
+        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.Header'}">
             <MenuItem
                 Click="Help_Click"
-                Header="{Binding Header_Help_EyesGuardHelp}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.EyesGuardHelp'}"
                 Icon="{StaticResource EyesGuard.QuestionMark}" />
-            <MenuItem Click="Resources_Click" Header="{Binding Header_Help_Resources}" />
+            <MenuItem Click="Resources_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.Resources'}" />
             <Separator />
-            <MenuItem Click="Feedback_Menu_Click" Header="{Binding Header_Help_SendFeedback}" Icon="{StaticResource EyesGuard.Feedback}" />
+            <MenuItem Click="Feedback_Menu_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.SendFeedback'}" Icon="{StaticResource EyesGuard.Feedback}" />
             <Separator/>
             <MenuItem
                 Click="Donate_Click"
-                Header="{Binding Header_Help_Donate}"
+                Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.Donate'}"
                 Icon="{StaticResource EyesGuard.Donate}" />
             <Separator />
 
-            <MenuItem Click="About_Click" Header="{Binding Header_Help_About}" />
+            <MenuItem Click="About_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.About'}" />
 
         </MenuItem>
     </Menu>
