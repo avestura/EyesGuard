@@ -13,7 +13,6 @@ namespace EyesGuard.Resources.Controls
 {
     public partial class WaveCircle : UserControl
     {
-
         public TimeSpan SignalDuration
         {
             get { return (TimeSpan)GetValue(SignalDurationProperty); }
@@ -89,7 +88,6 @@ namespace EyesGuard.Resources.Controls
 
             if (SignalDuration.Milliseconds == 0)
                 SignalDuration = TimeSpan.FromSeconds(2);
-
         }
 
         private void SetAnimations()
@@ -124,12 +122,10 @@ namespace EyesGuard.Resources.Controls
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void MainEllipse_Loaded(object sender, RoutedEventArgs e)
         {
-
             SetAnimations();
 
             Storyboard.SetTargetProperty(widthAnim, new PropertyPath(Ellipse.WidthProperty));

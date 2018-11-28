@@ -29,5 +29,4 @@ namespace EyesGuard.Resources.Converters
             return Visibility.Collapsed;
         }
     }
-
 }

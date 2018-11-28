@@ -1,4 +1,5 @@
-﻿using EyesGuard.AppManagers;
+﻿using EyesGuard.Animations;
+using EyesGuard.AppManagers;
 using EyesGuard.Configurations;
 using EyesGuard.Extensions;
 using EyesGuard.Pages;
@@ -38,14 +39,11 @@ namespace EyesGuard
 
         private void MaxRestoreButton_Click(object sender, RoutedEventArgs e)
         {
-            if (WindowState == WindowState.Maximized)
-            {
-                WindowState = WindowState.Normal;
-            }
-            else WindowState = WindowState.Maximized;
+            WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
         }
 
-        bool minimizing = false;
+        private bool minimizing = false;
+
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
             if (!minimizing)
@@ -71,10 +69,7 @@ namespace EyesGuard
             }
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {}
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

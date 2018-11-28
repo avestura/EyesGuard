@@ -12,11 +12,5 @@ namespace EyesGuard.Configurations
 {
     public partial class Configuration
     {
-
-        public Configuration()
-        {
-
-        }
-
     }
 }

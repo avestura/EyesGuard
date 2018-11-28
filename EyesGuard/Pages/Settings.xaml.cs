@@ -1,4 +1,5 @@
-﻿using EyesGuard.Extensions;
+﻿using EyesGuard.Animations;
+using EyesGuard.Extensions;
 using EyesGuard.Localization;
 using EyesGuard.Resources.Controls;
 using System;
@@ -85,7 +86,6 @@ namespace EyesGuard.Pages
 
         private void FillShortMessages()
         {
-
                 if (UseLanguageAsSourceCheckbox.IsChecked == true)
                 {
                     ShortMessagesSource = new ObservableCollection<string>(App.LocalizedEnvironment.Translation.EyesGuard.ShortMessageSuggestions);
@@ -100,12 +100,10 @@ namespace EyesGuard.Pages
                 }
 
                 ShortMessages.ItemsSource = ShortMessagesSource;
-
         }
 
         private void FillComboBoxWithLanguages()
         {
-
             LanguagesCombo.ItemsSource = LanguagesBriefData.Value;
         }
 
@@ -210,7 +208,7 @@ namespace EyesGuard.Pages
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
-                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? LocalizedEnvironment.DefaultLocale;
+                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? LanguageLoader.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
 
                     if (!App.Configuration.UseLanguageProvedidShortMessages)

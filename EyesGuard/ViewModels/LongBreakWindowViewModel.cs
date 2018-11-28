@@ -37,7 +37,6 @@ namespace EyesGuard.ViewModels
                 _canCancel = value;
                 OnPropertyChanged();
             }
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

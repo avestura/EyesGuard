@@ -100,7 +100,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Animation.cs" />
+    <Compile Include="Animations\BlinkAnimations.cs" />
+    <Compile Include="Animations\MarginFadeAnimations.cs" />
+    <Compile Include="Animations\ShowAndFadeAnimations.cs" />
+    <Compile Include="App.EyeProtection.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Initialization.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Privates.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Properties.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.TimingAndControl.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.UI.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Updates.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppManagers\ChromeManager.cs" />
     <Compile Include="AppManagers\TaskbarIconManager.cs" />
     <Compile Include="AppManagers\UIViewModels.cs" />
@@ -115,6 +138,55 @@
       <DependentUpon>Configuration.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\PropertyValueDeepDiveExtension.cs" />
+    <Compile Include="Localization\ApplicationStrings\About.cs" />
+    <Compile Include="Localization\ApplicationStrings\AboutContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\AlertPages.cs" />
+    <Compile Include="Localization\ApplicationStrings\Application.cs" />
+    <Compile Include="Localization\ApplicationStrings\ApplicationNotifications.cs" />
+    <Compile Include="Localization\ApplicationStrings\BeforeDonation.cs" />
+    <Compile Include="Localization\ApplicationStrings\BeforeDonationContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\BreaksMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\ControlPanel.cs" />
+    <Compile Include="Localization\ApplicationStrings\CustomPause.cs" />
+    <Compile Include="Localization\ApplicationStrings\Donate.cs" />
+    <Compile Include="Localization\ApplicationStrings\DonationButtonClicked.cs" />
+    <Compile Include="Localization\ApplicationStrings\DonationButtonClickedContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuard.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuardMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuardNotifications.cs" />
+    <Compile Include="Localization\ApplicationStrings\Feedback.cs" />
+    <Compile Include="Localization\ApplicationStrings\FeedbackContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\FirstLaunch.cs" />
+    <Compile Include="Localization\ApplicationStrings\GuardStatus.cs" />
+    <Compile Include="Localization\ApplicationStrings\HeaderMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\HelpMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\LanguageSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\LongBreak.cs" />
+    <Compile Include="Localization\ApplicationStrings\LongBreakAlert.cs" />
+    <Compile Include="Localization\ApplicationStrings\Menu.cs" />
+    <Compile Include="Localization\ApplicationStrings\Meta.cs" />
+    <Compile Include="Localization\ApplicationStrings\MetaPhantom.cs" />
+    <Compile Include="Localization\ApplicationStrings\PauseTime.cs" />
+    <Compile Include="Localization\ApplicationStrings\Resources.cs" />
+    <Compile Include="Localization\ApplicationStrings\ResourcesContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\Settings.cs" />
+    <Compile Include="Localization\ApplicationStrings\Shellextensions.cs" />
+    <Compile Include="Localization\ApplicationStrings\ShortBreak.cs" />
+    <Compile Include="Localization\ApplicationStrings\StatsPage.cs" />
+    <Compile Include="Localization\ApplicationStrings\StatsSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\TaskbarIcon.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeManipulation.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeRemaining.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeSeparators.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\ToolsMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\Translation.cs" />
+    <Compile Include="Localization\ApplicationStrings\Translator.cs" />
+    <Compile Include="Localization\ApplicationStrings\UserManager.cs" />
+    <Compile Include="Localization\ApplicationStrings\UserSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\ViewMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\WarningPage.cs" />
+    <Compile Include="Localization\ApplicationStrings\WarnPageTitles.cs" />
     <Compile Include="Localization\LocalizedFlowDirection.cs" />
     <Compile Include="Localization\LocalizedString.cs" />
     <Compile Include="Resources\Controls\TranslatorInfo.xaml.cs">
@@ -124,7 +196,7 @@
     <Compile Include="Extensions\ResourceExtensions.cs" />
     <Compile Include="IdleDetector.cs" />
     <Compile Include="Localization\LanguageLoader.cs" />
-    <Compile Include="Localization\LocalizedEnvironment.cs" />
+    <Compile Include="Localization\ApplicationStrings\LocalizedEnvironment.cs" />
     <Compile Include="LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>
     </Compile>

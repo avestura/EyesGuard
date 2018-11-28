@@ -37,17 +37,14 @@ namespace EyesGuard.Pages
 
         private void DonateButton_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 Process.Start($"https://donorbox.org/eyes-guard-donate");
-
             } catch { }
             var donateText = App.LocalizedEnvironment.Translation.Application.Donate.DonationButtonClicked.Content;
             App.ShowWarning(
                 $"{donateText.Thanks}\n{donateText.Redirect}\n\n{donateText.FeedbackNotice}"
                 , WarningPage.PageStates.Donate, new MainPage());
-
         }
     }
 }

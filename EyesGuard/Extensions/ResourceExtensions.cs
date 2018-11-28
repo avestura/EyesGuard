@@ -18,6 +18,5 @@ namespace EyesGuard.Extensions
         {
             return (T)App.Current.FindResource(resourceKey);
         }
-
     }
 }

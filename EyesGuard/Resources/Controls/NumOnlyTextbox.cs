@@ -12,8 +12,7 @@ namespace EyesGuard.Resources.Controls
 {
     public class NumOnlyTextbox : TextBox
     {
-        Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
-
+        readonly Regex regex = new Regex("[^0-9.-]+"); //regex that matches disallowed text
 
         public NumOnlyTextbox() : base()
         {
@@ -49,8 +48,5 @@ namespace EyesGuard.Resources.Controls
             if (e.Key == Key.Space) e.Handled = true;
             base.OnPreviewKeyDown(e);
         }
-
-
-
     }
 }

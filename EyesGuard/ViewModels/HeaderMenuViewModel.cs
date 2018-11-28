@@ -10,7 +10,6 @@ namespace EyesGuard.ViewModels
 {
     public class HeaderMenuViewModel : INotifyPropertyChanged
     {
-
         private bool _isTimeItemChecked = true;
         public bool IsTimeItemChecked
         {

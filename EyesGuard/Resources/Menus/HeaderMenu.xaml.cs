@@ -1,4 +1,5 @@
-﻿using EyesGuard.AppManagers;
+﻿using EyesGuard.Animations;
+using EyesGuard.AppManagers;
 using EyesGuard.Extensions;
 using EyesGuard.Pages;
 using System;
@@ -36,7 +37,6 @@ namespace EyesGuard.Resources.Menus
 
         private void GoToEyeSightImprove_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void GoToSettingsPage_Click(object sender, RoutedEventArgs e)
@@ -121,12 +121,12 @@ namespace EyesGuard.Resources.Menus
 
         private void StartShortBreak_Click(object sender, RoutedEventArgs e)
         {
-            App.GetApp().StartShortBreak();
+            App.AsApp().StartShortBreak();
         }
 
         private void StartLongBreak_Click(object sender, RoutedEventArgs e)
         {
-            App.GetApp().StartLongBreak();
+            App.AsApp().StartLongBreak();
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
@@ -144,7 +144,6 @@ namespace EyesGuard.Resources.Menus
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void Feedback_Menu_Click(object sender, RoutedEventArgs e)

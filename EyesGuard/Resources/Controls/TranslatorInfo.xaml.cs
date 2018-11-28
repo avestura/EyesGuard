@@ -60,6 +60,5 @@ namespace EyesGuard.Resources.Controls
 
         public static readonly DependencyProperty NotesProperty =
             DependencyProperty.Register("Notes", typeof(string), typeof(TranslatorInfo), null);
-
     }
 }

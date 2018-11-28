@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Animations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace EyesGuard.AppManagers
     public static class ChromeManager
     {
         private static bool _hiding = false;
+
         public async static void Hide()
         {
             if (!_hiding)
@@ -21,6 +23,7 @@ namespace EyesGuard.AppManagers
         }
 
         private static bool _closing = false;
+
         public async static void Close()
         {
             if (!_closing)
@@ -33,6 +36,7 @@ namespace EyesGuard.AppManagers
         }
 
         private static bool _showing = false;
+
         public async static void Show()
         {
             if (!_showing)

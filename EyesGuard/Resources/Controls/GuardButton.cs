@@ -13,7 +13,6 @@ namespace EyesGuard.Resources.Controls
     {
 
 
-
         public GuardStates GuardState
         {
             get { return (GuardStates)GetValue(GuardStateProperty); }
@@ -21,7 +20,6 @@ namespace EyesGuard.Resources.Controls
         }
         public static readonly DependencyProperty GuardStateProperty =
             DependencyProperty.Register("GuardState", typeof(GuardStates), typeof(GuardButton), new PropertyMetadata(GuardStates.Protecting));
-
 
 
     }

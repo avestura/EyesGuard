@@ -10,7 +10,6 @@ namespace EyesGuard.ViewModels
 {
     public class ShortBreakViewModel : INotifyPropertyChanged
     {
-
         private string shortMessage = "";
         public string ShortMessage
         {

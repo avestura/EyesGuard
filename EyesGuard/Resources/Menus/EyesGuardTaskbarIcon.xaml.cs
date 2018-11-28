@@ -58,7 +58,6 @@ namespace EyesGuard.Resources.Menus
 
         private void TaskbarIcon_ContextMenuOpening(object sender, System.Windows.Controls.ContextMenuEventArgs e)
         {
-
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

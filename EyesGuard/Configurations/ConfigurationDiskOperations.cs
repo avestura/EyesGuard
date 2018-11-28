@@ -27,7 +27,6 @@ namespace EyesGuard.Configurations
         /// </summary>
         public void SaveSettingsToFile()
         {
-
             XmlSerializer xsSubmit = new XmlSerializer(typeof(Configuration));
             var xml = "";
 
@@ -41,7 +40,6 @@ namespace EyesGuard.Configurations
             }
 
             File.WriteAllText(path, xml);
-
         }
 
         /// <summary>
@@ -64,8 +62,6 @@ namespace EyesGuard.Configurations
                 App.Configuration = new Configuration();
                 App.Configuration.SaveSettingsToFile();
             }
-
         }
-
     }
 }

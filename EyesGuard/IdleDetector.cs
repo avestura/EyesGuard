@@ -79,7 +79,6 @@ namespace EyesGuard
 
             cancelRequested = false;
             State = IdleDetectorState.Stopped;
-
         }
 
         public async Task RequestCancel()
@@ -90,6 +89,5 @@ namespace EyesGuard
                 while (State == IdleDetectorState.Running) { }
             });
         }
-
     }
 }

@@ -11,12 +11,11 @@ namespace EyesGuard.Configurations
 {
     public partial class Configuration
     {
-
         #region Config :: Fields :: Internal
-        GuardStates _protectionState = GuardStates.Protecting;
-        bool _keyTimeVisible = true;
-        bool runAtStartup = false;
-        bool _systemIdleDetectionEnabled = false;
+        private GuardStates _protectionState = GuardStates.Protecting;
+        private bool _keyTimeVisible = true;
+        private bool runAtStartup = false;
+        private bool _systemIdleDetectionEnabled = false;
         #endregion
 
         #region Config :: Fields :: Public Properties
@@ -28,14 +27,13 @@ namespace EyesGuard.Configurations
             {
                 _protectionState = value;
 
-                if (App.GetApp().BasePrequirementsLoaded)
+                if (App.AsApp().BasePrequirementsLoaded)
                 {
                     UpdateTimeHandlers();
                     UpdateLongShortVisibility();
                     UpdateTaskbarIcon();
                     UpdateIdleActions();
                 }
-
             }
         }
 
@@ -107,11 +105,10 @@ namespace EyesGuard.Configurations
                         _ = SystemIdleDetector.RequestCancel();
                     }
                 }
-
             }
         }
 
-        public string ApplicationLocale { get; set; } = Localization.LocalizedEnvironment.DefaultLocale;
+        public string ApplicationLocale { get; set; } = LanguageLoader.DefaultLocale;
 
         public bool UseLanguageProvedidShortMessages { get; set; } = true;
 

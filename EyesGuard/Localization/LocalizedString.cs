@@ -24,13 +24,13 @@ namespace EyesGuard.Localization
         public LocalizedString()
         {
             Value = string.Empty;
-            Locale = LocalizedEnvironment.DefaultLocale;
+            Locale = LanguageLoader.DefaultLocale;
         }
 
         public LocalizedString(string key)
         {
             Value = key;
-            Locale = LocalizedEnvironment.DefaultLocale;
+            Locale = LanguageLoader.DefaultLocale;
         }
 
         public LocalizedString(string key, string locale)

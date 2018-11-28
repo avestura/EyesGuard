@@ -1,4 +1,5 @@
-﻿using EyesGuard.Extensions;
+﻿using EyesGuard.Animations;
+using EyesGuard.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,6 @@ namespace EyesGuard.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-
         public GuardStates ProtectionState
         {
             get { return (GuardStates)GetValue(ProtectionStateProperty); }
@@ -73,7 +73,6 @@ namespace EyesGuard.Pages
             {
                 App.ResumeProtection();
             }
-
         }
 
         private async void UpdatePageText()
@@ -106,6 +105,5 @@ namespace EyesGuard.Pages
                 }
             }
         }
-
     }
 }
