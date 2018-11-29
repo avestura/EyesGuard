@@ -187,7 +187,7 @@
                         BorderThickness="0"
                         Navigated="MainFrame_Navigated"
                         NavigationUIVisibility="Hidden"
-                        Source="/EyesGuard;component/Pages/MainPage.xaml" />
+                        Source="/EyesGuard;component/Views/Pages/MainPage.xaml" />
                 </Grid>
             </Grid>
         </Grid>
