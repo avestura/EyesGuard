@@ -148,21 +148,6 @@ namespace EyesGuard.ViewModels
 
         public string TooltipTitle => App.LocalizedEnvironment.Translation.Application.HeaderTitle;
 
-        public string Menu_PauseFor => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.PauseFor;
-        public string Menu_ShowMainMenu => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.ShowMainMenu;
-        public string Menu_StartProtection => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.StartProtection;
-        public string Menu_StopProtection => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.StopProtection;
-        public string Menu_FiveMins => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.FiveMins;
-        public string Menu_TenMins => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.TenMins;
-        public string Menu_ThirtyMins => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.ThirtyMins;
-        public string Menu_OneHour => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.OneHour;
-        public string Menu_TwoHours => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.TwoHours;
-        public string Menu_Custom => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.Custom;
-        public string Menu_Settings => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.Settings;
-        public string Menu_Exit => App.LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.Menu.Exit;
-
-        public FlowDirection Menu_FlowDirection => (App.LocalizedEnvironment.Meta.CurrentCulture.TextInfo.IsRightToLeft) ? FlowDirection.RightToLeft : FlowDirection.LeftToRight;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName]string propName = "")

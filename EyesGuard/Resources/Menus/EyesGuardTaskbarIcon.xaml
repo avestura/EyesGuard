@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:local="clr-namespace:EyesGuard.Resources.Menus"
     x:Name="this"
     xmlns:c="clr-namespace:EyesGuard.Resources.Converters"
@@ -13,7 +14,7 @@
     <nf:TaskbarIcon
         x:Key="App.GlobalTaskbarIcon"
         ContextMenuOpening="TaskbarIcon_ContextMenuOpening"
-        IconSource="{Binding Source}" FlowDirection="{Binding Menu_FlowDirection}"
+        IconSource="{Binding Source}" FlowDirection="{lang:LocalizedFlowDirection}"
         TrayMouseDoubleClick="TaskbarIcon_TrayMouseDoubleClick"
         Visibility="{Binding RelativeSource={RelativeSource Mode=Self}, Path=IconSource, Converter={StaticResource IconSourceVisbilityConverter}}">
         <nf:TaskbarIcon.TrayToolTip>
@@ -33,7 +34,7 @@
             </ToolTip>
         </nf:TaskbarIcon.TrayToolTip>
         <nf:TaskbarIcon.ContextMenu>
-            <ContextMenu FlowDirection="{Binding Menu_FlowDirection}" FontFamily="{DynamicResource HastiUI.Fonts.IRANSans}">
+            <ContextMenu FlowDirection="{lang:LocalizedFlowDirection}" FontFamily="{DynamicResource HastiUI.Fonts.IRANSans}">
 
                 <MenuItem Margin="-3,-3,-3,2" StaysOpenOnClick="True">
                     <MenuItem.Template>
@@ -87,37 +88,37 @@
                     </MenuItem.Template>
                 </MenuItem>
                 <MenuItem Click="TaskbarIcon_TrayMouseDoubleClick"
-                          Header="{Binding Menu_ShowMainMenu}" />
+                          Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.ShowMainMenu'}" />
                 <Separator />
                 <MenuItem
                     Click="StartProtect_Click"
-                    Header="{Binding Menu_StartProtection}"
+                    Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.StartProtection'}"
                     Icon="{StaticResource EyesGuard.StartProtecting}"
                     Visibility="{Binding StartProtectVisibility}" />
                 <MenuItem
                     Click="StopProtect_Click"
-                    Header="{Binding Menu_StopProtection}"
+                    Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.StopProtection'}"
                     Icon="{StaticResource EyesGuard.StopProtecting}"
                     Visibility="{Binding StopProtectVisibility}" />
-                <MenuItem Header="{Binding Menu_PauseFor}">
+                <MenuItem Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.PauseFor'}">
                     <MenuItem Click="FiveMinutesPause_Click"
-                              Header="{Binding Menu_FiveMins}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.FiveMins'}" />
                     <MenuItem Click="TenMinutesPause_Click"
-                              Header="{Binding Menu_TenMins}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.TenMins'}" />
                     <MenuItem Click="ThirtyMinutesPause_Click"
-                              Header="{Binding Menu_ThirtyMins}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.ThirtyMins'}" />
                     <MenuItem Click="OneHourPause_Click"
-                              Header="{Binding Menu_OneHour}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.OneHour'}" />
                     <MenuItem Click="TwoHourPause_Click"
-                              Header="{Binding Menu_TwoHours}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.TwoHours'}" />
                     <Separator />
                     <MenuItem Click="CustomPause_Click"
-                              Header="{Binding Menu_Custom}" />
+                              Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.Custom'}" />
                 </MenuItem>
                 <Separator />
-                <MenuItem Click="Settings_Click" Header="{Binding Menu_Settings}" />
+                <MenuItem Click="Settings_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.Settings'}" />
                 <Separator />
-                <MenuItem Click="Exit_Click" Header="{Binding Menu_Exit}" />
+                <MenuItem Click="Exit_Click" Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.Exit'}" />
             </ContextMenu>
         </nf:TaskbarIcon.ContextMenu>
     </nf:TaskbarIcon>
