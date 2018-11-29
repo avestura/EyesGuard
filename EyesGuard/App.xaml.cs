@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using EyesGuard.Views.Windows;
+using System.Windows;
 
 namespace EyesGuard
 {

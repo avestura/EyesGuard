@@ -1,0 +1,72 @@
+﻿<UserControl
+    x:Class="EyesGuard.Views.Menus.UserLoginMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
+    xmlns:local="clr-namespace:EyesGuard.Views.Menus"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="this"
+    mc:Ignorable="d">
+    <Menu
+        VerticalAlignment="Center"
+        Background="Transparent"
+        FontFamily="{StaticResource HastiUI.Fonts.IRANSans}">
+        <MenuItem FontSize="15">
+            <MenuItem.Header>
+
+                <StackPanel Margin="5,0" Orientation="Horizontal">
+                    <fa:ImageAwesome
+                        Height="20"
+                        Margin="0,0,5,0"
+                        Foreground="White"
+                        Icon="UserCircleOutline" />
+                    <TextBlock Text="{lang:LocalizedString 'EyesGuard.UserManager.User'}"/>
+
+                </StackPanel>
+            </MenuItem.Header>
+            <MenuItem StaysOpenOnClick="True">
+                <MenuItem.Template>
+                    <ControlTemplate>
+                        <Grid Height="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <fa:ImageAwesome
+                                Grid.Column="0"
+                                Height="40"
+                                Foreground="#FFCBCBCB"
+                                Icon="UserCircle" />
+                            <StackPanel
+                                Grid.Column="1"
+                                Margin="5"
+                                VerticalAlignment="Center">
+                                <TextBlock FontSize="12" FontWeight="Bold" Text="{lang:LocalizedString 'EyesGuard.UserManager.NotLoggedIn'}"/>
+                                <TextBlock FontSize="10" Text="{lang:LocalizedString 'EyesGuard.UserManager.NoTitle'}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ControlTemplate>
+                </MenuItem.Template>
+            </MenuItem>
+            <MenuItem
+                Click="MenuItem_Click"
+                FontSize="12"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Login'}"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Login}" />
+            <MenuItem
+                FontSize="12"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Profile'}"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Profile}"
+                IsEnabled="False" />
+            <Separator />
+            <MenuItem
+                FontSize="12"
+                Header="{lang:LocalizedString 'EyesGuard.UserManager.Logout'}"
+                Icon="{StaticResource HastiUI.Menus.UserLoginMenu.Signout}"
+                IsEnabled="False" />
+        </MenuItem>
+    </Menu>
+
+</UserControl>

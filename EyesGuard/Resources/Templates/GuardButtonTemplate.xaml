@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:c="clr-namespace:EyesGuard.Resources.Controls"
+    xmlns:c="clr-namespace:EyesGuard.Views.Controls"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
     xmlns:local="clr-namespace:EyesGuard.Resources.Templates">
     <Style x:Key="EyesGuard.GuardButton.FocusVisual">
@@ -190,8 +190,6 @@
                                 <Setter TargetName="border" Property="Background" Value="{StaticResource EyesGuard.GuardButton.Pressed.NotProtecting.Background}" />
                             </MultiTrigger.Setters>
                         </MultiTrigger>
-
-
 
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter TargetName="border" Property="Background" Value="{StaticResource EyesGuard.GuardButton.Disabled.Background}" />

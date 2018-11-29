@@ -1,6 +1,6 @@
 ﻿using EyesGuard.AppManagers;
 using EyesGuard.Configurations;
-using EyesGuard.Pages;
+using EyesGuard.Views.Pages;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;
 using System.Windows;

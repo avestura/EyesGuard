@@ -1,4 +1,4 @@
-﻿using EyesGuard.Pages;
+﻿using EyesGuard.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace EyesGuard
 {
-    using static EyesGuard.Pages.WarningPage;
+    using static EyesGuard.Views.Pages.WarningPage;
 
     public partial class App
     {

@@ -1,5 +1,6 @@
-﻿using EyesGuard.Animations;
-using EyesGuard.Pages;
+﻿using EyesGuard.Views.Animations;
+using EyesGuard.Views.Pages;
+using EyesGuard.Views.Windows;
 using FormatWith;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;

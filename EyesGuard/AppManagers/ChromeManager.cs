@@ -1,4 +1,4 @@
-﻿using EyesGuard.Animations;
+﻿using EyesGuard.Views.Animations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
