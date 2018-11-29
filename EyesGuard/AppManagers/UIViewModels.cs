@@ -22,6 +22,5 @@ namespace EyesGuard.AppManagers
             = new LongBreakWindowViewModel();
 
         public StatsViewModel Stats { get; set; } = new StatsViewModel();
-
     }
 }

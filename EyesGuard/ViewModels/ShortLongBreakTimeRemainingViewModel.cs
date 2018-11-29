@@ -22,7 +22,6 @@ namespace EyesGuard.ViewModels
                 _nextShortBreak = value;
                 OnPropertyChanged();
             }
-
         }
 
         private string _nextLongBreak = "";
@@ -37,7 +36,6 @@ namespace EyesGuard.ViewModels
                 _nextLongBreak = value;
                 OnPropertyChanged();
             }
-
         }
 
         private string _pauseTime = "";
@@ -52,7 +50,6 @@ namespace EyesGuard.ViewModels
                 _pauseTime = value;
                 OnPropertyChanged();
             }
-
         }
 
         private Visibility _timeRemainVisibility = Visibility.Visible;
@@ -67,7 +64,6 @@ namespace EyesGuard.ViewModels
                 _timeRemainVisibility = value;
                 OnPropertyChanged();
             }
-
         }
 
         private bool _protectionPause = false;
@@ -91,12 +87,10 @@ namespace EyesGuard.ViewModels
                 {
                     PauseVisibility = Visibility.Collapsed;
                     LongShortVisibility = Visibility.Visible;
-
                 }
                 OnPropertyChanged("PauseVisibility");
                 OnPropertyChanged("LongShortVisibility");
             }
-
         }
 
         public Visibility PauseVisibility { get; set; } = Visibility.Collapsed;

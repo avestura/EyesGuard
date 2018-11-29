@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:EyesGuard"
     Startup="Application_Startup"
-    StartupUri="MainWindow.xaml">
+    StartupUri="pack://application:,,,/EyesGuard;component/Views/Windows/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -41,7 +41,7 @@
                 <!--#endregion-->
 
                 <!--#region Taskbar-->
-                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Resources/Menus/EyesGuardTaskbarIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/EyesGuard;component/Views/Menus/EyesGuardTaskbarIcon.xaml" />
                 <!--#endregion-->
 
                 <!--#region Converters-->

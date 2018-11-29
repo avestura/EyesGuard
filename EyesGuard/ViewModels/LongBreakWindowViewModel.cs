@@ -12,6 +12,7 @@ namespace EyesGuard.ViewModels
     public class LongBreakWindowViewModel : INotifyPropertyChanged
     {
         private string timeRemaining = "";
+
         public string TimeRemaining
         {
             get
@@ -26,6 +27,7 @@ namespace EyesGuard.ViewModels
         }
 
         private Visibility _canCancel = Visibility.Visible;
+
         public Visibility CanCancel
         {
             get
@@ -37,10 +39,10 @@ namespace EyesGuard.ViewModels
                 _canCancel = value;
                 OnPropertyChanged();
             }
-
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         private void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

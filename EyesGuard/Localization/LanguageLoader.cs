@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EyesGuard.Localization.ApplicationStrings;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,6 +14,8 @@ namespace EyesGuard.Localization
 {
     public static class LanguageLoader
     {
+        public static readonly string DefaultLocale = "en-US";
+
         private static string CompilerFilePath([CallerFilePath] string path = "") => path;
 
         public static string CompilerDirectory() => Path.GetDirectoryName(CompilerFilePath());
@@ -100,8 +103,8 @@ namespace EyesGuard.Localization
              "Languages"
          );
 
-        public static LocalizedEnvironment DefaultLocale { get; }
-            = CreateEnvironment(LocalizedEnvironment.DefaultLocale);
+        public static LocalizedEnvironment DefaultEnvironment { get; }
+            = CreateEnvironment(DefaultLocale);
 
         public static string[] GetLocaleFiles() =>
             Directory.GetFiles(LocalizationFilesPath, "*.json", SearchOption.TopDirectoryOnly)

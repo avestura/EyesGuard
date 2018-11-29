@@ -22,6 +22,5 @@ namespace EyesGuard.Configurations
         /// Full path of <see cref="Configuration"/> file
         /// </summary>
         private static string path = directory + fileName;
-
     }
 }

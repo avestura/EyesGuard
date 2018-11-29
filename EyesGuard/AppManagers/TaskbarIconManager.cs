@@ -13,12 +13,10 @@ namespace EyesGuard.AppManagers
 {
     public static class TaskbarIconManager
     {
-
         public static void UpdateTaskbarIcon()
         {
             if (Configuration.ProtectionState == GuardStates.Protecting)
             {
-
                 App.UIViewModels.NotifyIcon.DarkBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.Protecting.DarkBrush".Translate<SolidColorBrush>();
                 App.UIViewModels.NotifyIcon.LowBrush = "EyesGuard.SolidColorBrushes.TaskbarIcon.Protecting.LowBrush".Translate<SolidColorBrush>();
                 App.UIViewModels.NotifyIcon.Source = "Images.Bitmap.EyesGuard.TaskbarIcon.Protecting".Translate<BitmapImage>();
@@ -34,7 +32,6 @@ namespace EyesGuard.AppManagers
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.Title = LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.PausedProtected;
-
             }
             else if (Configuration.ProtectionState == GuardStates.NotProtecting)
             {
@@ -44,9 +41,7 @@ namespace EyesGuard.AppManagers
                 App.UIViewModels.NotifyIcon.StartProtectVisibility = Visibility.Visible;
                 App.UIViewModels.NotifyIcon.StopProtectVisibility = Visibility.Collapsed;
                 App.UIViewModels.NotifyIcon.Title = LocalizedEnvironment.Translation.ShellExtensions.TaskbarIcon.NotProtected;
-
             }
         }
-
     }
 }

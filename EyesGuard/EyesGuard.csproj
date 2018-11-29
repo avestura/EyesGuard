@@ -100,7 +100,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Animation.cs" />
+    <Compile Include="Views\Animations\BlinkAnimations.cs" />
+    <Compile Include="Views\Animations\MarginFadeAnimations.cs" />
+    <Compile Include="Views\Animations\ShowAndFadeAnimations.cs" />
+    <Compile Include="App.EyeProtection.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Initialization.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Privates.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Properties.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.TimingAndControl.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.UI.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.Updates.xaml.cs">
+      <DependentUpon>App.xaml.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppManagers\ChromeManager.cs" />
     <Compile Include="AppManagers\TaskbarIconManager.cs" />
     <Compile Include="AppManagers\UIViewModels.cs" />
@@ -114,58 +137,107 @@
     <Compile Include="Configurations\ConfigurationProperties.cs">
       <DependentUpon>Configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BoolToFlowDirectionConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ImageSourceToVisisbilityConverter.cs" />
     <Compile Include="Extensions\PropertyValueDeepDiveExtension.cs" />
+    <Compile Include="Localization\ApplicationStrings\About.cs" />
+    <Compile Include="Localization\ApplicationStrings\AboutContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\AlertPages.cs" />
+    <Compile Include="Localization\ApplicationStrings\Application.cs" />
+    <Compile Include="Localization\ApplicationStrings\ApplicationNotifications.cs" />
+    <Compile Include="Localization\ApplicationStrings\BeforeDonation.cs" />
+    <Compile Include="Localization\ApplicationStrings\BeforeDonationContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\BreaksMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\ControlPanel.cs" />
+    <Compile Include="Localization\ApplicationStrings\CustomPause.cs" />
+    <Compile Include="Localization\ApplicationStrings\Donate.cs" />
+    <Compile Include="Localization\ApplicationStrings\DonationButtonClicked.cs" />
+    <Compile Include="Localization\ApplicationStrings\DonationButtonClickedContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuard.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuardMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\EyesGuardNotifications.cs" />
+    <Compile Include="Localization\ApplicationStrings\Feedback.cs" />
+    <Compile Include="Localization\ApplicationStrings\FeedbackContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\FirstLaunch.cs" />
+    <Compile Include="Localization\ApplicationStrings\GuardStatus.cs" />
+    <Compile Include="Localization\ApplicationStrings\HeaderMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\HelpMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\LanguageSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\LongBreak.cs" />
+    <Compile Include="Localization\ApplicationStrings\LongBreakAlert.cs" />
+    <Compile Include="Localization\ApplicationStrings\Menu.cs" />
+    <Compile Include="Localization\ApplicationStrings\Meta.cs" />
+    <Compile Include="Localization\ApplicationStrings\MetaPhantom.cs" />
+    <Compile Include="Localization\ApplicationStrings\PauseTime.cs" />
+    <Compile Include="Localization\ApplicationStrings\Resources.cs" />
+    <Compile Include="Localization\ApplicationStrings\ResourcesContent.cs" />
+    <Compile Include="Localization\ApplicationStrings\Settings.cs" />
+    <Compile Include="Localization\ApplicationStrings\Shellextensions.cs" />
+    <Compile Include="Localization\ApplicationStrings\ShortBreak.cs" />
+    <Compile Include="Localization\ApplicationStrings\StatsPage.cs" />
+    <Compile Include="Localization\ApplicationStrings\StatsSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\TaskbarIcon.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeManipulation.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeRemaining.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeSeparators.cs" />
+    <Compile Include="Localization\ApplicationStrings\TimeSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\ToolsMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\Translation.cs" />
+    <Compile Include="Localization\ApplicationStrings\Translator.cs" />
+    <Compile Include="Localization\ApplicationStrings\UserManager.cs" />
+    <Compile Include="Localization\ApplicationStrings\UserSettings.cs" />
+    <Compile Include="Localization\ApplicationStrings\ViewMenu.cs" />
+    <Compile Include="Localization\ApplicationStrings\WarningPage.cs" />
+    <Compile Include="Localization\ApplicationStrings\WarnPageTitles.cs" />
     <Compile Include="Localization\LocalizedFlowDirection.cs" />
     <Compile Include="Localization\LocalizedString.cs" />
-    <Compile Include="Resources\Controls\TranslatorInfo.xaml.cs">
+    <Compile Include="Views\Controls\TranslatorInfo.xaml.cs">
       <DependentUpon>TranslatorInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Converters\BoolToFlowDirectionConverter.cs" />
     <Compile Include="Extensions\ResourceExtensions.cs" />
     <Compile Include="IdleDetector.cs" />
     <Compile Include="Localization\LanguageLoader.cs" />
-    <Compile Include="Localization\LocalizedEnvironment.cs" />
-    <Compile Include="LongBreakWindow.xaml.cs">
+    <Compile Include="Localization\ApplicationStrings\LocalizedEnvironment.cs" />
+    <Compile Include="Views\Windows\LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CustomPause.xaml.cs">
+    <Compile Include="Views\Pages\CustomPause.xaml.cs">
       <DependentUpon>CustomPause.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Donate.xaml.cs">
+    <Compile Include="Views\Pages\Donate.xaml.cs">
       <DependentUpon>Donate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FeedbackPage.xaml.cs">
+    <Compile Include="Views\Pages\FeedbackPage.xaml.cs">
       <DependentUpon>FeedbackPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MainPage.xaml.cs">
+    <Compile Include="Views\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Settings.xaml.cs">
+    <Compile Include="Views\Pages\Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Statistics.xaml.cs">
+    <Compile Include="Views\Pages\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WarningPage.xaml.cs">
+    <Compile Include="Views\Pages\WarningPage.xaml.cs">
       <DependentUpon>WarningPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Controls\GuardButton.cs" />
-    <Compile Include="Resources\Controls\NumOnlyTextbox.cs" />
-    <Compile Include="Resources\Controls\WaveCircle.xaml.cs">
+    <Compile Include="Views\Controls\GuardButton.cs" />
+    <Compile Include="Views\Controls\NumOnlyTextbox.cs" />
+    <Compile Include="Views\Controls\WaveCircle.xaml.cs">
       <DependentUpon>WaveCircle.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Resources\Converters\ImageSourceToVisisbilityConverter.cs" />
-    <Compile Include="Resources\Menus\EyesGuardTaskbarIcon.xaml.cs">
+    <Compile Include="Views\Menus\EyesGuardTaskbarIcon.xaml.cs">
       <DependentUpon>EyesGuardTaskbarIcon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Menus\HeaderMenu.xaml.cs">
+    <Compile Include="Views\Menus\HeaderMenu.xaml.cs">
       <DependentUpon>HeaderMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Menus\UserLoginMenu.xaml.cs">
+    <Compile Include="Views\Menus\UserLoginMenu.xaml.cs">
       <DependentUpon>UserLoginMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShortBreakWindow.xaml.cs">
+    <Compile Include="Views\Windows\ShortBreakWindow.xaml.cs">
       <DependentUpon>ShortBreakWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\HeaderMenuViewModel.cs" />
@@ -175,11 +247,11 @@
     <Compile Include="ViewModels\ShortLongBreakTimeRemainingViewModel.cs" />
     <Compile Include="ViewModels\StatsViewModel.cs" />
     <Compile Include="ViewModels\WarningPageViewModel.cs" />
-    <Page Include="LongBreakWindow.xaml">
+    <Page Include="Views\Windows\LongBreakWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -187,35 +259,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\CustomPause.xaml">
+    <Page Include="Views\Pages\CustomPause.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Donate.xaml">
+    <Page Include="Views\Pages\Donate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FeedbackPage.xaml">
+    <Page Include="Views\Pages\FeedbackPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\MainPage.xaml">
+    <Page Include="Views\Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Settings.xaml">
+    <Page Include="Views\Pages\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Statistics.xaml">
+    <Page Include="Views\Pages\Statistics.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\WarningPage.xaml">
+    <Page Include="Views\Pages\WarningPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -235,10 +307,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\Controls\TranslatorInfo.xaml">
+    <Page Include="Views\Controls\TranslatorInfo.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Controls\WaveCircle.xaml">
+    <Page Include="Views\Controls\WaveCircle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -257,15 +329,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Menus\EyesGuardTaskbarIcon.xaml">
+    <Page Include="Views\Menus\EyesGuardTaskbarIcon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Resources\Menus\HeaderMenu.xaml">
+    <Page Include="Views\Menus\HeaderMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources\Menus\UserLoginMenu.xaml">
+    <Page Include="Views\Menus\UserLoginMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -307,7 +379,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ShortBreakWindow.xaml">
+    <Page Include="Views\Windows\ShortBreakWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

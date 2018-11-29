@@ -10,8 +10,8 @@ namespace EyesGuard.ViewModels
 {
     public class HeaderMenuViewModel : INotifyPropertyChanged
     {
-
         private bool _isTimeItemChecked = true;
+
         public bool IsTimeItemChecked
         {
             get { return _isTimeItemChecked; }
@@ -23,6 +23,7 @@ namespace EyesGuard.ViewModels
         }
 
         private bool manualBreakEnabled = true;
+
         public bool ManualBreakEnabled
         {
             get { return manualBreakEnabled; }
@@ -34,6 +35,7 @@ namespace EyesGuard.ViewModels
         }
 
         private bool isFeedbackAvailable = true;
+
         public bool IsFeedbackAvailable
         {
             get { return isFeedbackAvailable; }
@@ -45,6 +47,7 @@ namespace EyesGuard.ViewModels
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         public void OnPropertyChanged([CallerMemberName]string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
