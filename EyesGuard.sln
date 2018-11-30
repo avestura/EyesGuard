@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyesGuard", "EyesGuard\EyesGuard.csproj", "{C9BF8494-EC16-4090-82E5-208CF56216D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyesGuard", "Source\EyesGuard.csproj", "{C9BF8494-EC16-4090-82E5-208CF56216D4}"
 EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "EyesGuardPackage", "EyesGuardPackage\EyesGuardPackage.wapproj", "{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "StorePackage", "StorePackage\StorePackage.wapproj", "{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

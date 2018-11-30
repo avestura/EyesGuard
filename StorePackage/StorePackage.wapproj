@@ -51,7 +51,7 @@
     <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>EyesGuardPackage_StoreKey.pfx</PackageCertificateKeyFile>
-    <EntryPointProjectUniqueName>..\EyesGuard\EyesGuard.csproj</EntryPointProjectUniqueName>
+    <EntryPointProjectUniqueName>..\Source\EyesGuard.csproj</EntryPointProjectUniqueName>
     <PackageCertificateThumbprint>6CA2131F7F4CAFF19E82661C77BE6AD4FE1EE4FC</PackageCertificateThumbprint>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
@@ -143,7 +143,7 @@
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EyesGuard\EyesGuard.csproj" />
+    <ProjectReference Include="..\Source\EyesGuard.csproj" />
   </ItemGroup>
   <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
 </Project>
