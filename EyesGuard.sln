@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyesGuard", "Source\EyesGuard.csproj", "{C9BF8494-EC16-4090-82E5-208CF56216D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyesGuard", "Source\EyesGuard\EyesGuard.csproj", "{C9BF8494-EC16-4090-82E5-208CF56216D4}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "StorePackage", "StorePackage\StorePackage.wapproj", "{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EyesGuard.Data", "Source\EyesGuard.Data\EyesGuard.Data.fsproj", "{406BF8C5-A261-4C2F-A647-175C373C5B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,24 @@ Global
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Release|x86.ActiveCfg = Release|x86
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Release|x86.Build.0 = Release|x86
 		{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}.Release|x86.Deploy.0 = Release|x86
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|Any CPU.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|Any CPU.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|x64.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|x64.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|x86.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.AzureDevOps|x86.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|x64.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Debug|x86.Build.0 = Debug|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|x64.ActiveCfg = Release|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|x64.Build.0 = Release|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|x86.ActiveCfg = Release|Any CPU
+		{406BF8C5-A261-4C2F-A647-175C373C5B59}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
