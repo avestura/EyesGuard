@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:fa="http://schemas.fontawesome.io/icons/"
-    xmlns:local="clr-namespace:EyesGuard.Resources.Images">
+    xmlns:fa="http://schemas.fontawesome.io/icons/">
 
     <fa:ImageAwesome
         x:Key="HastiUI.Menus.UserLoginMenu.Login"

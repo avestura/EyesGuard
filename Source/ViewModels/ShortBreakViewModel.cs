@@ -1,47 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EyesGuard.ViewModels
+﻿namespace EyesGuard.ViewModels
 {
-    public class ShortBreakViewModel : INotifyPropertyChanged
+    public class ShortBreakViewModel : ViewModelBase
     {
-        private string shortMessage = "";
+        public ShortBreakViewModel()
+        {
+            ShortMessage = string.Empty; ;
+            TimeRemaining = string.Empty; ;
+        }
+
         public string ShortMessage
         {
-            get
-            {
-                return shortMessage;
-            }
-            set
-            {
-                shortMessage = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => ShortMessage); }
+            set { SetValue(() => ShortMessage, value); }
         }
 
-        private string timeRemaining = "";
         public string TimeRemaining
         {
-            get
-            {
-                return timeRemaining;
-            }
-            set
-            {
-                timeRemaining = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => TimeRemaining); }
+            set { SetValue(() => TimeRemaining, value); }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string propName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
+    
     }
 }

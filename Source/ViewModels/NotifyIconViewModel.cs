@@ -1,88 +1,61 @@
-﻿using EyesGuard.Extensions;
-using FormatWith;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormatWith;
 using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace EyesGuard.ViewModels
 {
-    public class NotifyIconViewModel : INotifyPropertyChanged
+    public class NotifyIconViewModel : ViewModelBase
     {
-        private SolidColorBrush darkBrush = Brushes.Green;
-        private SolidColorBrush lowBrush = Brushes.Green;
-        private ImageSource source;
-        private Visibility startProtectVisibility;
-        private Visibility stopProtectVisibility;
-        private string title = string.Empty;
+
         private string _nextShortBreak;
         private string _nextLongBreak;
-        private Visibility _pausedVisibility = Visibility.Collapsed;
         private string _pauseRemaining;
 
+        public NotifyIconViewModel()
+        {
+            Title = string.Empty;
+            DarkBrush = Brushes.Green;
+            LowBrush = Brushes.Green;
+            PausedVisibility = Visibility.Collapsed;
+            NextLongBreak = string.Empty;
+            NextShortBreak = string.Empty;
+            PauseRemaining = string.Empty;
+        }
+
         public SolidColorBrush DarkBrush {
-            get => darkBrush;
-            set
-            {
-                darkBrush = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => DarkBrush); }
+            set { SetValue(() => DarkBrush, value); }
         }
 
         public SolidColorBrush LowBrush
         {
-            get => lowBrush;
-            set
-            {
-                lowBrush = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => LowBrush); }
+            set { SetValue(() => LowBrush, value); }
         }
 
         public ImageSource Source
         {
-            get => source;
-            set
-            {
-                source = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => Source); }
+            set { SetValue(() => Source, value); }
         }
+
 
         public Visibility StartProtectVisibility
         {
-            get => startProtectVisibility;
-            set
-            {
-                startProtectVisibility = value;
-                OnPropertyChanged();
-            }
+           get { return GetValue(() => StartProtectVisibility); }
+           set { SetValue(() => StartProtectVisibility, value); }
         }
 
         public Visibility StopProtectVisibility
         {
-            get => stopProtectVisibility;
-            set
-            {
-                stopProtectVisibility = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => StopProtectVisibility); }
+            set { SetValue(() => StopProtectVisibility, value); }
         }
 
         public string Title
         {
-            get => title;
-            set
-            {
-                title = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => Title); }
+            set { SetValue(() => Title, value); }
         }
 
         public string NextShortBreak
@@ -90,8 +63,7 @@ namespace EyesGuard.ViewModels
             get => _nextShortBreak;
             set
             {
-                _nextShortBreak = value;
-                OnPropertyChanged();
+                SetField(ref _nextShortBreak, value);
                 OnPropertyChanged(nameof(NextShortBreakFullText));
             }
         }
@@ -101,20 +73,15 @@ namespace EyesGuard.ViewModels
             get => _nextLongBreak;
             set
             {
-                _nextLongBreak = value;
-                OnPropertyChanged();
+                SetField(ref _nextLongBreak, value);
                 OnPropertyChanged(nameof(NextLongBreakFullText));
             }
         }
 
         public Visibility PausedVisibility
         {
-            get => _pausedVisibility;
-            set
-            {
-                _pausedVisibility = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => PausedVisibility); }
+            set { SetValue(() => PausedVisibility, value); }
         }
 
         public string PauseRemaining
@@ -122,8 +89,7 @@ namespace EyesGuard.ViewModels
             get => _pauseRemaining;
             set
             {
-                _pauseRemaining = value;
-                OnPropertyChanged();
+                SetField(ref _pauseRemaining, value);
                 OnPropertyChanged(nameof(PauseRemainingFullText));
             }
         }
@@ -148,11 +114,5 @@ namespace EyesGuard.ViewModels
 
         public string TooltipTitle => App.LocalizedEnvironment.Translation.Application.HeaderTitle;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string propName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
     }
 }

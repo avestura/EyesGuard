@@ -1,89 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EyesGuard.ViewModels
+﻿namespace EyesGuard.ViewModels
 {
-    public class StatsViewModel : INotifyPropertyChanged
+    public class StatsViewModel : ViewModelBase
     {
-        private long shortCount = 0;
         public long ShortCount
         {
-            get
-            {
-                return shortCount;
-            }
-            set
-            {
-                shortCount = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => ShortCount); }
+            set { SetValue(() => ShortCount, value); }
         }
 
-        private long longCompletedCount = 0;
         public long LongCompletedCount
         {
-            get
-            {
-                return longCompletedCount;
-            }
-            set
-            {
-                longCompletedCount = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => LongCompletedCount); }
+            set { SetValue(() => LongCompletedCount, value); }
         }
 
-        private long longfailedCount = 0;
         public long LongFailedCount
         {
-            get
-            {
-                return longfailedCount;
-            }
-            set
-            {
-                longfailedCount = value;
-                OnPropertyChanged();
-            }
+
+            get { return GetValue(() => LongFailedCount); }
+            set { SetValue(() => LongFailedCount, value); }
         }
 
-        private long pauseCount = 0;
         public long PauseCount
         {
-            get
-            {
-                return pauseCount;
-            }
-            set
-            {
-                pauseCount = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => PauseCount); }
+            set { SetValue(() => PauseCount, value); }
         }
 
-        private long stopCount = 0;
         public long StopCount
         {
-            get
-            {
-                return stopCount;
-            }
-            set
-            {
-                stopCount = value;
-                OnPropertyChanged();
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string propName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+            get { return GetValue(() => PauseCount); }
+            set { SetValue(() => PauseCount, value); }
         }
     }
 }
