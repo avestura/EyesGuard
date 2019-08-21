@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 namespace EyesGuard.ViewModels
 {
     /// <summary>
-    /// Base class for all the viewmodels. 
+    /// Base class for all the viewmodels.
     /// Implements INotifyPropertyChanged
     /// main idea from http://web.archive.org/web/20121105051845/http://dotnet-forum.de/blogs/thearchitect/archive/2012/11/01/die-optimale-implementierung-des-inotifypropertychanged-interfaces.aspx
     /// </summary>
@@ -16,7 +16,7 @@ namespace EyesGuard.ViewModels
     {
         private readonly Dictionary<string, object> propertyValueStorage;
 
-    
+
         public ViewModelBase()
         {
             this.propertyValueStorage = new Dictionary<string, object>();
