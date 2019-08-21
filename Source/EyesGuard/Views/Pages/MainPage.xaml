@@ -3,18 +3,18 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:c="clr-namespace:EyesGuard.Views.Controls"
+    xmlns:converter="clr-namespace:EyesGuard.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:lang="clr-namespace:EyesGuard.Localization"
     xmlns:local="clr-namespace:EyesGuard.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:converter="clr-namespace:EyesGuard.Converters"
-    xmlns:lang="clr-namespace:EyesGuard.Localization"
     x:Name="page"
     Title="{lang:LocalizedString 'EyesGuard.ControlPanel.Title'}"
     d:DesignHeight="450"
     d:DesignWidth="550"
-    FlowDirection="{lang:LocalizedFlowDirection}"
     Background="#FF006A9F"
+    FlowDirection="{lang:LocalizedFlowDirection}"
     FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
@@ -30,14 +30,14 @@
                 <Grid Height="250">
                     <c:WaveCircle
                         CircleArea="200"
-                        WaveStroke="White"
                         IsSignaling="True"
-                        MaximumSignalArea="250" />
+                        MaximumSignalArea="250"
+                        WaveStroke="White" />
                     <c:WaveCircle
                         CircleArea="200"
-                        WaveStroke="White"
                         IsSignaling="True"
-                        MaximumSignalArea="220" />
+                        MaximumSignalArea="220"
+                        WaveStroke="White" />
 
                     <c:GuardButton
                         x:Name="GuardUIButton"
