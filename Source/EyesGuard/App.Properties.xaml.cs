@@ -46,7 +46,7 @@ namespace EyesGuard
 
         public static bool AppIsInIdleState =>
             Configuration.SystemIdleDetectionEnabled
-            && CurrentMainPage.ProtectionState == GuardStates.Protecting
+            && CurrentMainPage?.ProtectionState == GuardStates.Protecting
             && SystemIdleDetector.IsSystemIdle();
 
         public static bool TimersAreEligibleToCountdown => !(IsProtectionPaused || AppIsInIdleState);
