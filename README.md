@@ -35,15 +35,15 @@ You can contribute to software development and/or create translations for the ap
 ### How to contribute to translating app
 **Adding a new Language:**
 
-1. Go to [Localization/Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/Localization/Languages) folder and create a new json file with name `{StandardCountryCode}.json` like `en-US.json` or `fa-IR.json`. Here is a [List of country codes](https://azuliadesigns.com/list-net-culture-country-codes/) you can pick.
-2. Copy the content of `en-US.json` to the new created file.
-3. In the meta part of json edit the `Translators` array. Remove the existing translators in the copied file and just put information of yourself.
+1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) folder and create a new yaml file with name `{StandardCountryCode}.yml` like `en-US.yml` or `fa-IR.yml`. Here is a [List of country codes](https://azuliadesigns.com/list-net-culture-country-codes/) you can pick.
+2. Copy the content of `en-US.yml` to the new created file.
+3. In the meta part of yaml edit the `Translators` array. Remove the existing translators in the copied file and just put information of yourself.
 4. Translate the `Translation` section of file and make a PR!
 
 **Modifying a translation file:**
 
-1. Go to [Localization/Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/Localization/Languages) and find the language you want to edit using its standard locale.
-2. In the meta part of json and in the `Translators` array, add yourself as a new translator without removing others from the list.
+1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) and find the language you want to edit using its standard locale.
+2. In the meta part of yaml and in the `Translators` array, add yourself as a new translator without removing others from the list.
 3. Make your changes in the `Translation` section and make a PR!
 
 **RTL Languages**
