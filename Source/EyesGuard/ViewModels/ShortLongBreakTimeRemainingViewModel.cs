@@ -45,7 +45,8 @@ namespace EyesGuard.ViewModels
 
             set
             {
-                if (SetField(ref _protectionPause, value))
+                SetField(ref _protectionPause, value);
+                if (value)
                 {
                     PauseVisibility = Visibility.Visible;
                     LongShortVisibility = Visibility.Collapsed;
