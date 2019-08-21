@@ -12,7 +12,7 @@ namespace EyesGuard
     public partial class App
     {
         private static bool _isProtectionPaused = false;
-        private const int EyesGuardIdleDetectionThreshold = 80;
+        private const int EyesGuardIdleDetectionThreshold = 70;
 
         /// <summary>
         /// Used in <see cref="App.GetShortWindowMessage()"/> to get appropriate message from string resources
