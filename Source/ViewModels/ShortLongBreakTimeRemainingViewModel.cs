@@ -1,84 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace EyesGuard.ViewModels
 {
-    public class ShortLongBreakTimeRemainingViewModel : INotifyPropertyChanged
+    public class ShortLongBreakTimeRemainingViewModel : ViewModelBase
     {
-        private string _nextShortBreak = "";
-        public string NextShortBreak {
-            get
-            {
-                return _nextShortBreak;
-            }
-            set
-            {
-                _nextShortBreak = value;
-                OnPropertyChanged();
-            }
+        public ShortLongBreakTimeRemainingViewModel()
+        {
+           NextShortBreak = string.Empty; ;
+           NextLongBreak = string.Empty; ;
+           PauseTime = string.Empty; ;
+           TimeRemainingVisibility = Visibility.Visible;
         }
 
-        private string _nextLongBreak = "";
+       
+        public string NextShortBreak {
+            get { return GetValue(() => NextShortBreak); }
+            set { SetValue(() => NextShortBreak, value); }
+        }
+
+       
         public string NextLongBreak
         {
-            get
-            {
-                return _nextLongBreak;
-            }
-            set
-            {
-                _nextLongBreak = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => NextLongBreak); }
+            set { SetValue(() => NextLongBreak, value); }
         }
 
-        private string _pauseTime = "";
+
         public string PauseTime
         {
-            get
-            {
-                return _pauseTime;
-            }
-            set
-            {
-                _pauseTime = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => PauseTime); }
+            set { SetValue(() => PauseTime, value); }
         }
 
-        private Visibility _timeRemainVisibility = Visibility.Visible;
         public Visibility TimeRemainingVisibility
         {
-            get
-            {
-                return _timeRemainVisibility;
-            }
-            set
-            {
-                _timeRemainVisibility = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => TimeRemainingVisibility); }
+            set { SetValue(() => TimeRemainingVisibility, value); }
         }
 
         private bool _protectionPause = false;
         public bool IsProtectionPaused
         {
-            get
-            {
-                return _protectionPause;
-            }
+            get => _protectionPause;
+
             set
             {
-                _protectionPause = value;
-                OnPropertyChanged();
-
-                if (_protectionPause)
+                if (SetField(ref _protectionPause, value))
                 {
                     PauseVisibility = Visibility.Visible;
                     LongShortVisibility = Visibility.Collapsed;
@@ -88,37 +55,32 @@ namespace EyesGuard.ViewModels
                     PauseVisibility = Visibility.Collapsed;
                     LongShortVisibility = Visibility.Visible;
                 }
-                OnPropertyChanged("PauseVisibility");
-                OnPropertyChanged("LongShortVisibility");
+
+                OnPropertyChanged(nameof(PauseVisibility));
+                OnPropertyChanged(nameof(LongShortVisibility));
             }
         }
 
         public Visibility PauseVisibility { get; set; } = Visibility.Collapsed;
 
-        private Visibility _longShortVisibility { get; set; } = Visibility.Visible;
+        private Visibility longShortVisibility { get; set; } = Visibility.Visible;
         public Visibility LongShortVisibility {
-            get { return _longShortVisibility; }
+            get => longShortVisibility; 
             set {
-                _longShortVisibility = value;
+                longShortVisibility = value;
                 OnPropertyChanged();
             }
         }
 
-        private Visibility _idleVisibility { get; set; } = Visibility.Collapsed;
+        private Visibility idleVisibility { get; set; } = Visibility.Collapsed;
         public Visibility IdleVisibility
         {
-            get { return _idleVisibility; }
+            get => idleVisibility;
             set
             {
-                _idleVisibility = value;
+                idleVisibility = value;
                 OnPropertyChanged();
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged([CallerMemberName]string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -1,51 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace EyesGuard.ViewModels
 {
-    public class LongBreakWindowViewModel : INotifyPropertyChanged
+    public class LongBreakWindowViewModel : ViewModelBase
     {
-        private string timeRemaining = "";
+        public LongBreakWindowViewModel()
+        {
+            TimeRemaining = string.Empty;
+            CanCancel = Visibility.Visible;
+        }
 
         public string TimeRemaining
         {
-            get
-            {
-                return timeRemaining;
-            }
-            set
-            {
-                timeRemaining = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => TimeRemaining); }
+            set { SetValue(() => TimeRemaining, value); }
         }
-
-        private Visibility _canCancel = Visibility.Visible;
 
         public Visibility CanCancel
         {
-            get
-            {
-                return _canCancel;
-            }
-            set
-            {
-                _canCancel = value;
-                OnPropertyChanged();
-            }
-        }
+            get { return GetValue(() => CanCancel); }
+            set { SetValue(() => CanCancel, value); }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void OnPropertyChanged([CallerMemberName]string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -1,56 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EyesGuard.ViewModels
+﻿namespace EyesGuard.ViewModels
 {
-    public class HeaderMenuViewModel : INotifyPropertyChanged
+    public class HeaderMenuViewModel : ViewModelBase
     {
-        private bool _isTimeItemChecked = true;
-
+       
+        public HeaderMenuViewModel()
+        {
+            IsTimeItemChecked = true;
+            ManualBreakEnabled = true;
+            IsFeedbackAvailable = true;
+        }
         public bool IsTimeItemChecked
         {
-            get { return _isTimeItemChecked; }
-            set
-            {
-                _isTimeItemChecked = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => IsTimeItemChecked); }
+            set { SetValue(() => IsTimeItemChecked, value); }
         }
-
-        private bool manualBreakEnabled = true;
 
         public bool ManualBreakEnabled
         {
-            get { return manualBreakEnabled; }
-            set
-            {
-                manualBreakEnabled = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => ManualBreakEnabled); }
+            set { SetValue(() => ManualBreakEnabled, value); }
         }
-
-        private bool isFeedbackAvailable = true;
 
         public bool IsFeedbackAvailable
         {
-            get { return isFeedbackAvailable; }
-            set
-            {
-                isFeedbackAvailable = value;
-                OnPropertyChanged();
-            }
+            get { return GetValue(() => IsFeedbackAvailable); }
+            set { SetValue(() => IsFeedbackAvailable, value); }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+       
     }
 }
