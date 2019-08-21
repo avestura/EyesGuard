@@ -1,4 +1,5 @@
-﻿using EyesGuard.Extensions;
+﻿using EyesGuard.Data;
+using EyesGuard.Extensions;
 using EyesGuard.Localization;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard
 {
@@ -108,18 +110,19 @@ namespace EyesGuard
 
         private void InitalizeLocalizedEnvironment()
         {
-            string @default = LanguageLoader.DefaultLocale;
+            string @default = FsLanguageLoader.DefaultLocale;
             var currentLocale = Configuration.ApplicationLocale;
+            CurrentLocale = new CultureInfo(currentLocale);
 
             if (currentLocale == @default)
             {
-                LocalizedEnvironment = LanguageLoader.DefaultEnvironment;
+                LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
                 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
                 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
             }
-            if (currentLocale.IsCultureSupportedAndExists())
+            if (FsLanguageLoader.IsCultureSupportedAndExists(currentLocale))
             {
-                LocalizedEnvironment = LanguageLoader.CreateEnvironment(currentLocale);
+                LocalizedEnvironment = FsLanguageLoader.CreateEnvironment(currentLocale);
                 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(currentLocale);
                 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(currentLocale);
             }
@@ -127,7 +130,7 @@ namespace EyesGuard
             {
                 Configuration.ApplicationLocale = @default;
                 Configuration.SaveSettingsToFile();
-                LocalizedEnvironment = LanguageLoader.DefaultEnvironment;
+                LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
                 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
                 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
             }

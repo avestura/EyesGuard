@@ -1,0 +1,8 @@
+source https://api.nuget.org/v3/index.json
+
+nuget FSharp.Core
+nuget FontAwesome.WPF 4.7.0.9 prerelease restriction: >= net40
+nuget FormatWith 2.2.1 prerelease restriction: >= net471
+nuget FSharp.Configuration 2.0.0-alpha2 prerelease
+nuget Hardcodet.NotifyIcon.Wpf 1.0.8 prerelease restriction: >= net452
+nuget Newtonsoft.Json 11.0.2 prerelease restriction: >= net471

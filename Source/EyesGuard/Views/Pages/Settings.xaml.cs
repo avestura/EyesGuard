@@ -20,7 +20,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using static EyesGuard.Localization.LanguageLoader;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard.Views.Pages
 {
@@ -56,7 +56,7 @@ namespace EyesGuard.Views.Pages
             FillShortMessages();
 
             LanguagesCombo.SelectedItem =
-                LanguagesBriefData.Value.First(x => x.Name == App.LocalizedEnvironment.Meta.CurrentCulture.Name);
+                FsLanguageLoader.LanguagesBriefData.Value.First(x => x.Name == App.CurrentLocale.Name);
 
             shortGapHours.Text   = App.Configuration.ShortBreakGap.Hours.ToString();
             shortGapMinutes.Text = App.Configuration.ShortBreakGap.Minutes.ToString();
@@ -104,7 +104,7 @@ namespace EyesGuard.Views.Pages
 
         private void FillComboBoxWithLanguages()
         {
-            LanguagesCombo.ItemsSource = LanguagesBriefData.Value;
+            LanguagesCombo.ItemsSource = FsLanguageLoader.LanguagesBriefData.Value;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -208,7 +208,7 @@ namespace EyesGuard.Views.Pages
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
-                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? LanguageLoader.DefaultLocale;
+                    App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? FsLanguageLoader.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
 
                     if (!App.Configuration.UseLanguageProvedidShortMessages)
@@ -274,8 +274,8 @@ namespace EyesGuard.Views.Pages
             try
             {
                 MaintainersLinks.Inlines.Clear();
-                var translators = LanguageLoader.LoadMeta(((LanguageHolder)LanguagesCombo.SelectedItem).Name).Meta.Translators;
-                for (int i = 0; i < translators.Length; i++)
+                var translators = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name).Meta.Translators;
+                for (int i = 0; i < translators.Count; i++)
                 {
                     var translator = translators[i];
                     var link = new Hyperlink(new Run(translator.Name));
@@ -285,7 +285,7 @@ namespace EyesGuard.Views.Pages
                         {
                             TranslatorName = translator.Name,
                             GitHubUsername = (string.IsNullOrWhiteSpace(translator.GitHubUsername)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoAccount : $"@{translator.GitHubUsername}",
-                            WebsiteUrl = (string.IsNullOrWhiteSpace(translator.Website)) ?App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoWebsite : translator.Website,
+                            WebsiteUrl = (string.IsNullOrWhiteSpace(translator.Website.ToString())) ?App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoWebsite : translator.Website.ToString(),
                             Notes = (string.IsNullOrWhiteSpace(translator.Notes)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoNotes : translator.Notes
                         },
                         PlacementTarget = MaintainersLinks,
@@ -296,9 +296,9 @@ namespace EyesGuard.Views.Pages
                     MaintainersLinks.Inlines.Add(popup);
                     link.Click += (s, ev) => popup.IsOpen = !popup.IsOpen;
                     MaintainersLinks.Inlines.Add(link);
-                    if (i != translators.Length - 1)
+                    if (i != translators.Count - 1)
                     {
-                        MaintainersLinks.Inlines.Add(new Run($" {App.LocalizedEnvironment.Meta.CurrentCulture.TextInfo.ListSeparator} ")
+                        MaintainersLinks.Inlines.Add(new Run($" {App.CurrentLocale.TextInfo.ListSeparator} ")
                         {
                             Foreground = Brushes.White,
                             FontSize = 12

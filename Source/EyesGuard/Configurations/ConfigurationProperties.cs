@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using static EyesGuard.App;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard.Configurations
 {
@@ -108,7 +109,7 @@ namespace EyesGuard.Configurations
             }
         }
 
-        public string ApplicationLocale { get; set; } = LanguageLoader.DefaultLocale;
+        public string ApplicationLocale { get; set; } = FsLanguageLoader.DefaultLocale;
 
         public bool UseLanguageProvedidShortMessages { get; set; } = true;
 

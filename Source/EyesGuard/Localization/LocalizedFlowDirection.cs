@@ -1,5 +1,4 @@
-﻿using EyesGuard.Localization.ApplicationStrings;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -8,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard.Localization
 {
@@ -22,12 +22,12 @@ namespace EyesGuard.Localization
         public LocalizedFlowDirection()
         {
             if (App.LocalizedEnvironment is LocalizedEnvironment env) {
-                FlowDirection = env.Meta.CurrentCulture.TextInfo.IsRightToLeft ?
+                FlowDirection = App.CurrentLocale.TextInfo.IsRightToLeft ?
                     FlowDirection.RightToLeft :
                     FlowDirection.LeftToRight;
             }
 
-            Locale = LanguageLoader.DefaultLocale;
+            Locale = FsLanguageLoader.DefaultLocale;
         }
 
         public LocalizedFlowDirection(string locale)
@@ -40,7 +40,7 @@ namespace EyesGuard.Localization
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
             {
-                return new CultureInfo(LanguageLoader.DefaultLocale).TextInfo.IsRightToLeft ?
+                return new CultureInfo(FsLanguageLoader.DefaultLocale).TextInfo.IsRightToLeft ?
                     (FlowDirection.RightToLeft) :
                     (FlowDirection.LeftToRight);
             }

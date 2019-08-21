@@ -115,7 +115,7 @@ namespace EyesGuard.Views.Menus
         {
             var aboutBase = App.LocalizedEnvironment.Translation.Application.About;
             App.ShowWarning(
-                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n   {aboutBase.Content.Repo}"
+                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n"
                 , WarningPage.PageStates.About);
         }
 
@@ -133,7 +133,7 @@ namespace EyesGuard.Views.Menus
         {
             var aboutBase = App.LocalizedEnvironment.Translation.Application.About;
             App.ShowWarning(
-                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n   {aboutBase.Content.Repo}"
+                $"{aboutBase.Content.InnerTitle}\n\n   {aboutBase.Content.PublisherInfo}\n"
                 , WarningPage.PageStates.About);
         }
 

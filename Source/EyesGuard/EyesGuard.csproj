@@ -13,8 +13,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,8 +41,6 @@
   <PropertyGroup>
     <ApplicationIcon>EyeGuard.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup />
-  <PropertyGroup />
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
@@ -67,18 +64,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
-      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
-    </Reference>
-    <Reference Include="FormatWith, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FormatWith.2.2.1\lib\netstandard2.0\FormatWith.dll</HintPath>
-    </Reference>
-    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -142,55 +127,6 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ImageSourceToVisisbilityConverter.cs" />
     <Compile Include="Extensions\PropertyValueDeepDiveExtension.cs" />
-    <Compile Include="Localization\ApplicationStrings\About.cs" />
-    <Compile Include="Localization\ApplicationStrings\AboutContent.cs" />
-    <Compile Include="Localization\ApplicationStrings\AlertPages.cs" />
-    <Compile Include="Localization\ApplicationStrings\Application.cs" />
-    <Compile Include="Localization\ApplicationStrings\ApplicationNotifications.cs" />
-    <Compile Include="Localization\ApplicationStrings\BeforeDonation.cs" />
-    <Compile Include="Localization\ApplicationStrings\BeforeDonationContent.cs" />
-    <Compile Include="Localization\ApplicationStrings\BreaksMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\ControlPanel.cs" />
-    <Compile Include="Localization\ApplicationStrings\CustomPause.cs" />
-    <Compile Include="Localization\ApplicationStrings\Donate.cs" />
-    <Compile Include="Localization\ApplicationStrings\DonationButtonClicked.cs" />
-    <Compile Include="Localization\ApplicationStrings\DonationButtonClickedContent.cs" />
-    <Compile Include="Localization\ApplicationStrings\EyesGuard.cs" />
-    <Compile Include="Localization\ApplicationStrings\EyesGuardMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\EyesGuardNotifications.cs" />
-    <Compile Include="Localization\ApplicationStrings\Feedback.cs" />
-    <Compile Include="Localization\ApplicationStrings\FeedbackContent.cs" />
-    <Compile Include="Localization\ApplicationStrings\FirstLaunch.cs" />
-    <Compile Include="Localization\ApplicationStrings\GuardStatus.cs" />
-    <Compile Include="Localization\ApplicationStrings\HeaderMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\HelpMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\LanguageSettings.cs" />
-    <Compile Include="Localization\ApplicationStrings\LongBreak.cs" />
-    <Compile Include="Localization\ApplicationStrings\LongBreakAlert.cs" />
-    <Compile Include="Localization\ApplicationStrings\Menu.cs" />
-    <Compile Include="Localization\ApplicationStrings\Meta.cs" />
-    <Compile Include="Localization\ApplicationStrings\MetaPhantom.cs" />
-    <Compile Include="Localization\ApplicationStrings\PauseTime.cs" />
-    <Compile Include="Localization\ApplicationStrings\Resources.cs" />
-    <Compile Include="Localization\ApplicationStrings\ResourcesContent.cs" />
-    <Compile Include="Localization\ApplicationStrings\Settings.cs" />
-    <Compile Include="Localization\ApplicationStrings\Shellextensions.cs" />
-    <Compile Include="Localization\ApplicationStrings\ShortBreak.cs" />
-    <Compile Include="Localization\ApplicationStrings\StatsPage.cs" />
-    <Compile Include="Localization\ApplicationStrings\StatsSettings.cs" />
-    <Compile Include="Localization\ApplicationStrings\TaskbarIcon.cs" />
-    <Compile Include="Localization\ApplicationStrings\TimeManipulation.cs" />
-    <Compile Include="Localization\ApplicationStrings\TimeRemaining.cs" />
-    <Compile Include="Localization\ApplicationStrings\TimeSeparators.cs" />
-    <Compile Include="Localization\ApplicationStrings\TimeSettings.cs" />
-    <Compile Include="Localization\ApplicationStrings\ToolsMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\Translation.cs" />
-    <Compile Include="Localization\ApplicationStrings\Translator.cs" />
-    <Compile Include="Localization\ApplicationStrings\UserManager.cs" />
-    <Compile Include="Localization\ApplicationStrings\UserSettings.cs" />
-    <Compile Include="Localization\ApplicationStrings\ViewMenu.cs" />
-    <Compile Include="Localization\ApplicationStrings\WarningPage.cs" />
-    <Compile Include="Localization\ApplicationStrings\WarnPageTitles.cs" />
     <Compile Include="Localization\LocalizedFlowDirection.cs" />
     <Compile Include="Localization\LocalizedString.cs" />
     <Compile Include="Views\Controls\TranslatorInfo.xaml.cs">
@@ -198,8 +134,6 @@
     </Compile>
     <Compile Include="Extensions\ResourceExtensions.cs" />
     <Compile Include="IdleDetector.cs" />
-    <Compile Include="Localization\LanguageLoader.cs" />
-    <Compile Include="Localization\ApplicationStrings\LocalizedEnvironment.cs" />
     <Compile Include="Views\Windows\LongBreakWindow.xaml.cs">
       <DependentUpon>LongBreakWindow.xaml</DependentUpon>
     </Compile>
@@ -405,13 +339,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="EyesGuard_KEY_Sign.pfx" />
-    <None Include="Localization\Languages\fa-IR.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Localization\Languages\en-US.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="packages.config" />
+    <None Include="paket.references" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -469,5 +397,105 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EyesGuard.Data\EyesGuard.Data.fsproj">
+      <Project>{406bf8c5-a261-4c2f-a647-175c373c5b59}</Project>
+      <Name>EyesGuard.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.0' Or $(TargetFrameworkVersion) == 'v4.0.3' Or $(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="FontAwesome.WPF">
+          <HintPath>..\..\packages\FontAwesome.WPF\lib\net40\FontAwesome.WPF.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="FormatWith">
+          <HintPath>..\..\packages\FormatWith\lib\netstandard2.0\FormatWith.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="FSharp.Configuration">
+          <HintPath>..\..\packages\FSharp.Configuration\lib\net45\FSharp.Configuration.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="YamlDotNet">
+          <HintPath>..\..\packages\FSharp.Configuration\lib\net45\YamlDotNet.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="($(TargetFrameworkIdentifier) == 'MonoAndroid' And ($(TargetFrameworkVersion) == 'v8.0' Or $(TargetFrameworkVersion) == 'v8.1' Or $(TargetFrameworkVersion) == 'v9.0')) Or ($(TargetFrameworkIdentifier) == '.NETCoreApp' And ($(TargetFrameworkVersion) == 'v2.0' Or $(TargetFrameworkVersion) == 'v2.1' Or $(TargetFrameworkVersion) == 'v2.2' Or $(TargetFrameworkVersion) == 'v3.0')) Or ($(TargetFrameworkIdentifier) == '.NETStandard' And ($(TargetFrameworkVersion) == 'v2.0' Or $(TargetFrameworkVersion) == 'v2.1')) Or ($(TargetFrameworkIdentifier) == '.NETCore' And $(TargetFrameworkVersion) == 'v5.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.iOS') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
+      <ItemGroup>
+        <Reference Include="FSharp.Configuration">
+          <HintPath>..\..\packages\FSharp.Configuration\lib\netstandard2.0\FSharp.Configuration.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+        <Reference Include="YamlDotNet">
+          <HintPath>..\..\packages\FSharp.Configuration\lib\netstandard2.0\YamlDotNet.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5' Or $(TargetFrameworkVersion) == 'v4.5.1' Or $(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="FSharp.Core">
+          <HintPath>..\..\packages\FSharp.Core\lib\net45\FSharp.Core.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="($(TargetFrameworkIdentifier) == 'MonoAndroid' And ($(TargetFrameworkVersion) == 'v8.0' Or $(TargetFrameworkVersion) == 'v8.1' Or $(TargetFrameworkVersion) == 'v9.0')) Or ($(TargetFrameworkIdentifier) == '.NETCoreApp' And ($(TargetFrameworkVersion) == 'v2.0' Or $(TargetFrameworkVersion) == 'v2.1' Or $(TargetFrameworkVersion) == 'v2.2' Or $(TargetFrameworkVersion) == 'v3.0')) Or ($(TargetFrameworkIdentifier) == '.NETStandard' And ($(TargetFrameworkVersion) == 'v2.0' Or $(TargetFrameworkVersion) == 'v2.1')) Or ($(TargetFrameworkIdentifier) == '.NETCore' And $(TargetFrameworkVersion) == 'v5.0') Or ($(TargetFrameworkIdentifier) == 'Xamarin.iOS') Or ($(TargetFrameworkIdentifier) == 'Xamarin.Mac')">
+      <ItemGroup>
+        <Reference Include="FSharp.Core">
+          <HintPath>..\..\packages\FSharp.Core\lib\netstandard2.0\FSharp.Core.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.5.2' Or $(TargetFrameworkVersion) == 'v4.5.3' Or $(TargetFrameworkVersion) == 'v4.6' Or $(TargetFrameworkVersion) == 'v4.6.1' Or $(TargetFrameworkVersion) == 'v4.6.2' Or $(TargetFrameworkVersion) == 'v4.6.3' Or $(TargetFrameworkVersion) == 'v4.7' Or $(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="Hardcodet.Wpf.TaskbarNotification">
+          <HintPath>..\..\packages\Hardcodet.NotifyIcon.Wpf\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Choose>
+    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And ($(TargetFrameworkVersion) == 'v4.7.1' Or $(TargetFrameworkVersion) == 'v4.7.2' Or $(TargetFrameworkVersion) == 'v4.8')">
+      <ItemGroup>
+        <Reference Include="Newtonsoft.Json">
+          <HintPath>..\..\packages\Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll</HintPath>
+          <Private>True</Private>
+          <Paket>True</Paket>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
 </Project>

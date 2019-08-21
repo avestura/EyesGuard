@@ -3,8 +3,10 @@ using EyesGuard.Configurations;
 using EyesGuard.Views.Pages;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Threading;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard
 {
@@ -22,7 +24,9 @@ namespace EyesGuard
 
         public static Configuration Configuration { get; set; } = new Configuration();
 
-        public static Localization.ApplicationStrings.LocalizedEnvironment LocalizedEnvironment { get; set; }
+        public static LocalizedEnvironment LocalizedEnvironment { get; set; }
+
+        public static CultureInfo CurrentLocale { get; private set; }
 
         public static bool LaunchMinimized { get; set; } = true;
 

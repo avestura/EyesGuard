@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{863768C3-1B3F-4A6F-838A-9B6C93D2360A}"
+	ProjectSection(SolutionItems) = preProject
+		paket.dependencies = paket.dependencies
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyesGuard", "Source\EyesGuard\EyesGuard.csproj", "{C9BF8494-EC16-4090-82E5-208CF56216D4}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "StorePackage", "StorePackage\StorePackage.wapproj", "{38192ACA-5EF1-403A-A842-F1B7EBE7CB0E}"

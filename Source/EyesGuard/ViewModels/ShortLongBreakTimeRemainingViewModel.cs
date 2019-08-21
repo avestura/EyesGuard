@@ -12,13 +12,13 @@ namespace EyesGuard.ViewModels
            TimeRemainingVisibility = Visibility.Visible;
         }
 
-       
+
         public string NextShortBreak {
             get { return GetValue(() => NextShortBreak); }
             set { SetValue(() => NextShortBreak, value); }
         }
 
-       
+
         public string NextLongBreak
         {
             get { return GetValue(() => NextLongBreak); }
@@ -64,8 +64,9 @@ namespace EyesGuard.ViewModels
         public Visibility PauseVisibility { get; set; } = Visibility.Collapsed;
 
         private Visibility longShortVisibility { get; set; } = Visibility.Visible;
+
         public Visibility LongShortVisibility {
-            get => longShortVisibility; 
+            get => longShortVisibility;
             set {
                 longShortVisibility = value;
                 OnPropertyChanged();

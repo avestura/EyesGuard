@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
+using EyesGuard.Data;
+using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard.Localization
 {
@@ -24,13 +26,13 @@ namespace EyesGuard.Localization
         public LocalizedString()
         {
             Value = string.Empty;
-            Locale = LanguageLoader.DefaultLocale;
+            Locale = FsLanguageLoader.DefaultLocale;
         }
 
         public LocalizedString(string key)
         {
             Value = key;
-            Locale = LanguageLoader.DefaultLocale;
+            Locale = FsLanguageLoader.DefaultLocale;
         }
 
         public LocalizedString(string key, string locale)
@@ -43,7 +45,8 @@ namespace EyesGuard.Localization
         {
             if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
             {
-                var env = LanguageLoader.CreateEnvironment(Locale, designMode: true);
+                var env = FsLanguageLoader.CreateEnvironment(Locale, designMode: true);
+
                 return env.Translation.GetPropValue<string>(Value);
             }
 

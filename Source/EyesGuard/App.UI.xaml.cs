@@ -33,7 +33,7 @@ namespace EyesGuard
                 Configuration.CustomShortMessages;
 
             ShortMessageIteration++;
-            ShortMessageIteration %= messagesBase.Length;
+            ShortMessageIteration %= messagesBase.Count;
 
             return messagesBase[ShortMessageIteration];
         }

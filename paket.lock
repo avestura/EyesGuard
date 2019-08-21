@@ -1,0 +1,10 @@
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FontAwesome.WPF (4.7.0.9) - restriction: >= net40
+    FormatWith (2.2.1) - restriction: >= net471
+    FSharp.Configuration (2.0.0-alpha2)
+      FSharp.Core (>= 4.0.0.1) - restriction: >= net45
+      FSharp.Core (>= 4.3.4) - restriction: && (< net45) (>= netstandard2.0)
+    FSharp.Core (4.7)
+    Hardcodet.NotifyIcon.Wpf (1.0.8) - restriction: >= net452
+    Newtonsoft.Json (11.0.2) - restriction: >= net471
