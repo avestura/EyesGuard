@@ -57,7 +57,6 @@ module LanguageLoader =
         |> Array.map Path.GetFileNameWithoutExtension
 
     let languagesBriefData =
-        let y = localizationFilesPath
         let items = localeFiles
                     |> Array.filter isCultureSupported
                     |> Array.map CultureInfo
