@@ -17,16 +17,15 @@ module LanguageLoader =
 
     type LocalizedEnvironment = YamlConfig<defaultLocaleAddress>
 
-    let localizationFilesPath =
-        Path.Combine [|AppDomain.CurrentDomain.BaseDirectory; "Languages" |]
+    let localizationDirectoryPath designMode =
+        if designMode then Path.Combine [| CompilerInfo.CompilerDirectory; "Languages" |]
+        else Path.Combine [|AppDomain.CurrentDomain.BaseDirectory; "Languages" |]
 
     let supportedCultures =
         CultureInfo.GetCultures(CultureTypes.AllCultures)
         |> Array.map (fun x -> x.Name)
 
-    let getLocalePath locale designMode =
-        if designMode then Path.Combine [|CompilerInfo.CompilerDirectory; "Languages"; sprintf "%s.yml" locale|]
-        else Path.Combine [|localizationFilesPath; sprintf "%s.yml" locale|]
+    let getLocalePath locale designMode = Path.Combine [|localizationDirectoryPath designMode; sprintf "%s.yml" locale|]
 
     let localeFileExists locale designMode =
         getLocalePath locale designMode
@@ -52,12 +51,12 @@ module LanguageLoader =
 
     type LanguageHolder = { Name : string; NativeName : string }
 
-    let localeFiles =
-        Directory.GetFiles (localizationFilesPath, "*.yml", SearchOption.TopDirectoryOnly)
+    let localeFiles designMode =
+        Directory.GetFiles (localizationDirectoryPath designMode, "*.yml", SearchOption.TopDirectoryOnly)
         |> Array.map Path.GetFileNameWithoutExtension
 
-    let languagesBriefData =
-        let items = localeFiles
+    let languagesBriefData designMode =
+        let items = localeFiles designMode
                     |> Array.filter isCultureSupported
                     |> Array.map CultureInfo
                     |> Array.map (fun x -> {
@@ -71,6 +70,6 @@ module LanguageLoader =
     type FsLanguageLoader() =
         static member DefaultLocale = defaultLocale
         static member CreateEnvironment (locale, [<Optional;DefaultParameterValue(false)>]designMode) = createEnvironment locale designMode
-        static member LanguagesBriefData = languagesBriefData
+        static member LanguagesBriefData ([<Optional;DefaultParameterValue(false)>]designMode)  = languagesBriefData designMode
         static member DefaultEnvironment = defaultEnvironment
         static member IsCultureSupportedAndExists (locale, [<Optional;DefaultParameterValue(false)>] designMode) = isCultureSupportedAndExists locale designMode

@@ -114,25 +114,34 @@ namespace EyesGuard
             var currentLocale = Configuration.ApplicationLocale;
             CurrentLocale = new CultureInfo(currentLocale);
 
-            if (currentLocale == @default)
+            if (DesignerExtensions.IsRunningInVisualStudioDesigner)
             {
-                LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
+                LocalizedEnvironment = FsLanguageLoader.CreateEnvironment(currentLocale, designMode: true);
                 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
                 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
-            }
-            if (FsLanguageLoader.IsCultureSupportedAndExists(currentLocale))
-            {
-                LocalizedEnvironment = FsLanguageLoader.CreateEnvironment(currentLocale);
-                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(currentLocale);
-                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(currentLocale);
             }
             else
             {
-                Configuration.ApplicationLocale = @default;
-                Configuration.SaveSettingsToFile();
-                LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
-                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
-                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
+                if (currentLocale == @default)
+                {
+                    LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
+                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
+                    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
+                }
+                if (FsLanguageLoader.IsCultureSupportedAndExists(currentLocale))
+                {
+                    LocalizedEnvironment = FsLanguageLoader.CreateEnvironment(currentLocale);
+                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(currentLocale);
+                    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(currentLocale);
+                }
+                else
+                {
+                    Configuration.ApplicationLocale = @default;
+                    Configuration.SaveSettingsToFile();
+                    LocalizedEnvironment = FsLanguageLoader.DefaultEnvironment;
+                    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo(@default);
+                    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo(@default);
+                }
             }
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EyesGuard.Extensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -21,7 +22,9 @@ namespace EyesGuard.Localization
 
         public LocalizedFlowDirection()
         {
-            if (App.LocalizedEnvironment is LocalizedEnvironment env) {
+
+            if (App.LocalizedEnvironment is LocalizedEnvironment env)
+            {
                 FlowDirection = App.CurrentLocale.TextInfo.IsRightToLeft ?
                     FlowDirection.RightToLeft :
                     FlowDirection.LeftToRight;
@@ -38,13 +41,14 @@ namespace EyesGuard.Localization
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
-            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+            if (DesignerExtensions.IsRunningInVisualStudioDesigner)
             {
                 return new CultureInfo(FsLanguageLoader.DefaultLocale).TextInfo.IsRightToLeft ?
                     (FlowDirection.RightToLeft) :
                     (FlowDirection.LeftToRight);
             }
             return FlowDirection;
+
         }
     }
 }

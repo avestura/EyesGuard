@@ -56,7 +56,9 @@ namespace EyesGuard.Views.Pages
             FillShortMessages();
 
             LanguagesCombo.SelectedItem =
-                FsLanguageLoader.LanguagesBriefData.Value.First(x => x.Name == App.CurrentLocale.Name);
+              FsLanguageLoader.LanguagesBriefData(DesignerExtensions.IsRunningInVisualStudioDesigner)
+              .Value
+              .First(x => x.Name == App.CurrentLocale.Name);
 
             shortGapHours.Text   = App.Configuration.ShortBreakGap.Hours.ToString();
             shortGapMinutes.Text = App.Configuration.ShortBreakGap.Minutes.ToString();
@@ -104,7 +106,9 @@ namespace EyesGuard.Views.Pages
 
         private void FillComboBoxWithLanguages()
         {
-            LanguagesCombo.ItemsSource = FsLanguageLoader.LanguagesBriefData.Value;
+            LanguagesCombo.ItemsSource = FsLanguageLoader
+                .LanguagesBriefData(DesignerExtensions.IsRunningInVisualStudioDesigner)
+                .Value;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
