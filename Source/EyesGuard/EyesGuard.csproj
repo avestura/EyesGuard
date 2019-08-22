@@ -85,6 +85,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Extensions\DesignerExtensions.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\Animations\BlinkAnimations.cs" />
     <Compile Include="Views\Animations\MarginFadeAnimations.cs" />

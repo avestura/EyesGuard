@@ -43,7 +43,8 @@ namespace EyesGuard.Localization
 
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
-            if (DesignerProperties.GetIsInDesignMode(new DependencyObject()))
+
+            if (DesignerExtensions.IsRunningInVisualStudioDesigner)
             {
                 var env = FsLanguageLoader.CreateEnvironment(Locale, designMode: true);
 
