@@ -49,3 +49,23 @@ You can contribute to software development and/or create translations for the ap
 **RTL Languages**
 
 For right-to-left languages like Persian, Arabic, etc. It is not needed to explicitly state language layout in the meta section. Simply use a standard country code, and the app automatically detects if it has right-to-left direction or not and changes the design of elements in app.
+
+## Solution Structure
+
+| Project Name   | Language | Description                                  |
+|----------------|----------|----------------------------------------------|
+| EyesGuard      | C#       | Main Application                             |
+| EyesGuard.Data | F#       | Type Provider and Data Access / Translations |
+| StorePackage   |          | Used to publish WPF app into Store           |
+
+## Build
+
+You need [Paket Package manager for .NET](https://fsprojects.github.io/Paket) to restore the packages.
+
+```powershell
+git clone https://github.com/0xaryan/EyesGuard
+cd .\EyesGuard
+paket install
+cd .\Source\EyesGuard
+dotnet run
+```
