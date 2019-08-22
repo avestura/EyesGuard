@@ -45,12 +45,11 @@ You can contribute to software development and/or create translations for the ap
 1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) and find the language you want to edit using its standard locale.
 2. In the meta part of yaml and in the `Translators` array, add yourself as a new translator without removing others from the list.
 3. Make your changes in the `Translation` section and make a PR!
-
-**RTL Languages**
+📜 **RTL Languages**
 
 For right-to-left languages like Persian, Arabic, etc. It is not needed to explicitly state language layout in the meta section. Simply use a standard country code, and the app automatically detects if it has right-to-left direction or not and changes the design of elements in app.
 
-## Solution Structure
+## 📐 Solution Structure
 
 | Project Name   | Language | Description                                  |
 |----------------|----------|----------------------------------------------|
@@ -58,7 +57,7 @@ For right-to-left languages like Persian, Arabic, etc. It is not needed to expli
 | EyesGuard.Data | F#       | Type Provider and Data Access / Translations |
 | StorePackage   |          | Used to publish WPF app into Store           |
 
-## Build
+## 🔨 Build
 
 You need [Paket Package manager for .NET](https://fsprojects.github.io/Paket) to restore the packages.
 
