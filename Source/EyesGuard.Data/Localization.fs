@@ -25,8 +25,8 @@ module LanguageLoader =
         |> Array.map (fun x -> x.Name)
 
     let getLocalePath locale designMode =
-          if designMode then Path.Combine [|CompilerInfo.CompilerDirectory; "Languages"; sprintf "%s.yml" locale|]
-          else Path.Combine [|localizationFilesPath; sprintf "%s.yml" locale|]
+        if designMode then Path.Combine [|CompilerInfo.CompilerDirectory; "Languages"; sprintf "%s.yml" locale|]
+        else Path.Combine [|localizationFilesPath; sprintf "%s.yml" locale|]
 
     let localeFileExists locale designMode =
         getLocalePath locale designMode
@@ -40,7 +40,6 @@ module LanguageLoader =
         (localeFileExists locale designMode) && (isCultureSupported locale)
 
     let createEnvironment locale designmode =
-        let path = getLocalePath locale designmode
         if isCultureSupportedAndExists locale designmode then
             let lang = LocalizedEnvironment()
             let path = getLocalePath locale designmode
