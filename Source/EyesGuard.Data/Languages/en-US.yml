@@ -113,7 +113,7 @@ Translation:
         ForceUserToolTip: If you enable this option, you can't postpone or exit the
           break. Also, your mouse pointer will hide during the break.
         OnlyOneShortBreak: Show only one short-break between two long-breaks.
-        OnlyOneShortBreakToolTip: Activing this option stops counter of the short-break
+        OnlyOneShortBreakToolTip: Activating this option stops counter of the short-break
           after one completed successfully until a long-break.
         StartupApplication: Start Eyes Guard with system startup
         StartupApplicationToolTip: Eyes Guard starts with system boot by default.
@@ -141,7 +141,7 @@ Translation:
         Title: Language
         SelectLanguage: 'Select Language:'
         MaintainMessage: 'This language is maintained by: '
-        RestartRequired: Chaning language takes effect in next start
+        RestartRequired: Changing language takes effect in next start
         MessagesFromLangFile: Use language file as Short-break messages source
         MessagesFromLangFileToolTip: If you enable this option, the language file
           provides the messages that appear in the Short-break window
