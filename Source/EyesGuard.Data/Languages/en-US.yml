@@ -5,6 +5,10 @@ Meta:
     GitHubUsername: 0xaryan
     Website: https://aryan.software
     Notes: ''
+  - Name: Gianpaolo Filippa
+    GitHubUsername: gianpaolof
+    Website: 'https://github.com/gianpaolof'
+    Notes: ''
 Translation:
   Application:
     OSTitle: Eyes Guard
