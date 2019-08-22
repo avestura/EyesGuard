@@ -3,7 +3,7 @@ Meta:
   Translators:
   - Name: Gianpaolo Filippa
     GitHubUsername: gianpaolof
-    Website:
+    Website: 'https://github.com/gianpaolof'
     Notes: ''
 Translation:
   Application:
@@ -129,7 +129,7 @@ Translation:
         NoKeepData: No, conserva i dati
         StatsDeleted: Tutte le statistiche sono state cancellate
         StoreStats: Memorizza le statistiche
-        StoreStatsToolTip: Eyes Guard memorizzerà alcune informazioni sull'utlizzo che puoi vedere 
+        StoreStatsToolTip: Eyes Guard memorizzerà alcune informazioni sull'utlizzo che puoi vedere
           in Strumenti >> menu Statistiche. Questi dati sono memorizzati in locale sul tuo PC.
         ClearStatsText: 'Rimuovi lo storico delle statistiche:'
         ClearStats: Rimuovi i dati
