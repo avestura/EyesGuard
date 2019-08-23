@@ -1,11 +1,12 @@
-Eyes Guard
-===
-Windows Application for protecting you eyes 
+<p align="center"><a href="https://kutt.it" title="kutt.it"><img width="200" height="200" src="UWPAssets/400x400.png" alt="Kutt.it"></a></p>
 
+# Eyes Guard <img align="left" src="UWPAssets/71x71.png">
+
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Download-green)](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
 [![BuitlWithDot.Net shield](https://builtwithdot.net/project/41/eyes-guard/badge)](https://builtwithdot.net/project/41/eyes-guard)
+![platform](https://img.shields.io/badge/platform-UWP%20%7C%20Win32-blue)
 [![Build status](https://aryansoftware.visualstudio.com/Eyes%20Guard/_apis/build/status/Eyes%20Guard-.NET%20Desktop-CI)](https://aryansoftware.visualstudio.com/Eyes%20Guard/_build/latest?definitionId=3)
 
-<a href='//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge'><img width="250" src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge'/></a>
 
 ## Screenshots
 #### Control Panel
@@ -45,7 +46,8 @@ You can contribute to software development and/or create translations for the ap
 1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) and find the language you want to edit using its standard locale.
 2. In the meta part of yaml and in the `Translators` array, add yourself as a new translator without removing others from the list.
 3. Make your changes in the `Translation` section and make a PR!
-📜 **RTL Languages**
+
+📜 **RTL Languages**
 
 For right-to-left languages like Persian, Arabic, etc. It is not needed to explicitly state language layout in the meta section. Simply use a standard country code, and the app automatically detects if it has right-to-left direction or not and changes the design of elements in app.
 
