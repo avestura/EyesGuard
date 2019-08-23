@@ -31,11 +31,20 @@ Eyes Guard is a Windows Application for protecting your eyes. It will help you (
 | Timing Customization     | ✔ Implemented        | ✔ Yes                    |
 | Stas                     | ✔ Implemented        | ✔ Yes                    |
 | Pause or Stop protection | ✔ Implemented        | ✔ Yes                    |
+| Windows Tray Integration | ✔ Implemented        | ✔ Yes                    |
 | Auto Start               | ✔ Implemented        | ✔ Yes                    |
 | Customize messages       | ✔ Implemented        | ⌛ Under Review           |
 | Multi-language           | ✔ Implemented        | ⌛ Under Review           |
 
+## How can I help?
 
+Eyes Guard is a free and open-source app. If you like it, please consider:
+
+- ⭐ Star this project in GitHub
+- 📝 Write a review in [Microsoft Store page of Eyes Guard](https://www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
+- [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P011XLE)
+- 👩‍💻 Contribute to Software Development of Eyes Guard
+- ✏ Translate app to your language using guide below
 
 ## Can I contribute?
 
