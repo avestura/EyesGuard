@@ -1,5 +1,3 @@
-<p align="center"><a href="https://kutt.it" title="kutt.it"><img width="300" height="300" src="UWPAssets/400x400.png" alt="Kutt.it"></a></p>
-
 # Eyes Guard <img align="left" width="120" height="120" src="UWPAssets/150x150.png">
 
 [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Download-green)](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
@@ -8,8 +6,10 @@
 [![Build status](https://aryansoftware.visualstudio.com/Eyes%20Guard/_apis/build/status/Eyes%20Guard-.NET%20Desktop-CI)](https://aryansoftware.visualstudio.com/Eyes%20Guard/_build/latest?definitionId=3)
 
 
+<br>
 
 ## Screenshots
+
 #### Control Panel
 ![Eyes Guard](Screenshots/Store/main.JPG)
 #### Settings
