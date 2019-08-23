@@ -59,7 +59,7 @@ You can contribute to software development and/or create translations for the ap
 
 Adding a new Language:
 
-1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) folder and create a new yaml file with name `{StandardCountryCode}.yml` like `en-US.yml` or `fa-IR.yml`. Here is a [List of country codes](https://azuliadesigns.com/list-net-culture-country-codes/) you can pick.
+1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) folder and create a new yaml file with name `{StandardCountryCode}.yml` like `en-US.yml` or `fa-IR.yml`. Here is a [List of country codes](CountryCodes.md) you can pick.
 2. Copy the content of `en-US.yml` to the new created file.
 3. In the meta part of yaml edit the `Translators` array. Remove the existing translators in the copied file and just put information of yourself.
 4. Translate the `Translation` section of file and make a PR!
