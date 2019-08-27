@@ -9,6 +9,10 @@ Meta:
     GitHubUsername: gianpaolof
     Website: 'https://github.com/gianpaolof'
     Notes: ''
+  - Name: Akash Joshi
+    GitHubUsername: akash-joshi
+    Website: https://akashj.com
+    Notes: ''
 Translation:
   Application:
     OSTitle: Eyes Guard
@@ -34,7 +38,7 @@ Translation:
         InnerTitle: About Eyes Guard
         PublisherInfo: 'Publisher: Aryan Software'
     Donate:
-      PageTitle: Donate Eyes Guard
+      PageTitle: Donate to Eyes Guard
       BeforeDonation:
         Content:
           InnerTitle: Would you like to Donate?
