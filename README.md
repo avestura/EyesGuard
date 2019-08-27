@@ -33,8 +33,8 @@ Eyes Guard is a Windows Application for protecting your eyes. It will help you (
 | Pause or Stop protection | ✔ Implemented        | ✔ Yes                    |
 | Windows Tray Integration | ✔ Implemented        | ✔ Yes                    |
 | Auto Start               | ✔ Implemented        | ✔ Yes                    |
-| Customize messages       | ✔ Implemented        | ⌛ Under Review           |
-| Multi-language           | ✔ Implemented        | ⌛ Under Review           |
+| Customize messages       | ✔ Implemented        | ✔ Yes                    |
+| Multi-language           | ✔ Implemented        | ✔ Yes                    |
 
 ## How can I help?
 
