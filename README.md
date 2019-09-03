@@ -82,7 +82,7 @@ For right-to-left languages like Persian, Arabic, etc. It is not needed to expli
 
 | Project Name   | Language | Description                                  |
 |----------------|----------|----------------------------------------------|
-| EyesGuard      | C#       | Main Application                             |
+| EyesGuard      | C#       | Main Application (at the time of starting project I didn't know F# to write the app entirely in F#)|
 | EyesGuard.Data | F#       | Type Provider and Data Access / Translations |
 | StorePackage   |          | Used to publish WPF app into Store           |
 
