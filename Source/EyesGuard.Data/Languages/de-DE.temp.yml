@@ -1,0 +1,239 @@
+---
+Meta:
+  Translators:
+  - Name: Akash Joshi
+    GitHubUsername: akash-joshi
+    Website: https://akashj.com
+    Notes: ''
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard unterstützt derzeit keine Mehrbenutzerfunktionen.
+    HelpPageText: Um weitere Informationen zu einem Element in der App zu erhalten, bewegen Sie die Maus über das Element. Ein Tooltip sollte geöffnet sein, falls verfügbar.
+    DoNotRunMultipleInstances: Eyes Guard läuft bereits. Sie können nicht mehrere Instanzen dieser Software ausführen.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard rennt.
+        Message: Eyes Guard läuft im Hintergrund. Sie können die Benutzeroberfläche und andere anzeigen
+        Optionen mit dem Schildsymbol in der Taskleiste.
+    Resources:
+      PageTitle: Ressourcen
+      Content:
+        Icons: 'Icons: FontAwesome und IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (Entwickelt von Aryan Software)'
+    About:
+      PageTitle: Über
+      Content:
+        InnerTitle: Über Eyes Guard
+        PublisherInfo: 'Verleger: Aryan Software'
+    Donate:
+      PageTitle: Spende an Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Möchten Sie spenden?
+          Message: Wenn Sie diese kostenlose Open-Source-Software unterstützen möchten, können Sie dies
+          benutze dieses Formular.
+          ButtonText: Öffnen Sie die Spenden-Website im Browser
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Spenden
+          Thanks: Danke für deine Unterstützung!
+          Redirect: Sie werden zu einer Spendenseite in Ihrem Browser weitergeleitet
+          FeedbackNotice: Wenn Sie Kommentare haben, können Sie diese auf der Eyes Guard-Seite veröffentlichen an Microsoft Store.
+    Feedback:
+      PageTitle: Feedback
+      Content:
+        InnerTitle: Feedback
+        Message: You can create an issue in the project's GtiHub page and track changes
+          related to it.
+        ButtonText: Create a new Issue
+  EyesGuard:
+    ControlPanel:
+      Title: Control Panel
+    GuardStatus:
+      Running: Your eyes are under protection
+      Paused: Eyes Guard is temporarily disabled
+      Stopped: Eyes Guard is disabled
+      Idle: Eyes Guard paused due to system idle detection
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} seconds until short-break."
+        Minutes: "{Minutes} minutes until short-break."
+      LongBreak:
+        Seconds: "{Seconds} seconds until long-break"
+        Minutes: "{Minutes} minutes until long-break"
+      PauseTime:
+        Seconds: Eyes Guard is disabled for {Seconds} seconds
+        Minutes: Eyes Guard is disabled for {Minutes} minutes
+    CustomPause:
+      PageTitle: Custom Pause
+      Message: Enter the desired pause time
+      ButtonText: Pause
+    WarningPage:
+      ButtonText: Return
+    OperationFailed: Operation failed
+    CheckInput: Check input validiation.
+    TimeManipulation:
+      HoursLimit: Hours field must not be more than {Hours}
+      MinutesLimit: Minutes field must not be more than {Minutes}
+      SecondsLimit: Seconds field must not be more than {Seconds}
+      SGapMorethanLGap: Gap between two short-break must be smaller than the gap between
+        two long-break.
+      SDurationMorethanLDuration: Short-break duration must be smaller than long-break
+        duration.
+      SDurationTooHigh: Short-break can not be more than 5 minutes.
+      LDurationTooHigh: Long-break can not be more than 2 hours.
+      NotEnoughGapBetweenLandS: Not enough gap between short-break and long-break.
+      ShortGapLow: Gap between two short-breaks must be at least 1 minutes.
+      LongGapLow: Gap between two long-breaks must be at least 5 minutes.
+      ChooseLargerTime: Please choose a larger time.
+    Settings:
+      Title: Settings
+      SavedSuccessfully: Settings successfully saved
+      AreYouSure: Are you sure?
+      LanguageSection: Language
+      TimeSeparators:
+        Hour: Hour(s) and
+        Minutes: Minute(s) and
+        Second: Second(s)
+      SaveSettings: Save changes
+      TimeSettings:
+        Title: Time Settings
+        GapBetweenTwoShortBreak: 'Time gap between two Short-break:'
+        GapBetweenTwoLongBreak: 'Time gap between two Long-break:'
+        ShortBreakDuration: 'Short-break duration:'
+        LongBreakDuration: 'Long-break duration:'
+      UserSettings:
+        Title: User Settings
+        ForceUser: Force me to break
+        ForceUserToolTip: If you enable this option, you can't postpone or exit the
+          break. Also, your mouse pointer will hide during the break.
+        OnlyOneShortBreak: Show only one short-break between two long-breaks.
+        OnlyOneShortBreakToolTip: Activating this option stops counter of the short-break
+          after one completed successfully until a long-break.
+        StartupApplication: Start Eyes Guard with system startup
+        StartupApplicationToolTip: Eyes Guard starts with system boot by default.
+          You can disable this feature from TaskManager >> Startup Tab.
+        AlertBeforeLongBreak: Notify me 1 minute before long-break
+        AlertBeforeLongBreakToolTip: Eyes Guard notifies you one minute before a long-break.
+        SystemIdle: Pause Eyes Guard when system detected as idle
+        SystemIdleToolTip:
+        - Eyes Guard uses system idle detection to detect if you are away from your
+          PC.
+        - In this mode, Eyes Guard automatically pauses down-counting.
+        - Notice that this feature can disable guarding your eyes when you are not
+          interacting with your PC, for example when watching movies.
+      StatsSettings:
+        Title: Stats
+        YesDeleteData: Yes, Sure
+        NoKeepData: No, Keep data
+        StatsDeleted: All of stats deleted
+        StoreStats: Store stats
+        StoreStatsToolTip: Eyes Guard will store some info about your usage that you
+          can see in Tools >> Stats menu. These data are stored locally in your machine.
+        ClearStatsText: 'Remove history of stats:'
+        ClearStats: Remove data
+      LanguageSettings:
+        Title: Language
+        SelectLanguage: 'Select Language:'
+        MaintainMessage: 'This language is maintained by: '
+        RestartRequired: Changing language takes effect in next start
+        MessagesFromLangFile: Use language file as Short-break messages source
+        MessagesFromLangFileToolTip: If you enable this option, the language file
+          provides the messages that appear in the Short-break window
+        AddMessage: Add Message
+        RemoveMessage: Remove Message
+        NoAccount: No Account
+        NoWebsite: No Website
+        NoNotes: No notes about translation
+        EnterNewMessage: Enter new message
+        Submit: Submit
+    Resting: Resting
+    Waiting: Waiting
+    ShortMessageSuggestions:
+    - Open and close your eyes
+    - Blink unremittingly
+    - Stare far-off
+    - Look out the window
+    - Wash your hands then massage your eyes with them
+    LongWindowMessage: It's time for a long-break. Go for a walk.
+    LongWindowCancelButton: Cancel
+    Notifications:
+      LongBreakAlert:
+        Title: 1 minute to the long-break
+        Message: There is only one minute left until long-break. You can postpone
+          this break from the taskbar context menu if nessesary.
+    WaitUnitlEndOfBreak: Please wait until break finishes.
+    LongBreakTimeRemaining: "{Hours} hour(s) and {Minutes} minutes(s) and {Seconds}
+      seconds to the end of break."
+    StatsPage:
+      Title: Stats
+      ShortBreak: Short-break
+      LongBreak: Long-break
+      Pauses: Pauses
+      ShortCount: 'Short-breaks:'
+      LongCompletedCount: 'Completed Long-breaks:'
+      LongFailedCount: 'Failed Long-breaks:'
+      PauseCount: 'Temporary pauses:'
+      StopCount: 'Stops:'
+    AlertPages:
+      Titles:
+        Attention: Attention
+        Successful: Successful
+        Error: Error
+        Info: Info
+        AboutSoftware: About Software
+        Donate: Donate
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Main Menu
+        Hide: Hide Eyes Guard
+        Exit: Exit
+      Tools:
+        Header: Tools
+        Stats: Stats
+        Settings: Settings
+      Breaks:
+        Header: Breaks
+        GoShort: Go for a short-break
+        GoLong: Go for a long-break
+      View:
+        Header: View
+        KeyTimes: Key Times
+      Help:
+        Header: Help
+        EyesGuardHelp: Eyes Guard Help
+        Resources: Resources
+        SendFeedback: Send Feedback
+        Donate: Donate
+        About: About
+    UserManager:
+      User: User
+      NotLoggedIn: Not logged in
+      NoTitle: No title
+      Login: Login
+      Profile: Profile
+      Logout: Logout
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Protecting
+      NotProtected: Not protecting
+      PausedProtected: Temporarily disabled
+      Menu:
+        PauseFor: Pause for...
+        PausedFor: Paused for {PauseRemaining}
+        NextShortBreak: 'Next Short-break: {NextShortBreak}'
+        NextLongBreak: 'Next Long-break: {NextLongBreak}'
+        ShowMainMenu: Show Main Menu
+        StartProtection: Start Protection
+        StopProtection: Stop Protection
+        FiveMins: 5 minutes
+        TenMins: 10 minutes
+        ThirtyMins: 30 minutes
+        OneHour: 1 hour
+        TwoHours: 2 hours
+        Custom: Custom...
+        Settings: Settings
+        Exit: Exit
