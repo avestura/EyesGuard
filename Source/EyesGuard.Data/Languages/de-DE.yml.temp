@@ -45,33 +45,32 @@ Translation:
       PageTitle: Feedback
       Content:
         InnerTitle: Feedback
-        Message: You can create an issue in the project's GtiHub page and track changes
-          related to it.
-        ButtonText: Create a new Issue
+        Message: Sie können ein "Issue" auf der GitHub-Seite des Projekts erstellen und Änderungen nachverfolgen im Zusammenhang damit.
+        ButtonText: Erstellen Sie eine neue "Issue"
   EyesGuard:
     ControlPanel:
-      Title: Control Panel
+      Title: Schalttafel
     GuardStatus:
-      Running: Your eyes are under protection
-      Paused: Eyes Guard is temporarily disabled
-      Stopped: Eyes Guard is disabled
-      Idle: Eyes Guard paused due to system idle detection
+      Running: Deine Augen stehen unter Schutz
+      Paused: Eyes Guard ist vorübergehend deaktiviert
+      Stopped: Eyes Guard ist deaktiviert
+      Idle: Eyes Guard wurde aufgrund einer Systemleerlauferkennung gestoppt
     TimeRemaining:
       ShortBreak:
-        Seconds: "{Seconds} seconds until short-break."
-        Minutes: "{Minutes} minutes until short-break."
+        Seconds: "{Seconds} Sekunden bis zur kurzen Pause."
+        Minutes: "{Minutes} Minuten bis zur kurzen Pause."
       LongBreak:
-        Seconds: "{Seconds} seconds until long-break"
-        Minutes: "{Minutes} minutes until long-break"
+        Seconds: "{Seconds} Sekunden bis zur langen Pause."
+        Minutes: "{Minutes} Minuten bis zur langen Pause."
       PauseTime:
-        Seconds: Eyes Guard is disabled for {Seconds} seconds
-        Minutes: Eyes Guard is disabled for {Minutes} minutes
+        Seconds: Eyes Guard ist für {Seconds} Sekunden deaktiviert
+        Minutes: Eyes Guard ist für {Minutes} Minuten deaktiviert
     CustomPause:
-      PageTitle: Custom Pause
-      Message: Enter the desired pause time
+      PageTitle: Benutzerdefinierte Pause
+      Message: Geben Sie die gewünschte Pausenzeit ein
       ButtonText: Pause
     WarningPage:
-      ButtonText: Return
+      ButtonText: Rückkehr
     OperationFailed: Operation failed
     CheckInput: Check input validiation.
     TimeManipulation:
