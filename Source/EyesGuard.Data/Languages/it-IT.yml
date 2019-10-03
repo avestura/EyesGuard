@@ -47,7 +47,7 @@ Translation:
       PageTitle: Commenti
       Content:
         InnerTitle: Commenti
-        Message: Puoi creare una issue nella pagina GtiHub del progetto e tenere traccia delle modifiche
+        Message: Puoi creare una issue nella pagina GitHub del progetto e tenere traccia delle modifiche
           collegate.
         ButtonText: Crea una nuova Issue
   EyesGuard:
