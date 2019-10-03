@@ -56,7 +56,7 @@ Translation:
       PageTitle: Feedback
       Content:
         InnerTitle: Feedback
-        Message: You can create an issue in the project's GtiHub page and track changes
+        Message: You can create an issue in the project's GitHub page and track changes
           related to it.
         ButtonText: Create a new Issue
   EyesGuard:
