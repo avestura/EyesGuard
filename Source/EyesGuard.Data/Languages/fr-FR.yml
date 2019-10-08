@@ -107,8 +107,8 @@ Translation:
         Title: Réglages de l'heure 
         GapBetweenTwoShortBreak: 'Temps entre deux pauses courtes:'
         GapBetweenTwoLongBreak: 'Temps entre deux pauses longues:'
-        ShortBreakDuration: 'Durée d'une pause courte:'
-        LongBreakDuration: 'Durée d'une pause longue:'
+        ShortBreakDuration: "Durée d'une pause courte:"
+        LongBreakDuration: "Durée d'une pause longue:"
       UserSettings:
         Title: Paramètres utilisateur
         ForceUser: Me forcer à prendre une pause
@@ -139,7 +139,7 @@ Translation:
         StoreStatsToolTip: Eyes Guard sauvegardera certaines informations sur l'utilisation
           que vous en faites, vous pouvez les visualiser dans Outils >> Données. Ces données
           sont stockées localement sur votre machine.
-        ClearStatsText: 'Supprimer l'historique de données:'
+        ClearStatsText: "Supprimer l'historique de données:"
         ClearStats: Supprimer les données
       LanguageSettings:
         Title: Langage
