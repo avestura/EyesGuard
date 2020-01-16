@@ -13,6 +13,11 @@ Meta:
     GitHubUsername: akash-joshi
     Website: https://akashj.com
     Notes: ''
+  - Name: Thomas Rory Gummerson
+    GitHubUsername: trgwii
+    Website: https://trgwii.no
+    Notes: ''
+
 Translation:
   Application:
     OSTitle: Eyes Guard
@@ -72,8 +77,8 @@ Translation:
         Seconds: "{Seconds} seconds until short-break."
         Minutes: "{Minutes} minutes until short-break."
       LongBreak:
-        Seconds: "{Seconds} seconds until long-break"
-        Minutes: "{Minutes} minutes until long-break"
+        Seconds: "{Seconds} seconds until long-break."
+        Minutes: "{Minutes} minutes until long-break."
       PauseTime:
         Seconds: Eyes Guard is disabled for {Seconds} seconds
         Minutes: Eyes Guard is disabled for {Minutes} minutes
@@ -98,7 +103,7 @@ Translation:
       NotEnoughGapBetweenLandS: Not enough gap between short-break and long-break.
       ShortGapLow: Gap between two short-breaks must be at least 1 minutes.
       LongGapLow: Gap between two long-breaks must be at least 5 minutes.
-      ChooseLargerTime: Please choose a larger time.
+      ChooseLargerTime: Please choose a longer duration.
     Settings:
       Title: Settings
       SavedSuccessfully: Settings successfully saved
