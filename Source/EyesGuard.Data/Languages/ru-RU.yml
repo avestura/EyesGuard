@@ -1,0 +1,227 @@
+﻿---
+Meta:
+  Translators:
+  - Name: Dmitry Vorobjev
+    GitHubUsername: ExplorerOL
+    Website: https://github.com/ExplorerOL
+    Notes: 'Translation made 06.01.2020'
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard в настоящее время не поддерживает многопользовательский режим.
+    HelpPageText: Для получения дополнительной информации об элементе интерфейса программы наведите на него курсор мыши. Если для элемента было создано описание, то оно появится.
+    DoNotRunMultipleInstances: Программа Eyes Guard уже запущена. Невозможно запустить несколько копий программы одновременно.
+    Notifications:
+      FirstLaunch:
+        Title: Программа Eyes Guard работает.
+        Message: Программа Eyes Guard работает в фоновом режиме. Вы можете открыть меню программы, нажав на иконку щита в системной трее рядом с часами.
+    Resources:
+      PageTitle: Ресурсы
+      Content:
+        Icons: 'Иконки: FontAwesome и IconArchive'
+        UIKit: 'Графический интерфейс: Hasti UI Kit (разработчик - Aryan Software)'
+    About:
+      PageTitle: О программе
+      Content:
+        InnerTitle: О программе Eyes Guard
+        PublisherInfo: 'Разработчик: Aryan Software'
+    Donate:
+      PageTitle: Помочь Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Вы хотите сделать пожертвование?
+          Message: Если вы хотите поддержать данную программу с открытым исходным кодом, используйте эту форму для пожертвований.
+          ButtonText: Открыть страницу для пожертвований в браузере
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Сделать пожертвование
+          Thanks: Спасибо вам за поддержку!
+          Redirect: Вы будете переадресованы на страницу для пожертвований в интернет-браузере
+          FeedbackNotice: Вы можете оставлять комментарии на странице программы Eyes Guard в
+            Microsoft Store.
+    Feedback:
+      PageTitle: Обратная связь
+      Content:
+        InnerTitle: Обратная связь
+        Message: Вы можете сообщить о проблеме или оставить пожелание на странице программы на сайте GitHub и отслеживать статус их обработки.
+        ButtonText: Сообщить о проблеме
+  EyesGuard:
+    ControlPanel:
+      Title: Панель управления
+    GuardStatus:
+      Running: Ваши глаза под защитой
+      Paused: Программа Eyes Guard временно выключена
+      Stopped: Программа Eyes Guard выключена
+      Idle: Отсчет времени Eyes Guard приостановлени из-за отсутствия активности пользователя
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} секунд до короткого перерыва."
+        Minutes: "{Minutes} минут до короткого перерыва."
+      LongBreak:
+        Seconds: "{Seconds} секунд до длинного перерыва"
+        Minutes: "{Minutes} минут до длинного перерыва"
+      PauseTime:
+        Seconds: Программа Eyes Guard временно выключена на {Seconds} секунд
+        Minutes: Программа Eyes Guard временно выключена на {Minutes} минут
+    CustomPause:
+      PageTitle: Настраиваемая пауза
+      Message: Введите желаемое время паузы
+      ButtonText: Пауза
+    WarningPage:
+      ButtonText: Возврат
+    OperationFailed: Операция не выполнена
+    CheckInput: Проверьте правильность ввода.
+    TimeManipulation:
+      HoursLimit: Значение в поле часов не должно быть больше {Hours}
+      MinutesLimit: Значение в поле минут не должно быть больше {Minutes}
+      SecondsLimit: Значение в поле секунд не должно быть больше {Seconds}
+      SGapMorethanLGap: Временной промежуток между короткими перерывами должен быть меньше, чем временной промежуток между длинными перерывами.
+      SDurationMorethanLDuration: Длительность короткого перерыва дложна быть меньше, чем длительность длинного перерыва.
+      SDurationTooHigh: Короткий перерыв должен быть не более 5 минут.
+      LDurationTooHigh: Длинный перерыва должен быть не более 2 часов.
+      NotEnoughGapBetweenLandS: Слишком маленький временной промежуток между коротким и длинным перерывами.
+      ShortGapLow: Временной промежуток между короткими перерывами дложен быть не менее 1 минуты.
+      LongGapLow: Временной промежуток между длинными перерывами дложен быть не менее 5 минут.
+      ChooseLargerTime: Установите большее время, пожалуйста.
+    Settings:
+      Title: Настройки
+      SavedSuccessfully: Настройки успешно сохранены
+      AreYouSure: Вы уверены?
+      LanguageSection: Язык
+      TimeSeparators:
+        Hour: Часов и
+        Minutes: Минут и
+        Second: Секунд
+      SaveSettings: Сохранить изменения
+      TimeSettings:
+        Title: Настройки времени
+        GapBetweenTwoShortBreak: 'Время между короткими перерывами:'
+        GapBetweenTwoLongBreak: 'Время между длинными перерывами:'
+        ShortBreakDuration: 'Длительность короткого пререыва:'
+        LongBreakDuration: 'Длительность длинного перерыва:'
+      UserSettings:
+        Title: Пользовательские настройки
+        ForceUser: Принудительный перерыв
+        ForceUserToolTip: Если выбрана данная опция вы не сможете отложить или отменить перерыв. Также во время перерыва будет скрыт курсор мыши.
+        OnlyOneShortBreak: Один короткий перерыв между двумя длинными.
+        OnlyOneShortBreakToolTip: Данная опция останавливает счетчик коротких перерывов после успешного завешения первого из них до наступления длинного перерыва.
+        StartupApplication: Запускать Eyes Guard при загрузке системы
+        StartupApplicationToolTip: Программа Eyes Guard запускается при загрузке системы по умолчанию. Вы можете отменить данную функцию в Диспетчере задач Windows 10 на вкладке Автозагрузка.
+        AlertBeforeLongBreak: Напоминание за 1 минуту до длинного перерыва
+        AlertBeforeLongBreakToolTip: Eyes Guard напомнит о длинном перерыве за 1 минуту до его начала.
+        SystemIdle: Включать режим ожидания, если пользователь не активен
+        SystemIdleToolTip:
+        - Eyes Guard приостанавливает работу, если вы отошли от компьютера.
+        - В этом режиме программа автоматически приостанавливает отсчет времени.
+        - Обратите внимание, что эта функция может отключить защиту ваших глаз,
+          когда вы не взаимодействуете с компьютером, например, при просмотре фильмов.
+      StatsSettings:
+        Title: Статистика
+        YesDeleteData: Да, уверен
+        NoKeepData: Нет, оставить данные
+        StatsDeleted: Вся статистика удалена
+        StoreStats: Сохранить статистику
+        StoreStatsToolTip: Eyes Guard сохраняет некоторую информацию о вашем использовании компьютера. Эту информацию можно посмотреть, выбрав пункт меню Инструменты >> Меню статистики. Эти данные хранятся локально на вашем компьютере.
+        ClearStatsText: 'Удалить статистику вашей работы:'
+        ClearStats: Удалить данные
+      LanguageSettings:
+        Title: Язык
+        SelectLanguage: 'Выберите язык:'
+        MaintainMessage: 'Перевод выполнил: '
+        RestartRequired: Для изменения языка требуется перезапуск программы
+        MessagesFromLangFile: Использовать языковой файл в качестве источника для сообщений о коротком перерыве
+        MessagesFromLangFileToolTip: Если выбрана данная опция, то текст заставки короткого перерыва берется из языкового файла
+        AddMessage: Добавить сообщение
+        RemoveMessage: Удалить сообщение
+        NoAccount: Нет аккаунта
+        NoWebsite: Нет веб-сайта
+        NoNotes: Нет примечаний о переводе
+        EnterNewMessage: Ввести новое сообщение
+        Submit: Сохранить
+    Resting: Отдых
+    Waiting: Ожидание
+    ShortMessageSuggestions:
+    - Закройте и откройте ваши глаза
+    - Моргайте непрерывно
+    - Посмотрите вдаль
+    - Выгляните в окно
+    - Вымойте ваши руки, а затем сделайте массаж глаз пальцами
+    LongWindowMessage: Настало время длинного перерыва. Прогуляйтесь.
+    LongWindowCancelButton: Отмена
+    Notifications:
+      LongBreakAlert:
+        Title: До длинного перерыва осталась 1 минута
+        Message: Осталась всего одна минута до длинного перерыва. Если требуется, вы можете отложить этот перерыв из контекстного меню программы в системном трее рядом с часами.
+    WaitUnitlEndOfBreak: Пожалуйста, дождитесь окончания перерыва.
+    LongBreakTimeRemaining: "{Hours} часов и {Minutes} минут и {Seconds} секунд до конца перерыва."
+    StatsPage:
+      Title: Статистика
+      ShortBreak: Короткие перерывы
+      LongBreak: Длинные перерывы
+      Pauses: Паузы
+      ShortCount: 'Количество коротких перерывов:'
+      LongCompletedCount: 'Количество завершенных длинных перерывов:'
+      LongFailedCount: 'Количество незавершенных длинных перерывов:'
+      PauseCount: 'Количество пауз:'
+      StopCount: 'Количество остановок работы программы:'
+    AlertPages:
+      Titles:
+        Attention: Внимание
+        Successful: Успешно
+        Error: Ошибка
+        Info: Информация
+        AboutSoftware: О программе
+        Donate: Пожертвовать
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Главное меню
+        Hide: Свернуть Eyes Guard
+        Exit: Выход
+      Tools:
+        Header: Инструменты
+        Stats: Статистика
+        Settings: Настройки
+      Breaks:
+        Header: Перерывы
+        GoShort: Сделать короткий перерыв
+        GoLong: Сделать длинный перерыв
+      View:
+        Header: Вид
+        KeyTimes: Отображать оставшееся время в главном окне
+      Help:
+        Header: Помощь
+        EyesGuardHelp: Помощь по Eyes Guard
+        Resources: Ресурсы
+        SendFeedback: Сообщить о проблеме
+        Donate: Пожертвовать
+        About: О программе
+    UserManager:
+      User: Имя пользователя
+      NotLoggedIn: Пользователь не зарегистрирован
+      NoTitle: Нет имени
+      Login: Логин
+      Profile: Профиль
+      Logout: Выйти
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Защита глаз включена
+      NotProtected: Защита глаз выключена
+      PausedProtected: Защита глав временно отключена
+      Menu:
+        PauseFor: Временно отключить защиту глаз на...
+        PausedFor: Защита глаз временно отключена на {PauseRemaining}
+        NextShortBreak: 'До короткого перерывы осталось: {NextShortBreak}'
+        NextLongBreak: 'До длинного перерыва осталось: {NextLongBreak}'
+        ShowMainMenu: Главное меню
+        StartProtection: Включить защиту глаз
+        StopProtection: Отключить защиту глаз
+        FiveMins: 5 минут
+        TenMins: 10 минут
+        ThirtyMins: 30 минут
+        OneHour: 1 час
+        TwoHours: 2 часа
+        Custom: Выбрать...
+        Settings: Настройки
+        Exit: Выход
