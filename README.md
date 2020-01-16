@@ -46,6 +46,17 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 - 👩‍💻 Contribute to Software Development of Eyes Guard
 - ✏ Translate app to your language using guide below
 
+## Supported Languages
+
+| |Language|Locale|Translator|
+|-|--------|------|----------|
+|![us](https://img.icons8.com/color/48/000000/usa.png)|English|en-US|[Aryan Ebrahimpour](https://aryan.software), [Gianpaolo Filippa](https://github.com/gianpaolof), [Akash Joshi](https://akashj.com)|
+|![ir](https://img.icons8.com/color/48/000000/iran.png)|Persian|fa-IR|[Aryan Ebrahimpour](https://aryan.software)|
+|![it](https://img.icons8.com/color/48/000000/italy.png)|Italian|it-IT|[Gianpaolo Filippa](https://github.com/gianpaolof)|
+|![fr](https://img.icons8.com/color/48/000000/france.png)|French|fr-FR|[Bouillon Pierre](https://pbouillon.github.io)|
+|![ru](https://img.icons8.com/color/48/000000/russian-federation.png)|Russian|ru-RU|[Dmitry Vorobjev](https://github.com/ExplorerOL)|
+|![add](https://img.icons8.com/doodle/48/000000/add.png) <td colspan=3>[Add Language](#how-to-contribute-to-translating-app)
+
 ## Can I contribute?
 
 PRs are very welcome!
