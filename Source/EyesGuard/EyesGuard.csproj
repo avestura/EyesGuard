@@ -345,11 +345,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resources\Fonts\IranSans\IRANSans.ttf" />
-    <Resource Include="Resources\Fonts\IranSans\IRANSans_Bold.ttf" />
-    <Resource Include="Resources\Fonts\IranSans\IRANSans_Light.ttf" />
-    <Resource Include="Resources\Fonts\IranSans\IRANSans_Medium.ttf" />
-    <Resource Include="Resources\Fonts\IranSans\IRANSans_UltraLight.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir-Black.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir-Light.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Vazir\Vazir.ttf" />
     <Resource Include="Resources\Fonts\Samim\Samim-Bold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -367,18 +368,12 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Fonts\IranSans\IRANSans-Licence.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="EyeGuard.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\NonVectorIcons\Sheild-Paused.ico" />
     <Resource Include="Resources\Images\NonVectorIcons\Sheild-Protecting.ico" />
     <Resource Include="Resources\Images\NonVectorIcons\Shield-Stopped.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Fonts\IranSans\FontLicense.txt" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

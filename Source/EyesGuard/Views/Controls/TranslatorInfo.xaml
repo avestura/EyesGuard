@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:local="clr-namespace:EyesGuard.Views.Controls"
-             mc:Ignorable="d" MaxWidth="400" FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+             mc:Ignorable="d" MaxWidth="400" FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
              x:Name="this"
              MinWidth="200" >
     <Grid Background="#007ACC" >

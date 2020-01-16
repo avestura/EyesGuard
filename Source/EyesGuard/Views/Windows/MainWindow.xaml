@@ -16,7 +16,7 @@
     MinHeight="450"
     AllowsTransparency="True"
     Closing="Window_Closing"
-    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     Loaded="Window_Loaded"
     ResizeMode="CanResize"
     StateChanged="Window_StateChanged"

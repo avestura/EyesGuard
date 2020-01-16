@@ -13,7 +13,7 @@
     d:DesignHeight="500"
     d:DesignWidth="600"
     Background="#FF006A9F"
-    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     FlowDirection="{lang:LocalizedFlowDirection}"
     mc:Ignorable="d">
 

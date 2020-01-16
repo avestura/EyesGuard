@@ -34,7 +34,7 @@
             </ToolTip>
         </nf:TaskbarIcon.TrayToolTip>
         <nf:TaskbarIcon.ContextMenu>
-            <ContextMenu FlowDirection="{lang:LocalizedFlowDirection}" FontFamily="{DynamicResource HastiUI.Fonts.IRANSans}">
+            <ContextMenu FlowDirection="{lang:LocalizedFlowDirection}" FontFamily="{DynamicResource HastiUI.Fonts.AppFont}">
 
                 <MenuItem Margin="-3,-3,-3,2" StaysOpenOnClick="True">
                     <MenuItem.Template>

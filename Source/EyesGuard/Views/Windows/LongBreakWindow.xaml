@@ -15,7 +15,7 @@
     AllowsTransparency="True"
     Background="#E5000000"
     Closing="Window_Closing"
-    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     Loaded="Window_Loaded"
     ShowInTaskbar="False"
     Topmost="True"

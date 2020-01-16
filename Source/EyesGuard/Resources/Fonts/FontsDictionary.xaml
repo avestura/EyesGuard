@@ -8,6 +8,9 @@
     <FontFamily x:Key="HastiUI.Fonts.AdobeNaskhMedium">Adobe Naskh Medium, pack://application:,,,/EyesGuard;component/Resources/Fonts/#Adobe NAskh Medium</FontFamily>
     <FontFamily x:Key="HastiUI.Fonts.Samim">Samim, pack://application:,,,/EyesGuard;component/Resources/Fonts/Samim/#Samim</FontFamily>
     <FontFamily x:Key="HastiUI.Fonts.IRANSans">IRANSans, pack://application:,,,/EyesGuard;component/Resources/Fonts/IranSans/#IRANSans</FontFamily>
+    <FontFamily x:Key="HastiUI.Fonts.Vazir">Vazir, pack://application:,,,/EyesGuard;component/Resources/Fonts/Vazir/#Vazir</FontFamily>
 
+
+    <FontFamily x:Key="HastiUI.Fonts.AppFont">Vazir, pack://application:,,,/EyesGuard;component/Resources/Fonts/Vazir/#Vazir</FontFamily>
 
 </ResourceDictionary>

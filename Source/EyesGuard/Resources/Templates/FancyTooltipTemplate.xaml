@@ -21,7 +21,7 @@
                         <ContentPresenter
                                 Margin="4"
                                 VerticalAlignment="Top"
-                                TextBlock.FontFamily="{StaticResource HastiUI.Fonts.IRANSans}" />
+                                TextBlock.FontFamily="{StaticResource HastiUI.Fonts.AppFont}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="HasDropShadow" Value="true">

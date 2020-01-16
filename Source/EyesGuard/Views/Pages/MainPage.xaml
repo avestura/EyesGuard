@@ -15,7 +15,7 @@
     d:DesignWidth="550"
     Background="#FF006A9F"
     FlowDirection="{lang:LocalizedFlowDirection}"
-    FontFamily="{StaticResource HastiUI.Fonts.IRANSans}"
+    FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     Loaded="Page_Loaded"
     mc:Ignorable="d">
     <Grid>
