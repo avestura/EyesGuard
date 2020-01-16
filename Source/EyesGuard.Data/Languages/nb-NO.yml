@@ -1,0 +1,247 @@
+---
+Meta:
+  Translators:
+  - Name: Thomas Rory Gummerson
+    GitHubUsername: trgwii
+    Website: https://trgwii.no/
+    Notes: ''
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard støtter ikke funksjoner for flere brukere enda.
+    HelpPageText: For å få mer informasjon om en ting i applikasjonen kan du
+      bevege musen over den. Et tips vil dukke opp hvis tilgjengelig.
+    DoNotRunMultipleInstances: Eyes Guard kjører allerede. Du kan ikke kjøre
+      flere instanser av dette programmet.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard kjører.
+        Message: Eyes Guard kjører i bakgrunnen. Du kan åpne vinduet og se andre
+          instillinger ved å bruke ikonet i oppgavelinjen.
+    Resources:
+      PageTitle: Ressurser
+      Content:
+        Icons: 'Ikoner: FontAwesome og IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (Utviklet av Aryan Software)'
+    About:
+      PageTitle: Om
+      Content:
+        InnerTitle: Om Eyes Guard
+        PublisherInfo: 'Utgiver: Aryan Software'
+    Donate:
+      PageTitle: Donere til Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Vil du donere?
+          Message: Hvis du vil støtte dette frie programmet kan du bruke dette
+            skjemaet.
+          ButtonText: Åpne donasjonsside i nettleser
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Donere
+          Thanks: Takk for støtten!
+          Redirect: Du blir videresendt til en donasjonsside i nettleseren din
+          FeedbackNotice: Hvis du har kommentarer kan du publisere de på
+            Eyes Guard-siden på Microsoft Store.
+    Feedback:
+      PageTitle: Tilbakemelding
+      Content:
+        InnerTitle: Tilbakemelding
+        Message: Du kan lage en sak på GitHub-siden til prosjektet og se
+          oppdateringer og svar.
+        ButtonText: Lag en ny sak
+  EyesGuard:
+    ControlPanel:
+      Title: Kontrollpanel
+    GuardStatus:
+      Running: Øynene dine beskyttes
+      Paused: Eyes Guard er midlertidig deaktivert
+      Stopped: Eyes Guard er deaktivert
+      Idle: Eyes Guard satt på pause på grunn av at maskinen er inaktiv
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} sekunder til kort pause."
+        Minutes: "{Minutes} minutter til kort pause."
+      LongBreak:
+        Seconds: "{Seconds} sekunder til lang pause."
+        Minutes: "{Minutes} sekunder til lang pause."
+      PauseTime:
+        Seconds: Eyes Guard er deaktivert i {Seconds} sekunder
+        Minutes: Eyes Guard er deaktivert i {Minutes} minutter
+    CustomPause:
+      PageTitle: Egendefinert pause
+      Message: Skriv inn ønsket pausetid.
+      ButtonText: Pause
+    WarningPage:
+      ButtonText: Tilbake
+    OperationFailed: Operasjon feilet
+    CheckInput: Sjekk inputvalidering.
+    TimeManipulation:
+      HoursLimit: Time-feltet kan ikke være lenger enn {Hours}
+      MinutesLimit: Minutter-feltet kan ikke være lenger enn {Minutes}
+      SecondsLimit: Sekunder-feltet kan ikke være lenger enn {Seconds}
+      SGapMorethanLGap: Mellomrommet mellom to korte pauser må være mindre enn
+        mellomrommet mellom to lange pauser.
+      SDurationMorethanLDuration: Lengden på korte pauser må være mindre enn
+        lengden på lange pauser.
+      SDurationTooHigh: Kort pause kan ikke være mer enn 5 minutter.
+      LDurationTooHigh: Lang pause kan ikke være mer enn 2 timer.
+      NotEnoughGapBetweenLandS: Ikke nok mellomrom mellom kort pause og lang
+        pause.
+      ShortGapLow: Mellomrommet mellom to korte pauser må være minst 5 minutt.
+      LongGapLow: Mellomrommet mellom to lange pauser må være minst 5 minutter.
+      ChooseLargerTime: Vennligst velg en lenger varighet.
+    Settings:
+      Title: Innstillinger
+      SavedSuccessfully: Innstillinger lagret
+      AreYouSure: Er du sikker?
+      LanguageSection: Språk
+      TimeSeparators:
+        Hour: Time(r) og
+        Minutes: Minutt(er) og
+        Second: Sekund(er)
+      SaveSettings: Lagre endringer
+      TimeSettings:
+        Title: Tidsinnstillinger
+        GapBetweenTwoShortBreak: 'Tid mellom to korte pauser:'
+        GapBetweenTwoLongBreak: 'Tid mellom to lange pauser:'
+        ShortBreakDuration: 'Varighet for kort pause:'
+        LongBreakDuration: 'Varighet for lang pause:'
+      UserSettings:
+        Title: Brukerinnstillinger
+        ForceUser: Tving meg til å ta pause
+        ForceUserToolTip: Hvis du skrur på denne innstillingen kan du ikke
+          utsette eller avslutte pausen. I tillegg vil musepekeren din bli
+          skjult.
+        OnlyOneShortBreak: Vis kun en kort pause mellom to lange pauser.
+        OnlyOneShortBreakToolTip: Å skru på denne innstillingen stopper telleren
+          for korte pauser til etter en lang pause er ferdig.
+        StartupApplication: Start Eyes Guard sammen med systemoppstart.
+        StartupApplicationToolTip: Eyes Guard starter når maskinen starter som
+          standard. Du kan skru av denne innstillingen via Oppgavebehandling >>
+          Oppstartsfanen.
+        AlertBeforeLongBreak: Varsle meg ett minutt før lang pause
+        AlertBeforeLongBreakToolTip: Eyes Guard varsler deg ett minutt før lang
+          pause.
+        SystemIdle: Sett Eyes Guard på pause når maskinen er inaktiv
+        SystemIdleToolTip:
+        - Eyes Guard bruker systemets inaktiv-detektering for å finne ut om du
+          er borte fra maskinen.
+        - Eyes Guard vil automatisk stoppe nedtelling når maskinen er inaktiv.
+        - Merk at denne funksjonen kan forhindre Eyes Guard når du ikke utfører
+          tastetrykk eller musebevegelser, for eksempel når du ser på film.
+      StatsSettings:
+        Title: Statistikk
+        YesDeleteData: Ja, jeg er sikker
+        NoKeepData: Nei, behold dataene
+        StatsDeleted: All statistikk slettet
+        StoreStats: Lagre statistikk
+        StoreStatsToolTip: Eyes Guard lagrer noe informasjon om bruken din som
+          du kan se under Verktøy >> Statistikk. Denne informasjonen er kun
+          lagret lokalt på maskinen din.
+        ClearStatsText: 'Fjern statistikk:'
+        ClearStats: Fjern data
+      LanguageSettings:
+        Title: Språk
+        SelectLanguage: 'Velg språk:'
+        MaintainMessage: 'Dette språket er vedlikeholdt av: '
+        RestartRequired: Endring av språk trer i kraft ved neste omstart
+        MessagesFromLangFile: Bruk språkfil som kilde for kort pause meldinger
+        MessagesFromLangFileToolTip: Hvis du skrur på denne innstillingen vil
+          kort pause meldinger hentes fra språkfilen .
+        AddMessage: Legg til melding
+        RemoveMessage: Fjern melding
+        NoAccount: Ingen konto
+        NoWebsite: Ingen nettside
+        NoNotes: Ingen notater om oversettelse
+        EnterNewMessage: Skriv inn ny melding
+        Submit: Send inn
+    Resting: Hviler
+    Waiting: Venter
+    ShortMessageSuggestions:
+    - Åpne og lukk øynene
+    - Blunk mange ganger
+    - Se på noe langt unna
+    - Se ut vinduet
+    - Vask hendene og masser øynene
+    LongWindowMessage: Det er på tide med en lang pause. Ta en gåtur.
+    LongWindowCancelButton: Avbryt
+    Notifications:
+      LongBreakAlert:
+        Title: Ett minutt til lang pause
+        Message: Det er bare ett minutt til lang pause. Du kan utsette pausen
+          fra oppgavelinjen hvis det er nødvendig.
+    WaitUnitlEndOfBreak: Vennligst vent til pausen er over.
+    LongBreakTimeRemaining: "{Hours} time(r) og {Minutes} minutt(er) og
+      {Seconds} sekund(er) til pausen er over."
+    StatsPage:
+      Title: Statistikk
+      ShortBreak: Kort pause
+      LongBreak: Lang pause
+      Pauses: Pauser
+      ShortCount: 'Korte pauser:'
+      LongCompletedCount: 'Fullførte lange pauser:'
+      LongFailedCount: 'Feilede lange pauser:'
+      PauseCount: 'Midlertidige pauser:'
+      StopCount: 'Stopp:'
+    AlertPages:
+      Titles:
+        Attention: Merk
+        Successful: Vellykket
+        Error: Feil
+        Info: Info
+        AboutSoftware: Om programmet
+        Donate: Donere
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Hovedmeny
+        Hide: Skjul Eyes Guard
+        Exit: Avslutt
+      Tools:
+        Header: Verktøy
+        Stats: Statistikk
+        Settings: Innstillinger
+      Breaks:
+        Header: Pauser
+        GoShort: Ta en kort pause
+        GoLong: Ta en lang pause
+      View:
+        Header: Vis
+        KeyTimes: Viktige tidspunkter
+      Help:
+        Header: Hjelp
+        EyesGuardHelp: Eyes Guard Hjelp
+        Resources: Ressurser
+        SendFeedback: Send tilbakemelding
+        Donate: Donere
+        About: Om
+    UserManager:
+      User: Bruker
+      NotLoggedIn: Ikke innlogget
+      NoTitle: Ingen tittel
+      Login: Logg inn
+      Profile: Profil
+      Logout: Logg ut
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Beskytter
+      NotProtected: Beskytter ikke
+      PausedProtected: Midlertidig deaktivert
+      Menu:
+        PauseFor: Pause i...
+        PausedFor: Satt på pause i {PauseRemaining}
+        NextShortBreak: 'Neste korte pause: {NextShortBreak}'
+        NextLongBreak: 'Neste lange pause: {NextLongBreak}'
+        ShowMainMenu: Vis hovedmeny
+        StartProtection: Start beskyttelse
+        StopProtection: Stopp beskyttelse
+        FiveMins: 5 minutter
+        TenMins: 10 minutter
+        ThirtyMins: en halvtime
+        OneHour: 1 time
+        TwoHours: 2 timer
+        Custom: Egendefinert...
+        Settings: Innstillinger
+        Exit: Avslutt
