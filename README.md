@@ -55,7 +55,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 |![it](https://img.icons8.com/color/48/000000/italy.png)|Italian|it-IT|[Gianpaolo Filippa](https://github.com/gianpaolof)|
 |![fr](https://img.icons8.com/color/48/000000/france.png)|French|fr-FR|[Bouillon Pierre](https://pbouillon.github.io)|
 |![ru](https://img.icons8.com/color/48/000000/russian-federation.png)|Russian|ru-RU|[Dmitry Vorobjev](https://github.com/ExplorerOL)|
-|![add](https://img.icons8.com/doodle/48/000000/add.png) <td colspan=3>[Add Language](#how-to-contribute-to-translating-app)
+|![add](https://img.icons8.com/doodle/48/000000/add.png)|[Add Language](#how-to-contribute-to-translating-app)||You|
 
 ## Can I contribute?
 
