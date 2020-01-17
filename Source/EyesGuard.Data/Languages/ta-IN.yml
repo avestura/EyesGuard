@@ -210,7 +210,7 @@ Translation:
       PausedProtected: தற்காலிகமாக நிறுத்தப்பட்டுள்ளது
       Menu:
         PauseFor: இடைநிறுத்து...
-        PausedFor: {PauseRemaining} வரை இடைநிறுத்தப்பட்டுள்ளது
+        PausedFor: '{PauseRemaining} வரை இடைநிறுத்தப்பட்டுள்ளது'
         NextShortBreak: 'அடுத்த குறுகிய இடைவெளி: {NextShortBreak}'
         NextLongBreak: 'அடுத்த நீண்ட இடைவெளி: {NextLongBreak}'
         ShowMainMenu: முக்கிய மெனுவைக் காட்டு
