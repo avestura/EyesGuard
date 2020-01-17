@@ -1,0 +1,226 @@
+---
+Meta:
+  Translators:
+  - Name: Muthu Kumar
+    GitHubUsername: MKRhere
+    Website: https://mkr.pw
+    Notes: 'Twitter: @MKRhere'
+
+Translation:
+  Application:
+    OSTitle: கண் காவலன்
+    HeaderTitle: கண் காவலன் | Eyes Guard
+    LoginWarning: கண் காவலன் தற்போது பல பயனர்களை சப்போர்ட் செய்யாது
+    HelpPageText: ஏதும் ஒரு உறுப்பு பற்றிய கூடுதல் தகவலைப் பெற, அந்த உறுப்பின் மேல் உங்கள் மௌசை நகர்த்தவும். அதற்கு உதவிகுறிப்பு இருந்தால் காண்பிக்கும்
+    DoNotRunMultipleInstances: கண் காவலன் ஏற்கனவே இயங்குகிறது. இந்த மென்பொருளின் பல நிகழ்வுகளை நீங்கள் இயக்க முடியாது
+    Notifications:
+      FirstLaunch:
+        Title: கண் காவலன் இயங்குகிறது
+        Message: கண் காவலன் பின்னணியில் இயங்குகிறது. பணிப்பட்டியில் கேடை ஐகானைப் பயன்படுத்தி UI மற்றும் பிற விருப்பங்களை காண்பிக்கலாம்
+    Resources:
+      PageTitle: வளங்கள்
+      Content:
+        Icons: 'சின்னங்கள்: FontAwesome மற்றும் IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (Aryan Software-ஆல் உருவாக்கப்பட்டது)'
+    About:
+      PageTitle: About
+      Content:
+        InnerTitle: கண் காவலன் பற்றி
+        PublisherInfo: 'பதிப்பகத்தார்: Aryan Software'
+    Donate:
+      PageTitle: கண் காவலனுக்கு தானம் செய்
+      BeforeDonation:
+        Content:
+          InnerTitle: நன்கொடை கொடுக்க விரும்புகிறீர்களா?
+          Message: இந்த இலவச மென்பொருளை நீங்கள் ஆதரிக்க விரும்பினால், நீங்கள் இந்த படிவத்தைப் பயன்படுத்தலாம்.
+          ButtonText: வலைப்பக்கத்தைத் திறக்க
+      DonationButtonClicked:
+        Content:
+          InnerTitle: தானம் செய்
+          Thanks: உங்கள் ஆதரவிற்கு நன்றி!
+          Redirect: நன்கொடை செய்யும் வலைப்பக்கத்திற்கு கொண்டு செல்ல படுவீர்கள்
+          FeedbackNotice: மைக்ரோசாஃப்ட் ஸ்டோரின் "Eyes Guard" பக்கத்தில் உங்கள் கருத்துகக்ளை தெரிவிக்கலாம்
+    Feedback:
+      PageTitle: பின்னூட்டம்
+      Content:
+        InnerTitle: பின்னூட்டம்
+        Message: இந்த மென்பொருளின் GitHub பக்கத்தில் உங்கள் பிரச்சனைகளை தெரிவித்து அது தொடர்பான மாற்றங்களைக் கண்காணிக்கலாம்
+        ButtonText: புது பிரச்சனையை தெரிவி
+  EyesGuard:
+    ControlPanel:
+      Title: கட்டுப்பாட்டு பேனல்
+    GuardStatus:
+      Running: உங்கள் கண்கள் பாதுகாப்பில் உள்ளன
+      Paused: கண் காவலன் தற்காலிகமாக இடைநிறுத்தப்பட்டது
+      Stopped: கண் காவலன் நிறுத்தப்பட்டுள்ளது
+      Idle: கண் காவலன் கணினி செயலற்ற கண்டறிதல் காரணமாக இடைநிறுத்தப்பட்டது
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "குறுகிய இடைவெளிக்கு  {Seconds} விநாடிகள்"
+        Minutes: "குறுகிய இடைவெளிக்கு  {Minutes} நிமிடங்கள்"
+      LongBreak:
+        Seconds: "நீண்ட இடைவெளிக்கு {Seconds} விநாடிகள்"
+        Minutes: "நீண்ட இடைவெளிக்கு  {Minutes} நிமிடங்கள்"
+      PauseTime:
+        Seconds: கண் காவலன் {Seconds} வினாடிகளுக்கு நிறுத்தப்பட்டுள்ளது
+        Minutes: கண் காவலன் {Minutes} நிமிடங்களுக்கு நிறுத்தப்பட்டுள்ளது
+    CustomPause:
+      PageTitle: தேவைக்கேற்ற இடைநிறுத்தம்
+      Message: இடைநிறுத்தம் தேவைப்படும் நேரத்தை இடவும்
+      ButtonText: இடைநிறுத்தம்
+    WarningPage:
+      ButtonText: பின்செல்
+    OperationFailed: செயல்பாடு தோல்வி
+    CheckInput: உள்ளீட்டை சரிபார்
+    TimeManipulation:
+      HoursLimit: மணிகள் புலம் {Hours}-ஐ விட அதிகமாக இருக்கக்கூடாது
+      MinutesLimit: நிமிடங்கள் புலம் {Minutes}-ஐ விட அதிகமாக இருக்கக்கூடாது
+      SecondsLimit: விநாடிகள் புலம் {Seconds}-ஐ மேல் இருக்கக்கூடாது
+      SGapMorethanLGap: இரண்டு குறுகிய இடைவெளிக்கு இடையிலான இடைவெளி இரண்டு நீண்ட இடைவெளிக்கு இடையிலான இடைவெளியை விட சிறியதாக இருக்க வேண்டும்
+      SDurationMorethanLDuration: குறுகிய இடைவெளி காலம் நீண்ட இடைவெளி காலத்தை விட சிறியதாக இருக்க வேண்டும்
+      SDurationTooHigh: குறுகிய இடைவெளி 5 நிமிடங்களுக்கு மேல் இருக்கக்கூடாது
+      LDurationTooHigh: நீண்ட இடைவெளி 2 மணி நேரத்திற்கு மேல் இருக்கக்கூடாது
+      NotEnoughGapBetweenLandS: குறுகிய இடைவெளி மற்றும் நீண்ட இடைவெளிக்கு இடையில் போதுமான இடைவெளி இல்லை
+      ShortGapLow: இரண்டு குறுகிய இடைவெளிகளுக்கு இடையில் இடைவெளி குறைந்தது 1 நிமிடங்கள் இருக்க வேண்டும்
+      LongGapLow: இரண்டு நீண்ட இடைவெளிகளுக்கு இடையிலான இடைவெளி குறைந்தது 5 நிமிடங்கள் இருக்க வேண்டும்
+      ChooseLargerTime: இதைவிட நீண்ட காலத்தைத் தேர்வுசெய்க
+    Settings:
+      Title: Settings
+      SavedSuccessfully: வெற்றிகரமாக சேமிக்கப்பட்டன
+      AreYouSure: உறுதியாக உள்ளீரா?
+      LanguageSection: மொழி
+      TimeSeparators:
+        Hour: மணி(கள்) மற்றும்
+        Minutes: நிமிடங்(கள்) மற்றும்
+        Second: நொடி(கள்)
+      SaveSettings: மாற்றங்களை சேமி
+      TimeSettings:
+        Title: நேர அமைப்புகள்
+        GapBetweenTwoShortBreak: 'இரண்டு குறுகிய இடைவெளிக்கு இடையிலான நேர இடைவெளி:'
+        GapBetweenTwoLongBreak: 'இரண்டு நீண்ட இடைவெளிக்கு இடையிலான நேர இடைவெளி:'
+        ShortBreakDuration: 'குறுகிய இடைவெளி காலம்:'
+        LongBreakDuration: 'நீண்ட இடைவெளி காலம்:'
+      UserSettings:
+        Title: User Settings
+        ForceUser: இடைவெளி எடுக்க என்னை கட்டாயப்படுத்து
+        ForceUserToolTip: இதை இயக்கினால், இடைவெளியை ஒத்திவைக்கவோ அல்லது அதில் இருந்து வெளியேறவோ முடியாது. மேலும், இடைவெளியின் போது உங்கள் சுட்டிக்காட்டி மறைந்து விடும்
+        OnlyOneShortBreak: இரண்டு நீண்ட இடைவெளிகளுக்கு இடையில் ஒரே ஒரு குறுகிய இடைவெளியைக் காட்டு
+        OnlyOneShortBreakToolTip: இந்த விருப்பத்தை செயல்படுத்தினால்  ஒரு நீண்ட இடைவெளிக்குப் பின் குறுகிய இடைவெளியை கணக்கில் கொள்ளாது
+        StartupApplication: கணினி தொடங்கியதும் கண் காவலனை தொடங்குங்கள்
+        StartupApplicationToolTip: கண் காவலன் இயல்பாக கணினி துவக்கத்துடன் தொடங்கும். TaskManager >> Startup Tab-இல் இருந்து இந்த அம்சத்தை முடக்கலாம்
+        AlertBeforeLongBreak: நீண்ட இடைவெளிக்கு 1 நிமிடத்திற்கு முன்பு எனக்கு அறிவிக்கவும்
+        AlertBeforeLongBreakToolTip: நீண்ட இடைவெளிக்கு ஒரு நிமிடம் முன்னதாக கண் காவலன் அறிவிக்கும்
+        SystemIdle: கணினி செயலற்றதாகக் கண்டறியப்படும்போது கண் காவலனை இடைநிறுத்துங்கள்
+        SystemIdleToolTip:
+        - உங்கள் கணினியிலிருந்து நீங்கள் விலகி இருக்கிறீர்களா என்பதைக் கண்டறிய கண் காவலன் கணினியின் செயலற்ற கண்டறிதலைப் பயன்படுத்துகிறது
+        - செயலற்ற பயன்முறையில், கண் காவலன் தானாகவே கீழ் எண்ணுவதை நிறுத்தும்
+        - உங்கள் கணினியுடன் நீங்கள் தொடர்பு கொள்ளாதபோது இந்த அம்சம் உங்கள் கண்களைப் பாதுகாப்பதை நிறுத்திவிடும் என்பதைக் கவனியுங்கள், எடுத்துக்காட்டாக திரைப்படங்களைப் பார்க்கும்போது
+      StatsSettings:
+        Title: புள்ளிவிவரங்கள்
+        YesDeleteData: ஆம், உறுதியாக
+        NoKeepData: இல்லை, data-வை வைத்திரு
+        StatsDeleted: புள்ளிவிவரங்கள் அனைத்தும் நீக்கப்பட்டன
+        StoreStats: புள்ளிவிவரங்களை சேமி
+        StoreStatsToolTip: உங்கள் பயன்பாட்டைப் பற்றிய சில தகவல்களை கண் காவலன் சேமிக்கும். இதை Tools >> Stats (புள்ளிவிவரங்கள்) மெனுவில் பார்க்கலாம். இந்த தரவு உங்கள் கணினியில் உள்ளூரில் சேமிக்கப்படுகிறது.
+        ClearStatsText: 'புள்ளிவிவரங்களின் வரலாற்றை அகற்று:'
+        ClearStats: Data-வை அகற்று
+      LanguageSettings:
+        Title: Language
+        SelectLanguage: 'Select Language:'
+        MaintainMessage: 'இந்த மொழி இவர்களால் பராமரிக்கப் படுகிறது:'
+        RestartRequired: மொழியை மாற்றுவது அடுத்த தொடக்கத்தில் நடைமுறைக்கு வரும்
+        MessagesFromLangFile: மொழி கோப்பை குறுகிய இடைவெளி செய்திகளின் மூலமாகப் பயன்படுத்தவும்
+        MessagesFromLangFileToolTip: இந்த விருப்பத்தை நீங்கள் இயக்கினால், மொழி கோப்பு குறுகிய இடைவெளி விண்டோ-வில் தோன்றும் செய்திகளை வழங்கும்
+        AddMessage: செய்தியைச் சேர்க்கவும்
+        RemoveMessage: செய்தியை அகற்றவும்
+        NoAccount: கணக்கு இல்லை
+        NoWebsite: வலைத்தளம் இல்லை
+        NoNotes: மொழிபெயர்ப்பைப் பற்றி குறிப்புகள் எதுவும் இல்லை
+        EnterNewMessage: புதிய செய்தியை உள்ளிடவும்
+        Submit: சமர்ப்பி
+    Resting: ஓய்வு
+    Waiting: காத்திருப்பு
+    ShortMessageSuggestions:
+    - கண்களைத் திறந்து மூடவும்
+    - இடைவிடாமல் கண் சிமிட்டுங்கள்
+    - வெகுதூரம் வெறித்துப் பாருங்கள்
+    - ஜன்னலுக்கு வெளியே பாருங்கள்
+    - உங்கள் கைகளை கழுவவும், பின்னர் உங்கள் கண்களை மசாஜ் செய்யவும்
+    LongWindowMessage: நீண்ட இடைவெளிக்கான நேரம். ஒரு நடைக்கு செல்லுங்கள்
+    LongWindowCancelButton: ரத்து செய்
+    Notifications:
+      LongBreakAlert:
+        Title: நீண்ட இடைவெளிக்கு 1 நிமிடம்
+        Message: நீண்ட இடைவெளி வரை ஒரு நிமிடம் மட்டுமே உள்ளது. இந்த இடைவெளியை Taskbar context மெனுவிலிருந்து தேவைப்பட்டால் ஒத்திவைக்கலாம்.
+    WaitUnitlEndOfBreak: இடைவெளி முடியும் வரை காத்திருக்கவும்
+    LongBreakTimeRemaining: "இடைவேளையின் முடிவிற்கு இன்னும் {Hours} மணி(கள்) மற்றும் {Minutes} நிமிடங்(கள்) மற்றும் {Seconds} வினாடி(கள்) உள்ளன"
+    StatsPage:
+      Title: புள்ளிவிவரங்கள்
+      ShortBreak: சிறு இடைவேளை
+      LongBreak: நீண்ட இடைவேளை
+      Pauses: இடைநிறுத்தம்
+      ShortCount: 'குறுகிய இடைவெளிகள்:'
+      LongCompletedCount: 'வெற்றிகரமான நீண்ட இடைவெளிகள்:'
+      LongFailedCount: 'தோல்வியுற்ற நீண்ட இடைவெளிகள்:'
+      PauseCount: 'தற்காலிக இடைநிறுத்தங்கள்:'
+      StopCount: 'நிறுத்தப்பட்டது:'
+    AlertPages:
+      Titles:
+        Attention: கவனம்
+        Successful: வெற்றி
+        Error: தோல்வி
+        Info: தகவல்
+        AboutSoftware: மென்பொருள் பற்றி
+        Donate: தானம் செய்
+    HeaderMenu:
+      EyesGuard:
+        Header: கண் காவலன்
+        MainMenu: முக்கிய பட்டியல்
+        Hide: கண் காவலனை மறை
+        Exit: வெளியேறு
+      Tools:
+        Header: கருவிகள்
+        Stats: புள்ளிவிவரங்கள்
+        Settings: அமைப்புகள்
+      Breaks:
+        Header: இடைவெளிகள்
+        GoShort: குறுகிய இடைவெளிக்கு செல்லுங்கள்
+        GoLong: நீண்ட இடைவெளிக்கு செல்லுங்கள்
+      View:
+        Header: காண்பது
+        KeyTimes: முக்கிய நேரங்கள்
+      Help:
+        Header: உதவி
+        EyesGuardHelp: கண் காவலன் உதவி
+        Resources: வளங்கள்
+        SendFeedback: கருத்து அனுப்பு
+        Donate: தானம் செய்
+        About: இதைப்பற்றி
+    UserManager:
+      User: பயனர்
+      NotLoggedIn: உள்நுழையவில்லை
+      NoTitle: தலைப்பு இல்லை
+      Login: உள்நுழை
+      Profile: சுயவிவரங்கள்
+      Logout: வெளியேறு
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: பாதுகாக்கப்படுகிறது
+      NotProtected: பாதுகாக்கப்படவில்லை
+      PausedProtected: தற்காலிகமாக நிறுத்தப்பட்டுள்ளது
+      Menu:
+        PauseFor: இடைநிறுத்து...
+        PausedFor: {PauseRemaining} வரை இடைநிறுத்தப்பட்டுள்ளது
+        NextShortBreak: 'அடுத்த குறுகிய இடைவெளி: {NextShortBreak}'
+        NextLongBreak: 'அடுத்த நீண்ட இடைவெளி: {NextLongBreak}'
+        ShowMainMenu: முக்கிய மெனுவைக் காட்டு
+        StartProtection: பாதுகாப்பைத் தொடங்கு
+        StopProtection: பாதுகாப்பை நிறுத்து
+        FiveMins: 5 நிமிடம்
+        TenMins: 10 நிமிடங்கள்
+        ThirtyMins: 30 நிமிடம்
+        OneHour: 1 மணி நேரம்
+        TwoHours: 2 மணி நேரம்
+        Custom: வேறு...
+        Settings: அமைப்புகள்
+        Exit: வெளியேறு
