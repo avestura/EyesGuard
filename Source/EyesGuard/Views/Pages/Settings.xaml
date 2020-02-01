@@ -299,6 +299,7 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -394,7 +395,20 @@
                         </CheckBox>
 
                     </StackPanel>
-
+                    <StackPanel
+                        Grid.Row="6"
+                        Grid.Column="1"
+                        Margin="5"
+                        Orientation="Horizontal">
+                        <CheckBox
+                            x:Name="shortBreakAllowCloseWithRightCLick"
+                            VerticalAlignment="Center"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.ShortBreakAllowCloseWithRightCLick'}"
+                            Foreground="White"
+                            ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.ShortBreakAllowCloseWithRightCLickToolTip'}"
+                            Style="{DynamicResource WhiteCheckbox}">
+                        </CheckBox>
+                    </StackPanel>
                 </Grid>
 
                 <StackPanel Orientation="Horizontal">

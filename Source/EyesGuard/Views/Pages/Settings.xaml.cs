@@ -80,6 +80,7 @@ namespace EyesGuard.Views.Pages
             onlyOneShortbreakCheckbox.IsChecked = App.Configuration.OnlyOneShortBreak;
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
+            alertBeforeLongbreak.IsChecked = App.Configuration.ShortBreakAllowCloseWithRightCLick;
 
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
@@ -211,6 +212,7 @@ namespace EyesGuard.Views.Pages
                     App.Configuration.SaveStats = storeStatsCheckbox.IsChecked.Value;
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
+                    App.Configuration.ShortBreakAllowCloseWithRightCLick = shortBreakAllowCloseWithRightCLick.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
                     App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? FsLanguageLoader.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;

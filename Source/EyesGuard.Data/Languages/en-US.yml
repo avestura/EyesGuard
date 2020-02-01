@@ -133,6 +133,8 @@ Translation:
           You can disable this feature from TaskManager >> Startup Tab.
         AlertBeforeLongBreak: Notify me 1 minute before long-break
         AlertBeforeLongBreakToolTip: Eyes Guard notifies you one minute before a long-break.
+        ShortBreakAllowCloseWithRightCLick: Close Short-break window with a right click
+        ShortBreakAllowCloseWithRightCLickToolTip: Allow closing Short-break window with a right click.
         SystemIdle: Pause Eyes Guard when system detected as idle
         SystemIdleToolTip:
         - Eyes Guard uses system idle detection to detect if you are away from your

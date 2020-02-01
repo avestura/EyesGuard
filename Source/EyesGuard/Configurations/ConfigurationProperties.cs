@@ -79,6 +79,7 @@ namespace EyesGuard.Configurations
         public bool RunMinimized { get; set; } = false;
         public bool ForceUserToBreak { get; set; } = false;
         public bool OnlyOneShortBreak { get; set; } = false;
+        public bool ShortBreakAllowCloseWithRightCLick { get; set; } = false;
         public bool SaveStats { get; set; } = true;
         public bool RunAtStartUp { get { return runAtStartup; } set { runAtStartup = value; } }
         public long ShortBreaksCompleted { get; set; } = 0;
