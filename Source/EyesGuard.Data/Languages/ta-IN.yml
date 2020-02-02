@@ -110,6 +110,8 @@ Translation:
         StartupApplicationToolTip: கண் காவலன் இயல்பாக கணினி துவக்கத்துடன் தொடங்கும். TaskManager >> Startup Tab-இல் இருந்து இந்த அம்சத்தை முடக்கலாம்
         AlertBeforeLongBreak: நீண்ட இடைவெளிக்கு 1 நிமிடத்திற்கு முன்பு எனக்கு அறிவிக்கவும்
         AlertBeforeLongBreakToolTip: நீண்ட இடைவெளிக்கு ஒரு நிமிடம் முன்னதாக கண் காவலன் அறிவிக்கும்
+        ShortBreakAllowCloseWithRightCLick: ரைட் கிளிக் மூலம் குறுகிய இடைவெளியை மூடு
+        ShortBreakAllowCloseWithRightCLickToolTip: வலது கிளிக் மூலம் குறுகிய இடைவெளியை மூட அனுமதி
         SystemIdle: கணினி செயலற்றதாகக் கண்டறியப்படும்போது கண் காவலனை இடைநிறுத்துங்கள்
         SystemIdleToolTip:
         - உங்கள் கணினியிலிருந்து நீங்கள் விலகி இருக்கிறீர்களா என்பதைக் கண்டறிய கண் காவலன் கணினியின் செயலற்ற கண்டறிதலைப் பயன்படுத்துகிறது

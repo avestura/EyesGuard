@@ -15,7 +15,7 @@ namespace EyesGuard.Views.Animations
             int milliSeconds = 500,
             IEasingFunction easingFunction = null)
         {
-            if (element == null) return;
+            if (element == null || !element.IsVisible) return;
             var anim = new DoubleAnimation()
             {
                 From = 1,
@@ -37,7 +37,7 @@ namespace EyesGuard.Views.Animations
         {
             return Task.Run(async () =>
             {
-                if (element == null) return;
+                if (element == null || !element.IsVisible) return;
                 element.Dispatcher.Invoke(() => HideUsingLinearAnimation(element, milliSeconds, easingFunction));
                 await Task.Delay(milliSeconds);
             });

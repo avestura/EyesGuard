@@ -110,6 +110,8 @@ Translation:
         StartupApplicationToolTip: Программа Eyes Guard запускается при загрузке системы по умолчанию. Вы можете отменить данную функцию в Диспетчере задач Windows 10 на вкладке Автозагрузка.
         AlertBeforeLongBreak: Напоминание за 1 минуту до длинного перерыва
         AlertBeforeLongBreakToolTip: Eyes Guard напомнит о длинном перерыве за 1 минуту до его начала.
+        ShortBreakAllowCloseWithRightCLick: Разрешить закрывать заставку короткого перерыва правым кликом
+        ShortBreakAllowCloseWithRightCLickToolTip: Вы сможете закрыть заставку короткого перерыва правым кликом мыши
         SystemIdle: Включать режим ожидания, если пользователь не активен
         SystemIdleToolTip:
         - Eyes Guard приостанавливает работу, если вы отошли от компьютера.

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using EyesGuard.ViewModels;
 
 namespace EyesGuard.Views.Windows
 {
@@ -29,8 +30,13 @@ namespace EyesGuard.Views.Windows
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!LetItClose)
+            if (!LetItClose && (!App.Configuration.ShortBreakAllowCloseWithRightCLick || App.Configuration.ForceUserToBreak))
                 e.Cancel = true;
+        }
+
+        private void ShortBreakWindow_OnMouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            @this.Close();
         }
     }
 }

@@ -121,6 +121,8 @@ Translation:
         AlertBeforeLongBreak: یک دقیقه قبل از استراحت بلند مدت به من اطلاع بده
         AlertBeforeLongBreakToolTip: نگهبان چشم یک دقیقه قبل از یک استراحت بلند از
           طریق اعلان ویندوز به شما اطلاع می دهد.
+        ShortBreakAllowCloseWithRightCLick: بستن پنجره استراحت کوتاه با راست-کلیک
+        ShortBreakAllowCloseWithRightCLickToolTip: به شما اجازه می‌دهد که پنجره استراحت کوتاه را با استفاده از راست کلیک ببندید
         SystemIdle: نگهبان چشم را در صورت بیکار بودن سیستم متوقف کن
         SystemIdleToolTip:
         - نگهبان چشم از سامانه تشخیص بیکار بودن سیستم استفاده میکند تا ببیند که آیا

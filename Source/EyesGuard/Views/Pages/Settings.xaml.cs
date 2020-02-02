@@ -81,6 +81,9 @@ namespace EyesGuard.Views.Pages
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
 
+            shortBreakAllowCloseWithRightCLick.IsEnabled = !App.Configuration.ForceUserToBreak;
+            shortBreakAllowCloseWithRightCLick.IsChecked = (!App.Configuration.ForceUserToBreak) && App.Configuration.ShortBreakAllowCloseWithRightCLick;
+
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
             UseLanguageAsSourceCheckbox.IsChecked = App.Configuration.UseLanguageProvedidShortMessages;
@@ -211,6 +214,7 @@ namespace EyesGuard.Views.Pages
                     App.Configuration.SaveStats = storeStatsCheckbox.IsChecked.Value;
                     App.Configuration.OnlyOneShortBreak = onlyOneShortbreakCheckbox.IsChecked.Value;
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
+                    App.Configuration.ShortBreakAllowCloseWithRightCLick = shortBreakAllowCloseWithRightCLick.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
                     App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? FsLanguageLoader.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
@@ -345,6 +349,19 @@ namespace EyesGuard.Views.Pages
             {
                 ShortMessagesSource.Add(MessageContent.Text);
             }
+        }
+
+        private void forceUserCheckbox_Checked(object sender, RoutedEventArgs e)        {
+            if (IsLoaded)
+            {
+                shortBreakAllowCloseWithRightCLick.IsEnabled = false;
+                shortBreakAllowCloseWithRightCLick.IsChecked = false;
+            }
+        }
+
+        private void forceUserCheckbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            shortBreakAllowCloseWithRightCLick.IsEnabled = true;
         }
     }
 }

@@ -118,6 +118,8 @@ Translation:
            È possibile disabilitare questa funzione da TaskManager >> Scheda Avvio.
         AlertBeforeLongBreak: Avvisami 1 minuto prima della pausa lunga
         AlertBeforeLongBreakToolTip:  Eyes Guard ti avvisa un minuto prima di pausa lunga.
+        ShortBreakAllowCloseWithRightCLick: Close Short-break window with a right click
+        ShortBreakAllowCloseWithRightCLickToolTip: Allow closing Short-break window with a right click.
         SystemIdle: Metti in pausa Eyes Guard quando il sistema è inattivo
         SystemIdleToolTip:
         - Eyes Guard usa il reilevamento di sistema inattivo system per determinare se sei lontano dal tuo PC.

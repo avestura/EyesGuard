@@ -124,6 +124,8 @@ Translation:
         AlertBeforeLongBreak: Varsle meg ett minutt før lang pause
         AlertBeforeLongBreakToolTip: Eyes Guard varsler deg ett minutt før lang
           pause.
+        ShortBreakAllowCloseWithRightCLick: Close Short-break window with a right click
+        ShortBreakAllowCloseWithRightCLickToolTip: Allow closing Short-break window with a right click.
         SystemIdle: Sett Eyes Guard på pause når maskinen er inaktiv
         SystemIdleToolTip:
         - Eyes Guard bruker systemets inaktiv-detektering for å finne ut om du

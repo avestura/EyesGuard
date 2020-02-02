@@ -20,7 +20,8 @@
     Topmost="True"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    MouseRightButtonUp="ShortBreakWindow_OnMouseRightButtonUp">
     <Grid>
 
         <Grid.ColumnDefinitions>
