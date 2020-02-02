@@ -35,9 +35,10 @@
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Background" Color="#FFD5FAAC" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Border" Color="#FFA9FF61" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.MouseOver.Glyph" Color="#FF212121" />
-    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Background" Color="#FFE6E6E6" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Background" Color="#FFB6B6B6" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Border" Color="#FFBCBCBC" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Glyph" Color="#FF707070" />
+    <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Disabled.Foreground" Color="#FFBDBDBD" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Background" Color="#FFCDFF95" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Border" Color="#FF71E80D" />
     <SolidColorBrush x:Key="EyesGuard.WhiteOptionalMark.Pressed.Glyph" Color="#FF212121" />
@@ -115,6 +116,7 @@
                             <Setter TargetName="checkBoxBorder" Property="BorderBrush" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Border}" />
                             <Setter TargetName="optionMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}" />
                             <Setter TargetName="indeterminateMark" Property="Fill" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Glyph}" />
+                            <Setter TargetName="contentPresenter" Property="TextBlock.Foreground" Value="{StaticResource EyesGuard.WhiteOptionalMark.Disabled.Foreground}" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="true">
                             <Setter TargetName="checkBoxBorder" Property="Background" Value="{StaticResource EyesGuard.WhiteOptionalMark.Pressed.Background}" />
@@ -129,6 +131,15 @@
                             <Setter TargetName="optionMark" Property="Opacity" Value="1" />
                             <Setter TargetName="indeterminateMark" Property="Opacity" Value="0" />
                         </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Opacity" Value="0.7" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
                         <Trigger Property="IsChecked" Value="{x:Null}">
                             <Setter TargetName="optionMark" Property="Opacity" Value="0" />
                             <Setter TargetName="indeterminateMark" Property="Opacity" Value="1" />
