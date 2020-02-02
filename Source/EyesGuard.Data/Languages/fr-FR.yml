@@ -35,7 +35,7 @@ Translation:
       BeforeDonation:
         Content:
           InnerTitle: Souhaitez-vous faire un don ?
-          Message: Vous pouvez soutenir ce logiciel gratuit et open-source via 
+          Message: Vous pouvez soutenir ce logiciel gratuit et open-source via
             ce formulaire
           ButtonText: Ouvrir la page de donation dans le navigateur
       DonationButtonClicked:
@@ -104,7 +104,7 @@ Translation:
         Second: Seconde(s)
       SaveSettings: Sauvegarder les changements
       TimeSettings:
-        Title: Réglages de l'heure 
+        Title: Réglages de l'heure
         GapBetweenTwoShortBreak: 'Temps entre deux pauses courtes:'
         GapBetweenTwoLongBreak: 'Temps entre deux pauses longues:'
         ShortBreakDuration: "Durée d'une pause courte:"
@@ -123,9 +123,11 @@ Translation:
           Vous pouvez désactiver cette fonctionnalité dans TaskManager >> Onglet de démarrage.
         AlertBeforeLongBreak: Notifiez moi 1 minute avant une pause longue
         AlertBeforeLongBreakToolTip: Eyes Guard vous notifie une minute avant une pause longue.
+        ShortBreakAllowCloseWithRightCLick: Close Short-break window with a right click
+        ShortBreakAllowCloseWithRightCLickToolTip: Allow closing Short-break window with a right click.
         SystemIdle: Mettre Eyes Guard en pause quand le système ne détecte aucune activité
         SystemIdleToolTip:
-        - Eyes Guard utilise la détection d'activité pour déterminer si vous être présent 
+        - Eyes Guard utilise la détection d'activité pour déterminer si vous être présent
         - Dans ce mode, Eyes Guard met automatiquement en pause le compte à rebour
         - Veuillez noter que cette fonctionnalité peut désactiver la protection de vos
           yeux quand vous n'interagissez pas avec votre ordinateur, par exemple lorsque
@@ -146,7 +148,7 @@ Translation:
         SelectLanguage: 'Choisissez un langage:'
         MaintainMessage: 'Ce langage est maintenu par: '
         RestartRequired: Le changement de langue s'effectuera au prochain démarrage de l'application
-        MessagesFromLangFile: Utilisr le fichier de langue comme source pour le message de 
+        MessagesFromLangFile: Utilisr le fichier de langue comme source pour le message de
           pause courte
         MessagesFromLangFileToolTip: Si vous activez cette option, le fichier de langage servira
           de source pour les messages apparaissant dans la fenêtre de pause courte.
