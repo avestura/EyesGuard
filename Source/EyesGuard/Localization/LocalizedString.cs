@@ -51,7 +51,14 @@ namespace EyesGuard.Localization
                 return env.Translation.GetPropValue<string>(Value);
             }
 
-            return App.LocalizedEnvironment.Translation.GetPropValue<string>(Value);
+            var localizedTranslation = App.LocalizedEnvironment.Translation.GetPropValue<string>(Value);
+
+            if (string.IsNullOrEmpty(localizedTranslation))
+            {
+                return FsLanguageLoader.DefaultEnvironment.GetPropValue<string>(Value);
+            }
+
+            return localizedTranslation;
         }
     }
 }
