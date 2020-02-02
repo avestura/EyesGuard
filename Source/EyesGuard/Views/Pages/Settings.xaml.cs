@@ -80,7 +80,7 @@ namespace EyesGuard.Views.Pages
             onlyOneShortbreakCheckbox.IsChecked = App.Configuration.OnlyOneShortBreak;
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
-            alertBeforeLongbreak.IsChecked = App.Configuration.ShortBreakAllowCloseWithRightCLick;
+            shortBreakAllowCloseWithRightCLick.IsChecked = App.Configuration.ShortBreakAllowCloseWithRightCLick;
 
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
