@@ -80,7 +80,9 @@ namespace EyesGuard.Views.Pages
             onlyOneShortbreakCheckbox.IsChecked = App.Configuration.OnlyOneShortBreak;
             storeStatsCheckbox.IsChecked = App.Configuration.SaveStats;
             alertBeforeLongbreak.IsChecked = App.Configuration.AlertBeforeLongBreak;
-            shortBreakAllowCloseWithRightCLick.IsChecked = App.Configuration.ShortBreakAllowCloseWithRightCLick;
+
+            shortBreakAllowCloseWithRightCLick.IsEnabled = !App.Configuration.ForceUserToBreak;
+            shortBreakAllowCloseWithRightCLick.IsChecked = (!App.Configuration.ForceUserToBreak) && App.Configuration.ShortBreakAllowCloseWithRightCLick;
 
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
@@ -347,6 +349,19 @@ namespace EyesGuard.Views.Pages
             {
                 ShortMessagesSource.Add(MessageContent.Text);
             }
+        }
+
+        private void forceUserCheckbox_Checked(object sender, RoutedEventArgs e)        {
+            if (IsLoaded)
+            {
+                shortBreakAllowCloseWithRightCLick.IsEnabled = false;
+                shortBreakAllowCloseWithRightCLick.IsChecked = false;
+            }
+        }
+
+        private void forceUserCheckbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            shortBreakAllowCloseWithRightCLick.IsEnabled = true;
         }
     }
 }

@@ -30,7 +30,7 @@ namespace EyesGuard.Views.Windows
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!LetItClose && !App.Configuration.ShortBreakAllowCloseWithRightCLick)
+            if (!LetItClose && (!App.Configuration.ShortBreakAllowCloseWithRightCLick || App.Configuration.ForceUserToBreak))
                 e.Cancel = true;
         }
 
