@@ -61,7 +61,7 @@ namespace EyesGuard.Views.Pages
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit.FormatWith(new { Minutes = 59 });
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit.FormatWith(new { Seconds = 59 });
                 }
 
                 if (new TimeSpan(hours, minutes, seconds).TotalSeconds < 5)

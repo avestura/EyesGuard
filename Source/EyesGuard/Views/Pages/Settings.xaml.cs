@@ -154,7 +154,7 @@ namespace EyesGuard.Views.Pages
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit.FormatWith(new { Minutes = 59 });
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit.FormatWith(new { Seconds = 59 });
                 }
                 if (new TimeSpan(sgH, sgM, sgS).TotalSeconds >= new TimeSpan(lgH, lgM, lgS).TotalSeconds)
                 {
