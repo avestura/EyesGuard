@@ -4,4 +4,4 @@ defaults:
     values:
       layout: remote
 
-remote_theme: 0xaryan/0xaryan.github.io
+remote_theme: avestura/avestura.github.io
