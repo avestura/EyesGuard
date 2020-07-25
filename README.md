@@ -50,8 +50,8 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 
 | |Language|Locale|Translator|
 |-|--------|------|----------|
-|[![us][us]](#)|English|en-US|[Aryan Ebrahimpour](https://aryan.software), [Gianpaolo Filippa](https://github.com/gianpaolof), [Akash Joshi](https://akashj.com)|
-|[![ir][ir]](#)|Persian|fa-IR|[Aryan Ebrahimpour](https://aryan.software)|
+|[![us][us]](#)|English|en-US|[Aryan Ebrahimpour](https://avestura.dev), [Gianpaolo Filippa](https://github.com/gianpaolof), [Akash Joshi](https://akashj.com)|
+|[![ir][ir]](#)|Persian|fa-IR|[Aryan Ebrahimpour](https://avestura.dev)|
 |[![it][it]](#)|Italian|it-IT|[Gianpaolo Filippa](https://github.com/gianpaolof)|
 |[![fr][fr]](#)|French|fr-FR|[Bouillon Pierre](https://pbouillon.github.io)|
 |[![ru][ru]](#)|Russian|ru-RU|[Dmitry Vorobjev](https://github.com/ExplorerOL)|
@@ -81,14 +81,14 @@ You can contribute to software development and/or create translations for the ap
 
 Adding a new Language:
 
-1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) folder and create a new yaml file with name `{StandardCountryCode}.yml` like `en-US.yml` or `fa-IR.yml`. Here is a [List of country codes](CountryCodes.md) you can pick.
+1. Go to [Languages](https://github.com/avestura/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) folder and create a new yaml file with name `{StandardCountryCode}.yml` like `en-US.yml` or `fa-IR.yml`. Here is a [List of country codes](CountryCodes.md) you can pick.
 2. Copy the content of `en-US.yml` to the new created file.
 3. In the meta part of yaml edit the `Translators` array. Remove the existing translators in the copied file and just put information of yourself.
 4. Translate the `Translation` section of file and make a PR!
 
 Modifying a translation file:
 
-1. Go to [Languages](https://github.com/0xaryan/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) and find the language you want to edit using its standard locale.
+1. Go to [Languages](https://github.com/avestura/EyesGuard/tree/master/Source/EyesGuard.Data/Languages) and find the language you want to edit using its standard locale.
 2. In the meta part of yaml and in the `Translators` array, add yourself as a new translator without removing others from the list.
 3. Make your changes in the `Translation` section and make a PR!
 
@@ -113,7 +113,7 @@ For right-to-left languages like Persian, Arabic, etc. It is not needed to expli
 You need [Paket Package manager for .NET](https://fsprojects.github.io/Paket) to restore the packages.
 
 ```powershell
-git clone https://github.com/0xaryan/EyesGuard
+git clone https://github.com/avestura/EyesGuard
 cd .\EyesGuard
 paket install
 cd .\Source\EyesGuard
