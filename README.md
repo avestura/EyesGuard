@@ -11,6 +11,12 @@
 ## What is Eyes Guard?
 Eyes Guard is a Windows Application for protecting your eyes. It will help you (also can force you!) to break if you are working with your PC for a long time using configurable times.
 
+## Download Link
+
+For **Windows 10 (Official with latest features)**: [Download from Windows Store](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
+
+For **Windows 7 (Unofficial Fork, maybe not latest and not feature complete)**: [Download from ExplorerOL's GitHub](https://github.com/ExplorerOL/AryanSoftware_EyesGuard/releases/tag/AryanSoftware_EyesGuard_Release_2020_01_14)
+
 ## Any Screenshots?
 
 #### Control Panel
