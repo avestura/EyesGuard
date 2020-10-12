@@ -20,6 +20,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using FormatWith;
 using static EyesGuard.Data.LanguageLoader;
 
 namespace EyesGuard.Views.Pages
@@ -143,20 +144,20 @@ namespace EyesGuard.Views.Pages
                 ldS = int.Parse(longDurationSeconds.Text);
 
                 if (sgH > 11 || sdH > 11 || lgH > 11 || ldH > 11)
-                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.HoursLimit, 11);
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.HoursLimit.FormatWith(new { Hours = 11 });
 
                 if (sgM > 59 || sdM > 59 || lgM > 59 || ldM > 59)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.MinutesLimit, 59);
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.MinutesLimit.FormatWith(new{ Minutes = 59 });
                 }
 
                 if (sgS > 59 || sdS > 59 || lgS > 59 || ldS > 59)
                 {
                     if (warning != "")
                         warning += "\n";
-                    warning += string.Format("» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit, 59);
+                    warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.SecondsLimit.FormatWith(new { Seconds = 59 });
                 }
                 if (new TimeSpan(sgH, sgM, sgS).TotalSeconds >= new TimeSpan(lgH, lgM, lgS).TotalSeconds)
                 {
