@@ -39,7 +39,7 @@ namespace EyesGuard.Views.Pages
         {
             try
             {
-                Process.Start($"https://ko-fi.com/0xaryan");
+                Process.Start($"https://ko-fi.com/avestura");
             } catch { }
             var donateText = App.LocalizedEnvironment.Translation.Application.Donate.DonationButtonClicked.Content;
             App.ShowWarning(
