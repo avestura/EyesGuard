@@ -63,6 +63,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 |[![ru][ru]](#)|Russian|ru-RU|[Dmitry Vorobjev](https://github.com/ExplorerOL)|
 |[![no][no]](#)|Norwegian|nb-NO|[Thomas Rory Gummerson](https://trgwii.no/)|
 |[![in][in]](#)|Tamil|ta-IN|[Muthu Kumar](https://mkr.pw)|
+|[![ko][ko]](#)|Korean|ko-KR|[Sung Jae Cho](https://rubycho.github.io)|
 |[![add][add]](#how-to-contribute-to-translating-app)|[Add Language](#how-to-contribute-to-translating-app)||You|
 
 [us]: https://img.icons8.com/color/48/000000/usa.png
@@ -72,6 +73,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 [ru]: https://img.icons8.com/color/48/000000/russian-federation.png
 [no]: https://img.icons8.com/color/48/000000/norway.png
 [in]: https://img.icons8.com/color/48/000000/india.png
+[ko]: https://img.icons8.com/color/48/000000/south-korea.png
 [add]: https://img.icons8.com/doodle/48/000000/add.png
 
 ## Can I contribute?
