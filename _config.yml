@@ -3,3 +3,5 @@ defaults:
       path: ""
     values:
       layout: remote
+
+remote_theme: avestura/avestura.github.io	
