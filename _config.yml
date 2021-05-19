@@ -1,7 +1,1 @@
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: remote
-
 theme: jekyll-theme-cayman
