@@ -282,8 +282,14 @@ namespace EyesGuard.Views.Pages
         {
             try
             {
+                //RestartRequired.Text = App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.RestartRequired;                
+
                 MaintainersLinks.Inlines.Clear();
-                var translators = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name).Meta.Translators;
+                LocalizedEnvironment environment = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name);
+                var translators = environment.Meta.Translators;
+
+                RestartRequired.Text = environment.Translation.EyesGuard.Settings.LanguageSettings.RestartRequired;
+
                 for (int i = 0; i < translators.Count; i++)
                 {
                     var translator = translators[i];
