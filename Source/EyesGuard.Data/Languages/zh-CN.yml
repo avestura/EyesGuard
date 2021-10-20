@@ -128,7 +128,11 @@ Translation:
       LanguageSettings:
         Title: 语言
         SelectLanguage: '选择语言:'
+<<<<<<< HEAD
         MaintainMessage: '本翻译的伟大维护这和作者是: '
+=======
+        MaintainMessage: '本翻译的无敌伟大的作者是: '
+>>>>>>> translate-chinese
         RestartRequired: 语言的修改将在重启软件后显现
         MessagesFromLangFile: 使用默认休息提示
         MessagesFromLangFileToolTip: 如果你勾选这个框框，则在小型休息窗口会显示翻译文件提供的提示和“祝福”
