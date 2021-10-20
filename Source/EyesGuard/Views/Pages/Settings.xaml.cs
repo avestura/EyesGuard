@@ -281,9 +281,7 @@ namespace EyesGuard.Views.Pages
         private void LanguagesCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
-            {
-                //RestartRequired.Text = App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.RestartRequired;                
-
+            {                
                 MaintainersLinks.Inlines.Clear();
                 LocalizedEnvironment environment = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name);
                 var translators = environment.Meta.Translators;
