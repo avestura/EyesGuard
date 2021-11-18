@@ -67,7 +67,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 |[![add][add]](#how-to-contribute-to-translating-app)|[Add Language](#how-to-contribute-to-translating-app)||You|
 
 [us]: https://img.icons8.com/color/48/000000/usa.png
-[ir]: https://img.icons8.com/color/48/000000/iran.png
+[ir]: ./assets/flags/iran.png
 [it]: https://img.icons8.com/color/48/000000/italy.png
 [fr]: https://img.icons8.com/color/48/000000/france.png
 [ru]: https://img.icons8.com/color/48/000000/russian-federation.png
