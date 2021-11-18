@@ -1,0 +1,227 @@
+﻿---
+Meta:
+  Translators:
+  - Name: 七夕泥
+    GitHubUsername: Qixiny
+    Website: https://github.com/Qxiny
+    Notes: '第一次翻译软件请多多指教，翻译的有些太可爱了~ 邮箱:3185835784@qq.com'  
+
+Translation:
+  Application:
+    OSTitle: 护眼姬
+    HeaderTitle: 护眼姬
+    LoginWarning: 护眼姬现在不支持多用户模块哟~
+    HelpPageText: 你可以将鼠标悬停在你不懂的东西上，姬就可以显示小提示了哟（照理来说）
+    DoNotRunMultipleInstances: 护眼姬已经在运行了，你不可以脚踏两只船！
+    Notifications:
+      FirstLaunch:
+        Title: 护眼姬开始工作了~
+        Message: 护眼姬已经在后台开始工作了，你可以右键任务栏的托盘工具显示主界面或进行其它操作
+    Resources:
+      PageTitle: Resources
+      Content:
+        Icons: '图标: FontAwesome 和 IconArchive'
+        UIKit: 'UI工具包: Hasti UI Kit (由Aryan Software开发)'
+    About:
+      PageTitle: 关于
+      Content:
+        InnerTitle: 关于护眼姬
+        PublisherInfo: '项目发起者: Aryan Software 汉化：Qixiny'
+    Donate:
+      PageTitle: 打赏护眼姬
+      BeforeDonation:
+        Content:
+          InnerTitle: 您是要打赏？
+          Message: 你是要支持这款开源软件吗?不会吧不会吧!(不清楚国内的朋友能不能打赏成功呢~)
+          ButtonText: 在浏览器中打开打赏页面！
+      DonationButtonClicked:
+        Content:
+          InnerTitle: 打赏
+          Thanks: 感谢你的支持！
+          Redirect: 照理来说你的浏览器应该已经打开打赏界面了
+          FeedbackNotice: 如果你有任何的建议或意见，你可以在护眼姬（Eyes Guard）官网或者微软商店进行反馈
+    Feedback:
+      PageTitle: 反馈
+      Content:
+        InnerTitle: 反馈
+        Message: 你选择可以在Github上提交一个Issue（问题）
+        ButtonText: 提交Issue！
+  EyesGuard:
+    ControlPanel:
+      Title: 伟大的控制中枢
+    GuardStatus:
+      Running: 你的眼睛正在被我保护~
+      Paused: 什么？你竟然把护眼姬暂停了
+      Stopped: 糟糕，护眼姬被你关掉了！
+      Idle: 检测你最近没动电脑，我就帮你把我关掉了
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} 秒后进行小型休息"
+        Minutes: "{Minutes} 分钟后进行小型休息"
+      LongBreak:
+        Seconds: "{Seconds} 秒后将迎来大型休息"
+        Minutes: "{Minutes} 分钟后将迎来大型休息"
+      PauseTime:
+        Seconds: 护眼姬给您关了，她将在 {Seconds} 秒后重新回来
+        Minutes: 护眼姬给您关了，她将在 {Minutes} 分钟后重新回来
+    CustomPause:
+      PageTitle: 我要自己停！
+      Message: 选一下你要停多久
+      ButtonText: 停！
+    WarningPage:
+      ButtonText: 返回
+    OperationFailed: 坏了，操作失败
+    CheckInput: 你自己再检查一下输入的行不行罢，哎~
+    TimeManipulation:
+      HoursLimit: 小时栏栏是不可以超过 {Hours} 小时的
+      MinutesLimit: 分钟栏栏是不可以超过 {Hours} 分钟的
+      SecondsLimit: 秒数栏栏是不可以超过 {Hours} 秒的
+      SGapMorethanLGap: 抱歉啦~ 小休息的间隙是必须要比大休息的短的呢~
+      SDurationMorethanLDuration: 抱歉啦~ 小休息的休息时间是必须要比大休息的短的呢~
+      SDurationTooHigh: 不对！小型休息不可以超过5分钟
+      LDurationTooHigh: 不对！大型休息不可以超过2小时
+      NotEnoughGapBetweenLandS: 小型休息与大型休闲的间隙太少了
+      ShortGapLow: 两次小型休息的间隙最少只能是1分钟
+      LongGapLow: 两次小型休息的间隙最少只能是5分钟
+      ChooseLargerTime: 请选择更长的休息持续时间
+    Settings:
+      Title: 设置
+      SavedSuccessfully: 设置已被保存
+      AreYouSure: 真的吗？
+      LanguageSection: 语言
+      TimeSeparators:
+        Hour: 小时
+        Minutes: 分钟
+        Second: 秒
+      SaveSettings: 爷要保存！
+      TimeSettings:
+        Title: 时间设置
+        GapBetweenTwoShortBreak: '小型休息之间的间隔：'
+        GapBetweenTwoLongBreak: '大型休息之间的间隔:'
+        ShortBreakDuration: '小型休息休息这么久:'
+        LongBreakDuration: '大型休息休息这么久:'
+      UserSettings:
+        Title: 用户设置
+        ForceUser: 强迫我，强迫打断我！
+        ForceUserToolTip: 如果你启用这个选项，你是无法推迟或者中断休息。而且你的鼠标指针也会被我藏起来
+        OnlyOneShortBreak: 在两次大型休息之间只要一次小型休息
+        OnlyOneShortBreakToolTip: 激活此选项将在将在完成大型休息之后停止小型休息的记数
+        StartupApplication: 当系统启动时自动启动护眼姬
+        StartupApplicationToolTip: 护眼姬最最最喜欢这个了！！！！！
+        AlertBeforeLongBreak: 在大型休息一分钟前提醒我
+        AlertBeforeLongBreakToolTip: 护眼姬将在大型休息来临前的一分钟发送小消息告诉你
+        ShortBreakAllowCloseWithRightCLick: 鼠标右键关闭让你去小型休息的提示
+        ShortBreakAllowCloseWithRightCLickToolTip: 允许你在那个烦人的窗口跳出来的时候右键把它关掉（然后你的眼睛就......）
+        SystemIdle: 你不动电脑的时候护眼姬自动帮你暂停
+        SystemIdleToolTip:
+        - 当你不动电脑的时候将会自动暂停休息系统
+        - 例如你电脑搁着忘关了，或者是在看电影
+      StatsSettings:
+        Title: 统计
+        YesDeleteData: 往死里删！
+        NoKeepData: 停停停，别删！
+        StatsDeleted: 全部统计数据都帮你删掉啦~
+        StoreStats: 储存统计数据
+        StoreStatsToolTip: 护眼姬将会记录并且储存你的统计数据，你可以在工具 >> 统计菜单中看到
+        ClearStatsText: '删除历史统计数据:'
+        ClearStats: 删除数据
+      LanguageSettings:
+        Title: 语言
+        SelectLanguage: '选择语言:'
+        MaintainMessage: '本翻译的无敌伟大的作者是: '
+        RestartRequired: 语言的修改将在重启软件后显现
+        MessagesFromLangFile: 使用默认休息提示
+        MessagesFromLangFileToolTip: 如果你勾选这个框框，则在小型休息窗口会显示翻译文件提供的提示和“祝福”
+        AddMessage: 添加自定义休息提示语
+        RemoveMessage: 移除自定义休息提示语
+        NoAccount: 没账号
+        NoWebsite: 没网站
+        NoNotes: 没有关于翻译的小注释
+        EnterNewMessage: 输入新的提示语
+        Submit: 提交
+    Resting: 休息
+    Waiting: 等待
+    ShortMessageSuggestions:
+    - 眨一眨眼
+    - 往死里眨眼~
+    - 遥望远方~
+    - 看看窗子外面
+    - 洗个手，然后按摩按摩你的眼睛
+    LongWindowMessage: 是时候进行大型休息了，出去走走吧
+    LongWindowCancelButton: 我不要~
+    Notifications:
+      LongBreakAlert:
+        Title: 一分钟后开始大型休息
+        Message: 还有一分钟后就是大型休息了，如果你想要继续豪迈的使用电脑的话，你可以在系统托盘上进行推迟
+    WaitUnitlEndOfBreak: 等，等到休息结束！
+    LongBreakTimeRemaining: "{Hours} 小时 {Minutes} 分 {Seconds} 秒后结束休息"
+    StatsPage:
+      Title: 统计数据
+      ShortBreak: 小型休息
+      LongBreak: 大型休息
+      Pauses: 暂停
+      ShortCount: '小型休息次数:'
+      LongCompletedCount: '成功的大型休息:'
+      LongFailedCount: '失败的大型休息:'
+      PauseCount: '暂停数:'
+      StopCount: '停止数:'
+    AlertPages:
+      Titles:
+        Attention: 注意
+        Successful: 成功
+        Error: 错误
+        Info: 信息
+        AboutSoftware: 关于软件
+        Donate: 打赏
+    HeaderMenu:
+      EyesGuard:
+        Header: 护眼姬
+        MainMenu: 主菜单
+        Hide: 隐藏我到托盘
+        Exit: 退出
+      Tools:
+        Header: 工具
+        Stats: 统计
+        Settings: 设置
+      Breaks:
+        Header: 休息
+        GoShort: 开始一个小型休息
+        GoLong: 开始一个大型休息
+      View:
+        Header: 视图
+        KeyTimes: 关键时刻
+      Help:
+        Header: 帮助
+        EyesGuardHelp: 需要护眼姬的帮助
+        Resources: 资源声明
+        SendFeedback: 发送反馈
+        Donate: 打赏
+        About: 关于
+    UserManager:
+      User: 用户
+      NotLoggedIn: 未登录
+      NoTitle: 无标题
+      Login: 登录
+      Profile: 个人资料
+      Logout: 登出
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: 正在运行
+      NotProtected: 已停止
+      PausedProtected: 暂停中
+      Menu:
+        PauseFor: 暂停
+        PausedFor: 暂停 {PauseRemaining}
+        NextShortBreak: '下一次小型休息: {NextShortBreak}'
+        NextLongBreak: '下一次大型休息: {NextLongBreak}'
+        ShowMainMenu: 显示主菜单
+        StartProtection: 开始护眼
+        StopProtection: 停止护眼
+        FiveMins: 5 分钟
+        TenMins: 10 分钟
+        ThirtyMins: 30 分钟
+        OneHour: 1 小时
+        TwoHours: 2 小时
+        Custom: 自定义...
+        Settings: 设置
+        Exit: 退出

@@ -1,7 +1,1 @@
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: remote
-
-remote_theme: avestura/avestura.github.io
+theme: jekyll-theme-cayman
