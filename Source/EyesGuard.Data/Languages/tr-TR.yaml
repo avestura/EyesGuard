@@ -1,0 +1,244 @@
+---
+Meta:
+  Translators:
+  - Name: Furkan KARADENİZ
+    GitHubUsername: Suqbs
+    Website: https://github.com/Suqbs
+    Notes: 'Sabah şerifleriniz hayrolsun efendim.'
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard çok kullanıcılı özellikleri desteklemiyor.
+    HelpPageText: Bir şey hakkında daha fazla bilgi edinmek istiyorsanız
+    farenizi üzerinde gezdirin. Varsa bir ipucu açılacaktır.
+    DoNotRunMultipleInstances: Eyes Guard zaten çalışıyor. Bu uygulamadan
+    birden çok açamazsınız.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard çalışıyor.
+        Message: Eyes Guard arka planda çalışıyor. Görev çubuğundaki kalkan
+        simgesini kullanarak arayüzü ve diğer seçenekleri görebilirsiniz.
+    Resources:
+      PageTitle: Kaynaklar
+      Content:
+        Icons: 'İkonlar: FontAwesome ve IconArchive'
+        UIKit: 'Arayüz Kiti: Hasti UI Kit (Aryan Software tarafından geliştirildi.)'
+    About:
+      PageTitle: Hakkında
+      Content:
+        InnerTitle: Eyes Guard Hakkında
+        PublisherInfo: 'Yayınlayan: Aryan Software'
+    Donate:
+      PageTitle: Eyes Guard'a destek olun.
+      BeforeDonation:
+        Content:
+          InnerTitle: Destek olmak ister misin?
+          Message: Açık-kaynaklı bu yazılımı desteklemek istersen 
+          bu formu kullanabilirsin.
+          ButtonText: Bağış sayfasını tarayıcıda aç.
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Bağış
+          Thanks: Desteğiniz için teşekkürler!
+          Redirect: Tarayıcınızda bağış sayfasına yönlendirileceksiniz.
+          FeedbackNotice: Düşüncelerinizi Microsoft Store içerisindeki
+          Eyes Guard sayfamızda belirtebilirsiniz.
+    Feedback:
+      PageTitle: Geribildirim
+      Content:
+        InnerTitle: Geribildirim
+        Message: Projenin GitHub sayfasında sorununuzu belirtip değişiklikleri
+        takip edebilirsiniz.
+        ButtonText: Yeni bir sorun (issue) oluştur.
+  EyesGuard:
+    ControlPanel:
+      Title: Kontrol Paneli
+    GuardStatus:
+      Running: Gözleriniz koruma altında
+      Paused: Eyes Guard geçiçi olarak devre dışı
+      Stopped: Eyes Guard devre dışı
+      Idle: Eyes Guard sistemi boşta algıladığı için durduruldu.
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "Kısa molaya {Seconds} saniye."
+        Minutes: "Kısa molaya {Minutes} dakika."
+      LongBreak:
+        Seconds: "Uzun molaya {Seconds} saniye."
+        Minutes: "Uzun molaya {Minutes} dakika."
+      PauseTime:
+        Seconds: Eyes Guard {Seconds} saniyeliğine devre dışı.
+        Minutes: Eyes Guard {Minutes} dakikalığına devre dışı.
+    CustomPause:
+      PageTitle: Duraklat
+      Message: Arzu edilen duraklatma süresini girin.
+      ButtonText: Duraklat
+    WarningPage:
+      ButtonText: Geri dön
+    OperationFailed: Operasyon başarısız.
+    CheckInput: Girdi geçerlemesini kontrol et.
+    TimeManipulation:
+      HoursLimit: Saat bölümü {Hours} saatten fazla olmamalı
+      MinutesLimit: Dakika bölümü {Minutes} dakikadan fazla olmamalı
+      SecondsLimit: Saniye bölümü {Seconds} saniyeden fazla olmamalı
+      SGapMorethanLGap: İki kısa mola arasındaki süre, iki uzun mola arasındaki
+      süreden kısa olmalıdır.
+      SDurationMorethanLDuration: Kısa mola süresi uzun mola süresinden kısa 
+      olmalıdır.
+      SDurationTooHigh: Kısa mola 5 dakikayı geçemez.
+      LDurationTooHigh: Uzun mola 2 saatten fazla olamaz.
+      NotEnoughGapBetweenLandS: Kısa ve uzun mola arasında yeterli süre farkı yok.
+      ShortGapLow: İki kısa mola arasındaki süre en az 1 dakika olmalıdır.
+      LongGapLow: İki uzun mola arasındaki süre en az 5 dakika olmalıdır.
+      ChooseLargerTime: Lütfen daha uzun bir zaman seçin.
+    Settings:
+      Title: Ayarlar
+      SavedSuccessfully: Ayarlar başarıyla kaydedildi.
+      AreYouSure: Emin misiniz?
+      LanguageSection: Dil
+      TimeSeparators:
+        Hour: Saat ve
+        Minutes: Dakika ve
+        Second: Saniye
+      SaveSettings: Değişiklikleri kaydet
+      TimeSettings:
+        Title: Zaman Ayarları
+        GapBetweenTwoShortBreak: 'İki kısa mola arasındaki zaman:'
+        GapBetweenTwoLongBreak: 'İki uzun mola arasındaki zaman:'
+        ShortBreakDuration: 'Kısa mola süresi:'
+        LongBreakDuration: 'Uzun mola süresi:'
+      UserSettings:
+        Title: Kullanıcı Ayarları
+        ForceUser: Beni molaya zorla
+        ForceUserToolTip: Bu seçeneği işaretlersen molanı erteleyemez veya
+        moladan çıkamazsın. Ayrıca mola süresi boyunca imlecin saklanır.
+        OnlyOneShortBreak: İki uzun mola arasında bir kısa mola göster.
+        OnlyOneShortBreakToolTip: Bu seçenek işaretlenirse bir kısa mola bitirildiğinde
+        uzun molaya kadar kısa mola sayacını durdurur.
+        StartupApplication: Eyes Guard'ı sistem açılışında başlat
+        StartupApplicationToolTip: Eyes Guard varsayılan olarak sistem önyüklemesiyle başlar.
+          Bu özelliği Görev Yöneticisi >> Başlangıç bölümünden kapatabilirsiniz.
+        AlertBeforeLongBreak: Uzun aradan bir dakika önce bana haber ver
+        AlertBeforeLongBreakToolTip: Eyes Guard uzun bir mola öncesi sizi bilgilendirir.
+        ShortBreakAllowCloseWithRightCLick: Kısa mola penceresini sağ tıkla kapatın
+        ShortBreakAllowCloseWithRightCLickToolTip: Kısa mola penceresini sağ tıkla kapatmaya izin ver.
+        SystemIdle: Sistem boşta olarak algılandığında Eyes Guard'ı duraklat
+        SystemIdleToolTip:
+        - Eyes Guard bilgisayarınızdan uzak olup olmadığınızı kontrol etmek için 
+        sistem boşta mı diye kontrol eder.
+        - Bu modda Eyes Guard, geri sayımı otomatik olarak duraklatır.
+        - Bu özelliğin; siz bilgisayarınızla etkileşimde değilken, mesela film izlerken,
+        gözlerinizi korumaktan alıkoyabileceğini unutmayın.
+      StatsSettings:
+        Title: İstatistikler
+        YesDeleteData: Evet, eminim
+        NoKeepData: Hayır, veriyi tut
+        StatsDeleted: Tüm istatistikler silindi
+        StoreStats: İstatistikleri depola
+        StoreStatsToolTip: Eyes Guard kullanımınız hakkında Araçlar >> İstatistikler
+        kısmında görebileceğiniz verileri tutar. Bu veriler cihazınızda yerel olarak depolanır.
+        ClearStatsText: 'İstatistik geçmişini sil:'
+        ClearStats: Verileri sil
+      LanguageSettings:
+        Title: Dil
+        SelectLanguage: 'Dili Seç:'
+        MaintainMessage: 'Bu dili kazandıran kişiler: '
+        RestartRequired: Dilin değiştirilmesi bir sonraki başlangıçta etkili olur
+        MessagesFromLangFile: Kısa molalarda mesaj kaynağı olarak dil dosyasını kullan
+        MessagesFromLangFileToolTip: Bu seçenek işaretlenirse kısa mola penceresinde 
+        çıkan mesajlar dil dosyası tarafından sağlanır.
+        AddMessage: Mesaj Ekle
+        RemoveMessage: Mesajı Kaldır
+        NoAccount: Hesap Yok
+        NoWebsite: İnternet Sitesi Yok
+        NoNotes: Çeviri hakkında bir not yok
+        EnterNewMessage: Yeni mesaj girin
+        Submit: Gönder
+    Resting: Dinleniyor
+    Waiting: Bekliyor
+    ShortMessageSuggestions:
+    - Gözlerini aç ve kapat
+    - Aralıksız göz kırp
+    - Uzaklara bak
+    - Pencereden dışarı bak
+    - Ellerini yıkadıktan sonra ellerinle gözlerine masaj yap
+    LongWindowMessage: Uzun bir ara vermenin zamanı geldi. Bir yürüyüşe çık.
+    LongWindowCancelButton: İptal Et
+    Notifications:
+      LongBreakAlert:
+        Title: Uzun molaya 1 dakika
+        Message: Uzun molaya 1 dakika kaldı. Gerekirse görev çubuğu menüsünden
+        molayı erteleyebilirsin.
+    WaitUnitlEndOfBreak: Lütfen mola bitimine kadar bekleyin.
+    LongBreakTimeRemaining: "Mola bitimine {Hours} saat ve {Minutes} dakika ve {Seconds}
+      saniye kaldı."
+    StatsPage:
+      Title: İstatistikler
+      ShortBreak: Kısa mola
+      LongBreak: Uzun mola
+      Pauses: Duraklamalar
+      ShortCount: 'Kısa molalar:'
+      LongCompletedCount: 'Bitirilen uzun molalar:'
+      LongFailedCount: 'Bitirilememiş uzun molalar:'
+      PauseCount: 'Geçici duraklamalar:'
+      StopCount: 'Duraklamalar:'
+    AlertPages:
+      Titles:
+        Attention: Dikkat
+        Successful: Başarılı
+        Error: Hata
+        Info: Bilgi
+        AboutSoftware: Uygulama Hakkında
+        Donate: Bağış
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Ana Menü
+        Hide: Eyes Guard'ı Sakla
+        Exit: Çıkış
+      Tools:
+        Header: Araçlar
+        Stats: İstatistikler
+        Settings: Ayarlar
+      Breaks:
+        Header: Molalar
+        GoShort: Kısa bir mola verin
+        GoLong: Uzun bir mola verin
+      View:
+        Header: Görünüm
+        KeyTimes: Zamanı Tuttur
+      Help:
+        Header: Yardım
+        EyesGuardHelp: Eyes Guard Yardım
+        Resources: Kaynaklar
+        SendFeedback: Geribildirim Gönder
+        Donate: Bağış
+        About: Hakkında
+    UserManager:
+      User: Kullanıcı
+      NotLoggedIn: Giriş yapılmadı
+      NoTitle: Başlık yok
+      Login: Giriş yap
+      Profile: Profil
+      Logout: Çıkış yap
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Korunuyor
+      NotProtected: Korunmuyor
+      PausedProtected: Geçici olarak devre dışı
+      Menu:
+        PauseFor: Şu kadar duraklat...
+        PausedFor: Şu kadar {PauseRemaining} süre duraklatıldı
+        NextShortBreak: 'Sonraki kısa mola: {NextShortBreak}'
+        NextLongBreak: 'Sonraki uzun mola: {NextLongBreak}'
+        ShowMainMenu: Ana Menüyü Göster
+        StartProtection: Korumayı Başlat
+        StopProtection: Korumayı Durdur
+        FiveMins: 5 dakika
+        TenMins: 10 dakika
+        ThirtyMins: 30 dakika
+        OneHour: 1 saat
+        TwoHours: 2 saat
+        Custom: Özelleştir...
+        Settings: Ayarlar
+        Exit: Çıkış
