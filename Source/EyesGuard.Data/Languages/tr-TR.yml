@@ -11,14 +11,14 @@ Translation:
     HeaderTitle: Eyes Guard
     LoginWarning: Eyes Guard çok kullanıcılı özellikleri desteklemiyor.
     HelpPageText: Bir şey hakkında daha fazla bilgi edinmek istiyorsanız
-    farenizi üzerinde gezdirin. Varsa bir ipucu açılacaktır.
+        farenizi üzerinde gezdirin. Varsa bir ipucu açılacaktır.
     DoNotRunMultipleInstances: Eyes Guard zaten çalışıyor. Bu uygulamadan
-    birden çok açamazsınız.
+        birden çok açamazsınız.
     Notifications:
       FirstLaunch:
         Title: Eyes Guard çalışıyor.
         Message: Eyes Guard arka planda çalışıyor. Görev çubuğundaki kalkan
-        simgesini kullanarak arayüzü ve diğer seçenekleri görebilirsiniz.
+            simgesini kullanarak arayüzü ve diğer seçenekleri görebilirsiniz.
     Resources:
       PageTitle: Kaynaklar
       Content:
@@ -35,7 +35,7 @@ Translation:
         Content:
           InnerTitle: Destek olmak ister misin?
           Message: Açık-kaynaklı bu yazılımı desteklemek istersen 
-          bu formu kullanabilirsin.
+            bu formu kullanabilirsin.
           ButtonText: Bağış sayfasını tarayıcıda aç.
       DonationButtonClicked:
         Content:
@@ -43,13 +43,13 @@ Translation:
           Thanks: Desteğiniz için teşekkürler!
           Redirect: Tarayıcınızda bağış sayfasına yönlendirileceksiniz.
           FeedbackNotice: Düşüncelerinizi Microsoft Store içerisindeki
-          Eyes Guard sayfamızda belirtebilirsiniz.
+            Eyes Guard sayfamızda belirtebilirsiniz.
     Feedback:
       PageTitle: Geribildirim
       Content:
         InnerTitle: Geribildirim
         Message: Projenin GitHub sayfasında sorununuzu belirtip değişiklikleri
-        takip edebilirsiniz.
+            takip edebilirsiniz.
         ButtonText: Yeni bir sorun (issue) oluştur.
   EyesGuard:
     ControlPanel:
@@ -82,9 +82,9 @@ Translation:
       MinutesLimit: Dakika bölümü {Minutes} dakikadan fazla olmamalı
       SecondsLimit: Saniye bölümü {Seconds} saniyeden fazla olmamalı
       SGapMorethanLGap: İki kısa mola arasındaki süre, iki uzun mola arasındaki
-      süreden kısa olmalıdır.
+        süreden kısa olmalıdır.
       SDurationMorethanLDuration: Kısa mola süresi uzun mola süresinden kısa 
-      olmalıdır.
+        olmalıdır.
       SDurationTooHigh: Kısa mola 5 dakikayı geçemez.
       LDurationTooHigh: Uzun mola 2 saatten fazla olamaz.
       NotEnoughGapBetweenLandS: Kısa ve uzun mola arasında yeterli süre farkı yok.
@@ -111,10 +111,10 @@ Translation:
         Title: Kullanıcı Ayarları
         ForceUser: Beni molaya zorla
         ForceUserToolTip: Bu seçeneği işaretlersen molanı erteleyemez veya
-        moladan çıkamazsın. Ayrıca mola süresi boyunca imlecin saklanır.
+            moladan çıkamazsın. Ayrıca mola süresi boyunca imlecin saklanır.
         OnlyOneShortBreak: İki uzun mola arasında bir kısa mola göster.
         OnlyOneShortBreakToolTip: Bu seçenek işaretlenirse bir kısa mola bitirildiğinde
-        uzun molaya kadar kısa mola sayacını durdurur.
+            uzun molaya kadar kısa mola sayacını durdurur.
         StartupApplication: Eyes Guard'ı sistem açılışında başlat
         StartupApplicationToolTip: Eyes Guard varsayılan olarak sistem önyüklemesiyle başlar.
           Bu özelliği Görev Yöneticisi >> Başlangıç bölümünden kapatabilirsiniz.
@@ -125,10 +125,10 @@ Translation:
         SystemIdle: Sistem boşta olarak algılandığında Eyes Guard'ı duraklat
         SystemIdleToolTip:
         - Eyes Guard bilgisayarınızdan uzak olup olmadığınızı kontrol etmek için 
-        sistem boşta mı diye kontrol eder.
+          sistem boşta mı diye kontrol eder.
         - Bu modda Eyes Guard, geri sayımı otomatik olarak duraklatır.
         - Bu özelliğin; siz bilgisayarınızla etkileşimde değilken, mesela film izlerken,
-        gözlerinizi korumaktan alıkoyabileceğini unutmayın.
+          gözlerinizi korumaktan alıkoyabileceğini unutmayın.
       StatsSettings:
         Title: İstatistikler
         YesDeleteData: Evet, eminim
@@ -136,7 +136,7 @@ Translation:
         StatsDeleted: Tüm istatistikler silindi
         StoreStats: İstatistikleri depola
         StoreStatsToolTip: Eyes Guard kullanımınız hakkında Araçlar >> İstatistikler
-        kısmında görebileceğiniz verileri tutar. Bu veriler cihazınızda yerel olarak depolanır.
+            kısmında görebileceğiniz verileri tutar. Bu veriler cihazınızda yerel olarak depolanır.
         ClearStatsText: 'İstatistik geçmişini sil:'
         ClearStats: Verileri sil
       LanguageSettings:
@@ -146,7 +146,7 @@ Translation:
         RestartRequired: Dilin değiştirilmesi bir sonraki başlangıçta etkili olur
         MessagesFromLangFile: Kısa molalarda mesaj kaynağı olarak dil dosyasını kullan
         MessagesFromLangFileToolTip: Bu seçenek işaretlenirse kısa mola penceresinde 
-        çıkan mesajlar dil dosyası tarafından sağlanır.
+            çıkan mesajlar dil dosyası tarafından sağlanır.
         AddMessage: Mesaj Ekle
         RemoveMessage: Mesajı Kaldır
         NoAccount: Hesap Yok
@@ -168,7 +168,7 @@ Translation:
       LongBreakAlert:
         Title: Uzun molaya 1 dakika
         Message: Uzun molaya 1 dakika kaldı. Gerekirse görev çubuğu menüsünden
-        molayı erteleyebilirsin.
+            molayı erteleyebilirsin.
     WaitUnitlEndOfBreak: Lütfen mola bitimine kadar bekleyin.
     LongBreakTimeRemaining: "Mola bitimine {Hours} saat ve {Minutes} dakika ve {Seconds}
       saniye kaldı."
