@@ -1,0 +1,229 @@
+﻿---
+Meta:
+  Translators:
+  - Name: Marco Heinisch
+    GitHubUsername: marcoheinisch
+    Website: https://github.com/marcoheinisch
+    Notes: ''
+
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Derzeit unterstützt Eyes Guard keine Mehrbenutzer-Funktionen.
+    HelpPageText: Für weitere Informationen über ein Element in der App, bewegen Sie den Mauszeiger darüber. Falls verfügbar, wird Tooltip angezeigt.
+    DoNotRunMultipleInstances: Eyes Guard läuft bereits. Sie können nicht mehrere Instanzen dieser Software ausführen.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard wird ausgeführt.
+        Message: Eyes Guard läuft im Hintergrund. Sie können die Benutzeroberfläche und andere Optionen über das Schild-Symbol in der Taskleiste aufrufen.
+    Resources:
+      PageTitle: Ressourcen
+      Content:
+        Icons: 'Icons: FontAwesome und IconArchive'
+        UIKit: 'UI-Kit: Hasti UI-Kit (entwickelt von Aryan Software)'
+    About:
+      PageTitle: Über
+      Content:
+        InnerTitle: Über Eyes Guard
+        PublisherInfo: 'Veröffentlicht von: Aryan Software'
+    Donate:
+      PageTitle: Spenden für Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Möchten Sie spenden?
+          Message: Wenn Sie diese kostenlose Open-Source-Software unterstützen möchten, können Sie diesen Link verwenden.
+          ButtonText: Spendenwebseite im Browser öffnen
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Spenden
+          Thanks: Vielen Dank für Ihre Unterstützung!
+          Redirect: Sie werden zu einer Spenden-Seite in Ihrem Browser weitergeleitet.
+          FeedbackNotice: Wenn Sie Kommentare haben, können Sie diese auf der Eyes Guard-Seite im Microsoft Store posten.
+    Feedback:
+      PageTitle: Feedback
+      Content:
+        InnerTitle: Feedback
+        Message: Sie können Probleme auf der GitHub-Seite des Projekts melden sowie damit zusammenhängende Änderungen verfolgen.
+        ButtonText: Neues Github-Issue erstellen
+  EyesGuard:
+    ControlPanel:
+      Title: Control Panel
+    GuardStatus:
+      Running: Deine Augen sind geschützt.
+      Paused: Eyes Guard ist vorübergehend deaktiviert.
+      Stopped: Eyes Guard ist deaktiviert.
+      Idle: Eyes Guard ist pausiert, da sich das System im Idle-Zustand befindet.
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Sekunden} Sekunden bis zur kurzen Pause."
+        Minutes: "{Minuten} Minuten bis zur kurzen Pause."
+      LongBreak:
+        Seconds: "{Sekunden} Sekunden bis zur langen Pause."
+        Minutes: "{Minuten} Minuten bis zur langen Pause."
+      PauseTime:
+        Seconds: Eyes Guard ist für {Sekunden} Sekunden deaktiviert.
+        Minutes: Eyes Guard ist für {Minuten} Minuten deaktiviert.
+    CustomPause:
+      PageTitle: Benutzerdefinierte Pause
+      Message: Geben Sie die gewünschte Pausenzeit ein.
+      ButtonText: Pause
+    WarningPage:
+      ButtonText: Zurück
+    OperationFailed: Vorgang fehlgeschlagen
+    CheckInput: Überprüfen Sie die Eingabevalidierung.
+    TimeManipulation:
+      HoursLimit: Die Eingabe im Feld "Stunden" darf nicht größer als {Hours} sein
+      MinutesLimit: Die Eingabe im Feld "Minuten" darf nicht größer als {Minutes} sein
+      SecondsLimit: Die Eingabe im Feld "Sekunden" darf nicht größer als {Seconds} sein
+      SGapMorethanLGap: Der Zeitraum zwischen zwei kurzen Pausen muss kleiner sein als der Zeitraum zwischen zwei langen Pausen.
+      SDurationMorethanLDuration: Die Dauer der kurzen Pause muss kürzer sein als die Dauer der langen Pause.
+      SDurationTooHigh: Die kurze Pause darf nicht länger als 5 Minuten dauern.
+      LDurationTooHigh: Die lange Pause darf nicht länger als 2 Stunden dauern.
+      NotEnoughGapBetweenLandS: Es gibt nicht genug Abstand zwischen kurzen und langen Pausen.
+      ShortGapLow: Der Abstand zwischen zwei kurzen Pausen muss mindestens 1 Minute betragen.
+      LongGapLow: Der Abstand zwischen zwei langen Pausen muss mindestens 5 Minuten betragen.
+      ChooseLargerTime: Bitte wählen Sie eine längere Dauer.
+    Settings:
+      Title: Einstellungen
+      SavedSuccessfully: Einstellungen erfolgreich gespeichert
+      AreYouSure: Sind Sie sicher?
+      LanguageSection: Sprache
+      TimeSeparators:
+        Hour: Stunde(n) und
+        Minutes: Minute(n) und
+        Second: Sekunde(n)
+      SaveSettings: Änderungen speichern
+      TimeSettings:
+        Title: Zeit-Einstellungen
+        GapBetweenTwoShortBreak: 'Zeit zwischen zwei kurzen Pausen:'
+        GapBetweenTwoLongBreak: 'Zeit zwischen zwei langen Pausen:'
+        ShortBreakDuration: 'Dauer der kurzen Pause:'
+        LongBreakDuration: 'Dauer der langen Pause:'
+      UserSettings:
+        Title: Benutzereinstellungen
+        ForceUser: Zwinge mich zum pausieren
+        ForceUserToolTip: Wenn Sie diese Option aktivieren, können Sie die Pause nicht mehr verschieben oder abbrechen. Außerdem wird der Mauszeiger während der Pause ausgeblendet.
+        OnlyOneShortBreak: Zeige nur eine kurze Pause zwischen zwei langen Pausen an.
+        OnlyOneShortBreakToolTip: Wenn Sie diese Option aktivieren, wird der Zähler für die kurze Pause nach einer erfolgreichen Pause gestoppt, bis eine lange Pause eintritt.
+        StartupApplication: Starte Eyes Guard mit dem Systemstart
+        StartupApplicationToolTip: Eyes Guard startet standardmäßig bei Systemstart. Sie können diese Funktion im Task-Manager >> Tab "Start" deaktivieren.
+        AlertBeforeLongBreak: Benachrichtige mich 1 Minute vor der langen Pause
+        AlertBeforeLongBreakToolTip: Eyes Guard benachrichtigt Sie eine Minute vor einer langen Pause.
+        ShortBreakAllowCloseWithRightCLick: Schließen Sie das Fenster in kurzen Pausen mit einem Rechtsklick
+        ShortBreakAllowCloseWithRightCLickToolTip: Erlauben Sie das Schließen des Fenster in kurzen Pausen mit einem Rechtsklick.
+        SystemIdle: Pausieren Sie Eyes Guard, wenn erkannt wird, dass Sie den PC nicht benutzen.
+        SystemIdleToolTip:
+        - Eyes Guard verwendet eine System-Idle-Erkennung, um festzustellen, ob Sie
+          gerade nicht am PC sind.
+        - In diesem Modus pausiert Eyes Guard automatisch den Countdown.
+        - Beachten Sie, dass diese Funktion das Schutzverhalten der Augen deaktiviert, wenn Sie nicht mit Ihrem PC interagieren, beispielsweise beim Ansehen eines Filmes.
+      StatsSettings:
+        Title: Statistiken
+        YesDeleteData: Ja, sicher!
+        NoKeepData: Nein, Daten behalten
+        StatsDeleted: Alle Statistiken gelöscht
+        StoreStats: Statistiken speichern
+        StoreStatsToolTip: Eyes Guard speichert einige Informationen über Ihre Nutzung, die Sie im Menü "Tools >> Statistiken" einsehen können. Diese Daten werden lokal auf Ihrem Gerät gespeichert.
+        ClearStatsText: 'Statistikverlauf löschen:'
+        ClearStats: Daten löschen
+      LanguageSettings:
+        Title: Sprache
+        SelectLanguage: 'Sprache auswählen:'
+        MaintainMessage: 'Diese Sprache wird gepflegt von: '
+        RestartRequired: Die Änderungen werden beim nächsten Start wirksam.
+        MessagesFromLangFile: Verwende die Sprachdatei als Quelle für Short-Break-Meldungen
+        MessagesFromLangFileToolTip: Wenn Sie diese Option aktivieren, werden die Meldungen in der Short-Break-Anzeige aus der Sprachdatei geladen.
+        AddMessage: Nachricht hinzufügen
+        RemoveMessage: Nachricht entfernen
+        NoAccount: Kein Konto
+        NoWebsite: Keine Webseite
+        NoNotes: Keine Notizen zur Übersetzung
+        EnterNewMessage: Neue Nachricht eingeben
+        Submit: Übernehmen
+    Resting: Pause
+    Waiting: Warten
+    ShortMessageSuggestions:
+    - Öffne und schließe deine Augen
+    - Blinzle ununterbrochen
+    - Starre in die Ferne
+    - Schaue aus dem Fenster
+    - Wasche deine Hände und massiere anschließend deine Augen
+    LongWindowMessage: Es ist Zeit für eine lange Pause. Gehe spazieren.
+    LongWindowCancelButton: Abbrechen
+    Notifications:
+      LongBreakAlert:
+        Title: Noch 1 Minute bis zur langen Pause
+        Message: In einer Minute startet die lange Pause. Sie können diese Pause vom Kontextmenü der Taskleiste aus verschieben, falls nötig.
+    WaitUnitlEndOfBreak: Bitte warten Sie, bis die Pause beendet ist.
+    LongBreakTimeRemaining: "Noch {Hours} Stunde(n) und {Minutes} Minute(n) und {Seconds} Sekunde(n) bis zum Ende der Pause."
+    StatsPage:
+      Title: Statistiken
+      ShortBreak: Kurze Pause
+      LongBreak: Lange Pause
+      Pauses: Pausen
+      ShortCount: 'Kurze Pausen:'
+      LongCompletedCount: 'Abgeschlossene lange Pausen:'
+      LongFailedCount: 'Fehlgeschlagene lange Pausen:'
+      PauseCount: 'Temporäre Pausen:'
+      StopCount: 'Stopps:'
+    AlertPages:
+      Titles:
+        Attention: Achtung
+        Successful: Erfolgreich
+        Error: Fehler
+        Info: Info
+        AboutSoftware: Über die Software
+        Donate: Spenden
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Hauptmenü
+        Hide: Eyes Guard ausblenden
+        Exit: Beenden
+      Tools:
+        Header: Tools
+        Stats: Statistiken
+        Settings: Einstellungen
+      Breaks:
+        Header: Pausen
+        GoShort: Kurze Pause starten
+        GoLong: Lange Pause starten
+      View:
+        Header: Ansicht
+        KeyTimes: Zeitpunkte
+      Help:
+        Header: Hilfe
+        EyesGuardHelp: Eyes Guard Hilfe
+        Resources: Ressourcen
+        SendFeedback: Feedback senden
+        Donate: Spenden
+        About: Über
+    UserManager:
+      User: Benutzer
+      NotLoggedIn: Nicht angemeldet
+      NoTitle: Kein Titel
+      Login: Anmelden
+      Profile: Profil
+      Logout: Abmelden
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Schutz aktiviert
+      NotProtected: Kein Schutz
+      PausedProtected: Vorübergehend deaktiviert
+      Menu:
+        PauseFor: Pausieren für...
+        PausedFor: Pausieren für {PauseRemaining}
+        NextShortBreak: 'Nächste kurze Pause: {NextShortBreak}'
+        NextLongBreak: 'Nächste lange Pause: {NextLongBreak}'
+        ShowMainMenu: Hauptmenü öffnen
+        StartProtection: Schutz aktivieren
+        StopProtection: Schutz deaktivieren
+        FiveMins: 5 Minuten
+        TenMins: 10 Minuten
+        ThirtyMins: 30 Minuten
+        OneHour: 1 Stunde
+        TwoHours: 2 Stunden
+        Custom: Benutzerdefiniert...
+        Settings: Einstellungen
+        Exit: Beenden
