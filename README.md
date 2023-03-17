@@ -64,7 +64,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 |[![no][no]](#)|Norwegian|nb-NO|[Thomas Rory Gummerson](https://trgwii.no/)|
 |[![in][in]](#)|Tamil|ta-IN|[Muthu Kumar](https://mkr.pw)|
 |[![ko][ko]](#)|Korean|ko-KR|[Sung Jae Cho](https://rubycho.github.io)|
-|[![ch][ch]](#)|Chinese |zh-CN|[Qixiny](https://github.com/Qxiny)|
+|[![ch][ch]](#)|Chinese |zh-CN|[Qixiny](https://github.com/qixinynan)|
 |[![tr][tr]](#)|Turkish |tr-TR|[Furkan KARADENİZ](https://github.com/Suqbs)|
 |[![add][add]](#how-to-contribute-to-translating-app)|[Add Language](#how-to-contribute-to-translating-app)||You|
 
