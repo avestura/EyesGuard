@@ -56,14 +56,14 @@ Translation:
       Idle: Eyes Guard ist pausiert, da sich das System im Idle-Zustand befindet.
     TimeRemaining:
       ShortBreak:
-        Seconds: "{Sekunden} Sekunden bis zur kurzen Pause."
-        Minutes: "{Minuten} Minuten bis zur kurzen Pause."
+        Seconds: "{Seconds} Sekunden bis zur kurzen Pause."
+        Minutes: "{Minutes} Minuten bis zur kurzen Pause."
       LongBreak:
-        Seconds: "{Sekunden} Sekunden bis zur langen Pause."
-        Minutes: "{Minuten} Minuten bis zur langen Pause."
+        Seconds: "{Seconds} Sekunden bis zur langen Pause."
+        Minutes: "{Minutes} Minuten bis zur langen Pause."
       PauseTime:
-        Seconds: Eyes Guard ist für {Sekunden} Sekunden deaktiviert.
-        Minutes: Eyes Guard ist für {Minuten} Minuten deaktiviert.
+        Seconds: Eyes Guard ist für {Seconds} Sekunden deaktiviert.
+        Minutes: Eyes Guard ist für {Minutes} Minuten deaktiviert.
     CustomPause:
       PageTitle: Benutzerdefinierte Pause
       Message: Geben Sie die gewünschte Pausenzeit ein.
