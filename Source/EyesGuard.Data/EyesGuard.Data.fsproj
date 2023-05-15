@@ -6,7 +6,7 @@
   <ItemGroup>
     <Compile Include="CompilerExtensions.fs" />
     <None Include="languages\pl-PL.yml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
 	<None Include="Languages\tr-TR.yml">
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
