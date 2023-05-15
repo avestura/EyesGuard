@@ -11,13 +11,13 @@ Translation:
   Application:
     OSTitle: Eyes Guard
     HeaderTitle: Eyes Guard
-    LoginWarning: Aplikacja Eyes Guard nie udostêpnia obecnie mo¿liwoœci korzystania z wielu kont.
-    HelpPageText: By uzyskaæ wiêcej informacji dotycz¹cych elementu, umieœæ nad nim kursor myszy.
-    DoNotRunMultipleInstances: Aplikacja jest ju¿ uruchomiona. Tylko jedna instacja aplikacji jest dozwolona.
+    LoginWarning: Aplikacja Eyes Guard nie udostÄ™pnia obecnie moÅ¼liwoÅ›ci korzystania z wielu kont.
+    HelpPageText: By uzyskaÄ‡ wiÄ™cej informacji dotyczÄ…cych elementu, umieÅ›Ä‡ nad nim kursor myszy.
+    DoNotRunMultipleInstances: Aplikacja jest juÅ¼ uruchomiona. Tylko jedna instacja aplikacji jest dozwolona.
     Notifications:
       FirstLaunch:
         Title: Apliakcja Eyes Guard jest uruchomiona.
-        Message: Aplikacja Eyes Guard dzia³a w tle. By uzyskaæ dostêp do panelu sterowania kliknij ikonê aplikacji znajduj¹c¹ siê w zasobniku systemowym.
+        Message: Aplikacja Eyes Guard dziaÅ‚a w tle. By uzyskaÄ‡ dostÄ™p do panelu sterowania kliknij ikonÄ™ aplikacji znajdujÄ…cÄ… siÄ™ w zasobniku systemowym.
     Resources:
       PageTitle: Zasoby
       Content:
@@ -26,70 +26,70 @@ Translation:
     About:
       PageTitle: Info
       Content:
-        InnerTitle: Informacje dotycz¹ce Eyes Guard
+        InnerTitle: Informacje dotyczÄ…ce Eyes Guard
         PublisherInfo: 'Wydawca: Aryan Software'
     Donate:
-      PageTitle: Wesprzyj aplikacjê Eyes Guard
+      PageTitle: Wesprzyj aplikacjÄ™ Eyes Guard
       BeforeDonation:
         Content:
-          InnerTitle: Czy chcesz dokonaæ wp³aty?
-          Message: By wesprzeæ aplikacjê Eyes Guard mo¿esz skorzystaæz poni¿szego formularza.
-          ButtonText: Uruchom przegl¹darkê
+          InnerTitle: Czy chcesz dokonaÄ‡ wpÅ‚aty?
+          Message: By wesprzeÄ‡ aplikacjÄ™ Eyes Guard moÅ¼esz skorzystaÄ‡z poniÅ¼szego formularza.
+          ButtonText: Uruchom przeglÄ…darkÄ™
       DonationButtonClicked:
         Content:
-          InnerTitle: Wp³ata
-          Thanks: Dziêkujemy za Twoje wspracie!
-          Redirect: Za chwielê zostaniesz przekierowany na stronê wp³aty w swojej przegldarcie 
-          FeedbackNotice: Jeœli chcia³byœ zostawiæ komentarz mo¿esz to zrobiæ korzystaj¹c ze strony Microsoft Store.
+          InnerTitle: WpÅ‚ata
+          Thanks: DziÄ™kujemy za Twoje wspracie!
+          Redirect: Za chwielÄ™ zostaniesz przekierowany na stronÄ™ wpÅ‚aty w swojej przegldarcie 
+          FeedbackNotice: JeÅ›li chciaÅ‚byÅ› zostawiÄ‡ komentarz moÅ¼esz to zrobiÄ‡ korzystajÄ…c ze strony Microsoft Store.
     Feedback:
       PageTitle: Opinia
       Content:
         InnerTitle: Twoja opinia
-        Message: Mo¿esz utworzyæ nowe zg³oszenie na stronie Github i œledziæ postêp prac.
-        ButtonText: Utwórz nowe zg³oszenie
+        Message: MoÅ¼esz utworzyÄ‡ nowe zgÅ‚oszenie na stronie Github i Å›ledziÄ‡ postÄ™p prac.
+        ButtonText: UtwÃ³rz nowe zgÅ‚oszenie
   EyesGuard:
     ControlPanel:
       Title: Panel Sterowania
     GuardStatus:
-      Running: Twoje oczy s¹ chronione
+      Running: Twoje oczy sÄ… chronione
       Paused: Aplikacja jest tymczasowo zatrzymana
-      Stopped: Aplikacja jest wy³¹czona
-      Idle: Aplikacja zosta³a tymczasowo zatrzymana w zwi¹zku z beczynnoœci¹ systemu
+      Stopped: Aplikacja jest wyÅ‚Ä…czona
+      Idle: Aplikacja zostaÅ‚a tymczasowo zatrzymana w zwiÄ…zku z beczynnoÅ›ciÄ… systemu
     TimeRemaining:
       ShortBreak:
-        Seconds: "{Seconds} sekund do krótkiej przerwy."
-        Minutes: "{Minutes} minut do krótkiej przerwy."
+        Seconds: "{Seconds} sekund do krÃ³tkiej przerwy."
+        Minutes: "{Minutes} minut do krÃ³tkiej przerwy."
       LongBreak:
-        Seconds: "{Seconds} sekund do d³ugiej przerw¹."
-        Minutes: "{Minutes} minut do d³ugiej przerw¹."
+        Seconds: "{Seconds} sekund do dÅ‚ugiej przerwÄ…."
+        Minutes: "{Minutes} minut do dÅ‚ugiej przerwÄ…."
       PauseTime:
-        Seconds: Aplikacja Eyes Guard jest wy³¹czona od {Seconds} sekund
-        Minutes: Aplikacja Eyes Guard jest wy³¹czona od {Minutes} minut
+        Seconds: Aplikacja Eyes Guard jest wyÅ‚Ä…czona od {Seconds} sekund
+        Minutes: Aplikacja Eyes Guard jest wyÅ‚Ä…czona od {Minutes} minut
     CustomPause:
-      PageTitle: Zdefiniuj przerwê
+      PageTitle: Zdefiniuj przerwÄ™
       Message: Wpisz oczekiwany czas przerwy
-      ButtonText: Rozpocznij przerwê
+      ButtonText: Rozpocznij przerwÄ™
     WarningPage:
-      ButtonText: Powrót
-    OperationFailed: Operacja nie powiod³a siê.
-    CheckInput: Sprawdzanie danych wejœciowych.
+      ButtonText: PowrÃ³t
+    OperationFailed: Operacja nie powiodÅ‚a siÄ™.
+    CheckInput: Sprawdzanie danych wejÅ›ciowych.
     TimeManipulation:
-      HoursLimit: Liczba godzin nie mo¿e byæ wiêksza ni¿ {Hours}
-      MinutesLimit: Liczba minut nie mo¿e byæ wiêksza ni¿ {Minutes}
-      SecondsLimit: Liczba sekund nie mo¿e byæ wiêksza ni¿ {Seconds}
-      SGapMorethanLGap: Up³yw czasu miêdzy dwiema krótkimi przerwami ni¿ miêdzy dwiema d³ugimi przerwami.
-      SDurationMorethanLDuration: Czas trwania krótkiej przerwy musi byæ miniejszy ni¿ czas trwania d³ugiej przerwy.
-      SDurationTooHigh: Krótka przerwa nie mo¿e byæ d³u¿sza ni¿ 5 minut.
-      LDurationTooHigh: D³uga przerwa nie mo¿e byæ d³u¿a ni¿ 2 godziny.
-      NotEnoughGapBetweenLandS: Zbyt krótki odstêp miêdzy krótk¹ a d³ug¹ przerw¹.
-      ShortGapLow: Odstêp miêdzy dwiema krótkimi przerwami musi wynosiæ conajmniej 1 minutê.
-      LongGapLow: Odstêp miêdzy dwiema d³ugimi przerwami musi wynosiæ conajmniej 5 minut.
-      ChooseLargerTime: Proszê wybraæ d³u¿szy czas trwania.
+      HoursLimit: Liczba godzin nie moÅ¼e byÄ‡ wiÄ™ksza niÅ¼ {Hours}
+      MinutesLimit: Liczba minut nie moÅ¼e byÄ‡ wiÄ™ksza niÅ¼ {Minutes}
+      SecondsLimit: Liczba sekund nie moÅ¼e byÄ‡ wiÄ™ksza niÅ¼ {Seconds}
+      SGapMorethanLGap: UpÅ‚yw czasu miÄ™dzy dwiema krÃ³tkimi przerwami niÅ¼ miÄ™dzy dwiema dÅ‚ugimi przerwami.
+      SDurationMorethanLDuration: Czas trwania krÃ³tkiej przerwy musi byÄ‡ miniejszy niÅ¼ czas trwania dÅ‚ugiej przerwy.
+      SDurationTooHigh: KrÃ³tka przerwa nie moÅ¼e byÄ‡ dÅ‚uÅ¼sza niÅ¼ 5 minut.
+      LDurationTooHigh: DÅ‚uga przerwa nie moÅ¼e byÄ‡ dÅ‚uÅ¼a niÅ¼ 2 godziny.
+      NotEnoughGapBetweenLandS: Zbyt krÃ³tki odstÄ™p miÄ™dzy krÃ³tkÄ… a dÅ‚ugÄ… przerwÄ….
+      ShortGapLow: OdstÄ™p miÄ™dzy dwiema krÃ³tkimi przerwami musi wynosiÄ‡ conajmniej 1 minutÄ™.
+      LongGapLow: OdstÄ™p miÄ™dzy dwiema dÅ‚ugimi przerwami musi wynosiÄ‡ conajmniej 5 minut.
+      ChooseLargerTime: ProszÄ™ wybraÄ‡ dÅ‚uÅ¼szy czas trwania.
     Settings:
       Title: Ustawienia
-      SavedSuccessfully: Ustawienia zapisano pomyœlnie
-      AreYouSure: Czy te ustawienia s¹ poprawne?
-      LanguageSection: Jêzyk
+      SavedSuccessfully: Ustawienia zapisano pomyÅ›lnie
+      AreYouSure: Czy te ustawienia sÄ… poprawne?
+      LanguageSection: JÄ™zyk
       TimeSeparators:
         Hour: Godzin i
         Minutes: Minut i
@@ -97,117 +97,117 @@ Translation:
       SaveSettings: Zapisz
       TimeSettings:
         Title: Ustawienia czasu
-        GapBetweenTwoShortBreak: 'Odstêp miêdzy dwiema krótkimi przerwami:'
-        GapBetweenTwoLongBreak: 'Odstêp miêdzy dwiema d³ugimi przerwami:'
-        ShortBreakDuration: 'Czas trwania krótkiej przerwy:'
-        LongBreakDuration: 'Czas trwania d³ugiej przerwy:'
+        GapBetweenTwoShortBreak: 'OdstÄ™p miÄ™dzy dwiema krÃ³tkimi przerwami:'
+        GapBetweenTwoLongBreak: 'OdstÄ™p miÄ™dzy dwiema dÅ‚ugimi przerwami:'
+        ShortBreakDuration: 'Czas trwania krÃ³tkiej przerwy:'
+        LongBreakDuration: 'Czas trwania dÅ‚ugiej przerwy:'
       UserSettings:
-        Title: Ustawienia u¿ytkownika
-        ForceUser: Wymuszaj przerwê
-        ForceUserToolTip: Jeœli wybierzesz t¹ opcjênie bêdziesz móg³ pomin¹æ ani skóciæ przerwy. Dodatkwo wskaŸnik myszy zostanie ukryty podczas przerwy.
-        OnlyOneShortBreak: Poka¿ tylko jedn¹ krótk¹ przerwê miêdzy dwiema d³ugimi
-        OnlyOneShortBreakToolTip: Aktywowanie tej opcji zatrzymuje licznik krótkich przerw po ukoñczeniu pierwszej z nich do czasu d³ugiej przerwy.
+        Title: Ustawienia uÅ¼ytkownika
+        ForceUser: Wymuszaj przerwÄ™
+        ForceUserToolTip: JeÅ›li wybierzesz tÄ… opcjÄ™nie bÄ™dziesz mÃ³gÅ‚ pominÄ…Ä‡ ani skÃ³ciÄ‡ przerwy. Dodatkwo wskaÅºnik myszy zostanie ukryty podczas przerwy.
+        OnlyOneShortBreak: PokaÅ¼ tylko jednÄ… krÃ³tkÄ… przerwÄ™ miÄ™dzy dwiema dÅ‚ugimi
+        OnlyOneShortBreakToolTip: Aktywowanie tej opcji zatrzymuje licznik krÃ³tkich przerw po ukoÅ„czeniu pierwszej z nich do czasu dÅ‚ugiej przerwy.
         StartupApplication: Uruchom Eyes Guard przy stracie systemu
-        StartupApplicationToolTip: Aplikacja Eyes Guard jest domyœlnie uruchamiana wraz ze startem systemu.
-          Mo¿esz wy³¹czyæ t¹ opcjê korzystaj¹c z karty Uruchaminie w menad¿erze zadañ.
-        AlertBeforeLongBreak: Powiadamiaj na 1 minutê przed d³uga przerw¹
-        AlertBeforeLongBreakToolTip: Aplikacja Eyes Guard bêdzie wysy³aæ powiadomienia na minutê przed d³ug¹ przerw¹.
-        ShortBreakAllowCloseWithRightCLick: Zamykaj okno krótkiej przerwy prawym przyciskiem myszy
-        ShortBreakAllowCloseWithRightCLickToolTip: Pozwala zamykaæ okno krótkiej przerwy prawym przyciskiem myszy.
-        SystemIdle: Zatrzymuj Eyes Guard podczas beczynnoœci systemu
+        StartupApplicationToolTip: Aplikacja Eyes Guard jest domyÅ›lnie uruchamiana wraz ze startem systemu.
+          MoÅ¼esz wyÅ‚Ä…czyÄ‡ tÄ… opcjÄ™ korzystajÄ…c z karty Uruchaminie w menadÅ¼erze zadaÅ„.
+        AlertBeforeLongBreak: Powiadamiaj na 1 minutÄ™ przed dÅ‚uga przerwÄ…
+        AlertBeforeLongBreakToolTip: Aplikacja Eyes Guard bÄ™dzie wysyÅ‚aÄ‡ powiadomienia na minutÄ™ przed dÅ‚ugÄ… przerwÄ….
+        ShortBreakAllowCloseWithRightCLick: Zamykaj okno krÃ³tkiej przerwy prawym przyciskiem myszy
+        ShortBreakAllowCloseWithRightCLickToolTip: Pozwala zamykaÄ‡ okno krÃ³tkiej przerwy prawym przyciskiem myszy.
+        SystemIdle: Zatrzymuj Eyes Guard podczas beczynnoÅ›ci systemu
         SystemIdleToolTip:
-        - Eyes Guard u¿ywa detekcji beczynnoœci systemu do okreœlenia nieobecnoœci u¿ytkownika.
+        - Eyes Guard uÅ¼ywa detekcji beczynnoÅ›ci systemu do okreÅ›lenia nieobecnoÅ›ci uÅ¼ytkownika.
         - W tym trybie Eyes Guard automatycznie zatrzymuje odliczanie.
-        - Zaznaczenie tejk opcji mo¿e spowodowaæ zatrzymanieochrony oczu gdy nie korzystasz aktywnie z komputeran, 
-          naprzyk³ad podczas ogl¹dania filmów.
+        - Zaznaczenie tejk opcji moÅ¼e spowodowaÄ‡ zatrzymanieochrony oczu gdy nie korzystasz aktywnie z komputeran, 
+          naprzykÅ‚ad podczas oglÄ…dania filmÃ³w.
       StatsSettings:
         Title: Statystyki
-        YesDeleteData: Tak, usuñ dane
+        YesDeleteData: Tak, usuÅ„ dane
         NoKeepData: Nie, zatrzymaj dane
-        StatsDeleted: Wszystkie statystyki usuniête
+        StatsDeleted: Wszystkie statystyki usuniÄ™te
         StoreStats: Zapisywanie statystyk
-        StoreStatsToolTip: Aplikacja Eyes Guard przechowyje niektóre statystyki dotycz¹ce jej wykorzystania
-          (Narzêdzia >> Menu statystyk). Dane te przechowywane s¹ wy³¹cznie lokalnie.
-        ClearStatsText: 'Usuñ hsitoriê statystyk:'
-        ClearStats: Usuñ dane
+        StoreStatsToolTip: Aplikacja Eyes Guard przechowyje niektÃ³re statystyki dotyczÄ…ce jej wykorzystania
+          (NarzÄ™dzia >> Menu statystyk). Dane te przechowywane sÄ… wyÅ‚Ä…cznie lokalnie.
+        ClearStatsText: 'UsuÅ„ hsitoriÄ™ statystyk:'
+        ClearStats: UsuÅ„ dane
       LanguageSettings:
-        Title: Jêzyk
-        SelectLanguage: 'Wybór jêzyka:'
-        MaintainMessage: 'Ten pakiet jêzykowy jest utrzymywany przez: '
-        RestartRequired: Zmiana jêzyka odniesie efekt przy kolejnym uruchomienu aplikacji 
-        MessagesFromLangFile: U¿ywaj pakietów jêzykowych do wyœwietlania powiadomieñ o krótkiej przerwie
-        MessagesFromLangFileToolTip: Jeœli zaznaczysz t¹ opcjê, wiadomoœci wyœwietlane w 
-          oknie krótkiej przerwy bêd¹ pobierane z pliku z pakietami jêzykowmi
-        AddMessage: Dodaj wiadomoœæ
-        RemoveMessage: Usuñ wiadomoœæ
+        Title: JÄ™zyk
+        SelectLanguage: 'WybÃ³r jÄ™zyka:'
+        MaintainMessage: 'Ten pakiet jÄ™zykowy jest utrzymywany przez: '
+        RestartRequired: Zmiana jÄ™zyka odniesie efekt przy kolejnym uruchomienu aplikacji 
+        MessagesFromLangFile: UÅ¼ywaj pakietÃ³w jÄ™zykowych do wyÅ›wietlania powiadomieÅ„ o krÃ³tkiej przerwie
+        MessagesFromLangFileToolTip: JeÅ›li zaznaczysz tÄ… opcjÄ™, wiadomoÅ›ci wyÅ›wietlane w 
+          oknie krÃ³tkiej przerwy bÄ™dÄ… pobierane z pliku z pakietami jÄ™zykowmi
+        AddMessage: Dodaj wiadomoÅ›Ä‡
+        RemoveMessage: UsuÅ„ wiadomoÅ›Ä‡
         NoAccount: Brak konta
         NoWebsite: Brak strony internetowej
-        NoNotes: Brak informacji na temat t³umczenia
-        EnterNewMessage: Wpisz now¹ wiadomoœæ
-        Submit: Wyœlij
+        NoNotes: Brak informacji na temat tÅ‚umczenia
+        EnterNewMessage: Wpisz nowÄ… wiadomoÅ›Ä‡
+        Submit: WyÅ›lij
     Resting: Odpoczynek
     Waiting: Oczekiwanie
     ShortMessageSuggestions:
-    - Zamknij i otwórz oczy
-    - Mrugaj niprzerwanie przez pewien którki czas
-    - Spójrz w dal
-    - Spójrz przez okno
-    - Umyj rêce a nastêpnie delikatnie wymasuj nimi oczy
-    LongWindowMessage: To czas na d³ug¹ przerwê. Udaj siê na spacer.
+    - Zamknij i otwÃ³rz oczy
+    - Mrugaj niprzerwanie przez pewien ktÃ³rki czas
+    - SpÃ³jrz w dal
+    - SpÃ³jrz przez okno
+    - Umyj rÄ™ce a nastÄ™pnie delikatnie wymasuj nimi oczy
+    LongWindowMessage: To czas na dÅ‚ugÄ… przerwÄ™. Udaj siÄ™ na spacer.
     LongWindowCancelButton: Anuluj
     Notifications:
       LongBreakAlert:
-        Title: Pozosta³a 1 minuta do d³ugiej przerwy
-        Message: Pozosta³a tylko 1 minuta do d³ugiej przerwy. Jeœli to konieczne mo¿esz od³o¿yæ t¹przerwê korzystaj¹c z menu.
-    WaitUnitlEndOfBreak: Zaczekaj do koñca przerwy.
+        Title: PozostaÅ‚a 1 minuta do dÅ‚ugiej przerwy
+        Message: PozostaÅ‚a tylko 1 minuta do dÅ‚ugiej przerwy. JeÅ›li to konieczne moÅ¼esz odÅ‚oÅ¼yÄ‡ tÄ…przerwÄ™ korzystajÄ…c z menu.
+    WaitUnitlEndOfBreak: Zaczekaj do koÅ„ca przerwy.
     LongBreakTimeRemaining: "{Hours} Godzin, {Minutes} minut i {Seconds}
-      sekund do koñca przerwy."
+      sekund do koÅ„ca przerwy."
     StatsPage:
       Title: Statystyki
-      ShortBreak: Krótka przerwa
-      LongBreak: D³uga przerwa
+      ShortBreak: KrÃ³tka przerwa
+      LongBreak: DÅ‚uga przerwa
       Pauses: Pauza
-      ShortCount: 'Krótka przerwa:'
-      LongCompletedCount: 'Zakoñczono d³ug¹ przerwê:'
-      LongFailedCount: 'Nieukoñczone d³ugie przerwy:'
+      ShortCount: 'KrÃ³tka przerwa:'
+      LongCompletedCount: 'ZakoÅ„czono dÅ‚ugÄ… przerwÄ™:'
+      LongFailedCount: 'NieukoÅ„czone dÅ‚ugie przerwy:'
       PauseCount: 'Chwilowe pauze:'
       StopCount: 'Przerwy:'
     AlertPages:
       Titles:
         Attention: Uwaga
         Successful: Sukces
-        Error: B³¹d
+        Error: BÅ‚Ä…d
         Info: Info
         AboutSoftware: O aplikacji
         Donate: Wesprzyj
     HeaderMenu:
       EyesGuard:
         Header: Eyes Guard
-        MainMenu: Menu g³ówne
+        MainMenu: Menu gÅ‚Ã³wne
         Hide: Ukryj Eyes Guard
-        Exit: WyjdŸ
+        Exit: WyjdÅº
       Tools:
-        Header: Narzêdzia
+        Header: NarzÄ™dzia
         Stats: Statystyki
         Settings: Ustawienia
       Breaks:
         Header: Przerwy
-        GoShort: Udaj siê na krótk¹ przerwê
-        GoLong: Udaj siê na d³ug¹ przerwê
+        GoShort: Udaj siÄ™ na krÃ³tkÄ… przerwÄ™
+        GoLong: Udaj siÄ™ na dÅ‚ugÄ… przerwÄ™
       View:
         Header: Widok
-        KeyTimes: Poka¿ pozosta³y czas
+        KeyTimes: PokaÅ¼ pozostaÅ‚y czas
       Help:
         Header: Pomoc
         EyesGuardHelp: Pomoc programu
         Resources: Zasoby
-        SendFeedback: Wyœlij feedback
+        SendFeedback: WyÅ›lij feedback
         Donate: Wesprzyj
         About: O aplikacji
     UserManager:
-      User: U¿ytkownik
+      User: UÅ¼ytkownik
       NotLoggedIn: Nie zalogowano
-      NoTitle: Brak tytu³u
+      NoTitle: Brak tytuÅ‚u
       Login: Login
       Profile: Profil
       Logout: Wyloguj
@@ -215,20 +215,20 @@ Translation:
     TaskbarIcon:
       Protected: Ochrona
       NotProtected: Brak ochrony
-      PausedProtected: Tymczowo wy³aczone
+      PausedProtected: Tymczowo wyÅ‚aczone
       Menu:
         PauseFor: Zatrzymaj przez...
         PausedFor: Zatrzymane przez {PauseRemaining}
-        NextShortBreak: 'Nastêpna krótka przerwa: {NextShortBreak}'
-        NextLongBreak: 'Nastêpna d³uga przerwa: {NextLongBreak}'
-        ShowMainMenu: Pokarz menu g³ówne
-        StartProtection: W³¹cz ochronê
-        StopProtection: Wy³¹cz ochronê
+        NextShortBreak: 'NastÄ™pna krÃ³tka przerwa: {NextShortBreak}'
+        NextLongBreak: 'NastÄ™pna dÅ‚uga przerwa: {NextLongBreak}'
+        ShowMainMenu: Pokarz menu gÅ‚Ã³wne
+        StartProtection: WÅ‚Ä…cz ochronÄ™
+        StopProtection: WyÅ‚Ä…cz ochronÄ™
         FiveMins: 5 minute
         TenMins: 10 minute
         ThirtyMins: 30 minute
         OneHour: 1 godzina
         TwoHours: 2 godziny
-        Custom: W³asne...
+        Custom: WÅ‚asne...
         Settings: Ustawienia
-        Exit: Wyjœcie
+        Exit: WyjÅ›cie
