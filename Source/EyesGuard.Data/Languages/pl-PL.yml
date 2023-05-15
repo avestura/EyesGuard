@@ -223,9 +223,9 @@ Translation:
         ShowMainMenu: Pokarz menu główne
         StartProtection: Włącz ochronę
         StopProtection: Wyłącz ochronę
-        FiveMins: 5 minute
-        TenMins: 10 minute
-        ThirtyMins: 30 minute
+        FiveMins: 5 minut
+        TenMins: 10 minut
+        ThirtyMins: 30 minut
         OneHour: 1 godzina
         TwoHours: 2 godziny
         Custom: Własne...
