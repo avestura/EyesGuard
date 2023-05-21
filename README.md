@@ -67,6 +67,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 |[![ch][ch]](#)|Chinese |zh-CN|[Qixiny](https://github.com/qixinynan)|
 |[![tr][tr]](#)|Turkish |tr-TR|[Furkan KARADENİZ](https://github.com/Suqbs)|
 |[![de][de]](#)|German |de-DE|[Marco Heinisch](https://github.com/marcoheinisch)|
+|[![po][po]](#)|Polish |po-PO|[Bartlomiej Szmolke](https://github.com/BSzmolke)|
 |[![add][add]](#how-to-contribute-to-translating-app)|[Add Language](#how-to-contribute-to-translating-app)||You|
 
 [us]: https://img.icons8.com/color/48/000000/usa.png
@@ -80,6 +81,7 @@ Eyes Guard is a free and open-source app. If you like it, please consider:
 [ch]: https://img.icons8.com/color/48/000000/china.png
 [tr]: https://img.icons8.com/color/48/000000/turkey.png
 [de]: https://img.icons8.com/color/48/000000/germany.png
+[po]: https://img.icons8.com/color/48/000000/poland.png
 [add]: https://img.icons8.com/doodle/48/000000/add.png
 
 ## Can I contribute?
