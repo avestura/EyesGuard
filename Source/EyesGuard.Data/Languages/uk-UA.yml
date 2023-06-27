@@ -1,0 +1,227 @@
+﻿---
+Meta:
+  Translators:
+  - Name: Yaroslav Shaposhnyk
+    GitHubUsername: masterillaGitHub
+    Website: 
+    Notes: 'Translation made 27.06.2023'
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard в даний час не підтримує багатокористувацький режим.
+    HelpPageText: Для отримання додаткової інформації про елемент інтерфейсу програми наведіть курсор миші. Якщо для елемента було створено опис, воно з'явиться.
+    DoNotRunMultipleInstances: Програму Eyes Guard вже запущено. Неможливо запустити кілька копій програми одночасно.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard працює.
+        Message: Eyes Guard працює у фоновому режимі. Ви можете відкрити інтерфейс користувача та інші параметри за допомогою значка щита на панелі завдань.
+    Resources:
+      PageTitle: Ресурси
+      Content:
+        Icons: 'Значки: FontAwesome та IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (розроблено Aryan Software)'
+    About:
+      PageTitle: Про програму
+      Content:
+        InnerTitle: Про Eyes Guard
+        PublisherInfo: 'Видавець: Aryan Software'
+    Donate:
+      PageTitle: Допомогти Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Чи хотіли б ви пожертвувати?
+          Message: Якщо ви хочете підтримати це безкоштовне програмне забезпечення з відкритим кодом, ви можете скористатися цією формою.
+          ButtonText: Відкрийте веб-сторінку пожертвувань у браузері
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Зробити пожертву
+          Thanks: Дякую за вашу підтримку!
+          Redirect: Ви будете перенаправлені на сторінку пожертв у вашому браузері
+          FeedbackNotice: Якщо у вас є коментарі, ви можете опублікувати їх на сторінці Eyes Guard у Microsoft Store.
+    Feedback:
+      PageTitle: Зворотній зв'язок
+      Content:
+        InnerTitle: Зворотній зв'язок
+        Message: Ви можете повідомити про проблему або залишити побажання на сторінці програми на сайті GitHub та відстежувати статус їх обробки.
+        ButtonText: Повідомити про проблему
+  EyesGuard:
+    ControlPanel:
+      Title: Панель управління
+    GuardStatus:
+      Running: Ваші очі під захистом
+      Paused: Eyes Guard тимчасово вимкнено
+      Stopped: Eyes Guard вимкнено
+      Idle: Eyes Guard призупинено через виявлення неактивності системи
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} секунд до короткої перерви."
+        Minutes: "{Minutes} хвилин до короткої перерви."
+      LongBreak:
+        Seconds: "{Seconds} секунд до великої перерви."
+        Minutes: "{Minutes} хвилин до великої перерви."
+      PauseTime:
+        Seconds: Eyes Guard вимкнено на {Seconds} секунд
+        Minutes: Eyes Guard вимкнено на {Minutes} хвилин
+    CustomPause:
+      PageTitle: Встановити паузу
+      Message: Введіть потрібний час паузи
+      ButtonText: Пауза
+    WarningPage:
+      ButtonText: Повернутись
+    OperationFailed: Операція не вдалася
+    CheckInput: Перевірте правильність введення.
+    TimeManipulation:
+      HoursLimit: Поле години не повинно перевищувати {Hours}
+      MinutesLimit: Поле хвилини не повинно перевищувати {Minutes}
+      SecondsLimit: Поле секунди не повинно перевищувати {Seconds}
+      SGapMorethanLGap: Проміжок між двома короткими перервами повинен бути меншим, ніж проміжок між двома довгими перервами.
+      SDurationMorethanLDuration: Тривалість короткої перерви має бути меншою за тривалість довгої перерви.
+      SDurationTooHigh: Коротка перерва не може тривати більше 5 хвилин.
+      LDurationTooHigh: Велика перерва не може бути більше 2 годин.
+      NotEnoughGapBetweenLandS: Замалий проміжок між короткою та довгою перервами.
+      ShortGapLow: Перерва між двома короткими перервами має бути не менше 1 хвилини.
+      LongGapLow: Перерва між двома великими перервами має бути не менше 5 хвилин.
+      ChooseLargerTime: Виберіть довший термін.
+    Settings:
+      Title: Налаштування
+      SavedSuccessfully: Налаштування успішно збережено
+      AreYouSure: Ти впевнений?
+      LanguageSection: Мова
+      TimeSeparators:
+        Hour: годин
+        Minutes: хвилин
+        Second: секунд
+      SaveSettings: Зберегти зміни
+      TimeSettings:
+        Title: Параметри часу
+        GapBetweenTwoShortBreak: 'Проміжок часу між двома короткими перервами:'
+        GapBetweenTwoLongBreak: 'Проміжок часу між двома довгими перервами:'
+        ShortBreakDuration: 'Тривалість короткої перерви:'
+        LongBreakDuration: 'Тривалість довгої перерви:'
+      UserSettings:
+        Title: Налаштування користувача
+        ForceUser: Примусова перерва
+        ForceUserToolTip: Якщо ви ввімкнете цю опцію, ви не зможете відкласти або вийти з перерви. Крім того, під час перерви ваш вказівник миші ховатиметься.
+        OnlyOneShortBreak: Показувати лише одну коротку перерву між двома довгими перервами.
+        OnlyOneShortBreakToolTip: Активація цієї опції зупиняє лічильник короткої перерви після її успішного завершення до тривалої перерви.
+        StartupApplication: Запускати Eyes Guard із завантаженням системи
+        StartupApplicationToolTip: Програма Eyes Guard запускається під час завантаження системи за промовчанням. Ви можете скасувати цю функцію в Менеджері завдань Windows 10 на вкладці Автозавантаження.
+        AlertBeforeLongBreak: Повідомити мене за 1 хвилину до великої перерви
+        AlertBeforeLongBreakToolTip: Eyes Guard сповіщає вас за хвилину до великої перерви.
+        ShortBreakAllowCloseWithRightCLick: Закрийте вікно короткої перерви правою кнопкою миші
+        ShortBreakAllowCloseWithRightCLickToolTip: Дозволити закривати вікно короткої перерви клацанням правою кнопкою миші.
+        SystemIdle: Призупинити Eyes Guard, коли система виявлена як неактивна
+        SystemIdleToolTip:
+        - Eyes Guard використовує виявлення простою системи, щоб визначити, чи ви перебуваєте далеко від свого ПК.
+        - У цьому режимі Eyes Guard автоматично призупиняє відлік.
+        - Зауважте, що ця функція може вимкнути захист очей, коли ви не взаємодієте з ПК, наприклад під час перегляду фільмів.
+      StatsSettings:
+        Title: Статистика
+        YesDeleteData: Так, авжеж
+        NoKeepData: Ні, зберегти дані
+        StatsDeleted: Вся статистика видалена
+        StoreStats: Зберігати статистику
+        StoreStatsToolTip: Eyes Guard зберігає інформацію про використання комп'ютера. Цю інформацію можна переглянути, вибравши пункт меню Інструменти >> Меню статистики. Ці дані зберігаються локально на вашому комп'ютері.
+        ClearStatsText: 'Видалити історію статистики:'
+        ClearStats: Видалити дані
+      LanguageSettings:
+        Title: Мова
+        SelectLanguage: 'Оберіть мову:'
+        MaintainMessage: 'Перевів: '
+        RestartRequired: Зміна мови набуває чинності під час наступного запуску
+        MessagesFromLangFile: Використовуйте мовний файл як джерело коротких повідомлень
+        MessagesFromLangFileToolTip: Якщо ввімкнути цей параметр, мовний файл надаватиме повідомлення, які з’являтимуться у вікні короткої перерви
+        AddMessage: Add Message
+        RemoveMessage: Remove Message
+        NoAccount: Немає облікового запису
+        NoWebsite: Немає веб-сайту
+        NoNotes: Без приміток щодо перекладу
+        EnterNewMessage: Введіть нове повідомлення
+        Submit: Надіслати
+    Resting: Відпочинок
+    Waiting: Очікування
+    ShortMessageSuggestions:
+    - Відкрийте та закрийте очі
+    - Невпинно моргайте
+    - Дивіться вдалину
+    - Подивіться у вікно
+    - Вимийте руки, потім помасажуйте ними очі
+    LongWindowMessage: Настав час великої перерви. Іди відпочинь.
+    LongWindowCancelButton: Скасувати
+    Notifications:
+      LongBreakAlert:
+        Title: 1 хвилина до великої перерви
+        Message: До великої перерви залишилася всього одна хвилина. За потреби ви можете відкласти цю перерву з контекстного меню панелі завдань.
+    WaitUnitlEndOfBreak: Будь ласка, зачекайте, поки закінчиться перерва.
+    LongBreakTimeRemaining: "{Hours} годин {Minutes} хвилин {Seconds} секунд до кінця перерви."
+    StatsPage:
+      Title: Статистика
+      ShortBreak: Короткі перерви
+      LongBreak: Довгі перерви
+      Pauses: Паузи
+      ShortCount: 'Кількість коротких перерв:'
+      LongCompletedCount: 'Кількість завершених довгих перерв:'
+      LongFailedCount: 'Кількість незавершених довгих перерв:'
+      PauseCount: 'Кількість пауз:'
+      StopCount: 'Кількість зупинок роботи програми:'
+    AlertPages:
+      Titles:
+        Attention: Увага
+        Successful: Успішно
+        Error: Помилка
+        Info: Інформація
+        AboutSoftware: Про програму
+        Donate: Пожертва
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Головне меню
+        Hide: Сховати Eyes Guard
+        Exit: Вихід
+      Tools:
+        Header: Інструменти
+        Stats: Статистика
+        Settings: Налаштування
+      Breaks:
+        Header: Перерви
+        GoShort: Зробити коротку перерву
+        GoLong: Зробити довгу перерву
+      View:
+        Header: Вигляд
+        KeyTimes: Відображати час, що залишився, в головному вікні
+      Help:
+        Header: Допомога
+        EyesGuardHelp: Допомога з Eyes Guard
+        Resources: Ресурси
+        SendFeedback: Надіслати відгук
+        Donate: Пожертвувати
+        About: Про програму
+    UserManager:
+      User: Користувач
+      NotLoggedIn: Не ввійшли в систему
+      NoTitle: Без назви
+      Login: Логін
+      Profile: Профіль
+      Logout: Вийти
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Захист очей включено
+      NotProtected: Захист очей вимкнено
+      PausedProtected: Захист очей тимчасово вимкнено
+      Menu:
+        PauseFor: Тимчасово вимкнути на...
+        PausedFor: Тимчасово відключено на {PauseRemaining}
+        NextShortBreak: 'До короткого перерви залишилося: {NextShortBreak}'
+        NextLongBreak: 'До довгої перерви залишилося: {NextLongBreak}'
+        ShowMainMenu: Показати головне меню
+        StartProtection: Увімкнути захист очей
+        StopProtection: Вимкнути захист очей
+        FiveMins: 5 хвилин
+        TenMins: 10 хвлилин
+        ThirtyMins: 30 хвилин
+        OneHour: 1 година
+        TwoHours: 2 години
+        Custom: Вибрати...
+        Settings: Налаштування
+        Exit: Вихід
