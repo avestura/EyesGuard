@@ -36,12 +36,12 @@ Translation:
       PageTitle: Resources
       Content:
         Icons: 'Icons: FontAwesome and IconArchive'
-        UIKit: 'UI Kit: Hasti UI Kit (Developed by Aryan Software)'
+        UIKit: 'UI Kit: Hasti UI Kit (Developed by Avestura Technologies)'
     About:
       PageTitle: About
       Content:
         InnerTitle: About Eyes Guard
-        PublisherInfo: 'Publisher: Aryan Software'
+        PublisherInfo: 'Publisher: Avestura Technologies'
     Donate:
       PageTitle: Donate to Eyes Guard
       BeforeDonation:

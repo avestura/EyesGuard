@@ -21,12 +21,12 @@ Translation:
       PageTitle: வளங்கள்
       Content:
         Icons: 'சின்னங்கள்: FontAwesome மற்றும் IconArchive'
-        UIKit: 'UI Kit: Hasti UI Kit (Aryan Software-ஆல் உருவாக்கப்பட்டது)'
+        UIKit: 'UI Kit: Hasti UI Kit (Avestura Technologies-ஆல் உருவாக்கப்பட்டது)'
     About:
       PageTitle: About
       Content:
         InnerTitle: கண் காவலன் பற்றி
-        PublisherInfo: 'பதிப்பகத்தார்: Aryan Software'
+        PublisherInfo: 'பதிப்பகத்தார்: Avestura Technologies'
     Donate:
       PageTitle: கண் காவலனுக்கு தானம் செய்
       BeforeDonation:

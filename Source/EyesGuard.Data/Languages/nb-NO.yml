@@ -23,12 +23,12 @@ Translation:
       PageTitle: Ressurser
       Content:
         Icons: 'Ikoner: FontAwesome og IconArchive'
-        UIKit: 'UI Kit: Hasti UI Kit (Utviklet av Aryan Software)'
+        UIKit: 'UI Kit: Hasti UI Kit (Utviklet av Avestura Technologies)'
     About:
       PageTitle: Om
       Content:
         InnerTitle: Om Eyes Guard
-        PublisherInfo: 'Utgiver: Aryan Software'
+        PublisherInfo: 'Utgiver: Avestura Technologies'
     Donate:
       PageTitle: Donere til Eyes Guard
       BeforeDonation:

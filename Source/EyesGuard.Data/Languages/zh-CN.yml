@@ -21,12 +21,12 @@ Translation:
       PageTitle: Resources
       Content:
         Icons: '图标: FontAwesome 和 IconArchive'
-        UIKit: 'UI工具包: Hasti UI Kit (由Aryan Software开发)'
+        UIKit: 'UI工具包: Hasti UI Kit (由Avestura Technologies开发)'
     About:
       PageTitle: 关于
       Content:
         InnerTitle: 关于护眼姬
-        PublisherInfo: '项目发起者: Aryan Software 汉化：Qixiny'
+        PublisherInfo: '项目发起者: Avestura Technologies 汉化：Qixiny'
     Donate:
       PageTitle: 打赏护眼姬
       BeforeDonation:
