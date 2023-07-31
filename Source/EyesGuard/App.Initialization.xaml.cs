@@ -152,8 +152,7 @@ namespace EyesGuard
                 SystemIdleDetector = new IdleDetector()
                 {
                     IdleThreshold = EyesGuardIdleDetectionThreshold,
-                    DeferUpdate = false,
-                    EnableRaisingEvents = initialStart
+                    DeferUpdate = false
                 };
                 SystemIdleDetector.IdleStateChanged += SystemIdleDetector_IdleStateChanged;
 

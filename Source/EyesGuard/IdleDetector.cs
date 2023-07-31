@@ -40,8 +40,6 @@ namespace EyesGuard
 
         private bool cancelRequested = false;
 
-        public bool EnableRaisingEvents { get; set; } = false;
-
         public event EventHandler<IdleStateChangedEventArgs> IdleStateChanged;
 
         internal struct LASTINPUTINFO
@@ -66,12 +64,12 @@ namespace EyesGuard
                 }
                 catch
                 {
-                    EnableRaisingEvents = false;
                     break;
                 }
                 IdleDuration = (Environment.TickCount - lastInPut.dwTime) / 1000;
 
-                if (EnableRaisingEvents && (IsSystemIdle() != previousSystemInputIdle))
+                if ((App.Configuration.ProtectionState == App.GuardStates.Protecting) &&
+                    (IsSystemIdle() != previousSystemInputIdle))
                 {
                     IdleStateChangedEventArgs lastEventStateArgs = new IdleStateChangedEventArgs()
                     {

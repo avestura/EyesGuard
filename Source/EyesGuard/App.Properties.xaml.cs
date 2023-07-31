@@ -40,7 +40,6 @@ namespace EyesGuard
                     .ShortLongBreakTimeRemaining
                     .IsProtectionPaused = value;
                 UIViewModels.NotifyIcon.PausedVisibility = value ? Visibility.Visible : Visibility.Collapsed;
-                SystemIdleDetector.EnableRaisingEvents = !value;
             }
         }
 
