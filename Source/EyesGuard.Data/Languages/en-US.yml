@@ -142,6 +142,7 @@ Translation:
         - In this mode, Eyes Guard automatically pauses down-counting.
         - Notice that this feature can disable guarding your eyes when you are not
           interacting with your PC, for example when watching movies.
+        ResetTimersAfterIdleGap: 'Reset timers when system goes to idle mode exceeds:'
       StatsSettings:
         Title: Stats
         YesDeleteData: Yes, Sure

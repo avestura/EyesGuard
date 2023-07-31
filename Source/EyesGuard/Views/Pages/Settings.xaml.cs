@@ -87,6 +87,11 @@ namespace EyesGuard.Views.Pages
 
             sytemIdleCheckbox.IsChecked = App.Configuration.SystemIdleDetectionEnabled;
 
+            resetTimersAfterIdleDurationCheckbox.IsChecked = App.Configuration.EnableResetTimerAfterIdleDuration;
+            resetTimersAfterIdleDurationHours.Text = App.Configuration.ResetTimersAfterIdleDuration.Hours.ToString();
+            resetTimersAfterIdleDurationMinutes.Text = App.Configuration.ResetTimersAfterIdleDuration.Minutes.ToString();
+            resetTimersAfterIdleDurationSeconds.Text = App.Configuration.ResetTimersAfterIdleDuration.Seconds.ToString();
+
             UseLanguageAsSourceCheckbox.IsChecked = App.Configuration.UseLanguageProvedidShortMessages;
         }
 
@@ -125,7 +130,8 @@ namespace EyesGuard.Views.Pages
                 // sd: Short Duration
                 // lg: Long Gap
                 // ld: Long Duration
-                int sgH, sgM, sgS, sdH, sdM, sdS, lgH, lgM, lgS, ldH, ldM, ldS;
+                // rd: Reset Duration
+                int sgH, sgM, sgS, sdH, sdM, sdS, lgH, lgM, lgS, ldH, ldM, ldS, rdH, rdM, rdS;
 
                 sgH = int.Parse(shortGapHours.Text);
                 sgM = int.Parse(shortGapMinutes.Text);
@@ -142,6 +148,10 @@ namespace EyesGuard.Views.Pages
                 ldH = int.Parse(longDurationHours.Text);
                 ldM = int.Parse(longDurationMinutes.Text);
                 ldS = int.Parse(longDurationSeconds.Text);
+
+                rdH = int.Parse(resetTimersAfterIdleDurationHours.Text);
+                rdM = int.Parse(resetTimersAfterIdleDurationMinutes.Text);
+                rdS = int.Parse(resetTimersAfterIdleDurationSeconds.Text);
 
                 if (sgH > 11 || sdH > 11 || lgH > 11 || ldH > 11)
                     warning += "» " + App.LocalizedEnvironment.Translation.EyesGuard.TimeManipulation.HoursLimit.FormatWith(new { Hours = 11 });
@@ -217,6 +227,8 @@ namespace EyesGuard.Views.Pages
                     App.Configuration.AlertBeforeLongBreak = alertBeforeLongbreak.IsChecked.Value;
                     App.Configuration.ShortBreakAllowCloseWithRightCLick = shortBreakAllowCloseWithRightCLick.IsChecked.Value;
                     App.Configuration.SystemIdleDetectionEnabled = sytemIdleCheckbox.IsChecked.Value;
+                    App.Configuration.EnableResetTimerAfterIdleDuration = resetTimersAfterIdleDurationCheckbox.IsChecked.Value;
+                    App.Configuration.ResetTimersAfterIdleDuration = new TimeSpan(rdH, rdM, rdS);
                     App.Configuration.ApplicationLocale = (LanguagesCombo.SelectedItem as LanguageHolder)?.Name ?? FsLanguageLoader.DefaultLocale;
                     App.Configuration.UseLanguageProvedidShortMessages = UseLanguageAsSourceCheckbox.IsChecked.Value;
 
@@ -363,6 +375,16 @@ namespace EyesGuard.Views.Pages
         private void forceUserCheckbox_Unchecked(object sender, RoutedEventArgs e)
         {
             shortBreakAllowCloseWithRightCLick.IsEnabled = true;
+        }
+        
+        private void resetTimersAfterIdleDurationCheckbox_Checked(object sender, RoutedEventArgs e)
+        {
+            resetTimersAfterIdleGapInputStack.IsEnabled = true;
+        }
+
+        private void resetTimersAfterIdleDurationCheckbox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            resetTimersAfterIdleGapInputStack.IsEnabled = false;
         }
     }
 }
