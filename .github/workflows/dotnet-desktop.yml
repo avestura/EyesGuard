@@ -77,7 +77,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     - name: Install paket
-      run: dotnet tool install paket
+      run: dotnet tool install paket --global
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
