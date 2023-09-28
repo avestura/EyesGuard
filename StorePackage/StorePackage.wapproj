@@ -50,7 +50,7 @@
     <TargetPlatformVersion>10.0.22000.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateThumbprint>9E21D4FDB87E2202FC7EE7D5DA8D963BC4B6AD7B</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>DCD7481E444AADC4CDC2B8C767DD5DEAE1500369</PackageCertificateThumbprint>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
