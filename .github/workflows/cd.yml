@@ -56,7 +56,7 @@ jobs:
 
     env:
       App_Packages_Archive_Name: EyesGuard
-      App_Packages_Directory: EyesGuardPackages
+      App_Packages_Directory: AppPackages
       SigningCertificate: EyesGuardAction.pfx
       Solution_Path: EyesGuard.sln
       Wpf_Project_Path: Source\EyesGuard\EyesGuard.csproj
