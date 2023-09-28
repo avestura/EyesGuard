@@ -2,6 +2,7 @@
 
 [![BuitlWithDot.Net shield](https://builtwithdot.net/project/41/eyes-guard/badge)](https://builtwithdot.net/project/41/eyes-guard)
 ![platform](https://img.shields.io/badge/platform-UWP%20%7C%20Win32-blue)
+[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml)
 [![Build status](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml)
 
 
