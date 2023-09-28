@@ -30,12 +30,12 @@ jobs:
     # development, production for sideload applications and production for the Microsoft store.
     # For more information, see https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#configuring-a-build-matrix
       matrix:
-        channel: [Dev, Release]
+        channel: [dev, release]
         targetPlatform: [x86, x64]
         include:
 
           # includes the following variables for the matrix leg matching Dev
-          - channel: Dev
+          - channel: dev
             ChannelName: Dev
             Configuration: Debug
             DistributionUrl: https://github.avestura.dev/EyesGuard
@@ -44,7 +44,7 @@ jobs:
             MsixPackageDisplayName: EyesGuard (Dev)
 
           # includes the following variables for the matrix leg matching Prod_Sideload
-          - channel: Release
+          - channel: release
             Configuration: Release
             ChannelName: Release
             DistributionUrl: https://github.avestura.dev/EyesGuard
@@ -55,8 +55,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      App_Packages_Archive: AppPackages.zip
-      App_Packages_Directory: AppPackages
+      App_Packages_Archive_Name: EyesGuard
+      App_Packages_Directory: EyesGuardPackages
       SigningCertificate: EyesGuardAction.pfx
       Solution_Path: EyesGuard.sln
       Wpf_Project_Path: Source\EyesGuard\EyesGuard.csproj
@@ -70,10 +70,10 @@ jobs:
       with:
         fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
-    # Use Nerdbank.GitVersioning to set version variables: https://github.com/AArnott/nbgv
-    - name: Use Nerdbank.GitVersioning to set version variables
-      uses: dotnet/nbgv@master
-      id: nbgv
+    ## Use Nerdbank.GitVersioning to set version variables: https://github.com/AArnott/nbgv
+    #- name: Use Nerdbank.GitVersioning to set version variables
+    #  uses: dotnet/nbgv@master
+    #  id: nbgv
 
     # Install the .NET Core workload
     - name: Install .NET Core
@@ -93,7 +93,6 @@ jobs:
     - name: Update manifest version
       run: |
         [xml]$manifest = get-content ".\$env:Wap_Project_Directory\Package.appxmanifest"
-        $manifest.Package.Identity.Version = "${{ steps.nbgv.outputs.SimpleVersion }}.0"
         $manifest.Package.Identity.Name = "${{ matrix.MsixPackageId }}"
         $manifest.Package.Identity.Publisher = "${{ matrix.MsixPublisherId }}"
         $manifest.Package.Properties.DisplayName = "${{ matrix.MsixPackageDisplayName }}"
@@ -148,6 +147,8 @@ jobs:
     # Archive the package
     - name: Create archive
       run: Compress-Archive -Path $env:Wap_Project_Directory\$env:App_Packages_Directory\* -DestinationPath $env:Wap_Project_Directory\$env:App_Packages_Directory\$env:App_Packages_Archive
+      env:
+        App_Packages_Archive: ${{ env.App_Packages_Archive_Name }}.${{matrix.channel}}.${{ matrix.targetplatform }}.zip
 
     # Create the release:  https://github.com/actions/create-release
     - name: Create release
@@ -156,8 +157,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref}}.${{matrix.ChannelName}}.${{ matrix.targetplatform }}
-        release_name:  ${{ github.ref }}.${{ matrix.ChannelName }}.${{ matrix.targetplatform }}
+        tag_name: ${{ github.ref}}
+        release_name:  ${{ github.ref }}
         draft: false
         prerelease: false
 
@@ -167,6 +168,7 @@ jobs:
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        App_Packages_Archive: ${{ env.App_Packages_Archive_Name }}.${{matrix.channel}}.${{ matrix.targetplatform }}.zip
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
         asset_path: ${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}\${{ env.App_Packages_Archive }}
