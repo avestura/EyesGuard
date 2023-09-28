@@ -1,9 +1,8 @@
 # Eyes Guard <img align="left" width="120" height="120" src="UWPAssets/150x150.png">
 
-[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Download-green)](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
 [![BuitlWithDot.Net shield](https://builtwithdot.net/project/41/eyes-guard/badge)](https://builtwithdot.net/project/41/eyes-guard)
 ![platform](https://img.shields.io/badge/platform-UWP%20%7C%20Win32-blue)
-[![Build status](https://aryansoftware.visualstudio.com/Eyes%20Guard/_apis/build/status/Eyes%20Guard-.NET%20Desktop-CI)](https://aryansoftware.visualstudio.com/Eyes%20Guard/_build/latest?definitionId=3)
+[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml)
 
 
 <br>
@@ -61,7 +60,6 @@ Eyes Guard is a Windows Application for protecting your eyes. It will help you (
 Eyes Guard is a free and open-source app. If you like it, please consider:
 
 - ⭐ Star this project in GitHub
-- 📝 Write a review in [Microsoft Store page of Eyes Guard](https://www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
 - [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P011XLE)
 - 👩‍💻 Contribute to Software Development of Eyes Guard
 - ✏ Translate app to your language using guide below
