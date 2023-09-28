@@ -11,11 +11,25 @@
 ## What is Eyes Guard?
 Eyes Guard is a Windows Application for protecting your eyes. It will help you (also can force you!) to break if you are working with your PC for a long time using configurable times.
 
-## Download Link
+## Download
 
-For **Windows 10 or 11 (Official with latest features)**: [Download from Windows Store](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
+## Windows 10/11 (Official with latest features)
 
-For **Windows 7 (Unofficial Fork, maybe not latest and not feature complete)**: [Download from ExplorerOL's GitHub](https://github.com/ExplorerOL/AryanSoftware_EyesGuard/releases/tag/AryanSoftware_EyesGuard_Release_2020_01_14)
+> [!NOTE]  
+> EyesGuard will no longer distribute its packages via Microsoft Store. You need to install the 
+> package manually using the instruction below:
+
+1. [Download the latest package form the Releases section](https://github.com/avestura/EyesGuard/releases). 
+   - For x64 systems: `EyesGuard.release.x64.zip`
+   - For x86 systems: `EyesGuard.release.x86.zip`
+2. Unzip the package.
+3. Find the certificate file with `.cer` extension and open it.
+4. Click `Install Certificate` > `Local Machine` > `Place certificate in following store` > pick `Trusted People`
+5. Open the installation package with `.appx` extension and install Eyes Guard.
+
+## Windows 7 (Unofficial Fork, not latest)
+
+[Download from ExplorerOL's GitHub](https://github.com/ExplorerOL/AryanSoftware_EyesGuard/releases/tag/AryanSoftware_EyesGuard_Release_2020_01_14)
 
 ## Any Screenshots?
 
