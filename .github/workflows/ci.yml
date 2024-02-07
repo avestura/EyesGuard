@@ -114,7 +114,7 @@ jobs:
 
     - name: Build Installer
       uses: caphyon/advinst-github-action@v1.0
-      if: matrix.configuration == 'Release'
+      if:  ${{ matrix.configuration == 'Release' }}
       with:
         advinst-version: '21.4'
         # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
@@ -127,7 +127,7 @@ jobs:
           SetVersion 0.0.0
 
     - name: Publish setup artifact
-      if: matrix.configuration == 'Release'
+      if:  ${{ matrix.configuration == 'Release' }}
       uses: actions/upload-artifact@v2
       with:
         name: setup
