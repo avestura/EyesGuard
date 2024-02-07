@@ -189,6 +189,7 @@ jobs:
     - name: Update setup asset
       id: upload-setup-asset
       uses: actions/upload-release-asset@v1
+      if:  ${{ matrix.channel == 'release' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
