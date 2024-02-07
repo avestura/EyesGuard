@@ -263,3 +263,10 @@ __pycache__/
 # Setup Project
 /Setup Files/
 /.ionide
+
+
+# Advanced Installer caches and default build output
+*-cache/
+*-SetupFiles/
+Prerequisites/
+AdvancedInstaller/Setup/

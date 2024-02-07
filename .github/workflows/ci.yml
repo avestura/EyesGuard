@@ -111,3 +111,22 @@ jobs:
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
+
+    - name: Build Installer
+      uses: caphyon/advinst-github-action@v1.0
+      with:
+        advinst-version: '19.0'
+        # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
+        advinst-enable-automation: 'true'
+        aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
+        # aip-build-name: DefaultBuild
+        # aip-package-name: setup.msi
+        # aip-output-dir:  ${{ github.workspace }}\setup
+        aip-commands: |
+          SetVersion latest-dev
+
+    - name: Publish setup artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: setup
+        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-latest-dev.msi
