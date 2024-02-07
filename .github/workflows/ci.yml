@@ -114,8 +114,9 @@ jobs:
 
     - name: Build Installer
       uses: caphyon/advinst-github-action@v1.0
+      if: ${{ matrix.configuration }} == 'Release'
       with:
-        advinst-version: '19.0'
+        advinst-version: '21.4'
         # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
         advinst-enable-automation: 'true'
         aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
@@ -123,10 +124,11 @@ jobs:
         # aip-package-name: setup.msi
         # aip-output-dir:  ${{ github.workspace }}\setup
         aip-commands: |
-          SetVersion latest-dev
+          SetVersion latest-${{ matrix.configuration }}
 
     - name: Publish setup artifact
+      if: ${{ matrix.configuration }} == 'Release'
       uses: actions/upload-artifact@v2
       with:
         name: setup
-        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-latest-dev.msi
+        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-latest-${{ matrix.configuration }}.msi
