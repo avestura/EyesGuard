@@ -150,6 +150,20 @@ jobs:
       env:
         App_Packages_Archive: ${{ env.App_Packages_Archive_Name }}.${{matrix.channel}}.${{ matrix.targetplatform }}.zip
 
+    - name: Build Installer
+      uses: caphyon/advinst-github-action@v1.0
+      if:  ${{ matrix.channel == 'release' }}
+      with:
+        advinst-version: '21.4'
+        # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
+        advinst-enable-automation: 'true'
+        aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
+        # aip-build-name: DefaultBuild
+        # aip-package-name: setup.msi
+        # aip-output-dir:  ${{ github.workspace }}\setup
+        aip-commands: |
+          SetVersion ${{ github.ref_name }}
+
     # Create the release:  https://github.com/actions/create-release
     - name: Create release
       id: create_release
@@ -170,4 +184,15 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
         asset_path: ${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}\${{ env.App_Packages_Archive }}
         asset_name: ${{ env.App_Packages_Archive }}
+        asset_content_type: application/zip
+
+    - name: Update setup asset
+      id: upload-setup-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+        asset_path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-${{ github.ref_name }}.exe
+        asset_name: EyesGuard-Setup-${{ github.ref_name }}.exe
         asset_content_type: application/zip
