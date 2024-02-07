@@ -131,4 +131,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: setup
-        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-0.0.0.msi
+        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-0.0.0.exe
