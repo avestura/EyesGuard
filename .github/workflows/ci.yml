@@ -85,6 +85,29 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
+
+    - name: Build Installer
+      uses: caphyon/advinst-github-action@v1.0
+      if: ${{ matrix.configuration }} == 'Release'
+      with:
+        advinst-version: '21.4'
+        # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
+        advinst-enable-automation: 'true'
+        aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
+        # aip-build-name: DefaultBuild
+        # aip-package-name: setup.msi
+        # aip-output-dir:  ${{ github.workspace }}\setup
+        aip-commands: |
+          SetVersion 0.0.0
+
+    - name: Publish setup artifact
+      if: ${{ matrix.configuration }} == 'Release'
+      uses: actions/upload-artifact@v2
+      with:
+        name: setup
+        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-0.0.0.msi
+
+
     # Decode the base 64 encoded pfx and save the Signing_Certificate
     - name: Decode the pfx
       run: |
@@ -111,24 +134,3 @@ jobs:
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
-
-    - name: Build Installer
-      uses: caphyon/advinst-github-action@v1.0
-      if: ${{ matrix.configuration }} == 'Release'
-      with:
-        advinst-version: '21.4'
-        # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
-        advinst-enable-automation: 'true'
-        aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
-        # aip-build-name: DefaultBuild
-        # aip-package-name: setup.msi
-        # aip-output-dir:  ${{ github.workspace }}\setup
-        aip-commands: |
-          SetVersion latest-${{ matrix.configuration }}
-
-    - name: Publish setup artifact
-      if: ${{ matrix.configuration }} == 'Release'
-      uses: actions/upload-artifact@v2
-      with:
-        name: setup
-        path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-latest-${{ matrix.configuration }}.msi
