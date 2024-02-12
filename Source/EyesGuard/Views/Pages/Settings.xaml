@@ -300,14 +300,16 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
+                        <RowDefinition />
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="15" />
+                        <ColumnDefinition Width="auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Border
-                        Grid.RowSpan="7"
+                        Grid.RowSpan="8"
                         Grid.Column="0"
                         Margin="6,-0.5,0,0"
                         BorderBrush="White"
@@ -333,6 +335,7 @@
                     <StackPanel
                         Grid.Row="2"
                         Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Margin="5"
                         Orientation="Horizontal">
                         <CheckBox
@@ -348,6 +351,7 @@
                     <StackPanel
                         Grid.Row="3"
                         Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Margin="5"
                         Orientation="Horizontal">
                         <CheckBox
@@ -361,7 +365,8 @@
 
                     <StackPanel
                         Grid.Row="4"
-                        Grid.Column="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Margin="5"
                         Orientation="Horizontal"
                         ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.StartupApplicationToolTip'}">
@@ -379,7 +384,8 @@
 
                     <StackPanel
                         Grid.Row="5"
-                        Grid.Column="2"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
                         Margin="5"
                         Orientation="Horizontal">
                         <CheckBox
@@ -391,11 +397,72 @@
                             ToolTip="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.SystemIdleToolTipJoined'}" />
 
                     </StackPanel>
-                    <StackPanel
+                    <CheckBox
                         Grid.Row="6"
                         Grid.Column="1"
                         Margin="5"
-                        Orientation="Horizontal">
+                            x:Name="resetTimersAfterIdleDurationCheckbox"
+                            VerticalAlignment="Center"
+                            Checked="resetTimersAfterIdleDurationCheckbox_Checked"
+                            Unchecked="resetTimersAfterIdleDurationCheckbox_Unchecked"
+                            Content="{lang:LocalizedString 'EyesGuard.Settings.UserSettings.ResetTimersAfterIdleGap'}"
+                            Foreground="White"
+                            IsChecked="False"
+                            Style="{DynamicResource WhiteCheckbox}" />
+                    <StackPanel 
+                        x:Name="resetTimersAfterIdleGapInputStack"
+                        Grid.Row="6" 
+                        Grid.Column="2"
+                        Margin="5"
+                        Orientation="Horizontal"
+                        IsEnabled="False">
+                        <c:NumOnlyTextbox
+                            x:Name="resetTimersAfterIdleDurationHours"
+                            MinWidth="50"
+                            Margin="10,0,0,0"
+                            MaxLength="2"
+                            Style="{DynamicResource WhiteTextBox}"
+                            Text="0"
+                            TextAlignment="Center" />
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Hour'}" />
+                        <c:NumOnlyTextbox
+                            x:Name="resetTimersAfterIdleDurationMinutes"
+                            MinWidth="50"
+                            Margin="5,0,0,0"
+                            MaxLength="2"
+                            Style="{DynamicResource WhiteTextBox}"
+                            Text="0"
+                            TextAlignment="Center" />
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Minutes'}" />
+                        <c:NumOnlyTextbox
+                            x:Name="resetTimersAfterIdleDurationSeconds"
+                            MinWidth="50"
+                            Margin="5,0,0,0"
+                            MaxLength="2"
+                            Style="{DynamicResource WhiteTextBox}"
+                            Text="0"
+                            TextAlignment="Center" />
+                        <TextBlock
+                            Margin="5,0,0,0"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="{lang:LocalizedString 'EyesGuard.Settings.TimeSeparators.Second'}" />
+
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Row="7"
+                        Grid.Column="1"
+                        Margin="5"
+                        Orientation="Horizontal"
+                        Grid.ColumnSpan="2">
                         <CheckBox
                             x:Name="shortBreakAllowCloseWithRightCLick"
                             VerticalAlignment="Center"

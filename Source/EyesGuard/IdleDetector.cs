@@ -16,6 +16,7 @@ namespace EyesGuard
     public class IdleStateChangedEventArgs : EventArgs
     {
         public bool IdleState { get; set; }
+        public long Duration { get; set; }
     }
 
     public class IdleDetector
@@ -39,8 +40,6 @@ namespace EyesGuard
 
         private bool cancelRequested = false;
 
-        public bool EnableRaisingEvents { get; set; } = false;
-
         public event EventHandler<IdleStateChangedEventArgs> IdleStateChanged;
 
         internal struct LASTINPUTINFO
@@ -55,6 +54,7 @@ namespace EyesGuard
             LASTINPUTINFO lastInPut = new LASTINPUTINFO();
             lastInPut.cbSize = (uint)Marshal.SizeOf(lastInPut);
             State = IdleDetectorState.Running;
+            int lastTriggerTime = Environment.TickCount;
 
             while (!cancelRequested)
             {
@@ -64,15 +64,21 @@ namespace EyesGuard
                 }
                 catch
                 {
-                    EnableRaisingEvents = false;
                     break;
                 }
                 IdleDuration = (Environment.TickCount - lastInPut.dwTime) / 1000;
 
-                if (EnableRaisingEvents && (IsSystemIdle() != previousSystemInputIdle))
+                if ((App.Configuration.ProtectionState == App.GuardStates.Protecting) &&
+                    (IsSystemIdle() != previousSystemInputIdle))
                 {
+                    IdleStateChangedEventArgs lastEventStateArgs = new IdleStateChangedEventArgs()
+                    {
+                        IdleState = previousSystemInputIdle,
+                        Duration = (Environment.TickCount - lastTriggerTime) / 1000
+                    };
+                    lastTriggerTime = Environment.TickCount;
                     previousSystemInputIdle = IsSystemIdle();
-                    IdleStateChanged?.Invoke(null, null);
+                    IdleStateChanged?.Invoke(null, lastEventStateArgs);
                 }
                 await Task.Delay(UpdateInterval);
             }
