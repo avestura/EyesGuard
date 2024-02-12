@@ -566,10 +566,9 @@
                         Grid.Column="2"
                         Margin="5,0,0,10"
                         Orientation="Horizontal">
-                        <TextBlock
-                            FontSize="10"
-                            Foreground="#FFCBCBCB"
-                            Text="{lang:LocalizedString 'EyesGuard.Settings.LanguageSettings.RestartRequired'}" />
+                        <TextBlock x:Name="RestartRequired"
+                            Foreground="#FFEE2828"
+                            Text="{lang:LocalizedString EyesGuard.Settings.LanguageSettings.RestartRequired}" FontSize="10" FontWeight="Bold" />
                     </StackPanel>
 
                     <StackPanel
