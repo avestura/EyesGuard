@@ -17,6 +17,7 @@ namespace EyesGuard.Configurations
         private bool _keyTimeVisible = true;
         private bool runAtStartup = false;
         private bool _systemIdleDetectionEnabled = false;
+        private bool _enableResetTimerAfterIdleDuration = false;
         #endregion
 
         #region Config :: Fields :: Public Properties
@@ -108,6 +109,36 @@ namespace EyesGuard.Configurations
                     }
                 }
             }
+        }
+
+        public bool EnableResetTimerAfterIdleDuration
+        {
+            get => _enableResetTimerAfterIdleDuration;
+            set
+            {
+                _enableResetTimerAfterIdleDuration = value;
+
+                if (SystemIdleDetector != null)
+                {
+                    if (value && SystemIdleDetector.State == IdleDetectorState.Stopped)
+                    {
+                        _ = SystemIdleDetector.RequestStart();
+                    }
+                    else if (!value && SystemIdleDetector.State == IdleDetectorState.Running)
+                    {
+                        _ = SystemIdleDetector.RequestCancel();
+                    }
+                }
+            }
+        }
+
+        [XmlIgnore]
+        public TimeSpan ResetTimersAfterIdleDuration { get; set; } = new TimeSpan(0, 45, 0);
+
+        public string ResetTimersAfterIdleGapString
+        {
+            get { return ResetTimersAfterIdleDuration.ToString(); }
+            set { ResetTimersAfterIdleDuration = TimeSpan.Parse(value); }
         }
 
         public string ApplicationLocale { get; set; } = FsLanguageLoader.DefaultLocale;
