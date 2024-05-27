@@ -1,9 +1,9 @@
 # Eyes Guard <img align="left" width="120" height="120" src="UWPAssets/150x150.png">
 
-[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-Download-green)](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
 [![BuitlWithDot.Net shield](https://builtwithdot.net/project/41/eyes-guard/badge)](https://builtwithdot.net/project/41/eyes-guard)
 ![platform](https://img.shields.io/badge/platform-UWP%20%7C%20Win32-blue)
-[![Build status](https://aryansoftware.visualstudio.com/Eyes%20Guard/_apis/build/status/Eyes%20Guard-.NET%20Desktop-CI)](https://aryansoftware.visualstudio.com/Eyes%20Guard/_build/latest?definitionId=3)
+[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml)
+[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml)
 
 
 <br>
@@ -11,11 +11,35 @@
 ## What is Eyes Guard?
 Eyes Guard is a Windows Application for protecting your eyes. It will help you (also can force you!) to break if you are working with your PC for a long time using configurable times.
 
-## Download Link
+## Download
 
-For **Windows 10 or 11 (Official with latest features)**: [Download from Windows Store](//www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
+### Windows 10/11 (Official with latest features)
 
-For **Windows 7 (Unofficial Fork, maybe not latest and not feature complete)**: [Download from ExplorerOL's GitHub](https://github.com/ExplorerOL/AryanSoftware_EyesGuard/releases/tag/AryanSoftware_EyesGuard_Release_2020_01_14)
+> [!NOTE]  
+> EyesGuard will no longer distribute its packages via Microsoft Store. You need to install the 
+> package manually using the instruction below:
+
+#### 📦 Method 1: Use the setup (recommended):
+
+1. [🟩 Download the latest setup form the Releases section](https://github.com/avestura/EyesGuard/releases). 
+   - For x64 systems: `EyesGuard-Setup-VERSION-x64.exe`
+   - For x86 systems: `EyesGuard-Setup-VERSION-x86.exe`
+2. Run the setup and install EyesGuard.
+
+#### 🪟 Method 2: Use Windows Store Package (needs Developer mode to be enabled):
+
+1. Enable Developer Mode from `Settings > System > For Developers`
+2. [🟩 Download the latest package form the Releases section](https://github.com/avestura/EyesGuard/releases). 
+   - For x64 systems: `EyesGuard.release.x64.zip`
+   - For x86 systems: `EyesGuard.release.x86.zip`
+3. Unzip the package.
+4. Find the certificate file with `.cer` extension and open it.
+5. Click `Install Certificate` > `Local Machine` > `Place certificate in following store` > pick `Trusted People`
+6. Open the installation package with `.appx` extension and install Eyes Guard.
+
+### Windows 7 (Unofficial Fork, not latest)
+
+[Download from ExplorerOL's GitHub](https://github.com/ExplorerOL/AryanSoftware_EyesGuard/releases/tag/AryanSoftware_EyesGuard_Release_2020_01_14)
 
 ## Any Screenshots?
 
@@ -47,7 +71,6 @@ For **Windows 7 (Unofficial Fork, maybe not latest and not feature complete)**: 
 Eyes Guard is a free and open-source app. If you like it, please consider:
 
 - ⭐ Star this project in GitHub
-- 📝 Write a review in [Microsoft Store page of Eyes Guard](https://www.microsoft.com/store/apps/9PHW0XFKZD7J?ocid=badge)
 - [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P011XLE)
 - 👩‍💻 Contribute to Software Development of Eyes Guard
 - ✏ Translate app to your language using guide below

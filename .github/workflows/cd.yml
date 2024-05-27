@@ -1,0 +1,199 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT license.
+
+# This continuous delivery pipeline is meant to be triggered on release, anytime a user pushes code associated to a git tag,
+# and will run against multiple configurations and production environments.
+# This pipeline builds the Wpf project based upon the configuration matrix below.  In order to
+# create different channels of the application, the pipeline uses the Package.Identity.Name defined in the
+# Package.appxmanifest in the Windows Application Packaging Project to uniquely identify the application,
+# depending on which channel is being built.
+# Once the MSIX is created for each channel configuration, the agent archives the AppPackages folder, then creates
+# a Release with the specified git release tag. The archive is uploaded to the release as an asset for storage or distribution.
+name:  EyesGuard CD
+
+# Trigger on any push with a git tag
+# To create a git tag, run the following commands on the branch you wish to release:
+#   git tag 1.0.0.0
+#   git push origin --tags
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+
+  build:
+
+    strategy:
+
+    # The following build matrix allows builds across multiple configurations (Debug and Release) and production environments such as
+    # development, production for sideload applications and production for the Microsoft store.
+    # For more information, see https://help.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#configuring-a-build-matrix
+      matrix:
+        channel: [dev, release]
+        targetPlatform: [x86, x64]
+        include:
+
+          # includes the following variables for the matrix leg matching Dev
+          - channel: dev
+            ChannelName: Dev
+            Configuration: Debug
+            DistributionUrl: https://github.avestura.dev/EyesGuard
+            MsixPackageId: AvesturaTechnologies.EyesGuard.Dev
+            MsixPublisherId: CN=AvesturaTechnologies
+            MsixPackageDisplayName: EyesGuard (Dev)
+
+          # includes the following variables for the matrix leg matching Prod_Sideload
+          - channel: release
+            Configuration: Release
+            ChannelName: Release
+            DistributionUrl: https://github.avestura.dev/EyesGuard
+            MsixPackageId: AvesturaTechnologies.EyesGuard
+            MsixPublisherId: CN=AvesturaTechnologies
+            MsixPackageDisplayName: EyesGuard
+
+    runs-on: windows-latest
+
+    env:
+      App_Packages_Archive_Name: EyesGuard
+      App_Packages_Directory: AppPackages
+      SigningCertificate: EyesGuardAction.pfx
+      Solution_Path: EyesGuard.sln
+      Wpf_Project_Path: Source\EyesGuard\EyesGuard.csproj
+      Wap_Project_Directory: StorePackage
+      Wap_Project_Name: StorePackage.wapproj
+      Actions_Allow_Unsecure_Commands: true # Allows AddPAth and SetEnv commands
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+
+    ## Use Nerdbank.GitVersioning to set version variables: https://github.com/AArnott/nbgv
+    #- name: Use Nerdbank.GitVersioning to set version variables
+    #  uses: dotnet/nbgv@master
+    #  id: nbgv
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+
+    # Add  MsBuild to the PATH: https://github.com/microsoft/setup-msbuild
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Install paket
+      run: dotnet tool install paket --global
+
+    # Update the appxmanifest before build by setting the per-channel values set in the matrix such as
+    # the Package.Identity.Version or the Package.Identity.Name, which allows multiple channels to be built.
+    - name: Update manifest version
+      run: |
+        [xml]$manifest = get-content ".\$env:Wap_Project_Directory\Package.appxmanifest"
+        $manifest.Package.Identity.Name = "${{ matrix.MsixPackageId }}"
+        $manifest.Package.Identity.Publisher = "${{ matrix.MsixPublisherId }}"
+        $manifest.Package.Properties.DisplayName = "${{ matrix.MsixPackageDisplayName }}"
+        $manifest.Package.Applications.Application.VisualElements.DisplayName = "${{ matrix.MsixPackageDisplayName }}"
+        $manifest.save(".\$env:Wap_Project_Directory\Package.appxmanifest")
+
+    # Decode the Base64 encoded Pfx
+    - name: Decode the Pfx
+      run: |
+        $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.BASE64_ENCODED_PFX }}")
+        $currentDirectory = Get-Location
+        $certificatePath = Join-Path -Path $currentDirectory -ChildPath $env:Wap_Project_Directory -AdditionalChildPath $env:SigningCertificate
+        [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
+      if: matrix.ChannelName != 'Prod_Store'
+
+    # Restore the application
+    - name:  Restore the Wpf application to populate the obj folder
+      run: msbuild $env:Solution_Path /t:Restore /p:Configuration=$env:Configuration /p:RuntimeIdentifier=$env:RuntimeIdentifier
+      env:
+        Configuration: ${{ matrix.Configuration }}
+        RuntimeIdentifier: win-${{ matrix.targetplatform }}
+
+    # Build the Windows Application Packaging project for Dev and Prod_Sideload
+    - name: Build the Windows Application Packaging Project (wapproj) for ${{ matrix.ChannelName }}
+      run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:PackageCertificateKeyFile=$env:SigningCertificate /p:PackageCertificatePassword=${{ secrets.PFX_KEY }}
+      if: matrix.ChannelName != 'Prod_Store'
+      env:
+        AppxBundle: Never
+        AppInstallerUri: ${{ matrix.DistributionUrl }}
+        BuildMode: SideloadOnly
+        Configuration: ${{ matrix.Configuration }}
+        GenerateAppInstallerFile: True
+        TargetPlatform: ${{ matrix.targetplatform }}
+
+    # Build the Windows Application Packaging project for Prod_Store
+    - name: Build the Windows Application Packaging Project (wapproj) for ${{ matrix.ChannelName }}
+      run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:GenerateAppInstallerFile=$env:GenerateAppInstallerFile /p:AppxPackageSigningEnabled=$env:AppxPackageSigningEnabled
+      if: matrix.ChannelName == 'Prod_Store'
+      env:
+        AppxBundle: Never
+        AppxPackageSigningEnabled: False
+        BuildMode: StoreUpload
+        Configuration: ${{ matrix.Configuration }}
+        GenerateAppInstallerFile: False
+        TargetPlatform: ${{ matrix.targetplatform }}
+
+    # Remove the .pfx
+    - name: Remove the .pfx
+      run: Remove-Item -path $env:Wap_Project_Directory\$env:SigningCertificate
+      if: matrix.ChannelName != 'Prod_Store'
+
+    # Archive the package
+    - name: Create archive
+      run: Compress-Archive -Path $env:Wap_Project_Directory\$env:App_Packages_Directory\* -DestinationPath $env:Wap_Project_Directory\$env:App_Packages_Directory\$env:App_Packages_Archive
+      env:
+        App_Packages_Archive: ${{ env.App_Packages_Archive_Name }}.${{matrix.channel}}.${{ matrix.targetplatform }}.zip
+
+    - name: Build Installer
+      uses: caphyon/advinst-github-action@v1.0
+      if:  ${{ matrix.channel == 'release' }}
+      with:
+        advinst-version: '21.4'
+        # advinst-license: ${{ secrets.ADVINST_LICENSE_KEY }}
+        advinst-enable-automation: 'true'
+        aip-path: ${{ github.workspace }}\AdvancedInstaller\EyesGuard.aip
+        # aip-build-name: DefaultBuild
+        # aip-package-name: setup.msi
+        # aip-output-dir:  ${{ github.workspace }}\setup
+        aip-commands: |
+          SetVersion ${{ github.ref_name }}
+
+    # Create the release:  https://github.com/actions/create-release
+    - name: Create release
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref_name }}
+
+    # Upload release asset:   https://github.com/actions/upload-release-asset
+    - name: Update release asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        App_Packages_Archive: ${{ env.App_Packages_Archive_Name }}.${{matrix.channel}}.${{ matrix.targetplatform }}.zip
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+        asset_path: ${{ env.Wap_Project_Directory }}\${{ env.App_Packages_Directory }}\${{ env.App_Packages_Archive }}
+        asset_name: ${{ env.App_Packages_Archive }}
+        asset_content_type: application/zip
+
+    - name: Update setup asset
+      id: upload-setup-asset
+      uses: actions/upload-release-asset@v1
+      if:  ${{ matrix.channel == 'release' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}  # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+        asset_path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-${{ github.ref_name }}.exe
+        asset_name: EyesGuard-Setup-${{ github.ref_name }}-${{ matrix.targetplatform }}.exe
+        asset_content_type: application/zip
