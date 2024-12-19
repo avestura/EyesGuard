@@ -19,7 +19,15 @@ Eyes Guard is a Windows Application for protecting your eyes. It will help you (
 > EyesGuard will no longer distribute its packages via Microsoft Store. You need to install the 
 > package manually using the instruction below:
 
-#### 📦 Method 1: Use the setup (recommended):
+#### 📦 Method 1: Use the command-line WinGet tool (recommended):
+
+Use WinGet command-line tool:
+
+```powershell
+winget install -s winget Avestura.EyesGuard
+```
+
+#### 📦 Method 2: Use the graphical setup (recommended):
 
 1. [🟩 Download the latest setup form the Releases section](https://github.com/avestura/EyesGuard/releases). 
    - For x64 systems: `EyesGuard-Setup-VERSION-x64.exe`
