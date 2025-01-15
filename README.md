@@ -34,7 +34,7 @@ winget install -s winget Avestura.EyesGuard
    - For x86 systems: `EyesGuard-Setup-VERSION-x86.exe`
 2. Run the setup and install EyesGuard.
 
-#### 🪟 Method 2: Use Windows Store Package (needs Developer mode to be enabled):
+#### 🪟 Method 3: Use Windows Store Package (needs Developer mode to be enabled):
 
 1. Enable Developer Mode from `Settings > System > For Developers`
 2. [🟩 Download the latest package form the Releases section](https://github.com/avestura/EyesGuard/releases). 
