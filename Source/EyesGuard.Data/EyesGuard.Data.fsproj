@@ -5,6 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CompilerExtensions.fs" />
+    <None Include="Languages\el-GR.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Languages\uk-UA.yml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

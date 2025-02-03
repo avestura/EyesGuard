@@ -1,0 +1,243 @@
+﻿---
+Meta:
+  Translators:
+  - Name: Alexandros Koulelis
+    GitHubUsername: AlexKoulel
+    Website: https://alexkoulel.github.io/
+    Notes: ''
+
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Το Eyes Guard δεν υποστηρίζει λειτουργίες για πολλαπλούς χρήστες. 
+    HelpPageText: Για περισσότερες πληροφορίες σχετικά γία κάποιο κομμάτι της εφαρμογής, μετακινήστε το ποντίκι
+      πάνω σε αυτό.Εάν διατίθεται, θα εμφανιστεί μία συμβουλή.
+    DoNotRunMultipleInstances: Το Eyes Guard τρέχει ήδη. Δεν μπορείτε να τρέξετε πολλαπλές 
+      εργασίες αυτού του λογισμικού.
+    Notifications:
+      FirstLaunch:
+        Title: ΄Το Eyes Guard είναι ενεργό.
+        Message: Το Eyes Guard τρέχει στο παρασκήνιο. Μπορείτε να φανερώσετε την UI και άλλες 
+                 επιλογές χρησιμοποιώντας το εικονίδιο της ασπίδας στην γραμμή εργασιών. 
+    Resources:
+      PageTitle: Πόροι
+      Content:
+        Icons: 'Εικονίδια: FontAwesome και IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (Αναπτύχθηκε από την Avestura Technologies)'
+    About:
+      PageTitle: Σχετικά
+      Content:
+        InnerTitle: Σχετικά με το Eyes Guard
+        PublisherInfo: 'Εκδότης: Avestura Technologies'
+    Donate:
+      PageTitle: Κάντε μία δωρεά στο Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Θα θέλατε να κάνετε μία δωρεά;
+          Message: Εάν θέλετε να υποστηρίξετε αυτό το λογισμικό ανοιχτού κώδικα, χρησιμοποιήστε αυτό το έντυπο.
+          ButtonText: Άνοιγμα σελίδας δωρεάς στο πρόγραμμα περιήγησης.
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Δωρεά
+          Thanks: Σας ευχαριστούμε για την υποστήριξη!
+          Redirect: Θα ανακατευθυνθείτε σε μία σελίδα δωρεάς στο πρόγραμμα περιήγησης σας.
+          FeedbackNotice: Έαν έχετε οποιοδήποτε σχόλιο, μπορείτε να το δημοσιεύσετε στην 
+                          σελίδα του Eyes Guard στο Μicrosoft Store.
+    Feedback:
+      PageTitle: Σχόλια
+      Content:
+        InnerTitle: Σχόλια
+        Message: Μπορείτε να δημιουργήσετε κάποιο θέμα στην GitHub σελίδα του 
+                 πρότζεκτ και να παρακολουθείτε τις αλλαγές σχετικά με αυτό.
+        ButtonText: Δημιουργία θέματος
+  EyesGuard:
+    ControlPanel:
+      Title: Πίνακας ελέγχου
+    GuardStatus:
+      Running: Τα μάτια σας προστατεύονται 
+      Paused: Το Eyes Guard είναι προσωρινά απενεργοποιημένο
+      Stopped: Το Eyes Guard είναι απενεργοποιημένο
+      Idle: Το Eyes Guard τέθηκε σε παύση λόγω της αδρανής λειτουργίας του συστήματος.
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} δευτερόλεπτα για ένα μικρό διάλειμμα."
+        Minutes: "{Minutes} λεπτά για ένα μικρό διάλειμμα."
+      LongBreak:
+        Seconds: "{Seconds} δευτερόλεπτα για ένα μεγάλο διάλειμμα."
+        Minutes: "{Minutes} λεπτά για ένα μεγάλο διάλειμμα."
+      PauseTime:
+        Seconds: Το Eyes Guard απενεργοποιήθηκε για {Seconds} δευτερόλεπτα
+        Minutes: Το Eyes Guard απενεργοποιήθηκε για {Minutes} λεπτά
+    CustomPause:
+      PageTitle: Προσαρμοσμένη Παύση
+      Message: Εισάγετε τον επιθυμητό χρόνο παύσης
+      ButtonText: Παύση
+    WarningPage:
+      ButtonText: Επιστροφή
+    OperationFailed: Η διεργασία απέτυχε
+    CheckInput: Ελέγξτε την επιβεβαίωση εισόδου.
+    TimeManipulation:
+      HoursLimit: Το πεδίο ωρών δεν πρέπει είναι περισσότερο από {Hours}
+      MinutesLimit: Το πεδίο των λεπτών δεν πρέπει να είναι περισσότερο από {Minutes}
+      SecondsLimit: Το πεδίο των δευτερολέπτων δεν πρέπει να είναι περισσότερο από {Seconds}
+      SGapMorethanLGap: Το κενό μεταξύ δύο μικρών διαλειμμάτων πρέπει να είναι
+                        μικρότερο απο το κενό μεταξύ δύο μεγάλων διαλειμμάτων.
+      SDurationMorethanLDuration: Η διάρκεια του μικρόυ διαλείμματος πρέπει να είναι μικρότερη 
+                                  απο αυτή του μεγάλου διαλλείματος.
+      SDurationTooHigh: Το μικρό διάλειμμα δεν μπορεί να είναι περισσότερο από 5 λεπτά.
+      LDurationTooHigh: Το μεγάλο διάλειμμα δεν μπορεί να είναι περισσότερο από 2 ώρες.
+      NotEnoughGapBetweenLandS: Το κενό ανάμεσα στο μικρό και στο μεγάλο διάλειμμα δεν είναι αρκετό.
+      ShortGapLow: Το κενό ανάμεσα στα δύο μικρά διαλέίμματα πρέπει να είναι τουλάχιστον 1 λεπτό.
+      LongGapLow: Το κενό ανάμεσα στα δύο μεγάλα διαλέίμματα πρέπει να είναι τουλάχιστον 5 λεπτά.
+      ChooseLargerTime: Παρακαλώ επιλέξτε μεγαλύτερη διάρκεια.
+    Settings:
+      Title: Ρυθμίσεις
+      SavedSuccessfully: Οι ρυθμίσεις αποθηκεύτηκαν με επιτυχία 
+      AreYouSure: Είστε σίγουροι;
+      LanguageSection: Γλώσσα
+      TimeSeparators:
+        Hour: Ώρα(ες) και
+        Minutes: Λεπτό(ά) και
+        Second: Δευτερόλεπτο(α)
+      SaveSettings: Αποθήκευση αλλαγών
+      TimeSettings:
+        Title: Ρυθμίσεις Χρόνου
+        GapBetweenTwoShortBreak: 'Διάρκεια κενού ανάμεσα δύο μικρών διαλειμμάτων:'
+        GapBetweenTwoLongBreak: 'Διάρκεια κενού ανάμεσα δύο μεγάλων διαλειμμάτων:'
+        ShortBreakDuration: 'Διάρκεια μικρού διαλείμματος:'
+        LongBreakDuration: 'Διάρκεια μεγάλου διαλείμματος:'
+      UserSettings:
+        Title: Ρυθμίσεις Χρήστη
+        ForceUser: Ανάγκασε με να κάνω διάλειμμα
+        ForceUserToolTip: Εάν ενεργοποιήσετε αυτήν την επιλογή, δεν θα μπορείτε να αναβάλλετε ή να σταματήσετε
+                          το διάλειμμα. Επίσης ο δείκτης του ποντικιού θα κρυφτεί κατά την διάρκεια του διαλείμματος.
+        OnlyOneShortBreak: Εμφάνιση μόνο ενός μικρού διαλείμματος ανάμεσα σε δύο μεγάλα διαλείμματα. 
+        OnlyOneShortBreakToolTip: Με την ενεργοποίηση αυτής της επιλογής σταματά ο χρόνος του μικρού διαλείμματος 
+                                  αφού έχει ολοκληρωθεί ένα επιτυχία ,μέχρι το μεγάλο διάλειμμα.
+        StartupApplication: Εκκίνηση του Eyes Guard με την εκκίνηση του συστήματος
+        StartupApplicationToolTip: Το Eyes Guard ξεκινάει με την εκκίνηση του συστήματος απο προεπιλογή.
+          Μπορείτε να απενεργοποιήσετε αυτή την λειτουργία από την Διαχείριση Εργασιών >> Εφαρμογές Εκκίνησης.
+        AlertBeforeLongBreak: Ειδοποιήσε με 1 λεπτό πριν το μεγάλο διάλειμμα
+        AlertBeforeLongBreakToolTip: Το Eyes Guard σας ειδοποιεί ένα λεπτό πρίν το μεγάλο διάλειμμα.
+        ShortBreakAllowCloseWithRightCLick: Κλείστε το παράθυρο του μικρού διαλείμματος με ένα κλικ
+        ShortBreakAllowCloseWithRightCLickToolTip: Να επιτρέπεται το κλείσιμο του παραθύρου του μικρού διαλείμματος με ένα δεξί κλικ.
+        SystemIdle: Παύση του Eyes Guard όταν το σύστημα είναι σε αδράνεια
+        SystemIdleToolTip:
+        - Το Eyes Guard χρησιμοποιεί ανίχνευση αδράνειας συστήματος για να ανιχνεύσει εάν είστε μακρία απο τον υπολογιστή σας.
+        - Σε αυτή την λειτουργία, το Eyes Guard θέτει αυτόματα την αντίστροφη μέτρηση σε παύση.
+        - Προσέξτε πως αυτή η λειτουργία μπορεί να απενεργοποιήσει την προστασία των ματιών σας όταν δεν 
+          αλληλεπιδράτε με τον υπολογιστή σας, αν για παράδειγμα βλέπετε κάποια ταινία.
+      StatsSettings:
+        Title: Στατιστικά
+        YesDeleteData: Ναι, Σίγουρα
+        NoKeepData: Όχι, Κράτα τα δεδομένα
+        StatsDeleted: Διαγραφή όλων των δεδομένων
+        StoreStats: Αποθήκευση στατιστικών 
+        StoreStatsToolTip: Το Eyes Guard θα αποθηκεύσει κάποιες πληροφορίες σχετικά με την χρήση που κάνετε στο πρόγραμμα την οποία μπορείτε 
+                           να δείτε στο μενού Εργαλεία >> Στατιστικά. Αυτά τα δεδομένα αποθηκεύονται τοπικά στο σύστημά σας.
+        ClearStatsText: 'Αφαίρεση ιστορικού στατιστικών:'
+        ClearStats: Αφαίρεση δεδομένων
+      LanguageSettings:
+        Title: Γλώσσα
+        SelectLanguage: 'Επιλογή Γλώσσας:'
+        MaintainMessage: 'Αυτή η γλώσσα συντηρείται από: '
+        RestartRequired: Η αλλαγή της γλώσσας εμφανίζεται στην επόμενη εκκίνηση του προγράμματος
+        MessagesFromLangFile: Χρήση του αρχείου γλώσσας σαν πηγή του μηνύματος μικρού διαλείμματος
+        MessagesFromLangFileToolTip: Εάν ενεργοποιήσετε αυτή την επιλογή, το αρχείο γλώσσας 
+                                     θα παρέχει τα μηνύματα που εμφανίζονται στο παράθυρο του μικρού διαλείμματος.
+        AddMessage: Προσθήκη Μηνύματος
+        RemoveMessage: Αφαίρεση Μηνύματος
+        NoAccount: Δεν υπάρχει λογαργιασμός 
+        NoWebsite: Δεν υπάρχει ιστότοπος
+        NoNotes: Δεν υπάρχουν σχόλια για την μετάφραση
+        EnterNewMessage: Εισάγετε καινούργιο μήνυμα
+        Submit: Υποβολή
+    Resting: Ξεκούραση
+    Waiting: Περιμένει
+    ShortMessageSuggestions:
+    - Ανοίξτε και κλείστε τα μάτια σας 
+    - Ανοιγοκλείστε τα μάτια σας ανά διαστήματα 
+    - Κοιτάξτε επίμονα κάπου μακριά 
+    - Κοιτάξτε έξω από το παράθυρο
+    - Πλύνετε τα χέρια σας και μετά κάντε μασάζ τα μάτια σας 
+    LongWindowMessage: Ήρθε η ώρα για ένα μεγάλο διάλειμμα. Ώρα για μία βόλτα.
+    LongWindowCancelButton: Ακύρωση
+    Notifications:
+      LongBreakAlert:
+        Title: 1 λεπτό για το μεγάλο διάλειμμα 
+        Message: Υπάρχει μόνο ένα λεπτό που απομένει μέχρι το μεγάλο διάλειμμα. Μπορείτε να αναβάλλετε αυτό το 
+                 διάλειμμα από την γραμμή εργασιών εάν είναι απαραίτητο.
+    WaitUnitlEndOfBreak: Παρακαλώ περιμένετε μέχρι να τελειώσει το διάλειμμα.
+    LongBreakTimeRemaining: "{Hours} ώρα(ες) και {Minutes} λεπτό(ά) και {Seconds}
+      δευτερόλεπτο(α) μέχρι να τελειώσει το διάλειμμα."
+    StatsPage:
+      Title: Στατιστικά
+      ShortBreak: Μικρά διαλείμματα
+      LongBreak: Μεγάλα διαλείμματα
+      Pauses: Παύσεις
+      ShortCount: 'Μικρά διαλείμματα:'
+      LongCompletedCount: 'Ολοκληρωμένα μεγάλα διαλείμματα:'
+      LongFailedCount: 'Αποτυχημένα μεγάλα διαλείμματα:'
+      PauseCount: 'Προσωρινές παύσεις:'
+      StopCount: 'Διακοπές:'
+    AlertPages:
+      Titles:
+        Attention: Προσοχή
+        Successful: Επιτυχής
+        Error: Αποτυχία
+        Info: Πληροφορίες
+        AboutSoftware: Σχετικά με το λογισμικό
+        Donate: Δωρεά
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Κεντρικό Μενού
+        Hide: Κρύψτε το Eyes Guard
+        Exit: Έξοδος
+      Tools:
+        Header: Εργαλεία
+        Stats: Στατιστικά
+        Settings: Ρυθμίσεις
+      Breaks:
+        Header: Διαλείμματα
+        GoShort: Εκκίνηση μικρού διαλείμματος
+        GoLong: Εκκίνηση μεγάλου διαλείμματος
+      View:
+        Header: Προβολή
+        KeyTimes: Χρόνοι
+      Help:
+        Header: Βοήθεια
+        EyesGuardHelp: Βοήθεια Eyes Guard 
+        Resources: Πόροι
+        SendFeedback: Αποστολή Σχολίων
+        Donate: Δωρεά
+        About: Σχετικά
+    UserManager:
+      User: Χρήστης
+      NotLoggedIn: Δεν έχει συνδεθεί
+      NoTitle: Χωρίς τίτλο
+      Login: Σύνδεση
+      Profile: Προφίλ
+      Logout: Αποσύνδεση
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Ενεργή προστασία
+      NotProtected: Ανενεργή προστασία
+      PausedProtected: Temporarily disabled
+      Menu:
+        PauseFor: Παύση για...
+        PausedFor: Παύση για {PauseRemaining}
+        NextShortBreak: 'Επόμενο μικρό διάλειμμα: {NextShortBreak}'
+        NextLongBreak: 'Επόμενο μεγάλο διάλειμμα: {NextLongBreak}'
+        ShowMainMenu: Εμφάνιση Κεντρικού Μενού
+        StartProtection: Εκκίνηση Προστασίας
+        StopProtection: Διακοπή Προστασίας
+        FiveMins: 5 λεπτά
+        TenMins: 10 λεπτά
+        ThirtyMins: 30 λεπτά
+        OneHour: 1 ώρα
+        TwoHours: 2 ώρες
+        Custom: Προσαρμοσμένη...
+        Settings: Ρυθμίσεις
+        Exit: Έξοδος
