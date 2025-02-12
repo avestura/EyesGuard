@@ -50,6 +50,11 @@ namespace EyesGuard
             public uint dwTime;
         }
 
+        private uint LastInputPoint = (uint)Environment.TickCount, TempLastInputStartPoint, TempLastInputEndPoint;
+
+        //ContinuousPeriod must be greater than UpdateInterval
+        private int ContinuousPeriod = 5000;
+
         public async Task RequestStart()
         {
             LASTINPUTINFO lastInPut = new LASTINPUTINFO();
@@ -67,13 +72,20 @@ namespace EyesGuard
                     EnableRaisingEvents = false;
                     break;
                 }
-                IdleDuration = (Environment.TickCount - lastInPut.dwTime) / 1000;
+
+                if (lastInPut.dwTime - TempLastInputEndPoint > ContinuousPeriod)
+                    TempLastInputStartPoint = lastInPut.dwTime;
+                else if (lastInPut.dwTime - TempLastInputStartPoint > ContinuousPeriod)
+                    LastInputPoint = lastInPut.dwTime;
+
+                IdleDuration = (Environment.TickCount - LastInputPoint) / 1000;
 
                 if (EnableRaisingEvents && (IsSystemIdle() != previousSystemInputIdle))
                 {
                     previousSystemInputIdle = IsSystemIdle();
                     IdleStateChanged?.Invoke(null, null);
                 }
+                TempLastInputEndPoint = lastInPut.dwTime;
                 await Task.Delay(UpdateInterval);
             }
 
@@ -86,7 +98,8 @@ namespace EyesGuard
             cancelRequested = true;
             await Task.Run(() =>
             {
-                while (State == IdleDetectorState.Running) { }
+                while (State == IdleDetectorState.Running)
+                { }
             });
         }
     }
