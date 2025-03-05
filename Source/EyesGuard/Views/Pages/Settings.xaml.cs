@@ -281,9 +281,13 @@ namespace EyesGuard.Views.Pages
         private void LanguagesCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
-            {
+            {                
                 MaintainersLinks.Inlines.Clear();
-                var translators = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name).Meta.Translators;
+                LocalizedEnvironment environment = FsLanguageLoader.CreateEnvironment(((LanguageHolder)LanguagesCombo.SelectedItem).Name);
+                var translators = environment.Meta.Translators;
+
+                RestartRequired.Text = environment.Translation.EyesGuard.Settings.LanguageSettings.RestartRequired;
+
                 for (int i = 0; i < translators.Count; i++)
                 {
                     var translator = translators[i];
