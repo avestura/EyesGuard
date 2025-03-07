@@ -35,7 +35,7 @@ namespace EyesGuard
                 Shutdown();
             }
 
-            InitializeIdleDetector(Configuration.SystemIdleDetectionEnabled);
+            InitializeIdleDetector(Configuration.SystemIdleDetectionEnabled | Configuration.EnableResetTimerAfterIdleDuration);
 
             ToolTipService.ShowDurationProperty.OverrideMetadata(
                 typeof(DependencyObject), new FrameworkPropertyMetadata(int.MaxValue));
@@ -152,8 +152,7 @@ namespace EyesGuard
                 SystemIdleDetector = new IdleDetector()
                 {
                     IdleThreshold = EyesGuardIdleDetectionThreshold,
-                    DeferUpdate = false,
-                    EnableRaisingEvents = initialStart
+                    DeferUpdate = false
                 };
                 SystemIdleDetector.IdleStateChanged += SystemIdleDetector_IdleStateChanged;
 
@@ -166,6 +165,20 @@ namespace EyesGuard
         private void SystemIdleDetector_IdleStateChanged(object sender, IdleStateChangedEventArgs e)
         {
             UpdateIdleActions();
+
+            if (App.Configuration.EnableResetTimerAfterIdleDuration &&
+                !CheckIfResting(showWarning: false) &&
+                e.IdleState &&
+                e.Duration > App.Configuration.ResetTimersAfterIdleDuration.TotalSeconds)
+            {
+                ShortBreakHandler.Stop();
+                LongBreakHandler.Stop();
+                NextShortBreak = App.Configuration.ShortBreakGap;
+                NextLongBreak = App.Configuration.LongBreakGap;
+                ShortBreakHandler.Start();
+                LongBreakHandler.Start();
+            }
+
         }
 
         public static void UpdateIdleActions()

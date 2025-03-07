@@ -4,7 +4,11 @@ Meta:
   - Name: 七夕泥
     GitHubUsername: Qixiny
     Website: https://github.com/Qxiny
-    Notes: '第一次翻译软件请多多指教，翻译的有些太可爱了~ 邮箱:3185835784@qq.com'  
+    Notes: '第一次翻译软件请多多指教，翻译的有些太可爱了~ 邮箱:3185835784@qq.com'
+  - Name: 0ow
+    GitHubUsername: z0ow
+    Website: https://github.com/z0ow
+    Notes: '新增计时器重置翻译选项（仅中文）'
 
 Translation:
   Application:
@@ -113,6 +117,7 @@ Translation:
         ShortBreakAllowCloseWithRightCLick: 鼠标右键关闭让你去小型休息的提示
         ShortBreakAllowCloseWithRightCLickToolTip: 允许你在那个烦人的窗口跳出来的时候右键把它关掉（然后你的眼睛就......）
         SystemIdle: 你不动电脑的时候护眼姬自动帮你暂停
+        ResetTimersAfterIdleGap: '当系统空闲超过该时间后重置所有计时器:'
         SystemIdleToolTip:
         - 当你不动电脑的时候将会自动暂停休息系统
         - 例如你电脑搁着忘关了，或者是在看电影
