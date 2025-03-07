@@ -43,7 +43,7 @@
                     <RowDefinition Height="50" />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-
+              
                 <Grid Grid.Row="0" Background="#FF006A9F">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto" />

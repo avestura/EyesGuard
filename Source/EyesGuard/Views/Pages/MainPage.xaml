@@ -13,7 +13,7 @@
     Title="{lang:LocalizedString 'EyesGuard.ControlPanel.Title'}"
     d:DesignHeight="450"
     d:DesignWidth="550"
-    Background="#FF006A9F"
+    Background="#6EBAFF"
     FlowDirection="{lang:LocalizedFlowDirection}"
     FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     Loaded="Page_Loaded"

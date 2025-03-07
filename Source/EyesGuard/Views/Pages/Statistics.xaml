@@ -11,7 +11,7 @@
     x:Name="this"
     d:DesignHeight="450"
     d:DesignWidth="600"
-    Background="#FF006A9F"
+    Background="#6EBAFF"
     FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
     FlowDirection="{lang:LocalizedFlowDirection}"
     Loaded="Page_Loaded"

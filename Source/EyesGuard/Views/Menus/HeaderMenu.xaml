@@ -13,7 +13,8 @@
         Background="Transparent"
         FontFamily="{StaticResource HastiUI.Fonts.AppFont}"
         FontSize="11">
-        <MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.Header'}">
+        <!--<MenuItem Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.Header'}">-->
+        <MenuItem Header="Vista Guard">
             <MenuItem Click="GoToMainPage_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.EyesGuard.MainMenu'}" />
             <Separator />
             <MenuItem Header="{lang:LocalizedString 'ShellExtensions.TaskbarIcon.Menu.PauseFor'}">
@@ -70,11 +71,11 @@
             <Separator />
             <MenuItem Click="Feedback_Menu_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.SendFeedback'}" Icon="{StaticResource EyesGuard.Feedback}" />
             <Separator/>
-            <MenuItem
+            <!--<MenuItem
                 Click="Donate_Click"
                 Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.Donate'}"
-                Icon="{StaticResource EyesGuard.Donate}" />
-            <Separator />
+                Icon="{StaticResource EyesGuard.Donate}" />-->
+            <!--<Separator />-->
 
             <MenuItem Click="About_Click" Header="{lang:LocalizedString 'EyesGuard.HeaderMenu.Help.About'}" />
 

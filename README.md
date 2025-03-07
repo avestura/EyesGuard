@@ -1,9 +1,6 @@
-# Eyes Guard <img align="left" width="120" height="120" src="UWPAssets/150x150.png">
+# Vista Guard <img align="left" width="120" height="120" src="UWPAssets/150x150.png">
 
-[![BuitlWithDot.Net shield](https://builtwithdot.net/project/41/eyes-guard/badge)](https://builtwithdot.net/project/41/eyes-guard)
-![platform](https://img.shields.io/badge/platform-UWP%20%7C%20Win32-blue)
-[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/ci.yml)
-[![Build status](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml/badge.svg)](https://github.com/avestura/EyesGuard/actions/workflows/cd.yml)
+
 
 
 <br>
@@ -44,60 +41,18 @@ Eyes Guard is a Windows Application for protecting your eyes. It will help you (
 
 ## What features does it have?
 
-| Feature                  | Implementation State | Is live on store version? |
-|--------------------------|----------------------|---------------------------|
-| Short Break              | ✔ Implemented        | ✔ Yes                    |
-| Long Break               | ✔ Implemented        | ✔ Yes                    |
-| Timing Customization     | ✔ Implemented        | ✔ Yes                    |
-| Stas                     | ✔ Implemented        | ✔ Yes                    |
-| Pause or Stop protection | ✔ Implemented        | ✔ Yes                    |
-| Windows Tray Integration | ✔ Implemented        | ✔ Yes                    |
-| Auto Start               | ✔ Implemented        | ✔ Yes                    |
-| Customize messages       | ✔ Implemented        | ✔ Yes                    |
-| Multi-language           | ✔ Implemented        | ✔ Yes                    |
+| Feature                  | Implementation State 
+|--------------------------|----------------------
+| Short Break              | ✔ Implemented       
+| Long Break               | ✔ Implemented      
+| Timing Customization     | ✔ Implemented      
+| Stas                     | ✔ Implemented   
+| Pause or Stop protection | ✔ Implemented       
+| Windows Tray Integration | ✔ Implemented        
+| Auto Start               | ✔ Implemented        
+| Customize messages       | ✔ Implemented        
+| Multi-language           | ✔ Implemented        
 
-## How can I help?
-
-Eyes Guard is a free and open-source app. If you like it, please consider:
-
-- ⭐ Star this project in GitHub
-- [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P011XLE)
-- 👩‍💻 Contribute to Software Development of Eyes Guard
-- ✏ Translate app to your language using guide below
-
-## Supported Languages
-
-| |Language|Locale|Translator|
-|-|--------|------|----------|
-|[![us][us]](#)|English|en-US|[Aryan Ebrahimpour](https://avestura.dev), [Gianpaolo Filippa](https://github.com/gianpaolof), [Akash Joshi](https://akashj.com)|
-|[![ir][ir]](#)|Persian|fa-IR|[Aryan Ebrahimpour](https://avestura.dev)|
-|[![it][it]](#)|Italian|it-IT|[Gianpaolo Filippa](https://github.com/gianpaolof)|
-|[![fr][fr]](#)|French|fr-FR|[Bouillon Pierre](https://pbouillon.github.io)|
-|[![ru][ru]](#)|Russian|ru-RU|[Dmitry Vorobjev](https://github.com/ExplorerOL)|
-|[![no][no]](#)|Norwegian|nb-NO|[Thomas Rory Gummerson](https://trgwii.no/)|
-|[![in][in]](#)|Tamil|ta-IN|[Muthu Kumar](https://mkr.pw)|
-|[![ko][ko]](#)|Korean|ko-KR|[Sung Jae Cho](https://rubycho.github.io)|
-|[![ch][ch]](#)|Chinese |zh-CN|[Qixiny](https://github.com/qixinynan)|
-|[![tr][tr]](#)|Turkish |tr-TR|[Furkan KARADENİZ](https://github.com/Suqbs)|
-|[![de][de]](#)|German |de-DE|[Marco Heinisch](https://github.com/marcoheinisch)|
-|[![po][po]](#)|Polish |po-PO|[Bartlomiej Szmolke](https://github.com/BSzmolke)|
-|[![ua][ua]](#)|Ukrainian |uk-UA|[Yaroslav Shaposhnyk](https://github.com/masterillaGitHub)|
-|[![add][add]](#how-to-contribute-to-translating-app)|[Add Language](#how-to-contribute-to-translating-app)||You|
-
-[us]: https://img.icons8.com/color/48/000000/usa.png
-[ir]: ./assets/flags/iran.png
-[it]: https://img.icons8.com/color/48/000000/italy.png
-[fr]: https://img.icons8.com/color/48/000000/france.png
-[ru]: https://img.icons8.com/color/48/000000/russian-federation.png
-[no]: https://img.icons8.com/color/48/000000/norway.png
-[in]: https://img.icons8.com/color/48/000000/india.png
-[ko]: https://img.icons8.com/color/48/000000/south-korea.png
-[ch]: https://img.icons8.com/color/48/000000/china.png
-[tr]: https://img.icons8.com/color/48/000000/turkey.png
-[de]: https://img.icons8.com/color/48/000000/germany.png
-[po]: https://img.icons8.com/color/48/000000/poland.png
-[ua]: https://img.icons8.com/color/48/000000/ukraine.png
-[add]: https://img.icons8.com/doodle/48/000000/add.png
 
 ## Can I contribute?
 

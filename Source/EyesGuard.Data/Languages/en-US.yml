@@ -1,49 +1,39 @@
 ﻿---
 Meta:
   Translators:
-  - Name: Aryan Ebrahimpour
+  - Name: Reena khanna
     GitHubUsername: avestura
     Website: https://avestura.dev
     Notes: ''
-  - Name: Gianpaolo Filippa
-    GitHubUsername: gianpaolof
-    Website: 'https://github.com/gianpaolof'
-    Notes: ''
-  - Name: Akash Joshi
-    GitHubUsername: akash-joshi
-    Website: https://akashj.com
-    Notes: ''
-  - Name: Thomas Rory Gummerson
-    GitHubUsername: trgwii
-    Website: https://trgwii.no
-    Notes: ''
+
+  
 
 Translation:
   Application:
-    OSTitle: Eyes Guard
-    HeaderTitle: Eyes Guard
-    LoginWarning: Eyes Guard currently doesn't support multi-user features.
+    OSTitle: Vista Guard
+    HeaderTitle: Vista Guard
+    LoginWarning: Vista Guard currently doesn't support multi-user features.
     HelpPageText: For getting more info about an element in app, hover your mouse
       on that element. A tooltip will open if available.
-    DoNotRunMultipleInstances: Eyes Guard is already running. You can't run multiple
+    DoNotRunMultipleInstances: Vista Guard is already running. You can't run multiple
       instances of this software.
     Notifications:
       FirstLaunch:
-        Title: Eyes Guard is running.
-        Message: Eyes Guard is running in the background. You can reveal UI and other
+        Title: Vista Guard is running.
+        Message: Vista Guard is running in the background. You can reveal UI and other
           options using the shield icon in the taskbar.
     Resources:
       PageTitle: Resources
       Content:
         Icons: 'Icons: FontAwesome and IconArchive'
-        UIKit: 'UI Kit: Hasti UI Kit (Developed by Avestura Technologies)'
+        UIKit: 'UI Kit: Hasti UI Kit ()'
     About:
       PageTitle: About
       Content:
-        InnerTitle: About Eyes Guard
-        PublisherInfo: 'Publisher: Avestura Technologies'
+        InnerTitle: About Vista Guard
+        PublisherInfo: 'Publisher: Reena Khanna'
     Donate:
-      PageTitle: Donate to Eyes Guard
+      PageTitle: Donate to Vista Guard
       BeforeDonation:
         Content:
           InnerTitle: Would you like to Donate?
@@ -55,8 +45,7 @@ Translation:
           InnerTitle: Donate
           Thanks: Thanks for your support!
           Redirect: You will be redirected to a donation page in your browser
-          FeedbackNotice: If you have any comments, you can post in Eyes Guard page
-            of Microsoft Store.
+          FeedbackNotice: If you have any comments, you can post in Vista Guard page.
     Feedback:
       PageTitle: Feedback
       Content:
@@ -69,9 +58,9 @@ Translation:
       Title: Control Panel
     GuardStatus:
       Running: Your eyes are under protection
-      Paused: Eyes Guard is temporarily disabled
-      Stopped: Eyes Guard is disabled
-      Idle: Eyes Guard paused due to system idle detection
+      Paused: Vista Guard is temporarily disabled
+      Stopped: Vista Guard is disabled
+      Idle: Vista Guard paused due to system idle detection
     TimeRemaining:
       ShortBreak:
         Seconds: "{Seconds} seconds until short-break."
@@ -80,8 +69,8 @@ Translation:
         Seconds: "{Seconds} seconds until long-break."
         Minutes: "{Minutes} minutes until long-break."
       PauseTime:
-        Seconds: Eyes Guard is disabled for {Seconds} seconds
-        Minutes: Eyes Guard is disabled for {Minutes} minutes
+        Seconds: Vista Guard is disabled for {Seconds} seconds
+        Minutes: Vista Guard is disabled for {Minutes} minutes
     CustomPause:
       PageTitle: Custom Pause
       Message: Enter the desired pause time
@@ -128,18 +117,18 @@ Translation:
         OnlyOneShortBreak: Show only one short-break between two long-breaks.
         OnlyOneShortBreakToolTip: Activating this option stops counter of the short-break
           after one completed successfully until a long-break.
-        StartupApplication: Start Eyes Guard with system startup
-        StartupApplicationToolTip: Eyes Guard starts with system boot by default.
+        StartupApplication: Start Vista Guard with system startup
+        StartupApplicationToolTip: Vista Guard starts with system boot by default.
           You can disable this feature from TaskManager >> Startup Tab.
         AlertBeforeLongBreak: Notify me 1 minute before long-break
-        AlertBeforeLongBreakToolTip: Eyes Guard notifies you one minute before a long-break.
+        AlertBeforeLongBreakToolTip: Vista Guard notifies you one minute before a long-break.
         ShortBreakAllowCloseWithRightCLick: Close Short-break window with a right click
         ShortBreakAllowCloseWithRightCLickToolTip: Allow closing Short-break window with a right click.
-        SystemIdle: Pause Eyes Guard when system detected as idle
+        SystemIdle: Pause Vista Guard when system detected as idle
         SystemIdleToolTip:
-        - Eyes Guard uses system idle detection to detect if you are away from your
+        - Vista Guard uses system idle detection to detect if you are away from your
           PC.
-        - In this mode, Eyes Guard automatically pauses down-counting.
+        - In this mode, Vista Guard automatically pauses down-counting.
         - Notice that this feature can disable guarding your eyes when you are not
           interacting with your PC, for example when watching movies.
       StatsSettings:
@@ -148,7 +137,7 @@ Translation:
         NoKeepData: No, Keep data
         StatsDeleted: All of stats deleted
         StoreStats: Store stats
-        StoreStatsToolTip: Eyes Guard will store some info about your usage that you
+        StoreStatsToolTip: Vista Guard will store some info about your usage that you
           can see in Tools >> Stats menu. These data are stored locally in your machine.
         ClearStatsText: 'Remove history of stats:'
         ClearStats: Remove data
@@ -205,9 +194,9 @@ Translation:
         Donate: Donate
     HeaderMenu:
       EyesGuard:
-        Header: Eyes Guard
+        Header: Vista Guard
         MainMenu: Main Menu
-        Hide: Hide Eyes Guard
+        Hide: Hide Vista Guard
         Exit: Exit
       Tools:
         Header: Tools
@@ -222,7 +211,7 @@ Translation:
         KeyTimes: Key Times
       Help:
         Header: Help
-        EyesGuardHelp: Eyes Guard Help
+        EyesGuardHelp: Vista Guard Help
         Resources: Resources
         SendFeedback: Send Feedback
         Donate: Donate
@@ -240,8 +229,8 @@ Translation:
       NotProtected: Not protecting
       PausedProtected: Temporarily disabled
       Menu:
-        PauseFor: Pause for...
-        PausedFor: Paused for {PauseRemaining}
+        PauseFor: Stop for...
+        PausedFor: Stop for {PauseRemaining}
         NextShortBreak: 'Next Short-break: {NextShortBreak}'
         NextLongBreak: 'Next Long-break: {NextLongBreak}'
         ShowMainMenu: Show Main Menu

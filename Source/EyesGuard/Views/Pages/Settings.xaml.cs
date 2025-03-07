@@ -293,8 +293,8 @@ namespace EyesGuard.Views.Pages
                         Child = new TranslatorInfo
                         {
                             TranslatorName = translator.Name,
-                            GitHubUsername = (string.IsNullOrWhiteSpace(translator.GitHubUsername)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoAccount : $"@{translator.GitHubUsername}",
-                            WebsiteUrl = (string.IsNullOrWhiteSpace(translator.Website.ToString())) ?App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoWebsite : translator.Website.ToString(),
+                            GitHubUsername = (string.IsNullOrWhiteSpace(translator.GitHubUsername)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoAccount : null,
+                            WebsiteUrl = (string.IsNullOrWhiteSpace(translator.Website.ToString())) ?App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoWebsite : null,
                             Notes = (string.IsNullOrWhiteSpace(translator.Notes)) ? App.LocalizedEnvironment.Translation.EyesGuard.Settings.LanguageSettings.NoNotes : translator.Notes
                         },
                         PlacementTarget = MaintainersLinks,

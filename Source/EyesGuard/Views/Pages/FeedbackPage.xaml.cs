@@ -28,7 +28,7 @@ namespace EyesGuard.Views.Pages
 
         private void Feedback_Click(object sender, RoutedEventArgs e)
         {
-            Task.Run(() => Process.Start("https://github.com/avestura/EyesGuard/issues"));
+            Task.Run(() => Process.Start(""));
             App.GetMainWindow().MainFrame.Navigate(new MainPage());
         }
     }
