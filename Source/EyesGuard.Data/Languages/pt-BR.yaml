@@ -1,0 +1,234 @@
+---
+Meta:
+  Translators:
+  - Name: Daniel Alexandre Boaventura
+    GitHubUsername: D4n334
+    Website: https://github.com/D4n334
+    Notes: ''
+
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: Eyes Guard Atualmente não tem suporte para múltiplos usuários.
+    HelpPageText: Para obter mais informações de um elemento no app, posicione o cursor no elemento. Uma dica aparecerá se disponível.
+    DoNotRunMultipleInstances: Eyes Guard já está em execução. Não é possível executar mais de uma instância do aplicativo.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard está em execução.
+        Message: Eyes Guard está em execução em segundo plano. Você pode acionar a interface e outras opções usando o ícone de escudo na barra de tarefas.
+    Resources:
+      PageTitle: Recursos
+      Content:
+        Icons: 'Icons: FontAwesome and IconArchive'
+        UIKit: 'UI Kit: Hasti UI Kit (Developed by Avestura Technologies)'
+    About:
+      PageTitle: Sobre
+      Content:
+        InnerTitle: Sobre Eyes Guard
+        PublisherInfo: 'Publicado por: Avestura Technologies'
+    Donate:
+      PageTitle: Doe para Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: Você gostaria de doar para o projeto Eyes Guard?
+          Message: Se você quiser apoiar este projeto open-source, você pode usar este formulário.
+          ButtonText: Abrir página de apoio no navegador
+      DonationButtonClicked:
+        Content:
+          InnerTitle: Doação
+          Thanks: Muito Obrigado pelo seu apoio!
+          Redirect: Você será redirecionado para uma página de doação no seu navegador
+          FeedbackNotice: Se você tem qualquer comentário, você pode postar na página do Eyes Guard na Microsoft Store.
+    Feedback:
+      PageTitle: Feedback
+      Content:
+        InnerTitle: Feedback
+        Message: Você pode criar uma issue na página do GitHub deste projeto e acompanhar mudanças relacionadas a ele.
+        ButtonText: Criar um novo Issue
+  EyesGuard:
+    ControlPanel:
+      Title: Painel de Controle
+    GuardStatus:
+      Running: Seus olhos estão protegidos
+      Paused: Eyes Guard está temporariamente desativado
+      Stopped: Eyes Guard está desativado
+      Idle: Eyes Guard foi pausado devido a detecção de inatividade do sistema
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} segundos até uma pequena-pausa."
+        Minutes: "{Minutes} minutos até uma pequena-pausa."
+      LongBreak:
+        Seconds: "{Seconds} segundos até uma grande-pausa."
+        Minutes: "{Minutes} minutos até uma grande-pausa."
+      PauseTime:
+        Seconds: Eyes Guard está desabilitado por {Seconds} segundos
+        Minutes: Eyes Guard está desabilitado por {Minutes} minutos
+    CustomPause:
+      PageTitle: Pausa Customizada
+      Message: Insira o tempo desejado de pausa
+      ButtonText: Pausa
+    WarningPage:
+      ButtonText: Voltar
+    OperationFailed: Operação Falhou
+    CheckInput: Verifique a validação de entrada.
+    TimeManipulation:
+      HoursLimit:  O campo de Horas não deve ser maior que {Hours}
+      MinutesLimit: O campo de Minutos não deve maior que{Minutes}
+      SecondsLimit: O campo de Segundos não deve ser maior que {Seconds}
+      SGapMorethanLGap: O intervalo entre duas pequenas-pausas deve ser menor que o intervalo entre duas grande-pausas.
+      SDurationMorethanLDuration: A duração de uma pequena-pausa deve ser menor que a duração de uma grande-pausa.
+      SDurationTooHigh: Uma pequena-pausa não pode ter mais de 5 minutos.
+      LDurationTooHigh: Uma grande-pausa não pode ter mais de 2 horas.
+      NotEnoughGapBetweenLandS: Intervalo não suficiente entre a pequena-pausa e a grande-pausa.
+      ShortGapLow: Intervalo entre duas pequenas-pausas deve ser de, no mínimo, 1 minuto.
+      LongGapLow: Intervalo entre duas grande-pausas deve ser de, no mínimo, 5 minutos.
+      ChooseLargerTime: Por favor escolha um tempo de duração maior.
+    Settings:
+      Title: Configurações
+      SavedSuccessfully: Configurações salvas com sucesso
+      AreYouSure: Você tem certeza?
+      LanguageSection: Idiomas
+      TimeSeparators:
+        Hour: Hora(s) e
+        Minutes: Minuto(s) e
+        Second: Segundo(s)
+      SaveSettings: Salvar alterações
+      TimeSettings:
+        Title: Configurações do tempo
+        GapBetweenTwoShortBreak: 'Tempo entre duas pequena-pausas:'
+        GapBetweenTwoLongBreak: 'Tempo entre duas grande-pausas:'
+        ShortBreakDuration: 'Duração pequena-pausa:'
+        LongBreakDuration: 'Duração grande-pausa:'
+      UserSettings:
+        Title: Configuração do Usuário
+        ForceUser: Me forçar a fazer uma pausa
+        ForceUserToolTip: Caso escolha habilitar essa opção, você não poderá adiar ou sair do intervalo. Além disso, o ponteiro do mouse ficará oculto durante o intervalo.
+        OnlyOneShortBreak: Mostrar apenas uma pequena-pausa entre duas grande-pausas.
+        OnlyOneShortBreakToolTip: Ativando essa opção o contador da pequena-pausa será interrompido após uma pausa concluída com sucesso até uma grande-pausa
+        StartupApplication: Iniciar Eyes Guard junto com o sistema.
+        StartupApplicationToolTip: Eyes Guard inicia junto com o sistema por padrão. Você pode desabilitar essa função pelo Gerenciador de Tarefas >> Aba Inicializar.
+        AlertBeforeLongBreak: Notificar-me 1 minuto antes de uma grande-pausa
+        AlertBeforeLongBreakToolTip: Eyes Guard manda uma notificação um minuto antes de uma grande-pausa
+        ShortBreakAllowCloseWithRightCLick: Fechar janela de pequena-pausa com o botão direito do mouse
+        ShortBreakAllowCloseWithRightCLickToolTip: Permitir o fechamento da janela de pequena-pausa com um clique do botão direito do mouse.
+        SystemIdle: Pausar Eyes Guard quando o sistema detectar inatividade
+        SystemIdleToolTip:
+        - Eyes Guard usa a detecção de inatividade do sistema para detectar se você está longe do seu
+          computador.
+        - Nesse modo, o Eyes Guard automaticamente interrompe a contagem das pausas.
+        - Note que essa configuração pode desabilitar a proteção dos seus olhos quando você não está interagindo com seu computador,
+          como por exemplo quando estiver assistindo filmes.
+      StatsSettings:
+        Title: Estatísticas
+        YesDeleteData: Sim, claro
+        NoKeepData: Não, manter dados
+        StatsDeleted: Todas estatísticas deletadas
+        StoreStats: Armazenar estatísticas
+        StoreStatsToolTip: Eyes Guard irá armazenar algumas informações sobre o seu uso que pode ser visto em Ferramentas >> Estatísticas.
+          esses dados são armazenados localmente na sua máquina.
+        ClearStatsText: 'Remover histórico de estatísticas:'
+        ClearStats: Remover dados
+      LanguageSettings:
+        Title: Idiomas
+        SelectLanguage: 'Selecionar Idioma:'
+        MaintainMessage: 'Este idioma é mantido por: '
+        RestartRequired: A mudança de idioma terá efeito na próxima inicialização.
+        MessagesFromLangFile: Usar o arquivo de linguagem como fonte de mensagens de pequena-pausa
+        MessagesFromLangFileToolTip: Caso habilitada esta opção, o arquivo de linguagem
+         proverá as mensagens que aparecem na janela de pequena-pausa
+        AddMessage: Adicionar Mensagem
+        RemoveMessage: Remover Mensagem
+        NoAccount: Sem conta
+        NoWebsite: Sem site
+        NoNotes: Nenhuma nota disponível
+        EnterNewMessage: Digitar nova mensagem
+        Submit: Enviar
+    Resting: Descansando
+    Waiting: Esperando
+    ShortMessageSuggestions:
+    - Feche e abra seus olhos
+    - Pisque incessantemente
+    - Olhe fixamente para longe
+    - Olhe pela janela
+    - Lave suas mãos e massageie  os seus olhos com cuidado
+    LongWindowMessage: Está na hora de uma grande pausa. Dê um passeio.
+    LongWindowCancelButton: Cancelar
+    Notifications:
+      LongBreakAlert:
+        Title: 1 Minuto para uma grande pausa
+        Message: Falta apenas um minuto para uma grande pausa.
+          Você pode adiar esta pausa no menu de contexto da barra de tarefas, se necessário.
+    WaitUnitlEndOfBreak: Por favor aguarde até que a pausa acabe.
+    LongBreakTimeRemaining: "{Hours} hora(s) e {Minutes} minuto(s) e {Seconds}
+      segundo(s) para o fim da pausa."
+    StatsPage:
+      Title: Estatísticas
+      ShortBreak: pequena-pausa
+      LongBreak: grande-pausa
+      Pauses: Pausa
+      ShortCount: 'Pequenas-pausas:'
+      LongCompletedCount: 'Grandes-pausas completadas:'
+      LongFailedCount: 'Grandes-pausas falhadas:'
+      PauseCount: 'Pausas temporárias:'
+      StopCount: 'Paradas:'
+    AlertPages:
+      Titles:
+        Attention: Atenção
+        Successful: Sucesso
+        Error: Erro
+        Info: Info
+        AboutSoftware: Sobre Software
+        Donate: Doar
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: Menu Principal
+        Hide: Ocultar Eyes Guard
+        Exit: Sair
+      Tools:
+        Header: Ferramentas
+        Stats: Estatísticas
+        Settings: Configurações
+      Breaks:
+        Header: Intervalos
+        GoShort: Faça uma pequena pausa
+        GoLong: Faça uma grande pausa
+      View:
+        Header: Visualizar
+        KeyTimes: Momentos-chave
+      Help:
+        Header: Ajuda
+        EyesGuardHelp: Ajuda do Eyes Guard
+        Resources: Recursos
+        SendFeedback: Enviar Feedback
+        Donate: Doar
+        About: Sobre
+    UserManager:
+      User: Usuário
+      NotLoggedIn: Não está logado
+      NoTitle: Sem título
+      Login: Login
+      Profile: Perfil
+      Logout: Logout
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: Protegendo
+      NotProtected: Desprotegido
+      PausedProtected: Temporariamente desabilitado
+      Menu:
+        PauseFor: Pause por...
+        PausedFor: Pausado por {PauseRemaining}
+        NextShortBreak: 'Próxima pequena-pausa : {NextShortBreak}'
+        NextLongBreak: 'Próxima grande-pausa: {NextLongBreak}'
+        ShowMainMenu: Mostrar Menu Principal
+        StartProtection: Começar Proteção
+        StopProtection: Parar Proteção
+        FiveMins: 5 minutos
+        TenMins: 10 minutos
+        ThirtyMins: 30 minutos
+        OneHour: 1 horas
+        TwoHours: 2 horas
+        Custom: Customizado...
+        Settings: Configurações
+        Exit: Sair
