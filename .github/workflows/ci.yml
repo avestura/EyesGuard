@@ -107,7 +107,7 @@ jobs:
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: MSIX Package
         path: ${{ env.Wap_Project_Directory }}\AppPackages
@@ -128,7 +128,7 @@ jobs:
 
     - name: Publish setup artifact
       if:  ${{ matrix.configuration == 'Release' }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: setup
         path: ${{ github.workspace }}\AdvancedInstaller\Setup\EyesGuard-Setup-0.0.0.exe
