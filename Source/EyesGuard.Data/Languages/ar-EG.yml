@@ -1,0 +1,227 @@
+Meta:
+  Translators:
+  - Name: Mahmoud Elgohary
+    GitHubUsername: melgoharyme
+    Website: https://github.com/melgoharyme
+    Notes: ''
+
+Translation:
+  Application:
+    OSTitle: Eyes Guard
+    HeaderTitle: Eyes Guard
+    LoginWarning: دلوقتي Eyes Guard مش بيدعم أكتر من مستخدم.
+    HelpPageText: عشان تعرف معلومات عن أي حاجة، حط الماوس عليها. هيظهرلك توولتيب لو موجود.
+    DoNotRunMultipleInstances: Eyes Guard شغال دلوقتي. مش ممكن تشغل أكتر من نسخة.
+    Notifications:
+      FirstLaunch:
+        Title: Eyes Guard شغال
+        Message: Eyes Guard شغال في الخلفية. ممكن تظهر الواجهة واختيارات تانية من أيقونة الدرع في شريط المهام.
+    Resources:
+      PageTitle: الموارد
+      Content:
+        Icons: 'الأيقونات: FontAwesome و IconArchive'
+        UIKit: 'مجموعة واجهة المستخدم: Hasti UI Kit (طورتها Avestura Technologies)'
+    About:
+      PageTitle: عن البرنامج
+      Content:
+        InnerTitle: عن Eyes Guard
+        PublisherInfo: 'الناشر: Avestura Technologies'
+    Donate:
+      PageTitle: التبرع لـ Eyes Guard
+      BeforeDonation:
+        Content:
+          InnerTitle: تحب تتبرع؟
+          Message: لو حابب تدعم البرنامج المجاني والمفتوح المصدر، ممكن تستخدم الفورم ده.
+          ButtonText: افتح صفحة التبرع في المتصفح
+      DonationButtonClicked:
+        Content:
+          InnerTitle: التبرع
+          Thanks: شكراً لدعمك!
+          Redirect: هتتحول لصفحة التبرع في المتصفح
+          FeedbackNotice: ممكن تكتب ملاحظاتك في صفحة Eyes Guard على Microsoft Store.
+    Feedback:
+      PageTitle: الملاحظات
+      Content:
+        InnerTitle: الملاحظات
+        Message: ممكن تعمل Issue جديد على صفحة GitHub لمتابعة التغييرات.
+        ButtonText: اعمل Issue جديد
+  EyesGuard:
+    ControlPanel:
+      Title: لوحة التحكم
+    GuardStatus:
+      Running: عيونك محمية
+      Paused: Eyes Guard متوقف مؤقت
+      Stopped: Eyes Guard متوقف
+      Idle: Eyes Guard متوقف بسبب خمول الجهاز
+    TimeRemaining:
+      ShortBreak:
+        Seconds: "{Seconds} ثانية على الاستراحة القصيرة."
+        Minutes: "{Minutes} دقيقة على الاستراحة القصيرة."
+      LongBreak:
+        Seconds: "{Seconds} ثانية على الاستراحة الطويلة."
+        Minutes: "{Minutes} دقيقة على الاستراحة الطويلة."
+      PauseTime:
+        Seconds: Eyes Guard متوقف {Seconds} ثانية
+        Minutes: Eyes Guard متوقف {Minutes} دقيقة
+    CustomPause:
+      PageTitle: إيقاف مخصص
+      Message: اكتب المدة اللي تحب توقف فيها
+      ButtonText: إيقاف مؤقت
+    WarningPage:
+      ButtonText: رجوع
+    OperationFailed: العملية فشلت
+    CheckInput: اتأكد من البيانات اللي دخلتها.
+    TimeManipulation:
+      HoursLimit: الساعات لازم تبقى أقل من {Hours}.
+      MinutesLimit: الدقايق لازم تبقى أقل من {Minutes}.
+      SecondsLimit: الثواني لازم تبقى أقل من {Seconds}.
+      SGapMorethanLGap: الفاصل بين استراحتين قصيرتين لازم يكون أقل من الفاصل بين استراحتين طويلتين.
+      SDurationMorethanLDuration: مدة الاستراحة القصيرة لازم تكون أقل من الطويلة.
+      SDurationTooHigh: الاستراحة القصيرة مش ممكن تعدي 5 دقايق.
+      LDurationTooHigh: الاستراحة الطويلة مش ممكن تعدي ساعتين.
+      NotEnoughGapBetweenLandS: مفيش فاصل كفاية بين الاستراحة القصيرة والطويلة.
+      ShortGapLow: الفاصل بين استراحتين قصيرتين لازم يكون على الأقل دقيقة.
+      LongGapLow: الفاصل بين استراحتين طويلتين لازم يكون على الأقل 5 دقايق.
+      ChooseLargerTime: اختار مدة أطول.
+    Settings:
+      Title: الإعدادات
+      SavedSuccessfully: الإعدادات اتخزنت
+      AreYouSure: متأكد؟
+      LanguageSection: اللغة
+      TimeSeparators:
+        Hour: ساعة و
+        Minutes: دقيقة و
+        Second: ثانية
+      SaveSettings: احفظ التغييرات
+      TimeSettings:
+        Title: إعدادات الوقت
+        GapBetweenTwoShortBreak: 'الفاصل بين استراحتين قصيرتين:'
+        GapBetweenTwoLongBreak: 'الفاصل بين استراحتين طويلتين:'
+        ShortBreakDuration: 'مدة الاستراحة القصيرة:'
+        LongBreakDuration: 'مدة الاستراحة الطويلة:'
+      UserSettings:
+        Title: إعدادات المستخدم
+        ForceUser: اجبرني على الاستراحة
+        ForceUserToolTip: لو فعلت ده، مش هتقدر تأجل أو تلغي الاستراحة، وكمان الماوس هيختفي أثناءها.
+        OnlyOneShortBreak: عرض استراحة قصيرة واحدة بس بين استراحتين طويلتين.
+        OnlyOneShortBreakToolTip: لو فعلت ده، عداد الاستراحات القصيرة هيتوقف بعد أول واحدة ناجحة لحد ما تيجي الاستراحة الطويلة الجاية.
+        StartupApplication: شغل Eyes Guard مع تشغيل الجهاز
+        StartupApplicationToolTip: Eyes Guard بيشتغل تلقائي مع تشغيل الجهاز. ممكن توقف الميزة دي من إدارة المهام >> Startup.
+        AlertBeforeLongBreak: فكرني قبل دقيقة من الاستراحة الطويلة
+        AlertBeforeLongBreakToolTip: Eyes Guard هينبهك قبل دقيقة من الاستراحة الطويلة.
+        ShortBreakAllowCloseWithRightCLick: اغلق نافذة الاستراحة القصيرة بالزر اليمين
+        ShortBreakAllowCloseWithRightCLickToolTip: ممكن تغلق نافذة الاستراحة القصيرة بزر الماوس اليمين.
+        SystemIdle: وقف Eyes Guard لو الجهاز خامل
+        SystemIdleToolTip:
+        - Eyes Guard بيكتشف خمول الجهاز عشان يعرف لو انت بعيد.
+        - في الحالة دي، العد بيقف مؤقت.
+        - ممكن ده يأثر على حماية عيونك لو بتتفرج على فيلم أو مش بتتفاعل.
+      StatsSettings:
+        Title: الإحصائيات
+        YesDeleteData: آه، متأكد
+        NoKeepData: لأ، خليك محتفظ بالبيانات
+        StatsDeleted: كل الإحصائيات اتشالت
+        StoreStats: حفظ الإحصائيات
+        StoreStatsToolTip: Eyes Guard هيحفظ شوية بيانات عن استخدامك عشان تشوفها في الأدوات >> الإحصائيات. البيانات على جهازك.
+        ClearStatsText: 'مسح سجل الإحصائيات:'
+        ClearStats: مسح البيانات
+      LanguageSettings:
+        Title: إعدادات اللغة
+        SelectLanguage: 'اختر اللغة:'
+        MaintainMessage: 'الترجمة عملها: '
+        RestartRequired: اللغة هتتطبق بعد إعادة تشغيل Eyes Guard
+        MessagesFromLangFile: استخدام ملف اللغة لرسائل الاستراحة القصيرة
+        MessagesFromLangFileToolTip: لو فعلت، الرسائل في نافذة الاستراحة القصيرة هتجيلك من الملف.
+        AddMessage: ضيف رسالة
+        RemoveMessage: امسح رسالة
+        NoAccount: مفيش حساب
+        NoWebsite: مفيش موقع
+        NoNotes: مفيش ملاحظات عن الترجمة
+        EnterNewMessage: اكتب رسالة جديدة
+        Submit: إرسال
+    Resting: في استراحة
+    Waiting: مستني
+    ShortMessageSuggestions:
+    - افتح واغلق عينيك
+    - ارمش بسرعة
+    - بص بعيد
+    - بص من الشباك
+    - اغسل إيديك ودلك عينيك
+    LongWindowMessage: حان وقت الاستراحة الطويلة. اطلع تمشى شوية.
+    LongWindowCancelButton: إلغاء
+    Notifications:
+      LongBreakAlert:
+        Title: دقيقة واحدة قبل الاستراحة الطويلة
+        Message: باقي دقيقة على الاستراحة الطويلة. ممكن تأجلها من قائمة شريط المهام.
+    WaitUnitlEndOfBreak: استنى لحد ما الاستراحة تخلص.
+    LongBreakTimeRemaining: "{Hours} ساعة و {Minutes} دقيقة و {Seconds} ثانية لحد ما الاستراحة تخلص."
+    StatsPage:
+      Title: الإحصائيات
+      ShortBreak: استراحة قصيرة
+      LongBreak: استراحة طويلة
+      Pauses: الإيقافات المؤقتة
+      ShortCount: 'عدد الاستراحات القصيرة:'
+      LongCompletedCount: 'عدد الاستراحات الطويلة اللي خلصت:'
+      LongFailedCount: 'عدد الاستراحات الطويلة الفاشلة:'
+      PauseCount: 'عدد الإيقافات المؤقتة:'
+      StopCount: 'عدد مرات الإيقاف:'
+    AlertPages:
+      Titles:
+        Attention: تنبيه
+        Successful: نجح
+        Error: غلطة
+        Info: معلومة
+        AboutSoftware: عن البرنامج
+        Donate: تبرع
+    HeaderMenu:
+      EyesGuard:
+        Header: Eyes Guard
+        MainMenu: القائمة الرئيسية
+        Hide: اخفي Eyes Guard
+        Exit: خروج
+      Tools:
+        Header: الأدوات
+        Stats: الإحصائيات
+        Settings: الإعدادات
+      Breaks:
+        Header: الاستراحات
+        GoShort: استراحة قصيرة
+        GoLong: استراحة طويلة
+      View:
+        Header: العرض
+        KeyTimes: الأوقات المهمة
+      Help:
+        Header: المساعدة
+        EyesGuardHelp: مساعدة Eyes Guard
+        Resources: الموارد
+        SendFeedback: ابعت ملاحظات
+        Donate: تبرع
+        About: عن البرنامج
+    UserManager:
+      User: المستخدم
+      NotLoggedIn: مش مسجل
+      NoTitle: من غير لقب
+      Login: سجل دخول
+      Profile: الملف الشخصي
+      Logout: تسجيل خروج
+  ShellExtensions:
+    TaskbarIcon:
+      Protected: محمي
+      NotProtected: مش محمي
+      PausedProtected: موقوف مؤقت
+      Menu:
+        PauseFor: وقف مؤقت لمدة...
+        PausedFor: موقوف لمدة {PauseRemaining}
+        NextShortBreak: 'الاستراحة القصيرة الجاية: {NextShortBreak}'
+        NextLongBreak: 'الاستراحة الطويلة الجاية: {NextLongBreak}'
+        ShowMainMenu: عرض القائمة الرئيسية
+        StartProtection: شغل الحماية
+        StopProtection: وقف الحماية
+        FiveMins: 5 دقايق
+        TenMins: 10 دقايق
+        ThirtyMins: 30 دقيقة
+        OneHour: ساعة
+        TwoHours: ساعتين
+        Custom: مخصص...
+        Settings: الإعدادات
+        Exit: خروج
