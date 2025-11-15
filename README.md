@@ -8,6 +8,8 @@
 
 <br>
 
+<a href="https://trendshift.io/repositories/14967" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14967" alt="avestura%2FEyesGuard | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+
 ## What is Eyes Guard?
 Eyes Guard is a Windows Application for protecting your eyes. It will help you (also can force you!) to break if you are working with your PC for a long time using configurable times.
 
